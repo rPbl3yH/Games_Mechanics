@@ -7,6 +7,7 @@ namespace LeoEcsHomeTask.Systems
     public class DestroySystem : IEcsRunSystem
     {
         private readonly EcsFilterInject<Inc<HealthComponent, ViewComponent>> _healthFilter;
+        private readonly EcsWorldInject _world;
         
         public void Run(IEcsSystems systems)
         {
@@ -18,6 +19,7 @@ namespace LeoEcsHomeTask.Systems
                 {
                     ref var view = ref _healthFilter.Pools.Inc2.Get(entity);
                     Object.DestroyImmediate(view.View);
+                    _world.Value.DelEntity(entity);
                 }
             }
         }
