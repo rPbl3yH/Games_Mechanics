@@ -1,4 +1,5 @@
-﻿using AtomicHomework.Hero;
+﻿using AtomicHomework.Entities.Components;
+using AtomicHomework.Hero.Entity;
 using UnityEngine;
 using Zenject;
 
@@ -7,21 +8,24 @@ namespace AtomicHomework.Input
     public class RotateController : MonoBehaviour
     {
         [Inject] private MouseInputObserver _mouseInputObserver;
-        [Inject] private HeroDocument _document;
+        [Inject] private HeroEntity _heroEntity;
 
-        private void Awake()
+        private void OnEnable()
         {
             _mouseInputObserver.OnRotateDirectionChanged += OnDirectionChanged;
         }
 
-        private void OnDestroy()
+        private void OnDisable()
         {
-            _mouseInputObserver.OnRotateDirectionChanged += OnDirectionChanged;
+            _mouseInputObserver.OnRotateDirectionChanged -= OnDirectionChanged;
         }
 
         private void OnDirectionChanged(Vector3 direction)
         {
-            _document.Rotate.Direction.Value = direction;
+            if (_heroEntity.TryGet(out IRotateComponent rotateComponent))
+            {
+                rotateComponent.Rotate(direction);
+            }
         }
     }
 }

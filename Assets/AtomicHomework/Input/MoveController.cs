@@ -15,7 +15,7 @@ namespace AtomicHomework.Input
             _input.OnDirectionChanged += OnDirectionChanged;
         }
 
-        private void OnDestroy()
+        private void OnDisable()
         {
             _input.OnDirectionChanged -= OnDirectionChanged;
         }

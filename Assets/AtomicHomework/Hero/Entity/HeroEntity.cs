@@ -11,6 +11,7 @@ namespace AtomicHomework.Hero.Entity
         private void Awake()
         {
             Add(new MoveComponent(_hero.Move.OnMove));   
+            Add(new RotateComponent(_hero.Rotate.OnRotate));
             Add(new TakeDamageComponent(_hero.Life.OnTakeDamage));
         }
     }
