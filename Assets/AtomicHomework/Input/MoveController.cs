@@ -1,15 +1,16 @@
 ﻿using AtomicHomework.Entities.Components;
 using AtomicHomework.Hero.Entity;
 using UnityEngine;
+using Zenject;
 
 namespace AtomicHomework.Input
 {
     public class MoveController : MonoBehaviour
     {
-        [SerializeField] private InputSystem _input;
-        [SerializeField] private HeroEntity _heroEntity;
+        [Inject] private InputSystem _input;
+        [Inject] private HeroEntity _heroEntity;
 
-        private void Awake()
+        private void OnEnable()
         {
             _input.OnDirectionChanged += OnDirectionChanged;
         }
