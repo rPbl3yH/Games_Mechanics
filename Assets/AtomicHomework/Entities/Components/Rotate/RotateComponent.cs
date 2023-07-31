@@ -17,9 +17,4 @@ namespace AtomicHomework.Entities.Components
             _onRotate?.Invoke(direction);
         }
     }
-
-    public interface IRotateComponent
-    {
-        void Rotate(Vector3 direction);
-    }
 }

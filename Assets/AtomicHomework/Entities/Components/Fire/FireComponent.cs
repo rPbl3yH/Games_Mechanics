@@ -2,11 +2,6 @@
 
 namespace AtomicHomework.Entities.Components
 {
-    public interface IFireComponent
-    {
-        void Fire();
-    }
-
     public class FireComponent : IFireComponent
     {
         private readonly IAtomicAction _onFire;
