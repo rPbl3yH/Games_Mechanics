@@ -1,9 +1,10 @@
 ﻿using System;
+using Declarative;
 using UnityEngine;
 
 namespace AtomicHomework.Atomic.Custom
 {
-    public class TimerMechanics : MonoBehaviour
+    public class Timer : IUpdateListener
     {
         public event Action OnTimerFinished;
         
@@ -11,14 +12,14 @@ namespace AtomicHomework.Atomic.Custom
         private float _targetTime;
         private bool _isEnabled;
         
-        private void Update()
+        public void Update(float deltaTime)
         {
             if (!_isEnabled)
             {
                 return;
             }
             
-            _timer += Time.deltaTime;
+            _timer += deltaTime;
             
             if (_timer >= _targetTime)
             {
@@ -42,5 +43,7 @@ namespace AtomicHomework.Atomic.Custom
             _timer = 0;
             _isEnabled = false;
         }
+
+
     }
 }

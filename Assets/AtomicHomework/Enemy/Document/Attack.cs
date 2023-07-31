@@ -13,7 +13,7 @@ namespace AtomicHomework.Enemy.Document
     {
         public AtomicVariable<int> Damage;
         public AtomicVariable<float> TimeToAttack;
-        public TimerMechanics TimerMechanics;
+        public Timer _timer = new();
 
         public AtomicVariable<bool> IsCanAttack;
         public AtomicEvent<Transform> OnAttack = new();
@@ -22,12 +22,12 @@ namespace AtomicHomework.Enemy.Document
         [Construct]
         public void Construct(Follow follow)
         {
-            TimerMechanics.Construct(TimeToAttack.Value);
+            _timer.Construct(TimeToAttack.Value);
 
-            TimerMechanics.OnTimerFinished += () =>
+            _timer.OnTimerFinished += () =>
             {
                 IsCanAttack.Value = true;
-                TimerMechanics.StopTimer();
+                _timer.StopTimer();
                 
                 if (_target != null)
                 {
@@ -56,7 +56,7 @@ namespace AtomicHomework.Enemy.Document
                         {
                             takeDamageComponent.TakeDamage(Damage.Value);
                             IsCanAttack.Value = false;
-                            TimerMechanics.StartTimer();
+                            _timer.StartTimer();
                         }
                     }
                 }

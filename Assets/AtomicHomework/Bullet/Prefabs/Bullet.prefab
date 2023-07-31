@@ -155,10 +155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e641f0185e14ade907d8a0eddf3b488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initOnAwake: 1
   Transform: {fileID: 2772586332526612321}
   Speed:
-    value: 5
+    value: 15
   CollideDetectionMechanic: {fileID: 2626181354368101288}
   Damage:
     value: 1

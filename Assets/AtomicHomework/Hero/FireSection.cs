@@ -15,36 +15,45 @@ namespace AtomicHomework.Hero
 
         public AtomicVariable<int> BulletCount;
         public AtomicEvent OnFire = new();
+        
+        public AtomicVariable<float> Cooldown;
+        public AtomicVariable<bool> IsCooldown;
 
         public AtomicVariable<bool> IsCanAttack;
-        public TimerMechanics TimerMechanics;
-
-        [Section]
-        public FireCooldown FireCooldown;
-        
+        public Timer _bulletRefillTimer = new();
+        public Timer _cooldownTimer = new();
         
         [Construct]
         public void Construct()
         {
-            TimerMechanics.Construct(Delay.Value);
-
+            _bulletRefillTimer.Construct(Delay.Value);
+            _cooldownTimer.Construct(Cooldown.Value);
+            
+            _bulletRefillTimer.StartTimer();
+            
             OnFire += () =>
             {
                 if (IsCanAttack.Value)
                 {
                     GameObject.Instantiate(BulletPrefab, SpawnPoint.position, SpawnPoint.rotation);
                     BulletCount.Value--;
-                    TimerMechanics.StartTimer();
+                    _bulletRefillTimer.StartTimer();
+                }
+                
+                if (!IsCooldown.Value)  
+                {
+                    IsCooldown.Value = true;
+                    _cooldownTimer.StartTimer();
                 }
             };
 
-            TimerMechanics.OnTimerFinished += () =>
+            _bulletRefillTimer.OnTimerFinished += () =>
             {
                 BulletCount.Value++;
                 
                 if (BulletCount.Value == 5)
                 {
-                    TimerMechanics.StopTimer();
+                    _bulletRefillTimer.StopTimer();
                 }
             };
 
@@ -52,7 +61,7 @@ namespace AtomicHomework.Hero
             {
                 if (count > 0)
                 {
-                    IsCanAttack.Value = !FireCooldown.IsCooldown.Value;
+                    IsCanAttack.Value = !IsCooldown.Value;
                 }
                 else
                 {
@@ -60,42 +69,18 @@ namespace AtomicHomework.Hero
                 }
             };
 
-            FireCooldown.IsCooldown.OnChanged += isCooldown =>
+            IsCooldown.OnChanged += isCooldown =>
             {
                 if (!isCooldown)
                 {
                     IsCanAttack.Value = BulletCount.Value > 0;
                 }
             };
-        }
-    }
-    
-    [Serializable]
-    public class FireCooldown
-    {
-        public AtomicVariable<float> CoolDown;
-        public TimerMechanics TimerMechanics;
-
-        public AtomicVariable<bool> IsCooldown;
-
-        [Construct]
-        public void Construct(FireSection fireSection)
-        {
-            TimerMechanics.Construct(CoolDown.Value);
-                
-            fireSection.OnFire += () =>
-            {
-                if (!IsCooldown.Value)  
-                {
-                    IsCooldown.Value = true;
-                    TimerMechanics.StartTimer();
-                }
-            };
-
-            TimerMechanics.OnTimerFinished += () =>
+            
+            _cooldownTimer.OnTimerFinished += () =>
             {
                 IsCooldown.Value = false;
-                TimerMechanics.StopTimer();
+                _cooldownTimer.StopTimer();
             };
         }
     }
