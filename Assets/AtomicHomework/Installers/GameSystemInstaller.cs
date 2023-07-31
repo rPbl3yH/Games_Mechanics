@@ -1,5 +1,6 @@
 ﻿using AtomicHomework.Hero.Entity;
 using AtomicHomework.Input;
+using AtomicHomework.Services;
 using UnityEngine;
 using Zenject;
 
@@ -15,11 +16,22 @@ namespace AtomicHomework.Hero
         
         public override void InstallBindings()
         {
+            InstallMonoBehaviours();
+            InstallSimple();
+        }
+
+        private void InstallMonoBehaviours()
+        {
             Container.Bind<InputSystem>().FromInstance(_inputSystem).AsSingle();
             Container.Bind<HeroEntity>().FromInstance(_heroEntity).AsSingle();
             Container.Bind<MouseInputObserver>().FromInstance(_mouseInputObserver).AsSingle();
             Container.Bind<HeroDocument>().FromInstance(_heroDocument).AsSingle();
             Container.Bind<MouseInput>().FromInstance(_mouseInput).AsSingle();
+        }
+
+        private void InstallSimple()
+        {
+            Container.Bind<HeroService>().FromNew().AsSingle();
         }
     }
 }
