@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace LeoEcsHomeTask.Systems
 {
-    public class DestroySystem : IEcsRunSystem
+    public class DestroyViewSystem : IEcsRunSystem
     {
         private readonly EcsFilterInject<Inc<HealthComponent, ViewComponent>> _healthFilter;
         private readonly EcsWorldInject _world;
@@ -18,7 +18,7 @@ namespace LeoEcsHomeTask.Systems
                 if (health.Health <= 0)
                 {
                     ref var view = ref _healthFilter.Pools.Inc2.Get(entity);
-                    Object.DestroyImmediate(view.View);
+                    Object.DestroyImmediate(view.View.gameObject);
                     _world.Value.DelEntity(entity);
                 }
             }

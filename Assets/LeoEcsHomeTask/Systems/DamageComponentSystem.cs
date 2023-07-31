@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace LeoEcsHomeTask.Systems
 {
-    public class HitComponentSystem : IEcsRunSystem
+    public class DamageComponentSystem : IEcsRunSystem
     {
         private readonly EcsFilterInject<Inc<DamageComponent, ViewComponent, TeamComponent>> _bulletFilter;
         private readonly EcsFilterInject<Inc<HitComponent>> _hitFilter;
@@ -28,11 +28,10 @@ namespace LeoEcsHomeTask.Systems
                 {
                     ref var bulletDamage = ref _bulletFilter.Pools.Inc1.Get(hitEntities.Item1);
                     ref var unitHealth = ref _healthPool.Value.Get(hitEntities.Item2);
-
-                    unitHealth.Health -= bulletDamage.DamageValue;
+                    ref var bulletHealth = ref _healthPool.Value.Get(hitEntities.Item1);
                     
-                    ref var bulletView = ref _bulletFilter.Pools.Inc2.Get(hitEntities.Item1);
-                    Object.DestroyImmediate(bulletView.View.gameObject);
+                    unitHealth.Health -= bulletDamage.DamageValue;
+                    bulletHealth.Health = 0;
                 }
 
                 _world.Value.DelEntity(entity);

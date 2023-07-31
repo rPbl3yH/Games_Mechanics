@@ -10,6 +10,7 @@ namespace LeoEcsHomeTask.Systems
     {
         private readonly EcsFilterInject<Inc<DamageComponent, ViewComponent, ColorComponent, TeamComponent>> _bulletFilter;
         private readonly EcsFilterInject<Inc<BulletSpawnComponent>> _bulletSpawnFilter;
+        private readonly EcsPoolInject<HealthComponent> _healthPool;
         private readonly EcsPoolInject<BulletSpawnComponent> _bulletPool;
         private readonly EcsCustomInject<UnitData> _unitData;
         private readonly EcsCustomInject<BulletData> _bulletData;
@@ -24,7 +25,8 @@ namespace LeoEcsHomeTask.Systems
                 ref var view = ref _bulletFilter.Pools.Inc2.Add(bulletEntity);
                 ref var color = ref _bulletFilter.Pools.Inc3.Add(bulletEntity);
                 ref var team = ref _bulletFilter.Pools.Inc4.Add(bulletEntity);
-
+                ref var health = ref _healthPool.Value.Add(bulletEntity);
+                
                 (int, int) collideEntity = PackerEntityUtils.UnpackEntities(_world.Value,
                     bulletSpawn.SourceUnit.PackedEntity, bulletSpawn.TargetUnit.PackedEntity);
                 
@@ -35,6 +37,7 @@ namespace LeoEcsHomeTask.Systems
                 ref var targetUnitView = ref _bulletFilter.Pools.Inc2.Get(collideEntity.Item2);
                 
                 damage.DamageValue = _bulletData.Value.Damage;
+                health.Health = _bulletData.Value.Health;
 
                 var position = unitView.View.transform.position;
                 var bullet = Object.Instantiate(

@@ -14,6 +14,7 @@ namespace LeoEcs.Systems
     {
         public string Path;
         public float Speed;
+        public int Health;
         public int Damage;
     }
     

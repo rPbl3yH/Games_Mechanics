@@ -566,6 +566,7 @@ MonoBehaviour:
   _bulletData:
     Path: Bullet
     Speed: 7
+    Health: 1
     Damage: 1
 --- !u!4 &1805053374
 Transform:
