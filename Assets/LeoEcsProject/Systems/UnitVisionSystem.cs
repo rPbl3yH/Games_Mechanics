@@ -9,7 +9,6 @@ namespace LeoEcsHomeTask.Systems
     {
         private readonly EcsFilterInject<Inc<UnitVisionComponent>> _visionFilter;
         private readonly EcsPoolInject<UnitVisionComponent> _visionPool;
-        private readonly EcsPoolInject<ColorComponent> _colorPool;
         private readonly EcsPoolInject<BulletSpawnComponent> _bulletSpawnPool;
         private readonly EcsPoolInject<TeamComponent> _teamPool;
         private readonly EcsWorldInject _world;
