@@ -5,23 +5,29 @@ namespace AtomicHomework.Input
 {
     public class MouseInput : MonoBehaviour
     {
-        public event Action<Vector2> OnDirectionChanged;
+        public event Action<Vector3> OnMousePointChanged;
         private Vector3 _lastPosition;
-    
+        private Plane _plane;
+        private UnityEngine.Camera _camera;
+
+        private void Start()
+        {
+            _camera = UnityEngine.Camera.main;
+            _plane = new Plane(Vector3.up, Vector3.zero);
+        }
+
         private void Update()
         {
             var mousePosition = UnityEngine.Input.mousePosition;
-            if (_lastPosition != mousePosition)
+            var ray = _camera.ScreenPointToRay(mousePosition);
+            var worldPoint = Vector3.zero;
+
+            if (_plane.Raycast(ray, out float enter))
             {
-                var direction = mousePosition - _lastPosition;
-                _lastPosition = mousePosition;
-                direction.Normalize();
-                OnDirectionChanged?.Invoke(direction);
+                worldPoint = ray.GetPoint(enter);
             }
-            else
-            {
-                OnDirectionChanged?.Invoke(Vector2.zero);
-            }
+            
+            OnMousePointChanged?.Invoke(worldPoint);
         }
     }
 }

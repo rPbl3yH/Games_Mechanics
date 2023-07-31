@@ -8,15 +8,15 @@ namespace AtomicHomework.Hero
     {
         private Transform _transform;
         private IAtomicValue<float> _speed;
-        private IAtomicValue<Vector3> _rotateDirection;
+        private IAtomicValue<Vector3> _targetPoint;
 
         private bool _isRotateRequired;
         
-        public void Construct(Transform transform, IAtomicValue<float> speed, IAtomicValue<Vector3> rotateDirection)
+        public void Construct(Transform transform, IAtomicValue<float> speed, IAtomicValue<Vector3> targetPoint)
         {
             _transform = transform;
             _speed = speed;
-            _rotateDirection = rotateDirection;
+            _targetPoint = targetPoint;
         }
 
         public void Rotate()
@@ -28,7 +28,9 @@ namespace AtomicHomework.Hero
         {
             if (_isRotateRequired)
             {
-                _transform.Rotate(_rotateDirection.Value * (_speed.Value * deltaTime));
+                //Debug.Log("target point " + _targetPoint.Value);
+                var direction = _targetPoint.Value - _transform.position;
+                _transform.rotation = Quaternion.LookRotation(direction);
                 _isRotateRequired = false;
             }
         }

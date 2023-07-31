@@ -9,24 +9,24 @@ namespace AtomicHomework.Input
 {
     public class RotateController : MonoBehaviour
     {
-        [Inject] private MouseInputObserver _mouseInputObserver;
+        [Inject] private MouseInput _mouseInputObserver;
         [Inject] private HeroService _heroService;
 
         private void OnEnable()
         {
-            _mouseInputObserver.OnRotateDirectionChanged += OnDirectionChanged;
+            _mouseInputObserver.OnMousePointChanged += OnDirectionChanged;
         }
 
         private void OnDisable()
         {
-            _mouseInputObserver.OnRotateDirectionChanged -= OnDirectionChanged;
+            _mouseInputObserver.OnMousePointChanged -= OnDirectionChanged;
         }
 
-        private void OnDirectionChanged(Vector3 direction)
+        private void OnDirectionChanged(Vector3 targetPoint)
         {
             if (_heroService.GetHero().TryGet(out IRotateComponent rotateComponent))
             {
-                rotateComponent.Rotate(direction);
+                rotateComponent.Rotate(targetPoint);
             }
         }
     }

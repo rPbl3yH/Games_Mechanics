@@ -234,6 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b370462746d45e3bcbd4dfea8380982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _mouseInput: {fileID: 0}
 --- !u!114 &77181926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,7 +312,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputSystem: {fileID: 77181922}
   _heroEntity: {fileID: 952267568}
-  _mouseInputObserver: {fileID: 77181925}
   _heroDocument: {fileID: 952267566}
   _mouseInput: {fileID: 77181926}
 --- !u!4 &232331061
@@ -636,7 +636,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &761286318
@@ -928,7 +928,7 @@ MonoBehaviour:
   Rotate:
     RotationSpeed:
       value: 100
-    Direction:
+    TargetPoint:
       value: {x: 0, y: 0, z: 0}
   Fire:
     BulletPrefab: {fileID: 7655893833624640705, guid: d078c2cfc13e9c14e9feb547291d54c2,

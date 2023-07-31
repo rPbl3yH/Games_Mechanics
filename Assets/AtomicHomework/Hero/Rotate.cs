@@ -9,7 +9,7 @@ namespace AtomicHomework.Hero
     public class Rotate
     {
         [SerializeField] public AtomicVariable<float> RotationSpeed;
-        [SerializeField] public AtomicVariable<Vector3> Direction;
+        [SerializeField] public AtomicVariable<Vector3> TargetPoint;
         [SerializeField] public AtomicEvent<Vector3> OnRotate;
         
         public RotateEngine Engine = new();
@@ -17,11 +17,11 @@ namespace AtomicHomework.Hero
         [Construct]
         public void Construct(HeroDocument heroDocument)
         {
-            Engine.Construct(heroDocument.Transform, RotationSpeed, Direction);
+            Engine.Construct(heroDocument.Transform, RotationSpeed, TargetPoint);
             
-            OnRotate += direction =>
+            OnRotate += targetPoint =>
             {
-                Direction.Value = direction;
+                TargetPoint.Value = targetPoint;
             };
             
             heroDocument.onUpdate += _ => Engine.Rotate();
