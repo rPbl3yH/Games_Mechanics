@@ -217,12 +217,12 @@ MonoBehaviour:
   _lifeSection:
     HitPoints:
       value: 1
-  Follow:
+  _followSection:
     Speed:
       value: 2
     MinDistance:
       value: 1
-  Attack:
+  _attackSection:
     Damage:
       value: 1
     TimeToAttack:

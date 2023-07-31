@@ -28,7 +28,6 @@ namespace AtomicHomework.Hero
         {
             if (_isRotateRequired)
             {
-                //Debug.Log("target point " + _targetPoint.Value);
                 var direction = _targetPoint.Value - _transform.position;
                 _transform.rotation = Quaternion.LookRotation(direction);
                 _isRotateRequired = false;

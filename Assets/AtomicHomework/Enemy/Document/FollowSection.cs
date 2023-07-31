@@ -7,7 +7,7 @@ using UnityEngine;
 namespace AtomicHomework.Enemy.Document
 {
     [Serializable]
-    public class Follow
+    public class FollowSection
     {
         public AtomicVariable<float> Speed;
         public AtomicVariable<float> MinDistance;

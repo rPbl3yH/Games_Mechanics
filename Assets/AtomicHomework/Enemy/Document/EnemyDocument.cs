@@ -13,13 +13,13 @@ namespace AtomicHomework.Enemy.Document
         public LifeSection _lifeSection;
 
         [Section]
-        public Death Death;
+        public DeathSection _deathSection;
 
         [Section]
-        public Follow Follow;
+        public FollowSection _followSection;
 
         [Section]
-        public Attack Attack;
+        public AttackSection _attackSection;
     }
     
 }

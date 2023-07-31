@@ -10,7 +10,7 @@ namespace AtomicHomework.Hero
         [Section] 
         [SerializeField]
         public LifeSection _lifeSection;
-        
+
         [Section] 
         [SerializeField]
         public MoveSection _moveSection;
