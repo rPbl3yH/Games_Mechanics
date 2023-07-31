@@ -31,8 +31,8 @@ namespace LeoEcsHomeTask.Systems
                     int newEntity = _world.Value.NewEntity();
                 
                     ref BulletSpawnComponent bulletSpawn = ref _bulletSpawnPool.Value.Add(newEntity);
-                    bulletSpawn.SourceUnit = unitVision.FirstCollide;
-                    bulletSpawn.TargetUnit = unitVision.SecondCollide;
+                    bulletSpawn.SourceEntity = visionUnits.Item1;
+                    bulletSpawn.TargetEntity = visionUnits.Item2;
                 }
                 
                 _world.Value.DelEntity(entity);

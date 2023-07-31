@@ -4,7 +4,7 @@ namespace LeoEcsHomeTask
 {
     public struct BulletSpawnComponent
     {
-        public UnitView SourceUnit;
-        public UnitView TargetUnit;
+        public int SourceEntity;
+        public int TargetEntity;
     }
 }

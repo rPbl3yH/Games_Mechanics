@@ -27,14 +27,11 @@ namespace LeoEcsHomeTask.Systems
                 ref var team = ref _bulletFilter.Pools.Inc4.Add(bulletEntity);
                 ref var health = ref _healthPool.Value.Add(bulletEntity);
                 
-                (int, int) collideEntity = PackerEntityUtils.UnpackEntities(_world.Value,
-                    bulletSpawn.SourceUnit.PackedEntity, bulletSpawn.TargetUnit.PackedEntity);
-                
-                ref var unitTeam = ref _bulletFilter.Pools.Inc4.Get(collideEntity.Item1);
+                ref var unitTeam = ref _bulletFilter.Pools.Inc4.Get(bulletSpawn.SourceEntity);
                 team.IsRed = unitTeam.IsRed;
 
-                ref var unitView = ref _bulletFilter.Pools.Inc2.Get(collideEntity.Item1);
-                ref var targetUnitView = ref _bulletFilter.Pools.Inc2.Get(collideEntity.Item2);
+                ref var unitView = ref _bulletFilter.Pools.Inc2.Get(bulletSpawn.SourceEntity);
+                ref var targetUnitView = ref _bulletFilter.Pools.Inc2.Get(bulletSpawn.TargetEntity);
                 
                 damage.DamageValue = _bulletData.Value.Damage;
                 health.Health = _bulletData.Value.Health;
@@ -51,7 +48,7 @@ namespace LeoEcsHomeTask.Systems
 
                 view.View = bullet.gameObject;
                 
-                ref var unitColor = ref _bulletFilter.Pools.Inc3.Get(collideEntity.Item1);
+                ref var unitColor = ref _bulletFilter.Pools.Inc3.Get(bulletSpawn.SourceEntity);
                 color.Renderer = bullet.gameObject.GetComponent<MeshRenderer>();
                 color.Renderer.material.color = unitColor.Renderer.material.color;
                 
