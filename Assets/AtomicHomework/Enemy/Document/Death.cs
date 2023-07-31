@@ -10,9 +10,9 @@ namespace AtomicHomework.Atomic.Enemy.Document
     public class Death
     {
         [Construct]
-        public void Construct(EnemyDocument enemyDocument, Life life)
+        public void Construct(EnemyDocument enemyDocument, LifeSection lifeSection)
         {
-            life.OnDeath += () =>
+            lifeSection.OnDeath += () =>
             {
                 GameObject.Destroy(enemyDocument.gameObject);
             };

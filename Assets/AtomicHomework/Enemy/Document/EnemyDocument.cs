@@ -10,7 +10,7 @@ namespace AtomicHomework.Enemy.Document
         public Transform Transform;
         
         [Section] 
-        public Life Life;
+        public LifeSection _lifeSection;
 
         [Section]
         public Death Death;

@@ -7,7 +7,7 @@ using UnityEngine;
 namespace AtomicHomework.Hero
 {
     [Serializable]
-    public class Life
+    public class LifeSection
     { 
         [SerializeField]
         public AtomicVariable<int> HitPoints ;

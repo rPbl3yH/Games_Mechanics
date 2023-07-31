@@ -7,7 +7,7 @@ using UnityEngine;
 namespace AtomicHomework.Hero
 {
     [Serializable]
-    public class Fire
+    public class FireSection
     {
         public GameObject BulletPrefab;
         public Transform SpawnPoint;
@@ -79,11 +79,11 @@ namespace AtomicHomework.Hero
         public AtomicVariable<bool> IsCooldown;
 
         [Construct]
-        public void Construct(Fire fire)
+        public void Construct(FireSection fireSection)
         {
             TimerMechanics.Construct(CoolDown.Value);
                 
-            fire.OnFire += () =>
+            fireSection.OnFire += () =>
             {
                 if (!IsCooldown.Value)  
                 {

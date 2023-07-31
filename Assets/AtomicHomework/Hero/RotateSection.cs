@@ -6,7 +6,7 @@ using UnityEngine;
 namespace AtomicHomework.Hero
 {
     [Serializable]
-    public class Rotate
+    public class RotateSection
     {
         [SerializeField] public AtomicVariable<float> RotationSpeed;
         [SerializeField] public AtomicVariable<Vector3> TargetPoint;

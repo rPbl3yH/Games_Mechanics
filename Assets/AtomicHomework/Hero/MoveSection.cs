@@ -6,7 +6,7 @@ using UnityEngine;
 namespace AtomicHomework.Hero
 {
     [Serializable]
-    public class Move
+    public class MoveSection
     {
         [SerializeField] public AtomicVariable<float> Speed;
         public AtomicEvent<Vector3> OnMove = new();

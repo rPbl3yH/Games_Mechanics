@@ -10,10 +10,10 @@ namespace AtomicHomework.Hero.Entity
         
         private void Awake()
         {
-            Add(new MoveComponent(_hero.Move.OnMove));   
-            Add(new RotateComponent(_hero.Rotate.OnRotate));
-            Add(new FireComponent(_hero.Fire.OnFire));
-            Add(new TakeDamageComponent(_hero.Life.OnTakeDamage));
+            Add(new MoveComponent(_hero._moveSection.OnMove));   
+            Add(new RotateComponent(_hero._rotateSection.OnRotate));
+            Add(new FireComponent(_hero._fireSection.OnFire));
+            Add(new TakeDamageComponent(_hero._lifeSection.OnTakeDamage));
         }
     }
 }
