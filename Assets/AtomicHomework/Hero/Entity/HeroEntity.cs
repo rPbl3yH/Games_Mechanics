@@ -12,6 +12,7 @@ namespace AtomicHomework.Hero.Entity
         {
             Add(new MoveComponent(_hero.Move.OnMove));   
             Add(new RotateComponent(_hero.Rotate.OnRotate));
+            Add(new FireComponent(_hero.Fire.OnFire));
             Add(new TakeDamageComponent(_hero.Life.OnTakeDamage));
         }
     }

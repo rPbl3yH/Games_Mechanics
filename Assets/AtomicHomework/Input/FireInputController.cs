@@ -1,4 +1,5 @@
-﻿using AtomicHomework.Hero;
+﻿using AtomicHomework.Entities.Components;
+using AtomicHomework.Services;
 using UnityEngine;
 using Zenject;
 
@@ -6,13 +7,16 @@ namespace AtomicHomework.Input
 {
     public class FireInputController : MonoBehaviour
     {
-        [Inject] private HeroDocument _hero;
+        [Inject] private HeroService _heroService;
         
         private void Update()
         {
             if (UnityEngine.Input.GetMouseButtonDown(0))
             {
-                _hero.Fire.OnFire?.Invoke();
+                if (_heroService.GetHero().TryGet(out IFireComponent fireComponent))
+                {
+                    fireComponent.Fire();
+                }
             }
         }
     }
