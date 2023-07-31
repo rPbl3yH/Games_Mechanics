@@ -1,6 +1,6 @@
 using Sirenix.OdinInspector;
 
-namespace Lessons.Gameplay.Atomic1
+namespace Atomic
 {
     public sealed class AtomicAction : IAtomicAction
     {

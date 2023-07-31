@@ -1,9 +1,9 @@
 ﻿using System;
+using Atomic;
 using AtomicHomework.Atomic.Custom;
 using AtomicHomework.Entities.Components;
 using Declarative;
 using Entities;
-using Lessons.Gameplay.Atomic1;
 using UnityEngine;
 
 namespace AtomicHomework.Enemy.Document

@@ -1,6 +1,5 @@
 ﻿using AtomicHomework.Hero;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace AtomicHomework.Input
 {

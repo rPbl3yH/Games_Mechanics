@@ -1,5 +1,5 @@
-﻿using Declarative;
-using Lessons.Gameplay.Atomic1;
+﻿using Atomic;
+using Declarative;
 using UnityEngine;
 
 namespace AtomicHomework.Hero

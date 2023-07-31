@@ -1,107 +1,84 @@
-using System.Collections.Generic;
+using System;
+using Declarative;
 using Sirenix.OdinInspector;
 
-namespace Lessons.Gameplay.Atomic1
+namespace Atomic
 {
-    public sealed class AtomicEvent : IAtomicAction
+    [Serializable]
+    public sealed class AtomicEvent : IAtomicAction, IDisposable
     {
-        private readonly List<IAtomicAction> actions = new();
-        private readonly List<IAtomicAction> cache = new();
-        private readonly Dictionary<System.Action, IAtomicAction> delegates = new();
+        private System.Action onEvent;
 
-        public static AtomicEvent operator +(AtomicEvent composite, IAtomicAction action)
+        public static AtomicEvent operator +(AtomicEvent it, System.Action action)
         {
-            composite.actions.Add(action);
-            return composite;
+            it.onEvent += action;
+            return it;
+        }
+        
+        public static AtomicEvent operator -(AtomicEvent it, System.Action action)
+        {
+            it.onEvent -= action;
+            return it;
+        }
+        
+        public void AddListener(System.Action action)
+        {
+            this.onEvent += action;
         }
 
-        public static AtomicEvent operator +(AtomicEvent composite, System.Action @delegate)
+        public void RemoveListener(System.Action action)
         {
-            var action = new AtomicAction(@delegate);
-            composite.actions.Add(action);
-            composite.delegates[@delegate] = action;
-            return composite;
-        }
-
-        public static AtomicEvent operator -(AtomicEvent composite, IAtomicAction action)
-        {
-            composite.actions.Remove(action);
-            return composite;
-        }
-
-        public static AtomicEvent operator -(AtomicEvent composite, System.Action @delegate)
-        {
-            if (composite.delegates.TryGetValue(@delegate, out var action))
-            {
-                composite.delegates.Remove(@delegate);
-                composite.actions.Remove(action);
-            }
-
-            return composite;
+            this.onEvent -= action;
         }
 
         [Button]
         public void Invoke()
         {
-            this.cache.Clear();
-            this.cache.AddRange(this.actions);
+            this.onEvent?.Invoke();
+        }
 
-            for (int i = 0, count = this.cache.Count; i < count; i++)
-            {
-                var action = this.cache[i];
-                action.Invoke();
-            }
+        public void Dispose()
+        {
+            DelegateUtils.Dispose(ref this.onEvent);
         }
     }
 
-    public class AtomicEvent<T> : IAtomicAction<T>
+    [Serializable]
+    public class AtomicEvent<T> : IAtomicAction<T>, IDisposable
     {
-        private readonly List<IAtomicAction<T>> actions = new();
-        private readonly Dictionary<System.Action<T>, IAtomicAction<T>> delegates = new();
-        private readonly List<IAtomicAction<T>> cache = new();
+        private System.Action<T> onEvent;
 
-        public static AtomicEvent<T> operator +(AtomicEvent<T> composite, IAtomicAction<T> action)
+        public static AtomicEvent<T> operator +(AtomicEvent<T> it, System.Action<T> action)
         {
-            composite.actions.Add(action);
-            return composite;
+            it.onEvent += action;
+            return it;
+        }
+        
+        public static AtomicEvent<T> operator -(AtomicEvent<T> it, System.Action<T> action)
+        {
+            it.onEvent -= action;
+            return it;
+        }
+        
+        public void AddListener(System.Action<T> action)
+        {
+            this.onEvent += action;
         }
 
-        public static AtomicEvent<T> operator +(AtomicEvent<T> composite, System.Action<T> @delegate)
+        public void RemoveListener(System.Action<T> action)
         {
-            var action = new AtomicAction<T>(@delegate);
-            composite.actions.Add(action);
-            composite.delegates[@delegate] = action;
-            return composite;
-        }
-
-        public static AtomicEvent<T> operator -(AtomicEvent<T> composite, IAtomicAction<T> action)
-        {
-            composite.actions.Remove(action);
-            return composite;
-        }
-
-        public static AtomicEvent<T> operator -(AtomicEvent<T> composite, System.Action<T> @delegate)
-        {
-            if (composite.delegates.TryGetValue(@delegate, out var action))
-            {
-                composite.delegates.Remove(@delegate);
-                composite.actions.Remove(action);
-            }
-
-            return composite;
+            this.onEvent -= action;
         }
 
         [Button]
         public void Invoke(T args)
         {
-            this.cache.Clear();
-            this.cache.AddRange(this.actions);
+            this.onEvent?.Invoke(args);
+        }
 
-            for (int i = 0, count = this.cache.Count; i < count; i++)
-            {
-                var action = this.cache[i];
-                action.Invoke(args);
-            }
+        public void Dispose()
+        {
+            DelegateUtils.Dispose(ref this.onEvent);
         }
     }
 }

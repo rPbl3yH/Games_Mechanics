@@ -42,9 +42,9 @@ namespace Declarative
         void OnDestroy();
     }
 
-    public interface IMonoInjective : IMonoElement
+    public interface IMonoController : IMonoElement
     {
-        MonoBehaviour Context { set; }
+        MonoBehaviour MonoContext { set; }
     }
 
     public interface IMonoElement

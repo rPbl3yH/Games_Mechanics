@@ -8,19 +8,12 @@ namespace Declarative
         private readonly MonoBehaviour root;
         
         private readonly List<IAwakeListener> awakeComponents = new();
-
         private readonly List<IEnableListener> enableComponents = new();
-
         private readonly List<IStartListener> startComponents = new();
-
         private readonly List<IFixedUpdateListener> fixedUpdateComponents = new();
-
         private readonly List<IUpdateListener> updateComponents = new();
-
         private readonly List<ILateUpdateListener> lateUpdateComponents = new();
-
         private readonly List<IDisableListener> disableComponents = new();
-
         private readonly List<IDestroyListener> destroyComponents = new();
 
         public MonoContext(MonoBehaviour root)
@@ -30,9 +23,9 @@ namespace Declarative
 
         internal void AddListener(IMonoElement element)
         {
-            if (element is IMonoInjective injectiveComponent)
+            if (element is IMonoController injectiveComponent)
             {
-                injectiveComponent.Context = this.root;
+                injectiveComponent.MonoContext = this.root;
             }
             
             if (element is IAwakeListener awakeComponent)

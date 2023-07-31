@@ -1,8 +1,11 @@
+using System;
+using System.Collections.Generic;
+
 namespace Declarative
 {
     internal static class MonoContextInstaller
     {
-        internal static void InstallElements(object section, MonoContext monoContext)
+        internal static void RegisterElements(object section, MonoContext monoContext, List<IDisposable> disposables)
         {
             var sectionType = section.GetType();
             var fields = ReflectionUtils.RetrieveFields(sectionType);
@@ -15,6 +18,11 @@ namespace Declarative
                 if (fieldValue is IMonoElement listener)
                 {
                     monoContext.AddListener(listener);
+                }
+
+                if (fieldValue is IDisposable disposable)
+                {
+                    disposables.Add(disposable);
                 }
             }
         }

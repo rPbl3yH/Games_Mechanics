@@ -1,9 +1,11 @@
-namespace Lessons.Gameplay.Atomic1
+using System;
+
+namespace Atomic
 {
     public interface IAtomicVariable<T> : IAtomicValue<T>
     {
-        AtomicEvent<T> OnChanged { get; set; }
-        
+        event Action<T> OnChanged;
+
         new T Value { get; set; }
     }
 }

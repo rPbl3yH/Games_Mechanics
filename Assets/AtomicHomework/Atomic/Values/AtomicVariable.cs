@@ -1,13 +1,18 @@
 using System;
+using Declarative;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Lessons.Gameplay.Atomic1
+namespace Atomic
 {
     [Serializable]
-    public class AtomicVariable<T> : IAtomicVariable<T>
+    public class AtomicVariable<T> : IAtomicVariable<T>, IDisposable
     {
-        public AtomicEvent<T> OnChanged { get; set; } = new();
+        public event Action<T> OnChanged
+        {
+            add { this.onChanged += value; }
+            remove { this.onChanged -= value; }
+        }
 
         public T Value
         {
@@ -15,9 +20,11 @@ namespace Lessons.Gameplay.Atomic1
             set
             {
                 this.value = value;
-                this.OnChanged?.Invoke(value);
+                this.onChanged?.Invoke(value);
             }
         }
+
+        private Action<T> onChanged;
 
         [OnValueChanged("OnValueChanged")]
         [SerializeField]
@@ -36,8 +43,12 @@ namespace Lessons.Gameplay.Atomic1
 #if UNITY_EDITOR
         private void OnValueChanged(T value)
         {
-            this.OnChanged?.Invoke(value);
+            this.onChanged?.Invoke(value);
         }
 #endif
+        public void Dispose()
+        {
+            DelegateUtils.Dispose(ref this.onChanged);
+        }
     }
 }

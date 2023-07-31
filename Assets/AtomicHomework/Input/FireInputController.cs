@@ -1,5 +1,4 @@
-﻿using System;
-using AtomicHomework.Hero;
+﻿using AtomicHomework.Hero;
 using UnityEngine;
 
 namespace AtomicHomework.Input

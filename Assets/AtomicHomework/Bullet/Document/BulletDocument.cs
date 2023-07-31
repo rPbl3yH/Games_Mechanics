@@ -1,8 +1,8 @@
-﻿using AtomicHomework.Atomic.Custom;
+﻿using Atomic;
+using AtomicHomework.Atomic.Custom;
 using AtomicHomework.Bullet.Mechanics;
 using AtomicHomework.Entities.Components;
 using Declarative;
-using Lessons.Gameplay.Atomic1;
 using UnityEngine;
 
 namespace AtomicHomework.Bullet.Document

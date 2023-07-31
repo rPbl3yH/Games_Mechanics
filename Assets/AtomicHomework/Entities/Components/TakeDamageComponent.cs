@@ -1,4 +1,4 @@
-﻿using Lessons.Gameplay.Atomic1;
+﻿using Atomic;
 
 namespace AtomicHomework.Entities.Components
 {

@@ -1,4 +1,4 @@
-namespace Lessons.Gameplay.Atomic1
+namespace Atomic
 {
     public interface IAtomicValue<out T>
     {

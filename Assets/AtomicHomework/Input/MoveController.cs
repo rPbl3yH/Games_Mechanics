@@ -1,5 +1,4 @@
-﻿using System;
-using AtomicHomework.Entities.Components;
+﻿using AtomicHomework.Entities.Components;
 using AtomicHomework.Hero.Entity;
 using UnityEngine;
 

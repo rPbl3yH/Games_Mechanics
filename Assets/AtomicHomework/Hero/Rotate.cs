@@ -1,9 +1,8 @@
 ﻿using System;
+using Atomic;
 using AtomicHomework.Atomic.Custom;
 using Declarative;
-using Lessons.Gameplay.Atomic1;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace AtomicHomework.Hero
 {

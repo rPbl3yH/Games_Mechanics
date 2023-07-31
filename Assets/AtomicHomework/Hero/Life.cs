@@ -1,6 +1,6 @@
 ﻿using System;
+using Atomic;
 using Declarative;
-using Lessons.Gameplay.Atomic1;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

@@ -2,7 +2,6 @@
 using AtomicHomework.Atomic.Custom;
 using Declarative;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace AtomicHomework.Hero
 {
