@@ -1,6 +1,5 @@
 ﻿using System;
 using Atomic;
-using AtomicHomework.Atomic.Custom;
 using Declarative;
 using UnityEngine;
 
@@ -16,8 +15,6 @@ namespace AtomicHomework.Hero
         private Vector3 _direction;
         private bool _isMoveRequired;
 
-        public FixedUpdateMechanics FixedUpdateMechanics = new();
-
         [Construct]
         public void Construct(HeroDocument heroDocument)
         {
@@ -29,14 +26,14 @@ namespace AtomicHomework.Hero
                 _isMoveRequired = true;
             };
             
-            FixedUpdateMechanics.OnUpdate(deltaTime =>
+            heroDocument.onFixedUpdate += deltaTime =>
             {
                 if (_isMoveRequired)
                 {
                     _transform.Translate(_direction * (Speed.Value * deltaTime));
                     _isMoveRequired = false;
                 }   
-            });
+            };
         }
     }
 }

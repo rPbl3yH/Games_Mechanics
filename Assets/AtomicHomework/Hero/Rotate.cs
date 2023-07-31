@@ -1,6 +1,5 @@
 ﻿using System;
 using Atomic;
-using AtomicHomework.Atomic.Custom;
 using Declarative;
 using UnityEngine;
 
@@ -14,7 +13,6 @@ namespace AtomicHomework.Hero
         [SerializeField] public AtomicEvent<Vector3> OnRotate;
         
         public RotateEngine Engine = new();
-        public UpdateMechanics UpdateMechanics = new();
 
         [Construct]
         public void Construct(HeroDocument heroDocument)
@@ -26,7 +24,7 @@ namespace AtomicHomework.Hero
                 Direction.Value = direction;
             };
             
-            UpdateMechanics.OnUpdate(_ => Engine.Rotate());
+            heroDocument.onUpdate += _ => Engine.Rotate();
         }
     }
 }
