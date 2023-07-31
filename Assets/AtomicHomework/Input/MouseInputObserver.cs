@@ -1,11 +1,12 @@
 ﻿using System;
 using UnityEngine;
+using Zenject;
 
 namespace AtomicHomework.Input
 {
     public class MouseInputObserver : MonoBehaviour
     {
-        [SerializeField] private MouseInput _mouseInput;
+        [Inject] private MouseInput _mouseInput;
         
         public event Action<Vector3> OnRotateDirectionChanged;
 

@@ -234,7 +234,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b370462746d45e3bcbd4dfea8380982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mouseInput: {fileID: 77181926}
 --- !u!114 &77181926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +311,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputSystem: {fileID: 77181922}
   _heroEntity: {fileID: 952267568}
+  _mouseInputObserver: {fileID: 77181925}
+  _heroDocument: {fileID: 952267566}
+  _mouseInput: {fileID: 77181926}
 --- !u!4 &232331061
 Transform:
   m_ObjectHideFlags: 0
@@ -604,7 +606,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e4e9aad4714a59bdfe26efa730a854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hero: {fileID: 952267566}
 --- !u!1 &761286316
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,8 +1367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eac90c553f34c7a9b66eefe7e19cc40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mouseInputObserver: {fileID: 77181925}
-  _document: {fileID: 952267566}
 --- !u!114 &1530561477
 MonoBehaviour:
   m_ObjectHideFlags: 0

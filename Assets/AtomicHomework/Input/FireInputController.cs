@@ -1,11 +1,12 @@
 ﻿using AtomicHomework.Hero;
 using UnityEngine;
+using Zenject;
 
 namespace AtomicHomework.Input
 {
     public class FireInputController : MonoBehaviour
     {
-        [SerializeField] private HeroDocument _hero;
+        [Inject] private HeroDocument _hero;
         
         private void Update()
         {
