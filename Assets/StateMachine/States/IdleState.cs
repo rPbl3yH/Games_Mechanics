@@ -10,17 +10,25 @@ namespace StateMachine
     {
         private StateMachine _stateMachine;
         private MoveSection _moveSection;
-        
+        private Animator _animator;
+
         [Construct]
         public void Construct(MoveSection moveSection, HeroStates states)
         {
             _stateMachine = states.StateMachine;
             _moveSection = moveSection;
         }
+
+        [Construct]
+        public void Construct(HeroVisual heroVisual)
+        {
+            _animator = heroVisual.Animator;
+        }
         
         public void Enter()
         {
             _moveSection.OnMoveStarted += OnMoveStarted;
+            //TODO: set idle animation
         }
 
         public void Exit()
