@@ -19,12 +19,15 @@ namespace AtomicHomework.Hero
         public RunState RunState;
 
         [Construct]
-        public void Construct()
+        public void Construct(MoveSection moveSection)
         {
             StateMachine.Construct(
                 (HeroStateType.Idle, IdleState),
                 (HeroStateType.Run, RunState)
                 );
+
+            moveSection.OnMoveStarted += () => StateMachine.SwitchState(HeroStateType.Run);
+            moveSection.OnMoveFinished += () => StateMachine.SwitchState(HeroStateType.Idle);
         }
     }
 }

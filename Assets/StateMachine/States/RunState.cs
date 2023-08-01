@@ -7,39 +7,37 @@ namespace StateMachine
 {
     [Serializable]
     public class RunState : IState
-    {
-        private StateMachine _stateMachine;
+    {        
+        private Animator _animator;
         private MoveSection _moveSection;
         
         [Construct]
-        public void Construct(MoveSection moveSection, HeroStates states)
+        public void Construct(MoveSection moveSection)
         {
-            _stateMachine = states.StateMachine;
             _moveSection = moveSection;
+        }
+            
+        [Construct]
+        public void Construct(HeroVisual heroVisual)
+        {
+            _animator = heroVisual.Animator;
         }
         
         public void Enter()
         {
-            _moveSection.OnMoveFinished += OnMoveFinished;
-            _moveSection.OnMove += SetDirection;
             //TODO: set run animation
+            _moveSection.OnMove += SetDirection;
         }
 
         public void Exit()
         {
-            _moveSection.OnMoveFinished -= OnMoveFinished;
             _moveSection.OnMove -= SetDirection;
             SetDirection(Vector3.zero);
         }
 
-        public void SetDirection(Vector3 direction)
+        private void SetDirection(Vector3 direction)
         {
             _moveSection.Direction.Value = direction;
-        }
-        
-        private void OnMoveFinished()
-        {
-            _stateMachine.SwitchState(HeroStateType.Idle);
         }
     }
 }
