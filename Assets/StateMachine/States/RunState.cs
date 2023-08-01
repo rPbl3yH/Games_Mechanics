@@ -1,6 +1,7 @@
 ﻿using System;
 using AtomicHomework.Hero;
 using Declarative;
+using UnityEngine;
 
 namespace StateMachine
 {
@@ -8,6 +9,7 @@ namespace StateMachine
     public class RunState : CompositeState
     {
         public AnimationState AnimationState;
+        [HideInInspector]
         public MoveState MoveState;
         
         [Construct]

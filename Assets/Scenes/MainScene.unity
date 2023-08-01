@@ -1001,6 +1001,10 @@ MonoBehaviour:
         AnimationState:
           _animationType: 1
           _stateName: State
+      DeadState:
+        AnimationState:
+          _animationType: 2
+          _stateName: State
   Visual:
     Animator: {fileID: 0}
 --- !u!4 &952267567

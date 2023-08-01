@@ -7,7 +7,7 @@ namespace StateMachine
     {
         Idle,
         Run,
-        Death,
+        Dead,
         Shoot
     } 
     
