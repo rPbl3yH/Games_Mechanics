@@ -8,7 +8,7 @@ using Zenject;
 namespace AtomicHomework.Hero
 {
     [Serializable]
-    public class HeroLifeSection
+    public class LifeSection
     { 
         [SerializeField]
         public AtomicVariable<int> HitPoints;

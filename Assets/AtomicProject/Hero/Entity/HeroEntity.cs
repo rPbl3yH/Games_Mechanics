@@ -14,8 +14,8 @@ namespace AtomicHomework.Hero.Entity
             Add(new MoveComponent(_hero.MoveSection.OnMove));   
             Add(new RotateComponent(_hero.RotateSection.OnRotate));
             Add(new FireComponent(_hero.FireSection.OnFire));
-            Add(new TakeDamageComponent(_hero.HeroLifeSection.OnTakeDamage));
-            Add(new DeathComponent(_hero.HeroLifeSection.OnDeath));
+            Add(new TakeDamageComponent(_hero._lifeSection.OnTakeDamage));
+            Add(new DeathComponent(_hero._lifeSection.OnDeath));
         }
     }
 }

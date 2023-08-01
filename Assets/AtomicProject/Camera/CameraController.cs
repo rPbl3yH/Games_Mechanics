@@ -1,14 +1,15 @@
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace AtomicHomework.Camera
+namespace AtomicHomework.Hero
 {
     public class CameraController : MonoBehaviour
     {
-        [SerializeField] private Transform _target;
-    
+        [SerializeField] private Transform _targetTransform;
+        [SerializeField] private Transform _cameraTransform;
+        
         private void Update()
         {
-            transform.position = _target.position;
+            _cameraTransform.position = _targetTransform.position;
         }
     }
 }

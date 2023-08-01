@@ -7,10 +7,10 @@ using UnityEngine;
 namespace AtomicHomework.Atomic.Enemy.Document
 {
     [Serializable]
-    public class DeathSection
+    public class EnemyDeathSection
     {
         [Construct]
-        public void Construct(EnemyDocument document, EnemyLifeSection lifeSection)
+        public void Construct(EnemyDocument document, LifeSection lifeSection)
         {
             lifeSection.OnDeath += () =>
             {

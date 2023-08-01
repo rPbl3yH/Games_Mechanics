@@ -961,7 +961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Transform: {fileID: 952267567}
-  HeroLifeSection:
+  _lifeSection:
     HitPoints:
       value: 3
   MoveSection:

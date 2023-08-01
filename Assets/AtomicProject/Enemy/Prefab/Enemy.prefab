@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Transform: {fileID: 5354221851535450184}
-  EnemyLifeSection:
+  LifeSection:
     HitPoints:
       value: 1
   FollowSection:
