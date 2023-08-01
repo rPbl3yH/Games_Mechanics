@@ -961,31 +961,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Transform: {fileID: 952267567}
-  _lifeSection:
-    HitPoints:
-      value: 3
-  MoveSection:
-    Speed:
-      value: 4
-  RotateSection:
-    RotationSpeed:
-      value: 10
-    TargetPoint:
-      value: {x: 0, y: 0, z: 0}
-  FireSection:
-    BulletPrefab: {fileID: 7655893833624640705, guid: d078c2cfc13e9c14e9feb547291d54c2,
-      type: 3}
-    SpawnPoint: {fileID: 814271095}
-    Delay:
-      value: 1
-    BulletCount:
-      value: 0
-    Cooldown:
-      value: 2
-    IsCooldown:
-      value: 0
-    IsCanAttack:
-      value: 0
+  Core:
+    LifeSection:
+      HitPoints:
+        value: 3
+    MoveSection:
+      Speed:
+        value: 4
+    RotateSection:
+      RotationSpeed:
+        value: 10
+      TargetPoint:
+        value: {x: 0, y: 0, z: 0}
+    FireSection:
+      BulletPrefab: {fileID: 0}
+      SpawnPoint: {fileID: 0}
+      Delay:
+        value: 2
+      BulletCount:
+        value: 0
+      Cooldown:
+        value: 1
+      IsCooldown:
+        value: 0
+      IsCanAttack:
+        value: 0
 --- !u!4 &952267567
 Transform:
   m_ObjectHideFlags: 0

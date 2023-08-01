@@ -11,11 +11,11 @@ namespace AtomicHomework.Hero.Entity
         
         private void Awake()
         {
-            Add(new MoveComponent(_hero.MoveSection.OnMove));   
-            Add(new RotateComponent(_hero.RotateSection.OnRotate));
-            Add(new FireComponent(_hero.FireSection.OnFire));
-            Add(new TakeDamageComponent(_hero._lifeSection.OnTakeDamage));
-            Add(new DeathComponent(_hero._lifeSection.OnDeath));
+            Add(new MoveComponent(_hero.Core.MoveSection.OnMove));   
+            Add(new RotateComponent(_hero.Core.RotateSection.OnRotate));
+            Add(new FireComponent(_hero.Core.FireSection.OnFire));
+            Add(new TakeDamageComponent(_hero.Core.LifeSection.OnTakeDamage));
+            Add(new DeathComponent(_hero.Core.LifeSection.OnDeath));
         }
     }
 }
