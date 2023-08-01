@@ -968,6 +968,8 @@ MonoBehaviour:
     MoveSection:
       Speed:
         value: 4
+      Direction:
+        value: {x: 0, y: 0, z: 0}
     RotateSection:
       RotationSpeed:
         value: 10
@@ -991,6 +993,16 @@ MonoBehaviour:
       StateMachine:
         _heroStateType: 0
         _enterOnStart: 1
+      IdleState:
+        AnimationState:
+          _animationType: 0
+          _stateName: State
+      RunState:
+        AnimationState:
+          _animationType: 1
+          _stateName: State
+  Visual:
+    Animator: {fileID: 0}
 --- !u!4 &952267567
 Transform:
   m_ObjectHideFlags: 0

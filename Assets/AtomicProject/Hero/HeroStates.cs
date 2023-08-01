@@ -1,7 +1,6 @@
 ﻿using System;
 using Declarative;
 using StateMachine;
-using UnityEngine;
 
 namespace AtomicHomework.Hero
 {
@@ -11,11 +10,9 @@ namespace AtomicHomework.Hero
         public StateMachine.StateMachine StateMachine;
 
         [Section]
-        [HideInInspector]
         public IdleState IdleState;
         
         [Section]
-        [HideInInspector]
         public RunState RunState;
 
         [Construct]

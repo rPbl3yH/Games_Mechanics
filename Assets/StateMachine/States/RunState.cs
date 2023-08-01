@@ -1,43 +1,26 @@
 ﻿using System;
 using AtomicHomework.Hero;
 using Declarative;
-using UnityEngine;
 
 namespace StateMachine
 {
     [Serializable]
-    public class RunState : IState
-    {        
-        private Animator _animator;
-        private MoveSection _moveSection;
+    public class RunState : CompositeState
+    {
+        public AnimationState AnimationState;
+        public MoveState MoveState;
         
         [Construct]
-        public void Construct(MoveSection moveSection)
+        public void ConstructStates(HeroVisual heroVisual, HeroCore heroCore)
         {
-            _moveSection = moveSection;
+            AnimationState.Construct(heroVisual.Animator);
+            MoveState.Construct(heroCore.MoveSection);
         }
             
         [Construct]
-        public void Construct(HeroVisual heroVisual)
+        public void ConstructSelf()
         {
-            _animator = heroVisual.Animator;
-        }
-        
-        public void Enter()
-        {
-            //TODO: set run animation
-            _moveSection.OnMove += SetDirection;
-        }
-
-        public void Exit()
-        {
-            _moveSection.OnMove -= SetDirection;
-            SetDirection(Vector3.zero);
-        }
-
-        private void SetDirection(Vector3 direction)
-        {
-            _moveSection.Direction.Value = direction;
+            SetStates(AnimationState, MoveState);
         }
     }
 }

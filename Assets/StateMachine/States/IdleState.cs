@@ -6,23 +6,20 @@ using UnityEngine;
 namespace StateMachine
 {
     [Serializable]
-    public class IdleState : IState
+    public class IdleState : CompositeState
     {
-        private Animator _animator;
+        public AnimationState AnimationState;
 
         [Construct]
-        public void Construct(HeroVisual heroVisual)
+        public void ConstructStates(HeroVisual heroVisual, HeroCore heroCore)
         {
-            _animator = heroVisual.Animator;
-        }
-        
-        public void Enter()
-        {
-            //TODO: set idle animation
+            AnimationState.Construct(heroVisual.Animator);
         }
 
-        public void Exit()
+        [Construct]
+        public void ConstructSelf()
         {
+            SetStates(AnimationState);            
         }
     }
 }
