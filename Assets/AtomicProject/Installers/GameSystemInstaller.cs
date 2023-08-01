@@ -30,6 +30,7 @@ namespace AtomicHomework.Hero
         private void InstallSimple()
         {
             Container.Bind<HeroService>().FromNew().AsSingle();
+            Container.Bind<GameFinisher>().FromNew().AsSingle();
         }
     }
 }

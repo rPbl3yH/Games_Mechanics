@@ -1,5 +1,6 @@
 ﻿using AtomicHomework.Entities.Components;
 using Entities;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace AtomicHomework.Hero.Entity
@@ -10,10 +11,11 @@ namespace AtomicHomework.Hero.Entity
         
         private void Awake()
         {
-            Add(new MoveComponent(_hero._moveSection.OnMove));   
-            Add(new RotateComponent(_hero._rotateSection.OnRotate));
-            Add(new FireComponent(_hero._fireSection.OnFire));
-            Add(new TakeDamageComponent(_hero._lifeSection.OnTakeDamage));
+            Add(new MoveComponent(_hero.MoveSection.OnMove));   
+            Add(new RotateComponent(_hero.RotateSection.OnRotate));
+            Add(new FireComponent(_hero.FireSection.OnFire));
+            Add(new TakeDamageComponent(_hero.HeroLifeSection.OnTakeDamage));
+            Add(new DeathComponent(_hero.HeroLifeSection.OnDeath));
         }
     }
 }

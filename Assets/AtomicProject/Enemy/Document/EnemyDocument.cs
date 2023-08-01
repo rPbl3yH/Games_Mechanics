@@ -10,16 +10,15 @@ namespace AtomicHomework.Enemy.Document
         public Transform Transform;
         
         [Section] 
-        public LifeSection _lifeSection;
+        public EnemyLifeSection EnemyLifeSection;
 
         [Section]
-        public DeathSection _deathSection;
+        public DeathSection DeathSection;
 
         [Section]
-        public FollowSection _followSection;
+        public FollowSection FollowSection;
 
         [Section]
-        public AttackSection _attackSection;
+        public AttackSection AttackSection;
     }
-    
 }

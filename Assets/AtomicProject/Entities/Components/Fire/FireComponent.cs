@@ -1,4 +1,5 @@
-﻿using Atomic;
+﻿using System;
+using Atomic;
 
 namespace AtomicHomework.Entities.Components
 {
@@ -17,3 +18,4 @@ namespace AtomicHomework.Entities.Components
         }
     }
 }
+

@@ -3,14 +3,15 @@ using Atomic;
 using Declarative;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Zenject;
 
 namespace AtomicHomework.Hero
 {
     [Serializable]
-    public class LifeSection
+    public class HeroLifeSection
     { 
         [SerializeField]
-        public AtomicVariable<int> HitPoints ;
+        public AtomicVariable<int> HitPoints;
         [ShowInInspector]
         public AtomicEvent<int> OnTakeDamage = new();
         [ShowInInspector]
@@ -34,9 +35,6 @@ namespace AtomicHomework.Hero
                     OnDeath?.Invoke();
                 }
             };
-
-            OnDeath += () => Debug.Log("Death");
         }
     }
-
 }

@@ -9,18 +9,18 @@ namespace AtomicHomework.Hero
         
         [Section] 
         [SerializeField]
-        public LifeSection _lifeSection;
+        public HeroLifeSection HeroLifeSection;
 
         [Section] 
         [SerializeField]
-        public MoveSection _moveSection;
+        public MoveSection MoveSection;
         
         [Section] 
         [SerializeField]
-        public RotateSection _rotateSection;
+        public RotateSection RotateSection;
         
         [Section]
         [SerializeField] 
-        public FireSection _fireSection;
+        public FireSection FireSection;
     }
 }

@@ -11,8 +11,8 @@ namespace AtomicHomework.Atomic.Enemy.Entity
         
         private void Awake()
         {
-            Add(new TakeBulletDamageComponent(_enemyDocument._lifeSection.OnTakeDamage));
-            Add(new FollowComponent(_enemyDocument._followSection.OnFollow));
+            Add(new TakeBulletDamageComponent(_enemyDocument.EnemyLifeSection.OnTakeDamage));
+            Add(new FollowComponent(_enemyDocument.FollowSection.OnFollow));
         }
     }
 }

@@ -214,15 +214,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Transform: {fileID: 5354221851535450184}
-  _lifeSection:
+  EnemyLifeSection:
     HitPoints:
       value: 1
-  _followSection:
+  FollowSection:
     Speed:
       value: 2
     MinDistance:
       value: 1
-  _attackSection:
+  AttackSection:
     Damage:
       value: 1
     TimeToAttack:

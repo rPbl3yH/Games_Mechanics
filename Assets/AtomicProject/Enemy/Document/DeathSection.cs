@@ -10,7 +10,7 @@ namespace AtomicHomework.Atomic.Enemy.Document
     public class DeathSection
     {
         [Construct]
-        public void Construct(EnemyDocument document, LifeSection lifeSection)
+        public void Construct(EnemyDocument document, EnemyLifeSection lifeSection)
         {
             lifeSection.OnDeath += () =>
             {
