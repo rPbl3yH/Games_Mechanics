@@ -974,8 +974,9 @@ MonoBehaviour:
       TargetPoint:
         value: {x: 0, y: 0, z: 0}
     FireSection:
-      BulletPrefab: {fileID: 0}
-      SpawnPoint: {fileID: 0}
+      BulletPrefab: {fileID: 7655893833624640705, guid: d078c2cfc13e9c14e9feb547291d54c2,
+        type: 3}
+      SpawnPoint: {fileID: 814271095}
       Delay:
         value: 2
       BulletCount:
@@ -986,6 +987,10 @@ MonoBehaviour:
         value: 0
       IsCanAttack:
         value: 0
+    States:
+      StateMachine:
+        _heroStateType: 0
+        _enterOnStart: 1
 --- !u!4 &952267567
 Transform:
   m_ObjectHideFlags: 0

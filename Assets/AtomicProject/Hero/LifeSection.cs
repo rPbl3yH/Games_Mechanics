@@ -3,7 +3,6 @@ using Atomic;
 using Declarative;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using Zenject;
 
 namespace AtomicHomework.Hero
 {

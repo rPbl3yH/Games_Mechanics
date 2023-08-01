@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using Declarative;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace StateMachine
 {
     [Serializable]
-    public class StateMachine : IState
+    public class StateMachine : IState, IStartListener
     {
         [SerializeField] private HeroStateType _heroStateType;
-        
+
+        [SerializeField] private bool _enterOnStart;
+
         [ShowInInspector, ReadOnly]
         private IState _currentState;
 
@@ -19,7 +22,15 @@ namespace StateMachine
         {
             _states = new List<(HeroStateType, IState)>(states);
         }
-        
+
+        void IStartListener.Start()
+        {
+            if (_enterOnStart)
+            {
+                Enter();
+            }
+        }
+
         public void Enter()
         {
             _currentState = FindState(_heroStateType);
@@ -30,6 +41,13 @@ namespace StateMachine
         {
             _currentState.Exit();
             _currentState = null;
+        }
+
+        public void SwitchState(HeroStateType type)
+        {
+            Exit();
+            _heroStateType = type;
+            Enter();
         }
 
         private IState FindState(HeroStateType type)
