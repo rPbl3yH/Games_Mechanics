@@ -5,11 +5,9 @@ using Zenject;
 
 public sealed class ApplyDirectionMovement :  IDisposable
 {
-    private Transform _transform;
-
     [Inject] 
     private AreaService _areaService;
-    
+    private readonly Transform _transform;
     private readonly MoveInput _moveInput;
 
     [Inject]
@@ -28,6 +26,16 @@ public sealed class ApplyDirectionMovement :  IDisposable
         {
             _transform.LookAt(nextPoint);
             _transform.localPosition = nextPoint;
+        }
+        else
+        {
+            var enemy = _areaService.GetCharacter(nextPoint);
+            if (enemy == null)
+            {
+                return;
+            }
+            
+            enemy.TakeDamage(1);
         }
     }
 

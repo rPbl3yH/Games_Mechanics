@@ -3,12 +3,13 @@ using EventBus.Game.GamePlay;
 using EventBus.Game.GamePlay.Area;
 using Zenject;
 
-public class MovementSystemInstaller : MonoInstaller<MovementSystemInstaller>
+public class GameSystemInstaller : MonoInstaller<GameSystemInstaller>
 {
     public override void InstallBindings()
     {
         InstallAreaSystem();
         InstallMovementSystem();
+        InstallEnemySystem();
     }
 
     private void InstallMovementSystem()
@@ -21,5 +22,10 @@ public class MovementSystemInstaller : MonoInstaller<MovementSystemInstaller>
     private void InstallAreaSystem()
     {
         Container.Bind<AreaService>().FromNew().AsSingle().NonLazy();
+    }
+
+    private void InstallEnemySystem()
+    {
+        Container.BindInterfacesAndSelfTo<EnemySpawner>().FromComponentInHierarchy().AsSingle().NonLazy();
     }
 }

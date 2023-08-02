@@ -21,6 +21,17 @@ namespace EventBus.Game.GamePlay.Area
             }
         }
 
+        public void AddCharacter(Vector2Int point, Character character)
+        {
+            _area[point] = character;
+        }
+
+        public Character GetCharacter(Vector3 point)
+        {
+            var pointInt = AreaUtils.GetVector2Int(point);
+            return _area[pointInt];
+        }
+
         public bool IsWalkable(Vector2Int point)
         {
             var result = false;
