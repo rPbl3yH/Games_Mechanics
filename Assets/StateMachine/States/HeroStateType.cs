@@ -4,6 +4,7 @@
     {
         Idle,
         Run,
-        Dead
+        Dead,
+        Shoot
     }
 }

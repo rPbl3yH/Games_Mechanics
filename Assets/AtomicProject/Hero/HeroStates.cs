@@ -12,19 +12,22 @@ namespace AtomicHomework.Hero
         [Section] public IdleState IdleState;
         [Section] public RunState RunState;
         [Section] public DeadState DeadState;
+        [Section] public ShootState ShootState;
 
         [Construct]
-        public void Construct(MoveSection moveSection, LifeSection lifeSection)
+        public void Construct(HeroCore heroCore)
         {
             StateMachine.Construct(
                 (HeroStateType.Idle, IdleState),
                 (HeroStateType.Run, RunState),
-                (HeroStateType.Dead, DeadState)
+                (HeroStateType.Dead, DeadState),
+                (HeroStateType.Shoot, ShootState)
                 );
 
-            moveSection.OnMoveStarted += () => StateMachine.SwitchState(HeroStateType.Run);
-            moveSection.OnMoveFinished += () => StateMachine.SwitchState(HeroStateType.Idle);
-            lifeSection.OnDeath += () => StateMachine.SwitchState(HeroStateType.Dead);
+            heroCore.MoveSection.OnMoveStarted += () => StateMachine.SwitchState(HeroStateType.Run);
+            heroCore.MoveSection.OnMoveFinished += () => StateMachine.SwitchState(HeroStateType.Idle);
+            heroCore.LifeSection.OnDeath += () => StateMachine.SwitchState(HeroStateType.Dead);
+            heroCore.FireSection.OnFire += () => StateMachine.SwitchState(HeroStateType.Shoot);
         }
     }
 }

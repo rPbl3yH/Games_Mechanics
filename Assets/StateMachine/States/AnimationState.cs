@@ -7,8 +7,8 @@ namespace StateMachine
     {
         Idle,
         Run,
+        Shoot,
         Dead,
-        Shoot
     } 
     
     [Serializable]
@@ -29,12 +29,12 @@ namespace StateMachine
         
         public void Enter()
         {
-            //TODO: set animation
+            _animator.SetInteger(_stateId, (int)_animationType);
         }
 
         public void Exit()
         {
-            //TODO: set animation
+            
         }
     }
 }
