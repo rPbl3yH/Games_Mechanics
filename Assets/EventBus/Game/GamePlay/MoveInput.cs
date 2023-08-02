@@ -14,22 +14,22 @@ public class MoveInput : ITickable
     public void Tick()
     {
         //Debug.Log("Tick Move Input");
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             OnDirectionChanged?.Invoke(Vector3.left);
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             OnDirectionChanged?.Invoke(Vector3.right);
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             OnDirectionChanged?.Invoke(Vector3.forward);
         }
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             OnDirectionChanged?.Invoke(Vector3.back);
         }

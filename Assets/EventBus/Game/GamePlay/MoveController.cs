@@ -7,20 +7,20 @@ namespace EventBus.Game.GamePlay
     public sealed class MoveController : IDisposable
     {
         private readonly MoveInput _moveInput;
-        private readonly PlayerMovement _playerMovement;
+        private readonly ApplyDirectionMovement _applyDirectionMovement;
 
         [Inject]
-        public MoveController(MoveInput moveInput, PlayerMovement playerMovement)
+        public MoveController(MoveInput moveInput, ApplyDirectionMovement applyDirectionMovement)
         {
             _moveInput = moveInput;
-            _playerMovement = playerMovement;
+            _applyDirectionMovement = applyDirectionMovement;
             _moveInput.OnDirectionChanged += OnDirectionChanged;
             Debug.Log("Init move controller");
         }
 
         private void OnDirectionChanged(Vector3 direction)
         {
-            _playerMovement.Move(direction);
+            _applyDirectionMovement.Move(direction);
         }
 
         public void Dispose()

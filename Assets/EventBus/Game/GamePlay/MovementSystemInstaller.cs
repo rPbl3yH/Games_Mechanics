@@ -8,7 +8,7 @@ public class MovementSystemInstaller : MonoInstaller<MovementSystemInstaller>
     {
         Container.Bind<Player>().FromComponentInHierarchy().AsSingle();
         Container.BindInterfacesAndSelfTo<MoveInput>().FromNew().AsSingle();
-        Container.Bind<PlayerMovement>().FromNew().AsSingle().NonLazy();
+        Container.Bind<ApplyDirectionMovement>().FromNew().AsSingle().NonLazy();
         Container.BindInterfacesAndSelfTo<MoveController>().FromNew().AsSingle();
     }
 }
