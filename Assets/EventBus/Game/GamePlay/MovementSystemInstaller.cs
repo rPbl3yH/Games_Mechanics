@@ -15,8 +15,7 @@ public class MovementSystemInstaller : MonoInstaller<MovementSystemInstaller>
     {
         Container.Bind<Player>().FromComponentInHierarchy().AsSingle();
         Container.BindInterfacesAndSelfTo<MoveInput>().FromNew().AsSingle();
-        Container.Bind<ApplyDirectionMovement>().FromNew().AsSingle().NonLazy();
-        Container.BindInterfacesAndSelfTo<MoveController>().FromNew().AsSingle();
+        Container.BindInterfacesAndSelfTo<ApplyDirectionMovement>().FromNew().AsSingle().NonLazy();
     }
 
     private void InstallAreaSystem()

@@ -6,11 +6,6 @@ public class MoveInput : ITickable
 {
     public Action<Vector3> OnDirectionChanged;
 
-    public MoveInput()
-    {
-        Debug.Log("Init move input");
-    }
-
     public void Tick()
     {
         //Debug.Log("Tick Move Input");
