@@ -9,7 +9,7 @@ namespace EventBus.Game.GamePlay.Area
     {
         [SerializeField] private List<Vector2Int> _spawnPoints;
         [SerializeField] private Enemy _prefab;
-        [Inject] private AreaService _areaService;
+        [Inject] private LevelMap _levelMap;
         
         public void Initialize()
         {
@@ -17,7 +17,7 @@ namespace EventBus.Game.GamePlay.Area
             {
                 var spawnPoint = new Vector3(point.x, 0f, point.y);
                 var enemy = Instantiate(_prefab, spawnPoint, Quaternion.identity);
-                _areaService.AddCharacter(point, enemy);
+                _levelMap.AddCharacter(point, enemy);
             }
         }
     }

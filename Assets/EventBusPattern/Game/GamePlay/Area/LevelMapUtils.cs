@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public sealed class AreaUtils
+public sealed class LevelMapUtils
 {
     public static Vector2Int GetVector2Int(Vector3 point)
     {
