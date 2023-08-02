@@ -1,28 +1,31 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
-public class MoveInput 
+namespace EventBus.Game.GamePlay
 {
-    private void Update()
+    public sealed class MoveController : IDisposable
     {
-        
-    }
-}
+        private readonly MoveInput _moveInput;
+        private readonly PlayerMovement _playerMovement;
 
+        [Inject]
+        public MoveController(MoveInput moveInput, PlayerMovement playerMovement)
+        {
+            _moveInput = moveInput;
+            _playerMovement = playerMovement;
+            _moveInput.OnDirectionChanged += OnDirectionChanged;
+            Debug.Log("Init move controller");
+        }
 
-public class MoveController : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+        private void OnDirectionChanged(Vector3 direction)
+        {
+            _playerMovement.Move(direction);
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void Dispose()
+        {
+            _moveInput.OnDirectionChanged -= OnDirectionChanged;
+        }
     }
 }

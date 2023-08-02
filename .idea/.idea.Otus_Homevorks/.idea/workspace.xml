@@ -13,7 +13,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/f5b293c74049457cabc28437c5a763925a00/b1/d3b7f2cb/0200001E.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c2a97e0383e8404c9fc0ae19d58f57f146a800/4b/2dedec95/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f5b293c74049457cabc28437c5a763925a00/aa/23caa4bb/ITickable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EventBus/Game/App/EventBus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/MoveController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -95,7 +97,7 @@
       <workItem from="1689133004274" duration="10588000" />
       <workItem from="1690783068935" duration="13377000" />
       <workItem from="1690869620934" duration="12576000" />
-      <workItem from="1690950956031" duration="8847000" />
+      <workItem from="1690950956031" duration="12391000" />
     </task>
     <servers />
   </component>
