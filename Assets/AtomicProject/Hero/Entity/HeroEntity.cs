@@ -1,4 +1,5 @@
 ﻿using AtomicHomework.Entities.Components;
+using AtomicProject.Entities.Components;
 using Entities;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -16,6 +17,8 @@ namespace AtomicHomework.Hero.Entity
             Add(new FireComponent(_hero.Core.FireSection.OnFire));
             Add(new TakeDamageComponent(_hero.Core.LifeSection.OnTakeDamage));
             Add(new DeathComponent(_hero.Core.LifeSection.OnDeath));
+            Add(new FindComponent(_hero.Core.FindEnemySection.OnEnemyFind));
+            Add(new TransformComponent(_hero.Transform));
         }
     }
 }

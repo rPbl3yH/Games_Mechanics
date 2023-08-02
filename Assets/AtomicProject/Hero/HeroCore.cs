@@ -1,6 +1,6 @@
 ﻿using System;
+using AtomicHomework.Atomic.Enemy.Entity;
 using Declarative;
-using UnityEngine;
 
 namespace AtomicHomework.Hero
 {
@@ -21,5 +21,8 @@ namespace AtomicHomework.Hero
 
         [Section]
         public HeroStates States;
+
+        [Section] 
+        public FindEnemySection FindEnemySection;
     }
 }

@@ -1,4 +1,5 @@
-﻿using AtomicHomework.Hero.Entity;
+﻿using AtomicHomework.Atomic.Enemy.Document;
+using AtomicHomework.Hero.Entity;
 using AtomicHomework.Input;
 using AtomicHomework.Services;
 using UnityEngine;
@@ -12,10 +13,13 @@ namespace AtomicHomework.Hero
         [SerializeField] private HeroEntity _heroEntity;
         [SerializeField] private HeroDocument _heroDocument;
         [SerializeField] private MouseInput _mouseInput;
+        [SerializeField] private EnemyFindService _enemyFindService;
+        [SerializeField] private EnemySpawner _enemySpawner;
         
         public override void InstallBindings()
         {
             InstallMonoBehaviours();
+            InstallEnemyManagement();
             InstallSimple();
         }
 
@@ -25,6 +29,13 @@ namespace AtomicHomework.Hero
             Container.Bind<HeroEntity>().FromInstance(_heroEntity).AsSingle();
             Container.Bind<HeroDocument>().FromInstance(_heroDocument).AsSingle();
             Container.Bind<MouseInput>().FromInstance(_mouseInput).AsSingle();
+        }
+
+        private void InstallEnemyManagement()
+        {
+            Container.Bind<EnemySpawner>().FromInstance(_enemySpawner).AsSingle();
+            Container.Bind<EnemyService>().FromNew().AsSingle();
+            Container.Bind<EnemyFindService>().FromInstance(_enemyFindService).AsSingle();
         }
 
         private void InstallSimple()

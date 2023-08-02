@@ -1,13 +1,18 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using AtomicHomework.Atomic.Enemy.Entity;
 using AtomicHomework.Entities.Components;
 using AtomicHomework.Hero;
+using ModestTree.Util;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace AtomicHomework.Atomic.Enemy.Document
 {
     public class EnemySpawner : MonoBehaviour
     {
+        public Action<EnemyEntity> OnSpawn;
+
         [SerializeField] private EnemyEntity _enemy;
         [SerializeField] private float _spawnTime = 2f;
         [SerializeField] private Transform[] _spawnPoints;
@@ -30,6 +35,8 @@ namespace AtomicHomework.Atomic.Enemy.Document
                 {
                     followComponent.Follow(_heroDocument.Transform);
                 }   
+                
+                OnSpawn?.Invoke(enemy);
             }
         }
 
