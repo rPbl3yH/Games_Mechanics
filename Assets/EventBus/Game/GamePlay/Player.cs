@@ -1,6 +1,7 @@
+using EventBus.Game.GamePlay.Area;
 using UnityEngine;
 
-public sealed class Player : MonoBehaviour
+public sealed class Player : Character
 {
     
 }
