@@ -5,8 +5,7 @@ using Zenject;
 
 public sealed class ApplyDirectionMovement :  IDisposable
 {
-    [Inject]
-    private Player _player;
+    private Transform _transform;
 
     [Inject] 
     private AreaService _areaService;
@@ -14,19 +13,21 @@ public sealed class ApplyDirectionMovement :  IDisposable
     private readonly MoveInput _moveInput;
 
     [Inject]
-    public ApplyDirectionMovement(MoveInput moveInput)
+    public ApplyDirectionMovement(MoveInput moveInput, Player player)
     {
         _moveInput = moveInput;
+        _transform = player.transform;
         _moveInput.OnDirectionChanged += Move;
     }
 
-    public void Move(Vector3 direction)
+    private void Move(Vector3 direction)
     {
-        var nextPoint = _player.transform.localPosition + direction;
+        var nextPoint = _transform.localPosition + direction;
             
         if (_areaService.IsWalkable(nextPoint))
         {
-            _player.transform.localPosition = nextPoint;
+            _transform.LookAt(nextPoint);
+            _transform.localPosition = nextPoint;
         }
     }
 
