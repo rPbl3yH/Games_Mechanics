@@ -1,10 +1,10 @@
 ﻿using System;
 using Atomic;
-using AtomicHomework.Atomic.Custom;
+using AtomicProject.Atomic.Custom;
 using Declarative;
 using UnityEngine;
 
-namespace AtomicHomework.Enemy.Document
+namespace AtomicProject.Enemy.Document
 {
     [Serializable]
     public class FollowSection
@@ -13,54 +13,20 @@ namespace AtomicHomework.Enemy.Document
         public AtomicVariable<float> MinDistance;
         
         public AtomicEvent<Transform> OnFollow = new();
-        public AtomicEvent<Transform> OnTargetReach = new ();
-        public AtomicEvent<Transform> OnTargetLose = new();
-
-        public FixedUpdateMechanics FixedUpdateMechanics = new();
-
-        private Transform _target;
-        private bool _isMoveRequired;
-        private bool _isCanMove;
+        public FollowMechanics FollowMechanics = new();
+        private AtomicVariable<Transform> _target = new();
+        private AtomicVariable<bool> _isMoveRequired = new ();
         
         [Construct]
         public void Construct(EnemyDocument enemyDocument)
         {
+            FollowMechanics.Construct(_isMoveRequired, enemyDocument.Transform, _target, Speed, MinDistance);
+            
             OnFollow += target =>
             {
-                _target = target;
-                _isMoveRequired = true;
+                _target.Value = target;
+                _isMoveRequired.Value = true;
             };
-            
-            FixedUpdateMechanics.OnUpdate(deltaTime =>
-            {
-                if (_isMoveRequired)
-                {
-                    enemyDocument.transform.LookAt(_target);
-                    if (_isCanMove)
-                    {
-                        enemyDocument.Transform.Translate(Vector3.forward * (Speed.Value * deltaTime));
-                    }
-
-                    var distance = Vector3.Distance(_target.position, enemyDocument.Transform.position);
-                        
-                    if (distance <= MinDistance.Value)
-                    {
-                        if (_isCanMove)
-                        {
-                            OnTargetReach?.Invoke(_target);
-                        }
-                        _isCanMove = false;
-                    }
-                    else
-                    {
-                        if (!_isCanMove)
-                        {
-                            OnTargetLose?.Invoke(_target);
-                        }
-                        _isCanMove = true;
-                    }
-                }
-            });
         }
     }
 }

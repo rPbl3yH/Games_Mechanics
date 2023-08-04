@@ -4,7 +4,7 @@ using Declarative;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace AtomicHomework.Hero
+namespace AtomicProject.Hero
 {
     [Serializable]
     public class LifeSection

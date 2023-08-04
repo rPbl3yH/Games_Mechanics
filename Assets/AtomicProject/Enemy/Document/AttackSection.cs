@@ -6,78 +6,74 @@ using Declarative;
 using Entities;
 using UnityEngine;
 
-namespace AtomicHomework.Enemy.Document
+namespace AtomicProject.Enemy.Document
 {
     [Serializable]
     public class AttackSection
     {
         public AtomicVariable<int> Damage;
         public AtomicVariable<float> TimeToAttack;
-        public Timer _cooldownTimer = new();
+        public Timer _reloadTimer = new();
 
-        public AtomicVariable<bool> IsCanAttack;
         public AtomicEvent<Transform> OnAttack = new();
         private Transform _target;
             
         [Construct]
-        public void Construct(FollowSection followSection)
+        public void Construct(DeclarativeModel model, FollowSection followSection)
         {
-            _cooldownTimer.Construct(TimeToAttack.Value);
+            _reloadTimer.Construct(TimeToAttack.Value);
 
-            ConstructCooldownTimer();
-            
             ConstructTargetReach(followSection);
-
             ConstructTargetLose(followSection);
-
             ConstructAttack();
+            ConstructCheckTarget(model);
+        }
+
+        private void ConstructCheckTarget(DeclarativeModel model)
+        {
+            model.onFixedUpdate += _ =>
+            {
+                if (_reloadTimer.IsPlaying)
+                {
+                    return;
+                }
+
+                if (_target == null)
+                {
+                    return;
+                }
+
+                OnAttack?.Invoke(_target);
+            };
         }
 
         private void ConstructAttack()
         {
             OnAttack += target =>
             {
-                if (IsCanAttack.Value)
+                if (!target.TryGetComponent(out IEntity entity))
                 {
-                    if (target.TryGetComponent(out IEntity entity))
-                    {
-                        if (entity.TryGet(out ITakeDamageComponent takeDamageComponent))
-                        {
-                            takeDamageComponent.TakeDamage(Damage.Value);
-                            IsCanAttack.Value = false;
-                            _cooldownTimer.StartTimer();
-                        }
-                    }
+                    return;
                 }
+                
+                if (!entity.TryGet(out ITakeDamageComponent takeDamageComponent))
+                {
+                    return;
+                }
+
+                takeDamageComponent.TakeDamage(Damage.Value);
+                _reloadTimer.StartTimer();
             };
         }
 
         private void ConstructTargetLose(FollowSection followSection)
         {
-            followSection.OnTargetLose += _ => { _target = null; };
+            followSection.FollowMechanics.OnTargetLose += _ => _target = null;
         }
 
         private void ConstructTargetReach(FollowSection followSection)
         {
-            followSection.OnTargetReach += target =>
-            {
-                _target = target;
-                OnAttack?.Invoke(target);
-            };
-        }
-
-        private void ConstructCooldownTimer()
-        {
-            _cooldownTimer.OnTimerFinished += () =>
-            {
-                IsCanAttack.Value = true;
-                _cooldownTimer.StopTimer();
-
-                if (_target != null)
-                {
-                    OnAttack?.Invoke(_target);
-                }
-            };
+            followSection.FollowMechanics.OnTargetReach += target => _target = target;
         }
     }
 }
