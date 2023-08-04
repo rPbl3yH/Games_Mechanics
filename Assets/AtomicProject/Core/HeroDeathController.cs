@@ -1,23 +1,31 @@
-﻿using AtomicHomework.Services;
-using UnityEngine;
+﻿using System;
+using AtomicHomework.Entities.Components;
+using AtomicHomework.Services;
 using Zenject;
 
-namespace AtomicHomework.Entities.Components
+namespace AtomicProject.Core
 {
-    public class HeroDeathController : MonoBehaviour
+    public class HeroDeathController : IInitializable, IDisposable
     {
         [Inject] private HeroService _heroService;
         [Inject] private GameFinisher _gameFinisher;
+
+        private IDeathComponent _deathComponent;
         
-        private void Start()
+        public void Initialize()
         {
-            var component = _heroService.GetHero().Get<DeathComponent>();
-            component.OnDeath += FinishGame;
+            _deathComponent = _heroService.GetHero().Get<IDeathComponent>();
+            _deathComponent.OnDeath += FinishGame;
         }
-        
+
         private void FinishGame()
         {
             _gameFinisher.FinishGame();
+        }
+
+        public void Dispose()
+        {
+            _deathComponent.OnDeath -= FinishGame;
         }
     }
 }

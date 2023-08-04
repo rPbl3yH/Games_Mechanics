@@ -1,6 +1,8 @@
-﻿using AtomicHomework.Hero.Entity;
+﻿using AtomicHomework.Entities.Components;
+using AtomicHomework.Hero.Entity;
 using AtomicHomework.Input;
 using AtomicHomework.Services;
+using AtomicProject.Core;
 using UnityEngine;
 using Zenject;
 
@@ -31,6 +33,7 @@ namespace AtomicHomework.Hero
         {
             Container.Bind<HeroService>().FromNew().AsSingle();
             Container.Bind<GameFinisher>().FromNew().AsSingle();
+            Container.BindInterfacesAndSelfTo<HeroDeathController>().FromNew().AsSingle();
         }
     }
 }

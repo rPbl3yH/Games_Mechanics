@@ -1,14 +1,21 @@
-﻿using Atomic;
+﻿using System;
+using Atomic;
 
 namespace AtomicHomework.Entities.Components
 {
-    public class DeathComponent
+    public class DeathComponent : IDeathComponent
     {
-        public AtomicEvent OnDeath;
+        public event Action OnDeath
+        {
+            add => _onDeath.AddListener(value);
+            remove => _onDeath.RemoveListener(value);
+        }
+
+        private readonly AtomicEvent _onDeath;
 
         public DeathComponent(AtomicEvent onDeath)
         {
-            OnDeath = onDeath;
+            _onDeath = onDeath;
         }
     }
 }
