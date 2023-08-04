@@ -7,7 +7,7 @@ namespace AtomicProject.Hero
     [Serializable]
     public class HeroStates
     {
-        public StateMachine.StateMachine StateMachine;
+        public StateMachine.StateMachine<HeroStateType> StateMachine;
 
         [Section] public IdleState IdleState;
         [Section] public RunState RunState;

@@ -8,20 +8,20 @@ using UnityEngine;
 namespace StateMachine
 {
     [Serializable]
-    public class StateMachine : IState, IStartListener
+    public class StateMachine<T> : IState, IStartListener
     {
-        [SerializeField] private HeroStateType _heroStateType;
+        [SerializeField] private T _heroStateType;
 
         [SerializeField] private bool _enterOnStart;
 
         [ShowInInspector, ReadOnly]
         private IState _currentState;
 
-        private List<(HeroStateType, IState)> _states = new();
+        private List<(T, IState)> _states = new();
 
-        public void Construct(params (HeroStateType, IState)[] states)
+        public void Construct(params (T, IState)[] states)
         {
-            _states = new List<(HeroStateType, IState)>(states);
+            _states = new List<(T, IState)>(states);
         }
 
         void IStartListener.Start()
@@ -44,18 +44,18 @@ namespace StateMachine
             _currentState = null;
         }
 
-        public void SwitchState(HeroStateType type)
+        public virtual void SwitchState(T type)
         {
             Exit();
             _heroStateType = type;
             Enter();
         }
 
-        private IState FindState(HeroStateType type)
+        private IState FindState(T type)
         {
             foreach (var tuple in _states)
             {
-                if (tuple.Item1 == type)
+                if (tuple.Item1.Equals(type))
                 {
                     return tuple.Item2;
                 }
