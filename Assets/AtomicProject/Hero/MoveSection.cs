@@ -16,13 +16,9 @@ namespace AtomicProject.Hero
         public AtomicEvent OnMoveStarted;
         public AtomicEvent OnMoveFinished;
 
-        private Transform _transform;
-
         [Construct]
         public void Construct(HeroDocument heroDocument)
         {
-            _transform = heroDocument.Transform;
-            
             OnMove += direction =>
             {
                 if (Direction.Value == Vector3.zero && direction != Vector3.zero)
@@ -33,11 +29,8 @@ namespace AtomicProject.Hero
                 {
                     OnMoveFinished?.Invoke();
                 }
-            };
-            
-            heroDocument.onFixedUpdate += deltaTime =>
-            {
-                _transform.Translate(Direction.Value * (Speed.Value * deltaTime));   
+                
+                Direction.Value = direction;
             };
         }
     }

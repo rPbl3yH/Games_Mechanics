@@ -28,6 +28,8 @@ namespace AtomicProject.Hero
             heroCore.MoveSection.OnMoveFinished += () => StateMachine.SwitchState(HeroStateType.Idle);
             heroCore.LifeSection.OnDeath += () => StateMachine.SwitchState(HeroStateType.Dead);
             heroCore.FireSection.OnFire += () => StateMachine.SwitchState(HeroStateType.Shoot);
+            
+            StateMachine.Enter();
         }
     }
 }

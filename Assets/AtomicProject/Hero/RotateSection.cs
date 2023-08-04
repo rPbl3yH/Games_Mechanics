@@ -29,8 +29,8 @@ namespace AtomicProject.Hero
             
             OnRotate += targetPoint =>
             {
-                TargetPoint.Value = targetPoint;
-                _isRotateRequired = true;
+                //TargetPoint.Value = targetPoint;
+                //_isRotateRequired = true;
             };
         }
     }

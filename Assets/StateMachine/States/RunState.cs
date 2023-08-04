@@ -13,10 +13,12 @@ namespace StateMachine.States
         public MoveState MoveState;
         
         [Construct]
-        public void ConstructStates(HeroVisual heroVisual, HeroCore heroCore)
+        public void ConstructStates(HeroVisual heroVisual, HeroDocument heroDocument)
         {
             AnimationState.Construct(heroVisual.Animator);
-            MoveState.Construct(heroCore.MoveSection);
+            
+            var moveSection = heroDocument.Core.MoveSection;
+            MoveState.Construct(heroDocument.Transform, moveSection.Direction, moveSection.Speed);
         }
             
         [Construct]

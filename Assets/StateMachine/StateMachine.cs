@@ -8,9 +8,10 @@ using UnityEngine;
 namespace StateMachine
 {
     [Serializable]
-    public class StateMachine<T> : IState, IStartListener
+    public class StateMachine<T> : IState
     {
-        [SerializeField] private T _heroStateType;
+        [ShowInInspector] 
+        public T CurrentStateType;
 
         [SerializeField] private bool _enterOnStart;
 
@@ -24,17 +25,9 @@ namespace StateMachine
             _states = new List<(T, IState)>(states);
         }
 
-        void IStartListener.Start()
-        {
-            if (_enterOnStart)
-            {
-                Enter();
-            }
-        }
-
         public void Enter()
         {
-            _currentState = FindState(_heroStateType);
+            _currentState = FindState(CurrentStateType);
             _currentState.Enter();
         }
 
@@ -47,7 +40,7 @@ namespace StateMachine
         public virtual void SwitchState(T type)
         {
             Exit();
-            _heroStateType = type;
+            CurrentStateType = type;
             Enter();
         }
 

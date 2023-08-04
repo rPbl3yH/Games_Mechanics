@@ -1,33 +1,43 @@
 ﻿using System;
+using AtomicProject.Atomic.Values;
 using AtomicProject.Hero;
+using Declarative;
 using UnityEngine;
 
 namespace StateMachine.States
 {
     [Serializable]
-    public class MoveState : IState
+    public class MoveState : IState, IFixedUpdateListener
     {
-        private MoveSection _moveSection;
+        private Transform _transform;
+        private IAtomicValue<Vector3> Direction;
+        private IAtomicValue<float> Speed;
 
-        public void Construct(MoveSection moveSection)
+        private bool _isEnabled;
+        
+        public void Construct(Transform transform, IAtomicValue<Vector3> direction, IAtomicValue<float> speed)
         {
-            _moveSection = moveSection;
+            _transform = transform;
+            Direction = direction;
+            Speed = speed;
         }
         
         public void Enter()
         {
-            _moveSection.OnMove += SetDirection;
+            _isEnabled = true;
         }
 
         public void Exit()
         {
-            _moveSection.OnMove -= SetDirection;
-            SetDirection(Vector3.zero);
+            _isEnabled = false;
         }
-
-        private void SetDirection(Vector3 direction)
+        
+        public void FixedUpdate(float deltaTime)
         {
-            _moveSection.Direction.Value = direction;
+            if (_isEnabled)
+            {
+                _transform.Translate(Direction.Value * (Speed.Value * deltaTime));
+            }
         }
     }
 }
