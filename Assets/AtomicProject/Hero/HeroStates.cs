@@ -1,8 +1,8 @@
 ﻿using System;
 using Declarative;
-using StateMachine;
+using StateMachine.States;
 
-namespace AtomicHomework.Hero
+namespace AtomicProject.Hero
 {
     [Serializable]
     public class HeroStates

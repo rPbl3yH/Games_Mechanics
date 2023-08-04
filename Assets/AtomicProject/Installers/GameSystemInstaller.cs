@@ -1,4 +1,5 @@
 ﻿using AtomicProject.Core;
+using AtomicProject.Enemy;
 using AtomicProject.Hero;
 using AtomicProject.Hero.Entity;
 using AtomicProject.Input;

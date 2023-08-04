@@ -1,8 +1,7 @@
 ﻿using System;
-using AtomicProject.Hero;
 using Declarative;
 
-namespace AtomicHomework.Hero
+namespace AtomicProject.Hero
 {
     [Serializable]
     public class HeroCore

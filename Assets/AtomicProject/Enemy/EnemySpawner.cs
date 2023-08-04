@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using AtomicProject.Enemy.Entity;
 using AtomicProject.Entities.Components.Follow;
 using AtomicProject.Hero;

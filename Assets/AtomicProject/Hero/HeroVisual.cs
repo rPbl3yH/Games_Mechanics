@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace AtomicHomework.Hero
+namespace AtomicProject.Hero
 {
     [Serializable]
     public class HeroVisual

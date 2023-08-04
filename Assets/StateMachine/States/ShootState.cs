@@ -1,8 +1,8 @@
 ﻿using System;
-using AtomicHomework.Hero;
+using AtomicProject.Hero;
 using Declarative;
 
-namespace StateMachine
+namespace StateMachine.States
 {
     [Serializable]
     public class ShootState : CompositeState

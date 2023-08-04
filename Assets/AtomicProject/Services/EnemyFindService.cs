@@ -1,11 +1,10 @@
-﻿using System;
-using AtomicHomework.Atomic.Enemy.Document;
-using AtomicHomework.Atomic.Enemy.Entity;
+﻿using AtomicProject.Enemy;
+using AtomicProject.Enemy.Entity;
 using AtomicProject.Entities.Components;
 using UnityEngine;
 using Zenject;
 
-namespace AtomicHomework.Services
+namespace AtomicProject.Services
 {
     public class EnemyFindService : MonoBehaviour
     {

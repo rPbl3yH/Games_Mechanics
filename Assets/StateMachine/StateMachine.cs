@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Declarative;
 using Sirenix.OdinInspector;
+using StateMachine.States;
 using UnityEngine;
 
 namespace StateMachine

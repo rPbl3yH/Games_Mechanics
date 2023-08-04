@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using AtomicHomework.Atomic.Enemy.Entity;
+using AtomicProject.Enemy.Entity;
 using Entities;
 using Zenject;
 
-namespace AtomicHomework.Atomic.Enemy.Document
+namespace AtomicProject.Enemy
 {
     public class EnemyService
     {

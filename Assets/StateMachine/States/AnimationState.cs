@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace StateMachine
+namespace StateMachine.States
 {
     public enum AnimationType
     {

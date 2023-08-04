@@ -1,4 +1,4 @@
-﻿namespace StateMachine
+﻿namespace StateMachine.States
 {
     public enum HeroStateType
     {

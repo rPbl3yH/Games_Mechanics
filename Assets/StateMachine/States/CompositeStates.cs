@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace StateMachine
+namespace StateMachine.States
 {
     public class CompositeState : IState
     {

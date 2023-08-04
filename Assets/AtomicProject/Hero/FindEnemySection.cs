@@ -1,10 +1,11 @@
 ﻿using System;
-using Atomic;
+using AtomicProject.Atomic.Actions;
+using AtomicProject.Atomic.Values;
 using AtomicProject.Entities.Components;
 using Declarative;
 using Entities;
 
-namespace AtomicHomework.Hero
+namespace AtomicProject.Hero
 {
     [Serializable]
     public class FindEnemySection

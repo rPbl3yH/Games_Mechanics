@@ -1,9 +1,8 @@
 ﻿using System;
-using AtomicHomework.Hero;
+using AtomicProject.Hero;
 using Declarative;
-using UnityEngine;
 
-namespace StateMachine
+namespace StateMachine.States
 {
     [Serializable]
     public class IdleState : CompositeState

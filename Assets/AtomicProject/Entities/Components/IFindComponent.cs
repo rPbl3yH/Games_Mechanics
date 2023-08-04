@@ -1,5 +1,4 @@
-﻿using Atomic;
-using AtomicHomework.Atomic.Enemy.Entity;
+﻿using AtomicProject.Atomic.Actions;
 using Entities;
 
 namespace AtomicProject.Entities.Components

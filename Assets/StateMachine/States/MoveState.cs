@@ -1,8 +1,8 @@
 ﻿using System;
-using AtomicHomework.Hero;
+using AtomicProject.Hero;
 using UnityEngine;
 
-namespace StateMachine
+namespace StateMachine.States
 {
     [Serializable]
     public class MoveState : IState
