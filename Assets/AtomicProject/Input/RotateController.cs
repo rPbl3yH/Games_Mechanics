@@ -1,11 +1,9 @@
-﻿using AtomicHomework.Entities.Components;
-using AtomicHomework.Hero.Entity;
-using AtomicHomework.Services;
-using Entities;
+﻿using AtomicProject.Entities.Components.Rotate;
+using AtomicProject.Services;
 using UnityEngine;
 using Zenject;
 
-namespace AtomicHomework.Input
+namespace AtomicProject.Input
 {
     public class RotateController : MonoBehaviour
     {

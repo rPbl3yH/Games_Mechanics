@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace AtomicHomework.Entities.Components
+namespace AtomicProject.Entities.Components.Move
 {
     public interface IMoveComponent
     {

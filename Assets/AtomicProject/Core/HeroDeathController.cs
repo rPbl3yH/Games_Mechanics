@@ -1,6 +1,6 @@
 ﻿using System;
-using AtomicHomework.Entities.Components;
-using AtomicHomework.Services;
+using AtomicProject.Entities.Components.Death;
+using AtomicProject.Services;
 using Zenject;
 
 namespace AtomicProject.Core

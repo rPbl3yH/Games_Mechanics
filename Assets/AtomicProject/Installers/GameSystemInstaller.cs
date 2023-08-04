@@ -1,12 +1,12 @@
-﻿using AtomicHomework.Entities.Components;
-using AtomicHomework.Hero.Entity;
-using AtomicHomework.Input;
-using AtomicHomework.Services;
-using AtomicProject.Core;
+﻿using AtomicProject.Core;
+using AtomicProject.Hero;
+using AtomicProject.Hero.Entity;
+using AtomicProject.Input;
+using AtomicProject.Services;
 using UnityEngine;
 using Zenject;
 
-namespace AtomicHomework.Hero
+namespace AtomicProject.Installers
 {
     public class GameSystemInstaller : MonoInstaller<GameSystemInstaller>
     {

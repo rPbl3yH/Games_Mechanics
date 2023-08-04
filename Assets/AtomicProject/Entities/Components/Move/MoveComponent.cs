@@ -1,7 +1,7 @@
-﻿using Atomic;
+﻿using AtomicProject.Atomic.Actions;
 using UnityEngine;
 
-namespace AtomicHomework.Entities.Components
+namespace AtomicProject.Entities.Components.Move
 {
     public class MoveComponent : IMoveComponent
     {

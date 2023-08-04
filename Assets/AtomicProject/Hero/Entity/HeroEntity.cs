@@ -1,9 +1,12 @@
-﻿using AtomicHomework.Entities.Components;
+﻿using AtomicProject.Entities.Components.Damage;
+using AtomicProject.Entities.Components.Death;
+using AtomicProject.Entities.Components.Fire;
+using AtomicProject.Entities.Components.Move;
+using AtomicProject.Entities.Components.Rotate;
 using Entities;
-using Unity.VisualScripting;
 using UnityEngine;
 
-namespace AtomicHomework.Hero.Entity
+namespace AtomicProject.Hero.Entity
 {
     public class HeroEntity : MonoEntityBase
     {

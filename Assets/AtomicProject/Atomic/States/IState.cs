@@ -1,4 +1,4 @@
-namespace Atomic
+namespace AtomicProject.Atomic.States
 {
     public interface IState
     {

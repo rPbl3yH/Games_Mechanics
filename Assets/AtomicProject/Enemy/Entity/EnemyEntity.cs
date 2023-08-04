@@ -1,9 +1,10 @@
-﻿using AtomicHomework.Entities.Components;
-using AtomicProject.Enemy.Document;
+﻿using AtomicProject.Enemy.Document;
+using AtomicProject.Entities.Components.Damage;
+using AtomicProject.Entities.Components.Follow;
 using Entities;
 using UnityEngine;
 
-namespace AtomicHomework.Atomic.Enemy.Entity
+namespace AtomicProject.Enemy.Entity
 {
     public class EnemyEntity : MonoEntityBase
     {

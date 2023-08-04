@@ -1,9 +1,10 @@
 ﻿using System;
-using Atomic;
+using AtomicProject.Atomic.Actions;
+using AtomicProject.Atomic.Values;
 using Declarative;
 using UnityEngine;
 
-namespace AtomicHomework.Hero
+namespace AtomicProject.Hero
 {
     [Serializable]
     public class MoveSection

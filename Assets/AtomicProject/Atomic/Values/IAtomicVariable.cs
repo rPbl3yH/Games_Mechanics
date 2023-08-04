@@ -1,6 +1,6 @@
 using System;
 
-namespace Atomic
+namespace AtomicProject.Atomic.Values
 {
     public interface IAtomicVariable<T> : IAtomicValue<T>
     {

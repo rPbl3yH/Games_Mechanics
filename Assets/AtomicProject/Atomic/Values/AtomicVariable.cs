@@ -3,7 +3,7 @@ using Declarative;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Atomic
+namespace AtomicProject.Atomic.Values
 {
     [Serializable]
     public class AtomicVariable<T> : IAtomicVariable<T>, IDisposable

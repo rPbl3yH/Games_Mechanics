@@ -1,10 +1,10 @@
-﻿using Atomic;
-using AtomicHomework.Bullet.Mechanics;
-using AtomicHomework.Entities.Components;
+﻿using AtomicProject.Atomic.Values;
+using AtomicProject.Bullet.Mechanics;
+using AtomicProject.Entities.Components.Damage;
 using Declarative;
 using UnityEngine;
 
-namespace AtomicHomework.Bullet.Document
+namespace AtomicProject.Bullet.Document
 {
     public class BulletDocument : DeclarativeModel
     {

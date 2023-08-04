@@ -1,7 +1,7 @@
 using System;
 using Sirenix.OdinInspector;
 
-namespace Atomic
+namespace AtomicProject.Atomic.Values
 {
     public sealed class AtomicValue<T> : IAtomicValue<T>
     {

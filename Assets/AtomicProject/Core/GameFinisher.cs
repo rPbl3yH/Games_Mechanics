@@ -1,12 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class GameFinisher 
+namespace AtomicProject.Core
 {
-    public void FinishGame()
+    public class GameFinisher 
     {
-        Time.timeScale = 0f;
-        Debug.Log("Finish game");
+        public void FinishGame()
+        {
+            Time.timeScale = 0f;
+            Debug.Log("Finish game");
+        }
     }
 }

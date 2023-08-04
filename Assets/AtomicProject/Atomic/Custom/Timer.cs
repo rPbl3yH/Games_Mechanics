@@ -1,8 +1,7 @@
 ﻿using System;
 using Declarative;
-using UnityEngine;
 
-namespace AtomicHomework.Atomic.Custom
+namespace AtomicProject.Atomic.Custom
 {
     public class Timer : IUpdateListener
     {

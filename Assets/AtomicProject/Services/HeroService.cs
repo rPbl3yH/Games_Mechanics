@@ -1,8 +1,8 @@
-﻿using AtomicHomework.Hero.Entity;
+﻿using AtomicProject.Hero.Entity;
 using Entities;
 using Zenject;
 
-namespace AtomicHomework.Services
+namespace AtomicProject.Services
 {
     public class HeroService
     {

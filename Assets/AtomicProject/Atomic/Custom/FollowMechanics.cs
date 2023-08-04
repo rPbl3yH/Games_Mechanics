@@ -1,4 +1,5 @@
-﻿using Atomic;
+﻿using AtomicProject.Atomic.Actions;
+using AtomicProject.Atomic.Values;
 using Declarative;
 using UnityEngine;
 

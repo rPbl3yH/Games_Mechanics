@@ -1,4 +1,4 @@
-namespace Atomic
+namespace AtomicProject.Atomic.Actions
 {
     public interface IAtomicAction
     {

@@ -2,7 +2,7 @@
 using Entities;
 using UnityEngine;
 
-namespace AtomicHomework.Bullet.Mechanics
+namespace AtomicProject.Bullet.Mechanics
 {
     public class CollideDetectionMechanic : MonoBehaviour
     {

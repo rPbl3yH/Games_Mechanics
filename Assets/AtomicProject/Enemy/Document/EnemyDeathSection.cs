@@ -1,5 +1,4 @@
 ﻿using System;
-using AtomicHomework.Hero;
 using AtomicProject.Hero;
 using Declarative;
 using UnityEngine;

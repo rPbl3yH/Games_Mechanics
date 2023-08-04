@@ -1,7 +1,7 @@
 ﻿using System;
 using Declarative;
 
-namespace AtomicHomework.Atomic.Custom
+namespace AtomicProject.Atomic.Custom
 {
     public class FixedUpdateMechanics : IFixedUpdateListener
     {
