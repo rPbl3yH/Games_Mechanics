@@ -9,7 +9,7 @@ namespace AtomicProject.Enemy
     {
         private EnemySpawner _enemySpawner;
 
-        private List<IEntity> _enemies = new();
+        private List<MonoEntity> _enemies = new();
         
         [Inject] 
         public EnemyService(EnemySpawner enemySpawner)
@@ -23,7 +23,7 @@ namespace AtomicProject.Enemy
             _enemies.Add(enemy);
         }
 
-        public List<IEntity> GetEnemies()
+        public List<MonoEntity> GetEnemies()
         {
             for (int i = _enemies.Count - 1; i >= 0; i--)
             {
