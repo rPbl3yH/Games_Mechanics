@@ -633,50 +633,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42d7a4f16a8bc7a4ba5689919011b649, type: 3}
---- !u!1 &546306299
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 546306300}
-  - component: {fileID: 546306301}
-  m_Layer: 0
-  m_Name: DeathController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &546306300
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 546306299}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 787372354}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &546306301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 546306299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4a2765270ec40beac7fa746a94adab0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &752608853
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,7 +807,6 @@ Transform:
   - {fileID: 66476987}
   - {fileID: 1530561475}
   - {fileID: 752608854}
-  - {fileID: 546306300}
   - {fileID: 1804559409}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -1044,24 +999,21 @@ MonoBehaviour:
       Direction:
         value: {x: 0, y: 0, z: 0}
     RotateSection:
-      RotationSpeed:
-        value: 10
       TargetPoint:
         value: {x: 0, y: 0, z: 0}
     FireSection:
       BulletPrefab: {fileID: 7655893833624640705, guid: d078c2cfc13e9c14e9feb547291d54c2,
         type: 3}
       SpawnPoint: {fileID: 814271095}
-      Delay:
-        value: 2
       BulletCount:
         value: 0
-      Cooldown:
-        value: 1
-      IsCooldown:
+      ReloadTime:
         value: 0
-      IsCanAttack:
-        value: 0
+      RefillSection:
+        BulletRefillDelay:
+          value: 0
+        MaxCount:
+          value: 0
     States:
       StateMachine:
         _heroStateType: 0
@@ -1082,6 +1034,9 @@ MonoBehaviour:
         AnimationState:
           _animationType: 3
           _stateName: State
+    FindEnemySection:
+      IsFind:
+        value: 0
   Visual:
     Animator: {fileID: 1782754807}
 --- !u!4 &952267567
@@ -1554,7 +1509,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 787372354}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1804559410
 MonoBehaviour:

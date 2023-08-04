@@ -1,5 +1,5 @@
 ﻿using System;
-using AtomicHomework.Atomic.Enemy.Entity;
+using AtomicProject.Hero;
 using Declarative;
 
 namespace AtomicHomework.Hero
