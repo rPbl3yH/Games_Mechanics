@@ -16,9 +16,6 @@ namespace AtomicHomework.Hero
         public AtomicEvent OnFire = new();
         
         public AtomicVariable<float> ReloadTime;
-        public AtomicVariable<bool> IsReload;
-
-        public AtomicVariable<bool> IsCanAttack;
         public Timer _reloadTimer = new();
 
         [Section]
@@ -28,38 +25,14 @@ namespace AtomicHomework.Hero
         public void Construct()
         {
             _reloadTimer.Construct(ReloadTime.Value);
-            
             ConstructFire();
-
-            ConstructCooldownState();
-            
-            ConstructCooldownTimer();
         }
-
-        private void ConstructCooldownTimer()
-        {
-            _reloadTimer.OnTimerFinished += () =>
-            {
-                IsReload.Value = false;
-            };
-        }
-
-        private void ConstructCooldownState()
-        {
-            IsReload.OnChanged += isCooldown =>
-            {
-                if (!isCooldown)
-                {
-                    IsCanAttack.Value = BulletCount.Value > 0;
-                }
-            };
-        }
-
+        
         private void ConstructFire()
         {
             OnFire += () =>
             {
-                if (IsReload.Value)
+                if (_reloadTimer.IsEnabled)
                 {
                     return;
                 }

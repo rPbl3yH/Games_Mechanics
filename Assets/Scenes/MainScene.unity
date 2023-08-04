@@ -932,11 +932,7 @@ MonoBehaviour:
     BulletCount:
       value: 0
     ReloadTime:
-      value: 0
-    IsReload:
-      value: 0
-    IsCanAttack:
-      value: 0
+      value: 1
     RefillSection:
       BulletRefillDelay:
         value: 1

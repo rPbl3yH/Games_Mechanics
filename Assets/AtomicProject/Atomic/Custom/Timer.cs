@@ -10,11 +10,11 @@ namespace AtomicHomework.Atomic.Custom
         
         private float _timer;
         private float _targetTime;
-        private bool _isEnabled;
+        public bool IsEnabled;
         
         public void Update(float deltaTime)
         {
-            if (!_isEnabled)
+            if (!IsEnabled)
             {
                 return;
             }
@@ -35,13 +35,13 @@ namespace AtomicHomework.Atomic.Custom
 
         public void StartTimer()
         {
-            _isEnabled = true;
+            IsEnabled = true;
         }
 
         private void StopTimer()
         {
             _timer = 0;
-            _isEnabled = false;
+            IsEnabled = false;
         }
     }
 }
