@@ -6,7 +6,7 @@ using Declarative;
 using Entities;
 using UnityEngine;
 
-namespace AtomicHomework.Enemy.Document
+namespace AtomicProject.Enemy.Document
 {
     [Serializable]
     public class AttackSection
@@ -54,12 +54,12 @@ namespace AtomicHomework.Enemy.Document
 
         private void ConstructTargetLose(FollowSection followSection)
         {
-            followSection.OnTargetLose += _ => { _target = null; };
+            followSection.FollowMechanics.OnTargetLose += _ => { _target = null; };
         }
 
         private void ConstructTargetReach(FollowSection followSection)
         {
-            followSection.OnTargetReach += target =>
+            followSection.FollowMechanics.OnTargetReach += target =>
             {
                 _target = target;
                 OnAttack?.Invoke(target);

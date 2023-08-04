@@ -1,5 +1,5 @@
-﻿using AtomicHomework.Enemy.Document;
-using AtomicHomework.Entities.Components;
+﻿using AtomicHomework.Entities.Components;
+using AtomicProject.Enemy.Document;
 using Entities;
 using UnityEngine;
 

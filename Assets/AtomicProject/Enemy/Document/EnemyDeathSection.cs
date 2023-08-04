@@ -1,10 +1,10 @@
 ﻿using System;
-using AtomicHomework.Enemy.Document;
 using AtomicHomework.Hero;
+using AtomicProject.Hero;
 using Declarative;
 using UnityEngine;
 
-namespace AtomicHomework.Atomic.Enemy.Document
+namespace AtomicProject.Enemy.Document
 {
     [Serializable]
     public class EnemyDeathSection

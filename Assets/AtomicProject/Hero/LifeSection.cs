@@ -3,9 +3,8 @@ using Atomic;
 using Declarative;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using Zenject;
 
-namespace AtomicHomework.Hero
+namespace AtomicProject.Hero
 {
     [Serializable]
     public class LifeSection
