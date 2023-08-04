@@ -923,24 +923,25 @@ MonoBehaviour:
     Speed:
       value: 4
   RotateSection:
-    RotationSpeed:
-      value: 10
     TargetPoint:
       value: {x: 0, y: 0, z: 0}
   FireSection:
     BulletPrefab: {fileID: 7655893833624640705, guid: d078c2cfc13e9c14e9feb547291d54c2,
       type: 3}
     SpawnPoint: {fileID: 814271095}
-    Delay:
-      value: 1
     BulletCount:
       value: 0
-    Cooldown:
-      value: 2
-    IsCooldown:
+    ReloadTime:
+      value: 0
+    IsReload:
       value: 0
     IsCanAttack:
       value: 0
+    RefillSection:
+      BulletRefillDelay:
+        value: 1
+      MaxCount:
+        value: 5
 --- !u!4 &952267567
 Transform:
   m_ObjectHideFlags: 0

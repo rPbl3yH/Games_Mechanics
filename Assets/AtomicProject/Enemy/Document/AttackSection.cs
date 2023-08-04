@@ -71,7 +71,6 @@ namespace AtomicHomework.Enemy.Document
             _cooldownTimer.OnTimerFinished += () =>
             {
                 IsCanAttack.Value = true;
-                _cooldownTimer.StopTimer();
 
                 if (_target != null)
                 {

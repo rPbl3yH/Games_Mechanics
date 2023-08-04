@@ -23,7 +23,7 @@ namespace AtomicHomework.Atomic.Custom
             
             if (_timer >= _targetTime)
             {
-                _timer = 0;
+                StopTimer();
                 OnTimerFinished?.Invoke();
             }
         }
@@ -38,12 +38,10 @@ namespace AtomicHomework.Atomic.Custom
             _isEnabled = true;
         }
 
-        public void StopTimer()
+        private void StopTimer()
         {
             _timer = 0;
             _isEnabled = false;
         }
-
-
     }
 }

@@ -11,31 +11,25 @@ namespace AtomicHomework.Hero
     {
         public GameObject BulletPrefab;
         public Transform SpawnPoint;
-        public AtomicVariable<int> Delay;
 
         public AtomicVariable<int> BulletCount;
         public AtomicEvent OnFire = new();
         
-        public AtomicVariable<float> Cooldown;
-        public AtomicVariable<bool> IsCooldown;
+        public AtomicVariable<float> ReloadTime;
+        public AtomicVariable<bool> IsReload;
 
         public AtomicVariable<bool> IsCanAttack;
-        public Timer _bulletRefillTimer = new();
-        public Timer _cooldownTimer = new();
+        public Timer _reloadTimer = new();
+
+        [Section]
+        public RefillSection RefillSection;
         
         [Construct]
         public void Construct()
         {
-            _bulletRefillTimer.Construct(Delay.Value);
-            _cooldownTimer.Construct(Cooldown.Value);
-            
-            _bulletRefillTimer.StartTimer();
+            _reloadTimer.Construct(ReloadTime.Value);
             
             ConstructFire();
-
-            ConstructBulletRefillTimer();
-
-            ConstructBulletCount();
 
             ConstructCooldownState();
             
@@ -44,16 +38,15 @@ namespace AtomicHomework.Hero
 
         private void ConstructCooldownTimer()
         {
-            _cooldownTimer.OnTimerFinished += () =>
+            _reloadTimer.OnTimerFinished += () =>
             {
-                IsCooldown.Value = false;
-                _cooldownTimer.StopTimer();
+                IsReload.Value = false;
             };
         }
 
         private void ConstructCooldownState()
         {
-            IsCooldown.OnChanged += isCooldown =>
+            IsReload.OnChanged += isCooldown =>
             {
                 if (!isCooldown)
                 {
@@ -62,50 +55,23 @@ namespace AtomicHomework.Hero
             };
         }
 
-        private void ConstructBulletCount()
-        {
-            BulletCount.OnChanged += count =>
-            {
-                if (count > 0)
-                {
-                    IsCanAttack.Value = !IsCooldown.Value;
-                }
-                else
-                {
-                    IsCanAttack.Value = false;
-                }
-            };
-        }
-
-        private void ConstructBulletRefillTimer()
-        {
-            _bulletRefillTimer.OnTimerFinished += () =>
-            {
-                BulletCount.Value++;
-
-                if (BulletCount.Value == 5)
-                {
-                    _bulletRefillTimer.StopTimer();
-                }
-            };
-        }
-
         private void ConstructFire()
         {
             OnFire += () =>
             {
-                if (IsCanAttack.Value)
+                if (IsReload.Value)
                 {
-                    GameObject.Instantiate(BulletPrefab, SpawnPoint.position, SpawnPoint.rotation);
-                    BulletCount.Value--;
-                    _bulletRefillTimer.StartTimer();
+                    return;
                 }
 
-                if (!IsCooldown.Value)
+                if (BulletCount.Value <= 0)
                 {
-                    IsCooldown.Value = true;
-                    _cooldownTimer.StartTimer();
+                    return;
                 }
+                
+                GameObject.Instantiate(BulletPrefab, SpawnPoint.position, SpawnPoint.rotation);
+                BulletCount.Value--;
+                _reloadTimer.StartTimer();
             };
         }
     }
