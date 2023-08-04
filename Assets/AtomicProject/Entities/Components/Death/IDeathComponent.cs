@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AtomicHomework.Entities.Components
+namespace AtomicProject.Entities.Components.Death
 {
     public interface IDeathComponent
     {

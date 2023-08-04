@@ -1,8 +1,9 @@
 using System;
+using AtomicProject.Atomic.Values;
 using Declarative;
 using Sirenix.OdinInspector;
 
-namespace Atomic
+namespace AtomicProject.Atomic.Process
 {
     [Serializable]
     public sealed class AtomicProcess : IAtomicProcess, IDisposable

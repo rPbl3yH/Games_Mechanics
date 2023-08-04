@@ -5,7 +5,7 @@ using Declarative;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Atomic
+namespace AtomicProject.Atomic.States.FSM
 {
     [Serializable]
     public class StateMachine<TKey> : State, IStateMachine<TKey>, IDisposable

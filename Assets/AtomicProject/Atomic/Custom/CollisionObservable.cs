@@ -2,7 +2,7 @@ using System;
 using Declarative;
 using UnityEngine;
 
-namespace Atomic
+namespace AtomicProject.Atomic.Custom
 {
     public sealed class CollisionObservable : MonoBehaviour, IDisposable
     {

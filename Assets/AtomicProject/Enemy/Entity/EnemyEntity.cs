@@ -4,7 +4,7 @@ using AtomicProject.Entities.Components;
 using Entities;
 using UnityEngine;
 
-namespace AtomicHomework.Atomic.Enemy.Entity
+namespace AtomicProject.Enemy.Entity
 {
     public class EnemyEntity : MonoEntityBase
     {

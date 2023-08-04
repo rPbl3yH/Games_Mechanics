@@ -1,10 +1,11 @@
 ﻿using System;
-using Atomic;
-using AtomicHomework.Atomic.Custom;
+using AtomicProject.Atomic.Actions;
+using AtomicProject.Atomic.Custom;
+using AtomicProject.Atomic.Values;
 using Declarative;
 using UnityEngine;
 
-namespace AtomicHomework.Hero
+namespace AtomicProject.Hero
 {
     [Serializable]
     public class FireSection

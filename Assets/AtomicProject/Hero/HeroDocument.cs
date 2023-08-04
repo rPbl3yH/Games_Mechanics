@@ -1,8 +1,7 @@
-using AtomicProject.Hero;
 using Declarative;
 using UnityEngine;
 
-namespace AtomicHomework.Hero
+namespace AtomicProject.Hero
 {
     public class HeroDocument : DeclarativeModel
     {

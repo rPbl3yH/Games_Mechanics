@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace AtomicHomework.Hero
+namespace AtomicProject.Camera
 {
     public class CameraController : MonoBehaviour
     {

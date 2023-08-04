@@ -1,7 +1,8 @@
 ﻿using System;
-using Atomic;
-using AtomicHomework.Atomic.Custom;
-using AtomicHomework.Entities.Components;
+using AtomicProject.Atomic.Actions;
+using AtomicProject.Atomic.Custom;
+using AtomicProject.Atomic.Values;
+using AtomicProject.Entities.Components.Damage;
 using Declarative;
 using Entities;
 using UnityEngine;
@@ -19,14 +20,14 @@ namespace AtomicProject.Enemy.Document
         private Transform _target;
             
         [Construct]
-        public void Construct(DeclarativeModel model, FollowSection followSection)
+        public void Construct(EnemyDocument enemyDocument, FollowSection followSection)
         {
             _reloadTimer.Construct(TimeToAttack.Value);
 
             ConstructTargetReach(followSection);
             ConstructTargetLose(followSection);
             ConstructAttack();
-            ConstructCheckTarget(model);
+            ConstructCheckTarget(enemyDocument);
         }
 
         private void ConstructCheckTarget(DeclarativeModel model)

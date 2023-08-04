@@ -1,10 +1,8 @@
-﻿using AtomicHomework.Entities.Components;
 using AtomicProject.Entities.Components;
 using Entities;
-using Unity.VisualScripting;
 using UnityEngine;
 
-namespace AtomicHomework.Hero.Entity
+namespace AtomicProject.Hero.Entity
 {
     public class HeroEntity : MonoEntityBase
     {

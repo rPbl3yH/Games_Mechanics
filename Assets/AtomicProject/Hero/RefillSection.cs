@@ -1,9 +1,9 @@
 ﻿using System;
-using Atomic;
-using AtomicHomework.Atomic.Custom;
+using AtomicProject.Atomic.Custom;
+using AtomicProject.Atomic.Values;
 using Declarative;
 
-namespace AtomicHomework.Hero
+namespace AtomicProject.Hero
 {
     [Serializable]
     public class RefillSection

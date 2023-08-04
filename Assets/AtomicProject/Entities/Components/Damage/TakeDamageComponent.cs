@@ -1,6 +1,6 @@
-﻿using Atomic;
+﻿using AtomicProject.Atomic.Actions;
 
-namespace AtomicHomework.Entities.Components
+namespace AtomicProject.Entities.Components.Damage
 {
     class TakeDamageComponent : ITakeDamageComponent
     {

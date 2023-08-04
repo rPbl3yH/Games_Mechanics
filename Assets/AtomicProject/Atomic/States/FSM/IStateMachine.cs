@@ -1,6 +1,6 @@
 using System;
 
-namespace Atomic
+namespace AtomicProject.Atomic.States.FSM
 {
     public interface IStateMachine<TKey> : IState
     {

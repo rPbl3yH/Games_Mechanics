@@ -1,9 +1,9 @@
-﻿using AtomicHomework.Entities.Components;
-using AtomicHomework.Services;
+﻿using AtomicProject.Entities.Components.Fire;
+using AtomicProject.Services;
 using UnityEngine;
 using Zenject;
 
-namespace AtomicHomework.Input
+namespace AtomicProject.Input
 {
     public class FireInputController : MonoBehaviour
     {

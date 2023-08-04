@@ -1,4 +1,4 @@
-﻿namespace AtomicHomework.Entities.Components
+﻿namespace AtomicProject.Entities.Components.Damage
 {
     public interface ITakeBulletDamageComponent
     {

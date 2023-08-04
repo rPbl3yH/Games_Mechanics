@@ -1,7 +1,6 @@
-﻿using System;
-using Atomic;
+﻿using AtomicProject.Atomic.Actions;
 
-namespace AtomicHomework.Entities.Components
+namespace AtomicProject.Entities.Components.Fire
 {
     public class FireComponent : IFireComponent
     {

@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections;
-using AtomicHomework.Atomic.Enemy.Entity;
-using AtomicHomework.Entities.Components;
-using AtomicHomework.Hero;
-using ModestTree.Util;
+﻿using System.Collections;
+using AtomicProject.Enemy.Entity;
+using AtomicProject.Entities.Components.Follow;
+using AtomicProject.Hero;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace AtomicHomework.Atomic.Enemy.Document
+namespace AtomicProject.Enemy
 {
     public class EnemySpawner : MonoBehaviour
     {
