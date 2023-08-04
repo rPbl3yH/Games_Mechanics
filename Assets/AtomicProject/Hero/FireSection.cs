@@ -32,7 +32,7 @@ namespace AtomicHomework.Hero
         {
             OnFire += () =>
             {
-                if (_reloadTimer.IsEnabled)
+                if (_reloadTimer.IsPlaying)
                 {
                     return;
                 }

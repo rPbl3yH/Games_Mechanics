@@ -19,21 +19,21 @@ namespace AtomicProject.Enemy.Document
         private Transform _target;
             
         [Construct]
-        public void Construct(EnemyDocument enemyDocument, FollowSection followSection)
+        public void Construct(DeclarativeModel model, FollowSection followSection)
         {
             _reloadTimer.Construct(TimeToAttack.Value);
 
             ConstructTargetReach(followSection);
             ConstructTargetLose(followSection);
             ConstructAttack();
-            ConstructCheckTarget(enemyDocument);
+            ConstructCheckTarget(model);
         }
 
-        private void ConstructCheckTarget(EnemyDocument enemyDocument)
+        private void ConstructCheckTarget(DeclarativeModel model)
         {
-            enemyDocument.onFixedUpdate += _ =>
+            model.onFixedUpdate += _ =>
             {
-                if (_reloadTimer.IsEnabled)
+                if (_reloadTimer.IsPlaying)
                 {
                     return;
                 }
