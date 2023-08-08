@@ -32,7 +32,7 @@ namespace EventBusPattern.Game.GamePlay
     
         private void OnApplyDirection(ApplyMoveDirectionEvent evt)
         {
-            var nextPoint = evt.Character.transform.localPosition + evt.Direction;
+            var nextPoint = evt.LifeEntity.transform.localPosition + evt.Direction;
             
             if (_levelMap.IsWalkable(nextPoint))
             {

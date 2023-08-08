@@ -1,6 +1,6 @@
 namespace EventBusPattern.Game.GamePlay
 {
-    public sealed class Player : Character
+    public sealed class Player : LifeEntity
     {
     
     }

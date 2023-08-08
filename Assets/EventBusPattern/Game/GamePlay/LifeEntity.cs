@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace EventBusPattern.Game.GamePlay
 {
-    public abstract class Character : MonoBehaviour
+    public abstract class LifeEntity : MonoBehaviour
     {
         private int _life = 3;
         private int _damage = 1;
@@ -19,8 +19,13 @@ namespace EventBusPattern.Game.GamePlay
             
             if (_life <= 0)
             {
-                Destroy(gameObject);
+                Death();
             }
+        }
+
+        public virtual void Death()
+        {
+            Destroy(gameObject);
         }
     }
 }

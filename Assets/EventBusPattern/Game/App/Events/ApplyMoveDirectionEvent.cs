@@ -5,12 +5,12 @@ namespace EventBusPattern.Game.App.Events
 {
     public struct ApplyMoveDirectionEvent
     {
-        public Character Character;
+        public LifeEntity LifeEntity;
         public Vector3 Direction;
 
-        public ApplyMoveDirectionEvent(Character character, Vector3 direction)
+        public ApplyMoveDirectionEvent(LifeEntity lifeEntity, Vector3 direction)
         {
-            Character = character;
+            LifeEntity = lifeEntity;
             Direction = direction;
         }
     }

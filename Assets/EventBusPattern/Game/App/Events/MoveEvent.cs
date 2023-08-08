@@ -5,12 +5,12 @@ namespace EventBusPattern.Game.App.Events
 {
     public struct MoveEvent
     {
-        public readonly Character Character;
+        public readonly LifeEntity LifeEntity;
         public Vector3 TargetPoint;
 
-        public MoveEvent(Character character, Vector3 targetPoint)
+        public MoveEvent(LifeEntity lifeEntity, Vector3 targetPoint)
         {
-            Character = character;
+            LifeEntity = lifeEntity;
             TargetPoint = targetPoint;
         }
     }

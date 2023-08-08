@@ -10,7 +10,7 @@ namespace EventBusPattern.Game.GamePlay
     
         private void Move(MoveEvent moveEvent)
         {
-            var transform = moveEvent.Character.transform;
+            var transform = moveEvent.LifeEntity.transform;
             transform.LookAt(moveEvent.TargetPoint);
             transform.localPosition = moveEvent.TargetPoint;
         }

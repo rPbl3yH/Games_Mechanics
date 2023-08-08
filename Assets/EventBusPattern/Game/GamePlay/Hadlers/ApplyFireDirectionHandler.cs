@@ -31,7 +31,7 @@ namespace EventBusPattern.Game.GamePlay
     
         private void OnApplyDirection(ApplyFireDirectionEvent evt)
         {
-            var nextPoint = evt.Character.transform.position + evt.Direction;
+            var nextPoint = evt.LifeEntity.transform.position + evt.Direction;
             var hasCharacter = false;
 
             for (int i = 0; i < LevelMap.Size; i++)

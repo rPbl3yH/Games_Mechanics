@@ -17,7 +17,7 @@ namespace EventBus.Game.GamePlay.Area
             {
                 var spawnPoint = new Vector3(point.x, 0f, point.y);
                 var enemy = Instantiate(_prefab, spawnPoint, Quaternion.identity);
-                _levelMap.AddCharacter(point, enemy);
+                _levelMap.AddEntity(point, enemy);
             }
         }
     }

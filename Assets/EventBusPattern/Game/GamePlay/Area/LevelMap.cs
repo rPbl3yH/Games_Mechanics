@@ -7,7 +7,7 @@ namespace EventBus.Game.GamePlay.Area
 {
     public class LevelMap
     {
-        private readonly Dictionary<Vector2Int, Character> _map = new();
+        private readonly Dictionary<Vector2Int, LifeEntity> _map = new();
         public const int Size = 6;
 
         public LevelMap()
@@ -22,9 +22,15 @@ namespace EventBus.Game.GamePlay.Area
             }
         }
 
-        public void AddCharacter(Vector2Int point, Character character)
+        public void AddEntity(Vector2Int point, LifeEntity lifeEntity)
         {
-            _map[point] = character;
+            _map[point] = lifeEntity;
+        }
+        
+        public void AddEntity(Vector3 point, LifeEntity lifeEntity)
+        {
+            var pointInt = LevelMapUtils.GetVector2Int(point);
+            AddEntity(pointInt, lifeEntity);
         }
 
         public bool HasCharacter(Vector3 point)
@@ -43,7 +49,7 @@ namespace EventBus.Game.GamePlay.Area
             return false;
         }
         
-        public Character GetCharacter(Vector3 point)
+        public LifeEntity GetCharacter(Vector3 point)
         {
             var pointInt = LevelMapUtils.GetVector2Int(point);
             return _map[pointInt];

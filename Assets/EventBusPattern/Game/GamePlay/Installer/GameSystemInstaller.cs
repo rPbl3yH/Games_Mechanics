@@ -1,48 +1,50 @@
-using System;
-using EventBus.Game.GamePlay;
 using EventBus.Game.GamePlay.Area;
-using EventBusPattern.Game.GamePlay;
 using Zenject;
 
-public class GameSystemInstaller : MonoInstaller<GameSystemInstaller>
+namespace EventBusPattern.Game.GamePlay.Installer
 {
-    public override void InstallBindings()
+    public class GameSystemInstaller : MonoInstaller<GameSystemInstaller>
     {
-        InstallEventSystem();
-        InstallLevelMapSystem();
-        InstallAttackSystem();
-        InstallMovementSystem();
-        InstallEnemySystem();
-    }
+        public override void InstallBindings()
+        {
+            InstallEventSystem();
+            InstallLevelMapSystem();
+            InstallAttackSystem();
+            InstallMovementSystem();
+            InstallEnemySystem();
+        }
 
-    private void InstallEventSystem()
-    {
-        Container.Bind<EventBusPattern.EventBus>().FromNew().AsSingle();
-    }
+        private void InstallEventSystem()
+        {
+            Container.Bind<EventBus>().FromNew().AsSingle();
+        }
 
-    private void InstallMovementSystem()
-    {
-        Container.Bind<Player>().FromComponentInHierarchy().AsSingle();
-        Container.BindInterfacesAndSelfTo<KeyBoardInput>().FromNew().AsSingle();
-        Container.BindInterfacesAndSelfTo<FireInput>().FromNew().AsSingle();
-        Container.BindInterfacesAndSelfTo<PlayerInputController>().FromNew().AsSingle();
-        Container.BindInterfacesAndSelfTo<ApplyMoveDirectionHandler>().FromNew().AsSingle();
-        Container.BindInterfacesAndSelfTo<ApplyFireDirectionHandler>().FromNew().AsSingle();
-        Container.BindInterfacesAndSelfTo<MoveHandler>().FromNew().AsSingle();
-    }
+        private void InstallMovementSystem()
+        {
+            Container.Bind<Player>().FromComponentInHierarchy().AsSingle();
+            Container.BindInterfacesAndSelfTo<KeyBoardInput>().FromNew().AsSingle();
+            Container.BindInterfacesAndSelfTo<FireInput>().FromNew().AsSingle();
+            Container.BindInterfacesAndSelfTo<PlayerInputController>().FromNew().AsSingle();
+            Container.BindInterfacesAndSelfTo<ApplyMoveDirectionHandler>().FromNew().AsSingle();
+            Container.BindInterfacesAndSelfTo<ApplyFireDirectionHandler>().FromNew().AsSingle();
+            Container.BindInterfacesAndSelfTo<MoveHandler>().FromNew().AsSingle();
+            Container.BindInterfacesAndSelfTo<DealDamageEffectHandler>().FromNew().AsSingle();
+            Container.BindInterfacesAndSelfTo<ExplosionBarrelDeathHandler>().FromNew().AsSingle();
+        }
 
-    private void InstallAttackSystem()
-    {
-        Container.BindInterfacesAndSelfTo<DealDamageHandler>().FromNew().AsSingle();
-    }
+        private void InstallAttackSystem()
+        {
+            Container.BindInterfacesAndSelfTo<DealDamageHandler>().FromNew().AsSingle();
+        }
 
-    private void InstallLevelMapSystem()
-    {
-        Container.Bind<LevelMap>().FromNew().AsSingle().NonLazy();
-    }
+        private void InstallLevelMapSystem()
+        {
+            Container.Bind<LevelMap>().FromNew().AsSingle().NonLazy();
+        }
 
-    private void InstallEnemySystem()
-    {
-        Container.BindInterfacesAndSelfTo<EnemySpawner>().FromComponentInHierarchy().AsSingle().NonLazy();
+        private void InstallEnemySystem()
+        {
+            Container.BindInterfacesAndSelfTo<EnemySpawner>().FromComponentInHierarchy().AsSingle().NonLazy();
+        }
     }
 }

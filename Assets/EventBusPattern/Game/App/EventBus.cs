@@ -12,11 +12,8 @@ namespace EventBusPattern
         {
             var eventType = typeof(TEvent);
 
-            if (!_handlers.ContainsKey(eventType))
-            {
-                _handlers.Add(eventType, new EventHandlerEventCollection<TEvent>());
-            }
-            
+            _handlers.TryAdd(eventType, new EventHandlerEventCollection<TEvent>());
+
             _handlers[eventType].Subscribe(handler);
         }
 
