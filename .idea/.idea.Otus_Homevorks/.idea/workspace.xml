@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="784c52bd-8de3-408c-90cd-016db315fbc4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Otus_Homevorks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Otus_Homevorks/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Area/LevelMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Area/LevelMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/ApplyMoveDirectionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/ApplyMoveDirectionHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/ForceDirectionEffectHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/ForceDirectionEffectHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Input/FireInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Input/FireInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Input/KeyBoardInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Input/KeyBoardInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Installer/GameSystemInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Installer/GameSystemInstaller.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +111,7 @@
       <workItem from="1690869620934" duration="12576000" />
       <workItem from="1690950956031" duration="18169000" />
       <workItem from="1690993331668" duration="2926000" />
-      <workItem from="1691495068030" duration="2021000" />
+      <workItem from="1691495068030" duration="3201000" />
     </task>
     <servers />
   </component>

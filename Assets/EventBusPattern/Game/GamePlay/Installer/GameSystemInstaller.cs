@@ -7,10 +7,17 @@ namespace EventBusPattern.Game.GamePlay.Installer
         public override void InstallBindings()
         {
             InstallEventSystem();
+            InstallTurnPipeline();
             InstallLevelMapSystem();
             InstallAttackSystem();
             InstallMovementSystem();
             InstallEnemySystem();
+        }
+
+        private void InstallTurnPipeline()
+        {
+            Container.Bind<TurnPipeline>().FromNew().AsSingle();
+            Container.Bind<TurnRunner>().FromComponentInHierarchy().AsSingle();
         }
 
         private void InstallEventSystem()
