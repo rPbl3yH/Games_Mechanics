@@ -1,54 +1,50 @@
 using System;
-using EventBus.Game.App.Events;
 using EventBus.Game.GamePlay.Area;
-using EventBusPattern.Game.GamePlay;
-using UnityEngine;
+using EventBusPattern.Game.App.Events;
 using Zenject;
 
-public sealed class ApplyDirectionHandler :  IInitializable, IDisposable
+namespace EventBusPattern.Game.GamePlay
 {
-    [Inject] 
-    private LevelMap _levelMap;
+    public sealed class ApplyDirectionHandler :  IInitializable, IDisposable
+    {
+        [Inject] 
+        private LevelMap _levelMap;
 
-    [Inject] private AttackHandler _attackHandler;
-    [Inject] private MoveHandler _moveHandler;
-
-    private readonly Player _player;
-    private readonly Transform _transform;
-    private readonly EventBusPattern.EventBus _eventBus;
+        private readonly Player _player;
+        private readonly EventBus _eventBus;
     
-    [Inject]
-    public ApplyDirectionHandler(EventBusPattern.EventBus eventBus, Player player)
-    {
-        _player = player;
-        _eventBus = eventBus;
-        _transform = player.transform;
-    }
-    
-    public void Initialize()
-    {
-        _eventBus.Subscribe<ApplyDirectionEvent>(OnApplyDirection);
-    }
-
-    public void Dispose()
-    {
-        _eventBus.Unsubscribe<ApplyDirectionEvent>(OnApplyDirection);
-    }
-    
-    private void OnApplyDirection(ApplyDirectionEvent evt)
-    {
-        var nextPoint = evt.Character.transform.localPosition + evt.Direction;
-            
-        if (_levelMap.IsWalkable(nextPoint))
+        [Inject]
+        public ApplyDirectionHandler(EventBus eventBus, Player player)
         {
-            _eventBus.RaiseEvent(new MoveEvent(_player, nextPoint));
+            _player = player;
+            _eventBus = eventBus;
         }
-        else
+    
+        public void Initialize()
         {
-            if (_levelMap.HasCharacter(nextPoint))
+            _eventBus.Subscribe<ApplyDirectionEvent>(OnApplyDirection);
+        }
+
+        public void Dispose()
+        {
+            _eventBus.Unsubscribe<ApplyDirectionEvent>(OnApplyDirection);
+        }
+    
+        private void OnApplyDirection(ApplyDirectionEvent evt)
+        {
+            var nextPoint = evt.Character.transform.localPosition + evt.Direction;
+            
+            if (_levelMap.IsWalkable(nextPoint))
             {
-                var target = _levelMap.GetCharacter(nextPoint);
-                _eventBus.RaiseEvent(new AttackEvent(_player, target));
+                _eventBus.RaiseEvent(new MoveEvent(_player, nextPoint));
+            }
+            else
+            {
+                if (_levelMap.HasCharacter(nextPoint))
+                {
+                    var target = _levelMap.GetCharacter(nextPoint);
+                    _eventBus.RaiseEvent(new AttackEvent(_player, target));
+                }
             }
         }
     }

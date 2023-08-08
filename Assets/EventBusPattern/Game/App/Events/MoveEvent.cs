@@ -1,11 +1,11 @@
-using EventBus.Game.GamePlay.Area;
+using EventBusPattern.Game.GamePlay;
 using UnityEngine;
 
-namespace EventBus.Game.App.Events
+namespace EventBusPattern.Game.App.Events
 {
     public struct MoveEvent
     {
-        public Character Character;
+        public readonly Character Character;
         public Vector3 TargetPoint;
 
         public MoveEvent(Character character, Vector3 targetPoint)

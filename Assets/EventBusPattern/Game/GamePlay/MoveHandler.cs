@@ -1,12 +1,12 @@
 using System;
-using EventBus.Game.App.Events;
+using EventBusPattern.Game.App.Events;
 using Zenject;
 
 namespace EventBusPattern.Game.GamePlay
 {
     public class MoveHandler:  IInitializable, IDisposable
     {
-        [Inject] private EventBusPattern.EventBus _eventBus;
+        [Inject] private EventBus _eventBus;
     
         private void Move(MoveEvent moveEvent)
         {

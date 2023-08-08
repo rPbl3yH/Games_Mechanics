@@ -1,7 +1,7 @@
-using EventBus.Game.GamePlay.Area;
-using UnityEngine;
-
-public sealed class Player : Character
+namespace EventBusPattern.Game.GamePlay
 {
+    public sealed class Player : Character
+    {
     
+    }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace EventBus.Game.GamePlay.Area
+namespace EventBusPattern.Game.GamePlay
 {
     public abstract class Character : MonoBehaviour
     {

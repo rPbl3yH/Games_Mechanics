@@ -1,6 +1,6 @@
-using EventBus.Game.GamePlay.Area;
+using EventBusPattern.Game.GamePlay;
 
-namespace EventBus.Game.App.Events
+namespace EventBusPattern.Game.App.Events
 {
     public struct AttackEvent
     {
