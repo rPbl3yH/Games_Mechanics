@@ -9,8 +9,8 @@ namespace EventBusPattern.Game.GamePlay.Installer
             InstallEventSystem();
             InstallTurnPipeline();
             InstallLevelMapSystem();
-            InstallAttackSystem();
             InstallMovementSystem();
+            InstallHandlers();
             InstallEnemySystem();
         }
 
@@ -25,23 +25,23 @@ namespace EventBusPattern.Game.GamePlay.Installer
             Container.Bind<EventBus>().FromNew().AsSingle();
         }
 
-        private void InstallMovementSystem()
+        private void InstallHandlers()
         {
-            Container.Bind<Player>().FromComponentInHierarchy().AsSingle();
-            Container.BindInterfacesAndSelfTo<KeyBoardInput>().FromNew().AsSingle();
-            Container.BindInterfacesAndSelfTo<FireInput>().FromNew().AsSingle();
-            Container.BindInterfacesAndSelfTo<PlayerInputController>().FromNew().AsSingle();
             Container.BindInterfacesAndSelfTo<ApplyMoveDirectionHandler>().FromNew().AsSingle();
             Container.BindInterfacesAndSelfTo<ApplyFireDirectionHandler>().FromNew().AsSingle();
             Container.BindInterfacesAndSelfTo<MoveHandler>().FromNew().AsSingle();
             Container.BindInterfacesAndSelfTo<DealDamageEffectHandler>().FromNew().AsSingle();
             Container.BindInterfacesAndSelfTo<ExplosionBarrelDeathHandler>().FromNew().AsSingle();
             Container.BindInterfacesAndSelfTo<ForceDirectionEffectHandler>().FromNew().AsSingle();
+            Container.BindInterfacesAndSelfTo<DealDamageHandler>().FromNew().AsSingle();
         }
 
-        private void InstallAttackSystem()
+        private void InstallMovementSystem()
         {
-            Container.BindInterfacesAndSelfTo<DealDamageHandler>().FromNew().AsSingle();
+            Container.Bind<Player>().FromComponentInHierarchy().AsSingle();
+            Container.BindInterfacesAndSelfTo<KeyBoardInput>().FromNew().AsSingle();
+            Container.BindInterfacesAndSelfTo<FireInput>().FromNew().AsSingle();
+            Container.BindInterfacesAndSelfTo<PlayerInputController>().FromNew().AsSingle();
         }
 
         private void InstallLevelMapSystem()
@@ -51,7 +51,7 @@ namespace EventBusPattern.Game.GamePlay.Installer
 
         private void InstallEnemySystem()
         {
-            Container.BindInterfacesAndSelfTo<EnemySpawner>().FromComponentInHierarchy().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<EnemySpawner>().FromComponentInHierarchy().AsSingle();
         }
     }
 }
