@@ -30,7 +30,7 @@ public class GameSystemInstaller : MonoInstaller<GameSystemInstaller>
 
     private void InstallAttackSystem()
     {
-        Container.Bind<AttackController>().FromNew().AsSingle();
+        Container.BindInterfacesAndSelfTo<AttackHandler>().FromNew().AsSingle();
     }
 
     private void InstallLevelMapSystem()

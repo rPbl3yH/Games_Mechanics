@@ -9,7 +9,7 @@ public sealed class ApplyDirectionHandler :  IInitializable, IDisposable
     [Inject] 
     private LevelMap _levelMap;
 
-    [Inject] private AttackController _attackController;
+    [Inject] private AttackHandler _attackHandler;
     [Inject] private MoveHandler _moveHandler;
 
     private readonly Player _player;
@@ -48,7 +48,8 @@ public sealed class ApplyDirectionHandler :  IInitializable, IDisposable
             if (_levelMap.HasCharacter(nextPoint))
             {
                 var target = _levelMap.GetCharacter(nextPoint);
-                _attackController.Attack(_player, target);            
+                _eventBus.RaiseEvent(new AttackEvent(_player, target));
+                // _attackHandler.Attack(_player, target);            
             }
         }
     }
