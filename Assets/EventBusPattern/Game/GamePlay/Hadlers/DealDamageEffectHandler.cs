@@ -11,13 +11,12 @@ namespace EventBusPattern.Game.GamePlay
         
         public void Initialize()
         {
-            Debug.Log("subscribe on " + nameof(DealDamageEffect));
             _eventBus.Subscribe<DealDamageEffect>(OnDealDamage);
         }
 
         private void OnDealDamage(DealDamageEffect effect)
         {
-            Debug.Log("Deal damage effect!");
+            _eventBus.RaiseEvent(new DealDamageEvent(effect.Source, effect.Target));
         }
 
         public void Dispose()

@@ -1,7 +1,10 @@
+using EventBusPattern.Game.GamePlay;
+
 namespace EventBusPattern.Game.App.Effects
 {
     public interface IEffect
     {
-        void ApplyEffect();
+        LifeEntity Source { get; set; }
+        LifeEntity Target { get; set; }
     }
 }

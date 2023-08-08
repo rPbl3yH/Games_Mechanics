@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using EventBusPattern.Game.GamePlay;
 using UnityEngine;
 using Zenject;
@@ -48,11 +49,16 @@ namespace EventBus.Game.GamePlay.Area
 
             return false;
         }
+
+        public LifeEntity GetEntity(Vector2Int point)
+        {
+            return _map.TryGetValue(point, out var entity) ? entity : null;
+        }
         
-        public LifeEntity GetCharacter(Vector3 point)
+        public LifeEntity GetEntity(Vector3 point)
         {
             var pointInt = LevelMapUtils.GetVector2Int(point);
-            return _map[pointInt];
+            return GetEntity(pointInt);
         }
 
         public bool IsWalkable(Vector2Int point)
@@ -68,6 +74,21 @@ namespace EventBus.Game.GamePlay.Area
         public bool IsWalkable(Vector3 point)
         {
             return IsWalkable(LevelMapUtils.GetVector2Int(point));
+        }
+
+        public List<LifeEntity> GetNeighbourEntities(Vector3 point)
+        {
+            var pointInt = LevelMapUtils.GetVector2Int(point);
+            var neighbourCeils = new List<Vector2Int>
+            {
+                pointInt + Vector2Int.left,
+                pointInt + Vector2Int.right,
+                pointInt + Vector2Int.up,
+                pointInt + Vector2Int.down
+            };
+
+            var result = neighbourCeils.Select(GetEntity).Where(entity => entity != null).ToList();
+            return result;
         }
     }
 }

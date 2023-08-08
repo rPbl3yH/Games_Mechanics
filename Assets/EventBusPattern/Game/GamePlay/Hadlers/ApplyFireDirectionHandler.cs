@@ -50,7 +50,7 @@ namespace EventBusPattern.Game.GamePlay
                 return;
             }
             
-            var target = _levelMap.GetCharacter(nextPoint);
+            var target = _levelMap.GetEntity(nextPoint);
             _eventBus.RaiseEvent(new DealDamageEvent(_player, target));
         }
     }
