@@ -10,6 +10,8 @@ namespace StateMachine
     [Serializable]
     public class StateMachine<T> : IState
     {
+        public event Action<T> OnStateSwitched; 
+
         [ShowInInspector] 
         public T CurrentStateType;
 
@@ -42,6 +44,7 @@ namespace StateMachine
             Exit();
             CurrentStateType = type;
             Enter();
+            OnStateSwitched?.Invoke(type);
         }
 
         private IState FindState(T type)
