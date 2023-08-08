@@ -6,21 +6,22 @@ namespace EventBusPattern.Game.GamePlay.Installer
     {
         public override void InstallBindings()
         {
-            InstallEventSystem();
+            InstallEventBus();
             InstallTurnPipeline();
             InstallLevelMapSystem();
-            InstallMovementSystem();
+            InstallPlayer();
             InstallHandlers();
             InstallEnemySystem();
         }
 
         private void InstallTurnPipeline()
         {
-            Container.Bind<TurnPipeline>().FromNew().AsSingle();
+            Container.Bind<TurnTaskPipeline>().FromNew().AsSingle();
             Container.Bind<TurnRunner>().FromComponentInHierarchy().AsSingle();
+            Container.BindInterfacesAndSelfTo<TurnPipelineInstaller>().FromNew().AsSingle();
         }
 
-        private void InstallEventSystem()
+        private void InstallEventBus()
         {
             Container.Bind<EventBus>().FromNew().AsSingle();
         }
@@ -36,7 +37,7 @@ namespace EventBusPattern.Game.GamePlay.Installer
             Container.BindInterfacesAndSelfTo<DealDamageHandler>().FromNew().AsSingle();
         }
 
-        private void InstallMovementSystem()
+        private void InstallPlayer()
         {
             Container.Bind<Player>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesAndSelfTo<KeyBoardInput>().FromNew().AsSingle();

@@ -6,6 +6,26 @@
   <component name="ChangeListManager">
     <list default="true" id="784c52bd-8de3-408c-90cd-016db315fbc4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Otus_Homevorks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Otus_Homevorks/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/TurnPipeline.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/TurnTaskPipeline.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/TurnPipeline.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/TurnTaskPipeline.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/TurnRunner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/TurnRunner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/TurnTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/Tasks/TurnTask.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/TurnTask.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/Tasks/TurnTask.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Handlers.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/ApplyFireDirectionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Handlers/ApplyFireDirectionHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/ApplyFireDirectionHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Handlers/ApplyFireDirectionHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/ApplyMoveDirectionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Handlers/ApplyMoveDirectionHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/ApplyMoveDirectionHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Handlers/ApplyMoveDirectionHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/DealDamageEffectHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Handlers/DealDamageEffectHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/DealDamageEffectHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Handlers/DealDamageEffectHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/DealDamageHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Handlers/DealDamageHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/DealDamageHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Handlers/DealDamageHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/ExplosionBarrelDeathHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Handlers/ExplosionBarrelDeathHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/ExplosionBarrelDeathHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Handlers/ExplosionBarrelDeathHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/ForceDirectionEffectHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Handlers/ForceDirectionEffectHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/ForceDirectionEffectHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Handlers/ForceDirectionEffectHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/MoveHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Handlers/MoveHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/MoveHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Handlers/MoveHandler.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Installer/GameSystemInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Installer/GameSystemInstaller.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +131,7 @@
       <workItem from="1690869620934" duration="12576000" />
       <workItem from="1690950956031" duration="18169000" />
       <workItem from="1690993331668" duration="2926000" />
-      <workItem from="1691495068030" duration="3301000" />
+      <workItem from="1691495068030" duration="4272000" />
     </task>
     <servers />
   </component>

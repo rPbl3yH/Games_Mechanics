@@ -3,13 +3,18 @@ using System.Collections.Generic;
 
 namespace EventBusPattern
 {
-    public class TurnPipeline
+    public class TurnTaskPipeline
     {
         public event Action OnFinished;
 
         private List<TurnTask> _tasks = new();
 
         private int _currentIndex = -1;
+
+        public void AddTask(TurnTask task)
+        {
+            _tasks.Add(task);
+        }
         
         public void Run()
         {
