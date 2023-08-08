@@ -1,3 +1,4 @@
+using EventBusPattern.Game.App.Effects;
 using EventBusPattern.Game.App.Events;
 using UnityEngine;
 using Zenject;
@@ -20,18 +21,5 @@ namespace EventBusPattern.Game.GamePlay.ExplosionBarrel
             base.Death();
             _eventBus.RaiseEvent(new ExplosionBarrelDeathEvent(this));
         }
-    }
-
-    public class DealDamageEffect : IEffect
-    {
-        public void ApplyEffect()
-        {
-            
-        }
-    }
-
-    public interface IEffect
-    {
-        void ApplyEffect();
     }
 }

@@ -1,7 +1,5 @@
 using System;
-using EventBus.Game.GamePlay.Area;
 using EventBusPattern.Game.App.Events;
-using UnityEngine;
 using Zenject;
 
 namespace EventBusPattern.Game.GamePlay

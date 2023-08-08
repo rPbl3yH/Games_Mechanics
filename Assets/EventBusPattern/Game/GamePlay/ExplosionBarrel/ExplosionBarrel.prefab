@@ -144,10 +144,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EffectsOnDeath:
-  - rid: 414609531877982209
+  - rid: 414609531877982211
   references:
     version: 2
     RefIds:
-    - rid: 414609531877982209
-      type: {class: DealDamageEffect, ns: EventBusPattern.Game.GamePlay.ExplosionBarrel,
-        asm: Assembly-CSharp}
+    - rid: 414609531877982211
+      type: {class: DealDamageEffect, ns: EventBusPattern.Game.App.Events, asm: Assembly-CSharp}
+      data:
+        Damage: 0
