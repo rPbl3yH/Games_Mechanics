@@ -21,6 +21,11 @@ namespace EventBusPattern
             }
         }
 
+        public void RemovePoint(Vector2Int point)
+        {
+            _map[point] = null;
+        }
+
         public void AddEntity(Vector2Int point, LifeEntity lifeEntity)
         {
             _map[point] = lifeEntity;

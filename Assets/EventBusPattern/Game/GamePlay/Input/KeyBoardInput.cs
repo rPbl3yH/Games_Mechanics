@@ -10,22 +10,22 @@ namespace EventBusPattern
 
         public void Tick()
         {
-            if (UnityEngine.Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKeyDown(KeyCode.A))
             {
                 OnInputPerformed?.Invoke(Vector3.left);
             }
 
-            if (UnityEngine.Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKeyDown(KeyCode.D))
             {
                 OnInputPerformed?.Invoke(Vector3.right);
             }
 
-            if (UnityEngine.Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.W))
             {
                 OnInputPerformed?.Invoke(Vector3.forward);
             }
 
-            if (UnityEngine.Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.S))
             {
                 OnInputPerformed?.Invoke(Vector3.back);
             }

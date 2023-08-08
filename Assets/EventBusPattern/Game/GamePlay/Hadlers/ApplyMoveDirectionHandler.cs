@@ -6,19 +6,9 @@ namespace EventBusPattern
 {
     public sealed class ApplyMoveDirectionHandler :  IInitializable, IDisposable
     {
-        [Inject] 
-        private LevelMap _levelMap;
-
-        private readonly Player _player;
-        private readonly EventBus _eventBus;
-    
-        [Inject]
-        public ApplyMoveDirectionHandler(EventBus eventBus, Player player)
-        {
-            _player = player;
-            _eventBus = eventBus;
-        }
-    
+        [Inject] private LevelMap _levelMap;
+        [Inject] private readonly EventBus _eventBus;
+        
         public void Initialize()
         {
             _eventBus.Subscribe<ApplyMoveDirectionEvent>(OnApplyDirection);
@@ -31,11 +21,15 @@ namespace EventBusPattern
     
         private void OnApplyDirection(ApplyMoveDirectionEvent evt)
         {
-            var nextPoint = evt.LifeEntity.transform.localPosition + evt.Direction;
+            var nextPoint = evt.LifeEntity.transform.position + evt.Direction;
             
             if (_levelMap.IsWalkable(nextPoint))
             {
-                _eventBus.RaiseEvent(new MoveEvent(_player, nextPoint));
+                var nextPointInt = LevelMapUtils.GetVector2Int(nextPoint);
+                _levelMap.RemovePoint(LevelMapUtils.GetVector2Int(evt.LifeEntity.transform.position));
+                _levelMap.AddEntity(nextPointInt, evt.LifeEntity);
+                
+                _eventBus.RaiseEvent(new MoveEvent(evt.LifeEntity, nextPoint));
             }
         }
     }
