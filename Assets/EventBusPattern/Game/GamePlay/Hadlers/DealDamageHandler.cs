@@ -2,7 +2,7 @@ using System;
 using EventBusPattern.Game.App.Events;
 using Zenject;
 
-namespace EventBusPattern.Game.GamePlay
+namespace EventBusPattern
 {
     public sealed class DealDamageHandler : IInitializable, IDisposable
     {

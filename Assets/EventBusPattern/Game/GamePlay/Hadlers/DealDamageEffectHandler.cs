@@ -1,9 +1,8 @@
 using System;
 using EventBusPattern.Game.App.Events;
-using UnityEngine;
 using Zenject;
 
-namespace EventBusPattern.Game.GamePlay
+namespace EventBusPattern
 {
     public class DealDamageEffectHandler : IDisposable, IInitializable
     {

@@ -1,4 +1,3 @@
-using EventBus.Game.GamePlay.Area;
 using Zenject;
 
 namespace EventBusPattern.Game.GamePlay.Installer
@@ -30,6 +29,7 @@ namespace EventBusPattern.Game.GamePlay.Installer
             Container.BindInterfacesAndSelfTo<MoveHandler>().FromNew().AsSingle();
             Container.BindInterfacesAndSelfTo<DealDamageEffectHandler>().FromNew().AsSingle();
             Container.BindInterfacesAndSelfTo<ExplosionBarrelDeathHandler>().FromNew().AsSingle();
+            Container.BindInterfacesAndSelfTo<ForceDirectionEffectHandler>().FromNew().AsSingle();
         }
 
         private void InstallAttackSystem()

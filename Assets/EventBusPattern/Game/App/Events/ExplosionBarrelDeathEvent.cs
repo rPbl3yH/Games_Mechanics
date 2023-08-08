@@ -1,5 +1,4 @@
 using EventBusPattern.Game.GamePlay.ExplosionBarrel;
-using UnityEngine;
 
 namespace EventBusPattern.Game.App.Events
 {

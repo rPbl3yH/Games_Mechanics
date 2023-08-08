@@ -1,4 +1,4 @@
-namespace EventBusPattern.Game.GamePlay
+namespace EventBusPattern
 {
     public sealed class Player : LifeEntity
     {

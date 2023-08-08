@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace EventBusPattern.Game.GamePlay
+namespace EventBusPattern
 {
     public abstract class LifeEntity : MonoBehaviour
     {

@@ -1,5 +1,3 @@
-using EventBusPattern.Game.GamePlay;
-
 namespace EventBusPattern.Game.App.Events
 {
     public struct DealDamageEvent

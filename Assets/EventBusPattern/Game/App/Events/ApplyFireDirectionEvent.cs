@@ -1,4 +1,3 @@
-using EventBusPattern.Game.GamePlay;
 using UnityEngine;
 
 namespace EventBusPattern.Game.App.Events

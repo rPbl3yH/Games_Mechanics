@@ -1,5 +1,3 @@
-using EventBusPattern.Game.GamePlay;
-
 namespace EventBusPattern.Game.App.Effects
 {
     public interface IEffect

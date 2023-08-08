@@ -1,10 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
-using EventBusPattern.Game.GamePlay;
 using UnityEngine;
-using Zenject;
 
-namespace EventBus.Game.GamePlay.Area
+namespace EventBusPattern
 {
     public class LevelMap
     {

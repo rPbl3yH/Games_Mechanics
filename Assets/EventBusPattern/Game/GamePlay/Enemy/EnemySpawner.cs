@@ -1,9 +1,8 @@
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 using Zenject;
 
-namespace EventBus.Game.GamePlay.Area
+namespace EventBusPattern
 {
     public class EnemySpawner : MonoBehaviour, IInitializable
     {

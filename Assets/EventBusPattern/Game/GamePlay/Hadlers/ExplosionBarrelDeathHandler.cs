@@ -1,9 +1,8 @@
 using System;
-using EventBus.Game.GamePlay.Area;
 using EventBusPattern.Game.App.Events;
 using Zenject;
 
-namespace EventBusPattern.Game.GamePlay
+namespace EventBusPattern
 {
     public class ExplosionBarrelDeathHandler : IInitializable, IDisposable
     {
@@ -19,6 +18,7 @@ namespace EventBusPattern.Game.GamePlay
         {
             var barrel = evt.Barrel;
             var neighbourEntities = _levelMap.GetNeighbourEntities(barrel.transform.position);
+            
             foreach (var entity in neighbourEntities)
             {
                 foreach (var effect in barrel.EffectsOnDeath)

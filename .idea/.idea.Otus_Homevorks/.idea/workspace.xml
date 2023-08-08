@@ -4,7 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="784c52bd-8de3-408c-90cd-016db315fbc4" name="Changes" comment="" />
+    <list default="true" id="784c52bd-8de3-408c-90cd-016db315fbc4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Otus_Homevorks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Otus_Homevorks/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Effects/DealDamageEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Effects/DealDamageEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Effects/IEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Effects/IEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Events/ApplyFireDirectionEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Events/ApplyFireDirectionEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Events/ApplyMoveDirectionEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Events/ApplyMoveDirectionEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Events/DealDamageEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Events/DealDamageEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Events/ExplosionBarrelDeathEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Events/ExplosionBarrelDeathEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Events/MoveEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Events/MoveEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Area/LevelMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Area/LevelMap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Enemy/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Enemy/EnemySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/ExplosionBarrel/ExplosionBarrel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/ExplosionBarrel/ExplosionBarrel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/ExplosionBarrel/ExplosionBarrelSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/ExplosionBarrel/ExplosionBarrelSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/ApplyFireDirectionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/ApplyFireDirectionHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/ApplyMoveDirectionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/ApplyMoveDirectionHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/DealDamageEffectHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/DealDamageEffectHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/DealDamageHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/DealDamageHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/ExplosionBarrelDeathHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Hadlers/ExplosionBarrelDeathHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Input/FireInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Input/FireInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Input/KeyBoardInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Input/KeyBoardInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Installer/GameSystemInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Installer/GameSystemInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/LifeEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/LifeEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/PlayerInputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/PlayerInputController.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,6 +135,7 @@
       <workItem from="1690869620934" duration="12576000" />
       <workItem from="1690950956031" duration="18169000" />
       <workItem from="1690993331668" duration="2926000" />
+      <workItem from="1691495068030" duration="746000" />
     </task>
     <servers />
   </component>

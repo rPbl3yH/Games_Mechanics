@@ -2,30 +2,33 @@ using System;
 using UnityEngine;
 using Zenject;
 
-public class KeyBoardInput : ITickable
+namespace EventBusPattern
 {
-    public Action<Vector3> OnInputPerformed;
-
-    public void Tick()
+    public class KeyBoardInput : ITickable
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            OnInputPerformed?.Invoke(Vector3.left);
-        }
+        public Action<Vector3> OnInputPerformed;
 
-        if (Input.GetKeyDown(KeyCode.D))
+        public void Tick()
         {
-            OnInputPerformed?.Invoke(Vector3.right);
-        }
+            if (UnityEngine.Input.GetKeyDown(KeyCode.A))
+            {
+                OnInputPerformed?.Invoke(Vector3.left);
+            }
 
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            OnInputPerformed?.Invoke(Vector3.forward);
-        }
+            if (UnityEngine.Input.GetKeyDown(KeyCode.D))
+            {
+                OnInputPerformed?.Invoke(Vector3.right);
+            }
 
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            OnInputPerformed?.Invoke(Vector3.back);
+            if (UnityEngine.Input.GetKeyDown(KeyCode.W))
+            {
+                OnInputPerformed?.Invoke(Vector3.forward);
+            }
+
+            if (UnityEngine.Input.GetKeyDown(KeyCode.S))
+            {
+                OnInputPerformed?.Invoke(Vector3.back);
+            }
         }
     }
 }

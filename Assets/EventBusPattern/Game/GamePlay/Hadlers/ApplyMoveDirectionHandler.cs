@@ -1,9 +1,8 @@
 using System;
-using EventBus.Game.GamePlay.Area;
 using EventBusPattern.Game.App.Events;
 using Zenject;
 
-namespace EventBusPattern.Game.GamePlay
+namespace EventBusPattern
 {
     public sealed class ApplyMoveDirectionHandler :  IInitializable, IDisposable
     {

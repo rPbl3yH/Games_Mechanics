@@ -1,6 +1,4 @@
-using EventBusPattern.Game.GamePlay;
-
-namespace EventBus.Game.GamePlay.Area
+namespace EventBusPattern
 {
     public class Enemy : LifeEntity
     {

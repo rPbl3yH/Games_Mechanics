@@ -1,5 +1,4 @@
 using EventBusPattern.Game.App.Effects;
-using EventBusPattern.Game.GamePlay;
 
 namespace EventBusPattern.Game.App.Events
 {
