@@ -30,8 +30,8 @@ namespace AtomicProject.Services
                 return;
             }
             
-            var closeDistance = int.MaxValue;
-            var closeEnemy = enemies[0];
+            var closetDistance = float.MaxValue;
+            var closetEnemy = enemies[0];
             
             foreach (var enemy in enemies)
             {
@@ -43,13 +43,14 @@ namespace AtomicProject.Services
                 var enemyTransform = enemy.Get<TransformComponent>().Transform;
                 var distance = Vector3.Distance(enemyTransform.position, _heroTransform.position);
 
-                if (closeDistance > distance)
+                if (closetDistance > distance)
                 {
-                    closeEnemy = enemy;
+                    closetEnemy = enemy;
+                    closetDistance = distance;
                 }
             }
             
-            _findComponent.Find(closeEnemy);
+            _findComponent.Find(closetEnemy);
         }
     }
 }

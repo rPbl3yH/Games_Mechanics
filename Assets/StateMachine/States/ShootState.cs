@@ -12,17 +12,20 @@ namespace StateMachine.States
         [HideInInspector]
         public RotateState RotateState;
 
+        public FireState FireState;
+
         [Construct]
         public void ConstructSelf()
         {
-            SetStates(AnimationState, RotateState);
+            SetStates(AnimationState, RotateState, FireState);
         }
-
+        
         [Construct]
         public void ConstructStates(HeroDocument heroDocument)
         {
             AnimationState.Construct(heroDocument.Visual.Animator);
             RotateState.Construct(heroDocument.Transform, heroDocument.Core.FindEnemySection.ClosetEnemyPoint);
+            FireState.Construct(heroDocument.Core.FireSection.OnFire);
         }
     }
 }

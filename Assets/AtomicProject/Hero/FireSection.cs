@@ -15,8 +15,6 @@ namespace AtomicProject.Hero
 
         public AtomicVariable<int> BulletCount;
         public AtomicEvent OnFire = new();
-        public AtomicEvent OnFireStarted = new();
-        public AtomicEvent OnFireFinished = new();
         
         public AtomicVariable<float> ReloadTime;
         public Timer _reloadTimer = new();

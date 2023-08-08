@@ -310,12 +310,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b8fd7a37b4f4c06807f968d9c904271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inputSystem: {fileID: 77181922}
-  _heroEntity: {fileID: 952267568}
-  _heroDocument: {fileID: 952267566}
-  _mouseInput: {fileID: 77181926}
-  _enemyFindService: {fileID: 1804559410}
-  _enemySpawner: {fileID: 66476986}
 --- !u!4 &232331061
 Transform:
   m_ObjectHideFlags: 0
@@ -1008,16 +1002,15 @@ MonoBehaviour:
       BulletCount:
         value: 0
       ReloadTime:
-        value: 0
+        value: 1
       RefillSection:
         BulletRefillDelay:
-          value: 0
+          value: 1
         MaxCount:
-          value: 0
+          value: 5
     States:
       StateMachine:
-        _heroStateType: 0
-        _enterOnStart: 1
+        CurrentStateType: 0
       IdleState:
         AnimationState:
           _animationType: 0
@@ -1037,8 +1030,14 @@ MonoBehaviour:
     FindEnemySection:
       IsFind:
         value: 0
+      ClosetEnemyPoint:
+        value: {x: 0, y: 0, z: 0}
   Visual:
     Animator: {fileID: 1782754807}
+    HeroAnimationStates:
+      _animationStateMachine:
+        CurrentStateType: 0
+        _animator: {fileID: 0}
 --- !u!4 &952267567
 Transform:
   m_ObjectHideFlags: 0
