@@ -10,7 +10,7 @@ public sealed class ApplyDirectionHandler :  IInitializable, IDisposable
     private LevelMap _levelMap;
 
     [Inject] private AttackController _attackController;
-    [Inject] private MoveController _moveController;
+    [Inject] private MoveHandler _moveHandler;
 
     private readonly Player _player;
     private readonly Transform _transform;
@@ -40,7 +40,8 @@ public sealed class ApplyDirectionHandler :  IInitializable, IDisposable
             
         if (_levelMap.IsWalkable(nextPoint))
         {
-            _moveController.Move(_player, nextPoint);
+            _eventBus.RaiseEvent(new MoveEvent(_player, nextPoint));
+            //_moveController.Move(_player, nextPoint);
         }
         else
         {

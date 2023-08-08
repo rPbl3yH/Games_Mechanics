@@ -3,15 +3,15 @@ using UnityEngine;
 
 namespace EventBus.Game.App.Events
 {
-    public class MoveEvent
+    public struct MoveEvent
     {
-        private Character _character;
-        private Vector3 _targetPoint;
+        public Character Character;
+        public Vector3 TargetPoint;
 
         public MoveEvent(Character character, Vector3 targetPoint)
         {
-            _character = character;
-            _targetPoint = targetPoint;
+            Character = character;
+            TargetPoint = targetPoint;
         }
     }
 }

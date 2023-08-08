@@ -4,59 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="784c52bd-8de3-408c-90cd-016db315fbc4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/EventBus.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/ApplyDirectionHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Area/LevelMap.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Input/KeyBoardInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Otus_Homevorks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Otus_Homevorks/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/AssetPacks.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/AssetPacks.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/App.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/App/EventBus.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/App/EventBus.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/EventBus.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GameEngine.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GameEngine.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/ApplyDirectionMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/ApplyDirectionMovement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/ApplyDirectionHandler.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/Area.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Area.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/Area/AreaService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/Area/AreaService.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Area/LevelMap.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/Area/AreaUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Area/LevelMapUtils.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/Area/AreaUtils.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Area/LevelMapUtils.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Character.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/Character.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Character.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/Enemy.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Enemy.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/Enemy/Enemy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Enemy/Enemy.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/Enemy/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Enemy/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/Enemy/Enemy.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Enemy/Enemy.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/Enemy/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Enemy/EnemySpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/Enemy/EnemySpawner.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Enemy/EnemySpawner.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/GameSystemInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/GameSystemInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/GameSystemInstaller.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/GameSystemInstaller.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/MoveInput.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/MoveInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Input/KeyBoardInput.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/GamePlay/Player.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Player.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/Meta.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/Meta.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/UI.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/UI.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/Visual.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/Visual.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/Visual/Chess3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/Visual/Chess3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/Visual/Chess3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/Visual/Chess3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/Visual/Materials.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/Visual/Materials.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/Visual/Materials/BodyTest.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/Visual/Materials/BodyTest.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/Visual/Materials/BodyTest.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/Visual/Materials/BodyTest.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/Visual/Materials/Chess3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/Visual/Materials/Chess3.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/Visual/Materials/Chess3.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/Visual/Materials/Chess3.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/Visual/Materials/EyesTest.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/Visual/Materials/EyesTest.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Game/Visual/Materials/EyesTest.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/Visual/Materials/EyesTest.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Modules.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Modules.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBus/Tools.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Tools.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EventBusScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EventBusScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-    </list>
+    <list default="true" id="784c52bd-8de3-408c-90cd-016db315fbc4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,12 +12,19 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/f5b293c74049457cabc28437c5a763925a00/b1/d3b7f2cb/0200001E.il" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/97/f2920df2/IDisposable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c2a97e0383e8404c9fc0ae19d58f57f146a800/4b/2dedec95/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f5b293c74049457cabc28437c5a763925a00/aa/23caa4bb/ITickable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/EventBus/Game/App/EventBus.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Admin.BEST-KOMP/Otus_Homevorks/Assets/AtomicProject/Hero/RotateSection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Character.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Core/Events/AnimatorMessageListener.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Core/Events/UnityMessageListener.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Otus_UnityProfessional/Assets/Modules/AI/Agents/Scripts/Internal/MonoHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Otus_UnityProfessional/Assets/Modules/AI/BehaviourTree/Scripts/Internal/MonoHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Otus_UnityProfessional/Assets/Modules/AI/Tasks/Scripts/Internal/MonoHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Otus_UnityProfessional/Assets/Modules/Elementary/Internal/MonoHelper.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
   <component name="ProjectId" id="2SPoZRiTlNfcrtGUzNTKUj1niPE" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -157,6 +112,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">

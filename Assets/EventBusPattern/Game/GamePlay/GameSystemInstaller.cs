@@ -24,8 +24,8 @@ public class GameSystemInstaller : MonoInstaller<GameSystemInstaller>
         Container.Bind<Player>().FromComponentInHierarchy().AsSingle();
         Container.BindInterfacesAndSelfTo<KeyBoardInput>().FromNew().AsSingle();
         Container.BindInterfacesAndSelfTo<PlayerInputController>().FromNew().AsSingle();
-        Container.BindInterfacesAndSelfTo<ApplyDirectionHandler>().FromNew().AsSingle().NonLazy();
-        Container.Bind<MoveController>().FromNew().AsSingle();
+        Container.BindInterfacesAndSelfTo<ApplyDirectionHandler>().FromNew().AsSingle();
+        Container.BindInterfacesAndSelfTo<MoveHandler>().FromNew().AsSingle();
     }
 
     private void InstallAttackSystem()

@@ -15,7 +15,7 @@ namespace EventBus.Game.GamePlay.Area
         public virtual void TakeDamage(int damage)
         {
             _life -= damage;
-            print($"{name} take damage {damage}, life = {_life}");
+            //print($"{name} take damage {damage}, life = {_life}");
             
             if (_life <= 0)
             {
