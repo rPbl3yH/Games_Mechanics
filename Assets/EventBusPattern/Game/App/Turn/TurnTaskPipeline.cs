@@ -7,11 +7,11 @@ namespace EventBusPattern
     {
         public event Action OnFinished;
 
-        private List<TurnTask> _tasks = new();
+        private List<Task> _tasks = new();
 
         private int _currentIndex = -1;
 
-        public void AddTask(TurnTask task)
+        public void AddTask(Task task)
         {
             _tasks.Add(task);
         }
@@ -33,7 +33,7 @@ namespace EventBusPattern
             _tasks[_currentIndex].Run(OnTaskFinished);
         }
 
-        private void OnTaskFinished(TurnTask task)
+        private void OnTaskFinished(Task task)
         {
             _currentIndex++;
             RunNextTask();

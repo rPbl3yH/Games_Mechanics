@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace EventBusPattern
 {
-    public class StartTurnTask : TurnTask
+    public class StartTask : Task
     {
         protected override void OnRun()
         {
@@ -11,7 +11,7 @@ namespace EventBusPattern
         }
     }
 
-    public class FinishTurnTask : TurnTask
+    public class FinishTask : Task
     {
         protected override void OnRun()
         {

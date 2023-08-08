@@ -2,11 +2,11 @@ using System;
 
 namespace EventBusPattern
 {
-    public abstract class TurnTask
+    public abstract class Task
     {
-        private Action<TurnTask> _callback;
+        private Action<Task> _callback;
         
-        public void Run(Action<TurnTask> callBack)
+        public void Run(Action<Task> callBack)
         {
             _callback = callBack;
             OnRun();
@@ -23,6 +23,8 @@ namespace EventBusPattern
                  
                 callback?.Invoke(this);
             }
+            
+            OnFinish();
         }
 
         protected virtual void OnFinish()
