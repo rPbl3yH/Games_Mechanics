@@ -9,8 +9,8 @@ namespace StateMachine.States
     public class RunState : CompositeState
     {
         public AnimationState AnimationState;
-        [HideInInspector]
-        public MoveState MoveState;
+        [HideInInspector] public MoveState MoveState;
+        [HideInInspector] public MouseRotateState MouseRotateState;
         
         [Construct]
         public void ConstructStates(HeroVisual heroVisual, HeroDocument heroDocument)
@@ -19,6 +19,7 @@ namespace StateMachine.States
             
             var moveSection = heroDocument.Core.MoveSection;
             MoveState.Construct(heroDocument.Transform, moveSection.Direction, moveSection.Speed);
+            MouseRotateState.Construct(heroDocument.Transform, heroDocument.Core.RotateSection.TargetPoint);
         }
             
         [Construct]
