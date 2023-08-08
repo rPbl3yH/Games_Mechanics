@@ -8,7 +8,7 @@ namespace StateMachine
     [Serializable]
     public class AnimationStateMachine<T> : StateMachine<T>, IUpdateListener where T : Enum
     {
-        private readonly string _key = "State";
+        private readonly int _key = Animator.StringToHash("State");
         [SerializeField] private Animator _animator;
 
         private List<(T, Func<bool>)> _transitions = new();
@@ -16,12 +16,12 @@ namespace StateMachine
         public override void SwitchState(T type)
         {
             base.SwitchState(type);
-            _animator.SetInteger(Animator.StringToHash(_key), Convert.ToInt32(type));
+            _animator.SetInteger(_key, Convert.ToInt32(type));
         }
 
         public void AddTransition(T type, Func<bool> condition)
         {
-            _transitions.Add((type, condition));
+            _transitions.Add(new(type, condition));
         }
 
         public void Update(float deltaTime)
@@ -30,7 +30,7 @@ namespace StateMachine
             {
                 if (!stateType.Equals(CurrentStateType) && condition.Invoke())
                 {
-                    SwitchState(CurrentStateType);
+                    SwitchState(stateType);
                 }
             }
         }

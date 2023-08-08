@@ -29,7 +29,7 @@ namespace StateMachine.States
         
         public void Enter()
         {
-            _animator.SetInteger(_stateId, (int)_animationType);
+            //_animator.SetInteger(_stateId, (int)_animationType);
         }
 
         public void Exit()

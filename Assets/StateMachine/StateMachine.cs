@@ -28,12 +28,12 @@ namespace StateMachine
         public void Enter()
         {
             _currentState = FindState(CurrentStateType);
-            _currentState.Enter();
+            _currentState?.Enter();
         }
 
         public void Exit()
         {
-            _currentState.Exit();
+            _currentState?.Exit();
             _currentState = null;
         }
 
