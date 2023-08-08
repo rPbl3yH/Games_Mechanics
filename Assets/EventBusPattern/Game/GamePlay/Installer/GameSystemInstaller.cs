@@ -1,6 +1,7 @@
 using System;
 using EventBus.Game.GamePlay;
 using EventBus.Game.GamePlay.Area;
+using EventBusPattern.Game.GamePlay;
 using Zenject;
 
 public class GameSystemInstaller : MonoInstaller<GameSystemInstaller>

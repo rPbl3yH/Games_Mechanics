@@ -1,6 +1,7 @@
 using System;
 using EventBus.Game.App.Events;
 using EventBus.Game.GamePlay.Area;
+using EventBusPattern.Game.GamePlay;
 using UnityEngine;
 using Zenject;
 
@@ -36,12 +37,11 @@ public sealed class ApplyDirectionHandler :  IInitializable, IDisposable
     
     private void OnApplyDirection(ApplyDirectionEvent evt)
     {
-        var nextPoint = _transform.localPosition + evt.Direction;
+        var nextPoint = evt.Character.transform.localPosition + evt.Direction;
             
         if (_levelMap.IsWalkable(nextPoint))
         {
             _eventBus.RaiseEvent(new MoveEvent(_player, nextPoint));
-            //_moveController.Move(_player, nextPoint);
         }
         else
         {
@@ -49,7 +49,6 @@ public sealed class ApplyDirectionHandler :  IInitializable, IDisposable
             {
                 var target = _levelMap.GetCharacter(nextPoint);
                 _eventBus.RaiseEvent(new AttackEvent(_player, target));
-                // _attackHandler.Attack(_player, target);            
             }
         }
     }
