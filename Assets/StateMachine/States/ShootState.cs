@@ -1,6 +1,7 @@
 ﻿using System;
 using AtomicProject.Hero;
 using Declarative;
+using UnityEngine;
 
 namespace StateMachine.States
 {
@@ -8,17 +9,20 @@ namespace StateMachine.States
     public class ShootState : CompositeState
     {
         public AnimationState AnimationState;
+        [HideInInspector]
+        public RotateState RotateState;
 
         [Construct]
         public void ConstructSelf()
         {
-            SetStates(AnimationState);
+            SetStates(AnimationState, RotateState);
         }
 
         [Construct]
-        public void ConstructStates(HeroVisual visual)
+        public void ConstructStates(HeroDocument heroDocument)
         {
-            AnimationState.Construct(visual.Animator);
+            AnimationState.Construct(heroDocument.Visual.Animator);
+            RotateState.Construct(heroDocument.Transform, heroDocument.Core.FindEnemySection.ClosetEnemyPoint);
         }
     }
 }

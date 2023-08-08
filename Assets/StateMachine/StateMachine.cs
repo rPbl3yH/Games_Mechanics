@@ -15,8 +15,6 @@ namespace StateMachine
         [ShowInInspector] 
         public T CurrentStateType;
 
-        [SerializeField] private bool _enterOnStart;
-
         [ShowInInspector, ReadOnly]
         private IState _currentState;
 

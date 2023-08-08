@@ -16,7 +16,7 @@ namespace AtomicProject.Hero
         [Section] public ShootState ShootState;
 
         [Construct]
-        public void Construct(HeroCore heroCore)
+        public void Construct(HeroDocument heroDocument, HeroCore heroCore)
         {
             StateMachine.Construct(
                 (HeroStateType.Idle, IdleState),
@@ -44,8 +44,8 @@ namespace AtomicProject.Hero
                     StateMachine.SwitchState(HeroStateType.Shoot);
                 }
             };
-            
-            StateMachine.Enter();
+
+            heroDocument.onStart += () => StateMachine.Enter();
         }
     }
 }

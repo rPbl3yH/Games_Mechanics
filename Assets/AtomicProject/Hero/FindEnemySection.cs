@@ -4,6 +4,7 @@ using AtomicProject.Atomic.Values;
 using AtomicProject.Entities.Components;
 using Declarative;
 using Entities;
+using UnityEngine;
 
 namespace AtomicProject.Hero
 {
@@ -12,8 +13,7 @@ namespace AtomicProject.Hero
     {
         public AtomicEvent<IEntity> OnEnemyFind = new();
         public AtomicVariable<bool> IsFind;
-
-        private IEntity _closetEnemy;
+        public AtomicVariable<Vector3> ClosetEnemyPoint;
 
         [Construct]
         public void Construct(HeroCore heroCore)
@@ -21,17 +21,7 @@ namespace AtomicProject.Hero
             OnEnemyFind += enemy =>
             {
                 IsFind.Value = true;
-                _closetEnemy = enemy;
-            };
-
-            heroCore.MoveSection.OnMoveFinished += () =>
-            {
-                if (IsFind.Value)
-                {
-                    heroCore.RotateSection.TargetPoint.Value =
-                        _closetEnemy.Get<TransformComponent>().Transform.position;
-                    heroCore.FireSection.OnFire?.Invoke();
-                }
+                ClosetEnemyPoint.Value = enemy.Get<TransformComponent>().Transform.position;
             };
         }
     }

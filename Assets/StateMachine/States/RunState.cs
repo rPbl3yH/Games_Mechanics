@@ -10,7 +10,13 @@ namespace StateMachine.States
     {
         public AnimationState AnimationState;
         [HideInInspector] public MoveState MoveState;
-        [HideInInspector] public MouseRotateState MouseRotateState;
+        [HideInInspector] public RotateState RotateState;
+                    
+        [Construct]
+        public void ConstructSelf()
+        {
+            SetStates(AnimationState, MoveState, RotateState);
+        }
         
         [Construct]
         public void ConstructStates(HeroVisual heroVisual, HeroDocument heroDocument)
@@ -19,13 +25,7 @@ namespace StateMachine.States
             
             var moveSection = heroDocument.Core.MoveSection;
             MoveState.Construct(heroDocument.Transform, moveSection.Direction, moveSection.Speed);
-            MouseRotateState.Construct(heroDocument.Transform, heroDocument.Core.RotateSection.TargetPoint);
-        }
-            
-        [Construct]
-        public void ConstructSelf()
-        {
-            SetStates(AnimationState, MoveState);
+            RotateState.Construct(heroDocument.Transform, heroDocument.Core.RotateSection.TargetPoint);
         }
     }
 }
