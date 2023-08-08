@@ -5,7 +5,7 @@ using Zenject;
 
 namespace EventBusPattern.Game.GamePlay
 {
-    public sealed class ApplyDirectionHandler :  IInitializable, IDisposable
+    public sealed class ApplyMoveDirectionHandler :  IInitializable, IDisposable
     {
         [Inject] 
         private LevelMap _levelMap;
@@ -14,7 +14,7 @@ namespace EventBusPattern.Game.GamePlay
         private readonly EventBus _eventBus;
     
         [Inject]
-        public ApplyDirectionHandler(EventBus eventBus, Player player)
+        public ApplyMoveDirectionHandler(EventBus eventBus, Player player)
         {
             _player = player;
             _eventBus = eventBus;
@@ -22,29 +22,21 @@ namespace EventBusPattern.Game.GamePlay
     
         public void Initialize()
         {
-            _eventBus.Subscribe<ApplyDirectionEvent>(OnApplyDirection);
+            _eventBus.Subscribe<ApplyMoveDirectionEvent>(OnApplyDirection);
         }
 
         public void Dispose()
         {
-            _eventBus.Unsubscribe<ApplyDirectionEvent>(OnApplyDirection);
+            _eventBus.Unsubscribe<ApplyMoveDirectionEvent>(OnApplyDirection);
         }
     
-        private void OnApplyDirection(ApplyDirectionEvent evt)
+        private void OnApplyDirection(ApplyMoveDirectionEvent evt)
         {
             var nextPoint = evt.Character.transform.localPosition + evt.Direction;
             
             if (_levelMap.IsWalkable(nextPoint))
             {
                 _eventBus.RaiseEvent(new MoveEvent(_player, nextPoint));
-            }
-            else
-            {
-                if (_levelMap.HasCharacter(nextPoint))
-                {
-                    var target = _levelMap.GetCharacter(nextPoint);
-                    _eventBus.RaiseEvent(new AttackEvent(_player, target));
-                }
             }
         }
     }

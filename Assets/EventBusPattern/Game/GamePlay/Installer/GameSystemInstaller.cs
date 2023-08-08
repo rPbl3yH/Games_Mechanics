@@ -24,14 +24,16 @@ public class GameSystemInstaller : MonoInstaller<GameSystemInstaller>
     {
         Container.Bind<Player>().FromComponentInHierarchy().AsSingle();
         Container.BindInterfacesAndSelfTo<KeyBoardInput>().FromNew().AsSingle();
+        Container.BindInterfacesAndSelfTo<FireInput>().FromNew().AsSingle();
         Container.BindInterfacesAndSelfTo<PlayerInputController>().FromNew().AsSingle();
-        Container.BindInterfacesAndSelfTo<ApplyDirectionHandler>().FromNew().AsSingle();
+        Container.BindInterfacesAndSelfTo<ApplyMoveDirectionHandler>().FromNew().AsSingle();
+        Container.BindInterfacesAndSelfTo<ApplyFireDirectionHandler>().FromNew().AsSingle();
         Container.BindInterfacesAndSelfTo<MoveHandler>().FromNew().AsSingle();
     }
 
     private void InstallAttackSystem()
     {
-        Container.BindInterfacesAndSelfTo<AttackHandler>().FromNew().AsSingle();
+        Container.BindInterfacesAndSelfTo<DealDamageHandler>().FromNew().AsSingle();
     }
 
     private void InstallLevelMapSystem()

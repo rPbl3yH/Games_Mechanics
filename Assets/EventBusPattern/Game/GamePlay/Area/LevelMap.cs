@@ -8,7 +8,7 @@ namespace EventBus.Game.GamePlay.Area
     public class LevelMap
     {
         private readonly Dictionary<Vector2Int, Character> _map = new();
-        private const int Size =6;
+        public const int Size = 6;
 
         public LevelMap()
         {
