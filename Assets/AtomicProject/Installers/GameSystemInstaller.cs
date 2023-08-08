@@ -11,13 +11,6 @@ namespace AtomicProject.Installers
 {
     public class GameSystemInstaller : MonoInstaller<GameSystemInstaller>
     {
-        [SerializeField] private InputSystem _inputSystem;
-        [SerializeField] private HeroEntity _heroEntity;
-        [SerializeField] private HeroDocument _heroDocument;
-        [SerializeField] private MouseInput _mouseInput;
-        [SerializeField] private EnemyFindService _enemyFindService;
-        [SerializeField] private EnemySpawner _enemySpawner;
-        
         public override void InstallBindings()
         {
             InstallMonoBehaviours();
@@ -27,17 +20,17 @@ namespace AtomicProject.Installers
 
         private void InstallMonoBehaviours()
         {
-            Container.Bind<InputSystem>().FromInstance(_inputSystem).AsSingle();
-            Container.Bind<HeroEntity>().FromInstance(_heroEntity).AsSingle();
-            Container.Bind<HeroDocument>().FromInstance(_heroDocument).AsSingle();
-            Container.Bind<MouseInput>().FromInstance(_mouseInput).AsSingle();
+            Container.Bind<InputSystem>().FromComponentInHierarchy().AsSingle();
+            Container.Bind<HeroEntity>().FromComponentInHierarchy().AsSingle();
+            Container.Bind<HeroDocument>().FromComponentInHierarchy().AsSingle();
+            Container.Bind<MouseInput>().FromComponentInHierarchy().AsSingle();
         }
 
         private void InstallEnemyManagement()
         {
-            Container.Bind<EnemySpawner>().FromInstance(_enemySpawner).AsSingle();
+            Container.Bind<EnemySpawner>().FromComponentInHierarchy().AsSingle();
             Container.Bind<EnemyService>().FromNew().AsSingle();
-            Container.Bind<EnemyFindService>().FromInstance(_enemyFindService).AsSingle();
+            Container.Bind<EnemyFindService>().FromComponentInHierarchy().AsSingle();
         }
 
         private void InstallSimple()
