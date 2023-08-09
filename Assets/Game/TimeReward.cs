@@ -13,7 +13,7 @@ namespace Game
         [SerializeField] private float _timeToReceive = 5f;
 
         [ShowInInspector, ReadOnly]
-        private Countdown _timer = new();
+        private Timer _timer = new();
 
         private MoneyStorage _moneyStorage;
 
@@ -21,22 +21,22 @@ namespace Game
         {
             _moneyStorage = FindObjectOfType<MoneyStorage>();
             _timer.Duration = _timeToReceive;
-            _timer.OnEnded += ReceiveReward;
+            _timer.OnFinished += ReceiveReward;
         }
         
         private void Start()
         {
             _timer.Play();
+            
+            if (_timer.Progress == 0)
+            {
+                OnStarted?.Invoke();
+            }
         }
-        
-        public float GetRemainingTime()
+
+        public void SetCurrentTime(float currentTime)
         {
-            return _timer.RemainingTime;
-        }
-        
-        public void SetRemainingTime(float remainingTime)
-        {
-            _timer.RemainingTime = remainingTime;
+            _timer.CurrentTime = currentTime;
         }
 
         private void ReceiveReward()
