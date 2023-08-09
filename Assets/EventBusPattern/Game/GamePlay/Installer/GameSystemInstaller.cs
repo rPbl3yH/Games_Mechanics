@@ -1,3 +1,4 @@
+using EventBusPattern.Visual;
 using Zenject;
 
 namespace EventBusPattern.Game.GamePlay.Installer
@@ -12,13 +13,20 @@ namespace EventBusPattern.Game.GamePlay.Installer
             InstallPlayer();
             InstallHandlers();
             InstallEnemySystem();
+            InstallVisualPipeline();
         }
 
         private void InstallTurnPipeline()
         {
-            Container.Bind<TurnTaskPipeline>().FromNew().AsSingle();
+            Container.Bind<TaskPipeline>().FromNew().AsSingle();
             Container.Bind<TurnRunner>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesAndSelfTo<TurnPipelineInstaller>().FromNew().AsSingle();
+        }
+
+        private void InstallVisualPipeline()
+        {
+            Container.Bind<VisualTaskPipeline>().FromNew().AsSingle();
+            Container.BindInterfacesAndSelfTo<MoveVisualHandler>().FromNew().AsSingle();
         }
 
         private void InstallEventBus()

@@ -9,7 +9,7 @@ namespace EventBusPattern
     {
         [SerializeField] private bool _runOnStart = true;
         [SerializeField] private bool _runOnFinish = true;
-        [Inject] private TurnTaskPipeline _turnTaskPipeline;
+        [Inject] private TaskPipeline _taskPipeline;
 
         private void Start()
         {
@@ -21,18 +21,18 @@ namespace EventBusPattern
 
         private void OnEnable()
         {
-            _turnTaskPipeline.OnFinished += OnFinished;
+            _taskPipeline.OnFinished += OnFinished;
         }
 
         private void OnDisable()
         {
-            _turnTaskPipeline.OnFinished -= OnFinished;
+            _taskPipeline.OnFinished -= OnFinished;
         }
 
         [Button]
         public void Run()
         {
-            _turnTaskPipeline.Run();
+            _taskPipeline.Run();
         }
 
         private void OnFinished()

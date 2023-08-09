@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace EventBusPattern
 {
-    public class TurnTaskPipeline
+    public class TaskPipeline
     {
         public event Action OnFinished;
 
