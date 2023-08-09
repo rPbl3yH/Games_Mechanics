@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Elementary;
@@ -12,11 +13,16 @@ public class TimeReward : MonoBehaviour
     [ShowInInspector, ReadOnly]
     private Timer _timer = new();
 
-    [Button]
-    public void Run()
+    private void Start()
     {
         _timer.Duration = _timeToReceive;
         _timer.OnFinished += ReceiveReward;
+    }
+
+    [Button]
+    public void Run()
+    {
+        _timer.ResetTime();
         _timer.Play();
     }
     
