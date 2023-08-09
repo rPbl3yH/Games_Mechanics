@@ -27,7 +27,6 @@ namespace StateMachine.States
         {
             if (_isEnabled)
             {
-                Debug.Log("Fixed update rotate state");
                 _transform.transform.rotation = Quaternion.LookRotation(_targetPoint.Value);
             }
         }

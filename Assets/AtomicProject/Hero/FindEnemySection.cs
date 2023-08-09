@@ -14,14 +14,24 @@ namespace AtomicProject.Hero
         public AtomicEvent<IEntity> OnEnemyFind = new();
         public AtomicVariable<bool> IsFind;
         public AtomicVariable<Vector3> ClosetEnemyPoint;
+        private AtomicVariable<Transform> _closetEnemy;
 
         [Construct]
-        public void Construct(HeroCore heroCore)
+        public void Construct(HeroDocument heroDocument)
         {
             OnEnemyFind += enemy =>
             {
+                Debug.Log("Closet enemy is find");
                 IsFind.Value = true;
-                ClosetEnemyPoint.Value = enemy.Get<TransformComponent>().Transform.position;
+                _closetEnemy.Value = enemy.Get<TransformComponent>().Transform;
+            };
+
+            heroDocument.onFixedUpdate += _ =>
+            {
+                if (_closetEnemy.Value)
+                {
+                    ClosetEnemyPoint.Value = _closetEnemy.Value.position;
+                }
             };
         }
     }

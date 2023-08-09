@@ -1,6 +1,7 @@
 ﻿using AtomicProject.Enemy;
 using AtomicProject.Enemy.Entity;
 using AtomicProject.Entities.Components;
+using Entities;
 using UnityEngine;
 using Zenject;
 
@@ -13,7 +14,7 @@ namespace AtomicProject.Services
         
         private Transform _heroTransform;
         private IFindComponent _findComponent;
-        private EnemyEntity _closeEnemy;
+        private MonoEntity _closetEnemy;
         
         private void Start()
         {
@@ -49,8 +50,12 @@ namespace AtomicProject.Services
                     closetDistance = distance;
                 }
             }
-            
-            _findComponent.Find(closetEnemy);
+
+            if (_closetEnemy != closetEnemy)
+            {
+                _closetEnemy = closetEnemy;
+                _findComponent.Find(_closetEnemy);
+            }
         }
     }
 }

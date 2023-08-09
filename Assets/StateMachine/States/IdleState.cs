@@ -14,13 +14,13 @@ namespace StateMachine.States
         [Construct]
         public void ConstructSelf()
         {
-            SetStates(RotateState);            
+            //SetStates(RotateState);            
         }
 
         [Construct]
         public void ConstructStates(HeroDocument heroDocument)
         {
-            RotateState.Construct(heroDocument.Transform, heroDocument.Core.RotateSection.TargetPoint);
+            //RotateState.Construct(heroDocument.Transform, heroDocument.Core.RotateSection.TargetPoint);
         }
     }
 }
