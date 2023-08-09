@@ -12,7 +12,7 @@ namespace Game
         [ShowInInspector, ReadOnly]
         private Timer _timer = new();
 
-        private void Start()
+        private void Awake()
         {
             _timer.Duration = _timeToReceive;
             _timer.OnFinished += ReceiveReward;
