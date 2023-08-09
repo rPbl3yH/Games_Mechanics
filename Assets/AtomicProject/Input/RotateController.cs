@@ -24,7 +24,7 @@ namespace AtomicProject.Input
         {
             if (_heroService.GetHero().TryGet(out IRotateComponent rotateComponent))
             {
-                rotateComponent.Rotate(targetPoint);
+                rotateComponent.RotateInPoint(targetPoint);
             }
         }
     }

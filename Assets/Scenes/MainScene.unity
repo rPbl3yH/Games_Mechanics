@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -187,7 +187,6 @@ GameObject:
   - component: {fileID: 77181924}
   - component: {fileID: 77181922}
   - component: {fileID: 77181926}
-  - component: {fileID: 77181925}
   m_Layer: 0
   m_Name: InputSystem
   m_TagString: Untagged
@@ -222,18 +221,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &77181925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 77181921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b370462746d45e3bcbd4dfea8380982, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &77181926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -763,7 +750,7 @@ Transform:
   m_GameObject: {fileID: 761286316}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 2}
+  m_LocalScale: {x: 5, y: 1, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1011,29 +998,15 @@ MonoBehaviour:
     States:
       StateMachine:
         CurrentStateType: 0
-      IdleState:
-        AnimationState:
-          _animationType: 0
-          _stateName: State
-      RunState:
-        AnimationState:
-          _animationType: 1
-          _stateName: State
-      DeadState:
-        AnimationState:
-          _animationType: 2
-          _stateName: State
-      ShootState:
-        AnimationState:
-          _animationType: 3
-          _stateName: State
+      IdleState: {}
+      RunState: {}
+      ShootState: {}
     FindEnemySection:
       IsFind:
         value: 0
       ClosetEnemyPoint:
         value: {x: 0, y: 0, z: 0}
   Visual:
-    Animator: {fileID: 1782754807}
     HeroAnimationStates:
       _animationStateMachine:
         CurrentStateType: 0

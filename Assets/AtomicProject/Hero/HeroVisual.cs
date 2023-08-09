@@ -8,8 +8,6 @@ namespace AtomicProject.Hero
 	[Serializable]
     public class HeroVisual
     {
-        public Animator Animator;
-
         [Section] 
         public HeroAnimationStates HeroAnimationStates;
     }

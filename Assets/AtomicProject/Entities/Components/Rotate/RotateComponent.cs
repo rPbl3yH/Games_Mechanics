@@ -12,9 +12,9 @@ namespace AtomicProject.Entities.Components.Rotate
             _onRotate = onRotate;
         }
         
-        public void Rotate(Vector3 direction)
+        public void RotateInPoint(Vector3 targetPoint)
         {
-            _onRotate?.Invoke(direction);
+            _onRotate?.Invoke(targetPoint);
         }
     }
 }
