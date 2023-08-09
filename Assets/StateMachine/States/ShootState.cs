@@ -22,7 +22,7 @@ namespace StateMachine.States
         [Construct]
         public void ConstructStates(HeroDocument heroDocument)
         {
-            RotateState.Construct(heroDocument.Transform, heroDocument.Core.FindEnemySection.ClosetEnemyPoint);
+            RotateState.Construct(heroDocument.Transform, heroDocument.Core._findEnemySection.ClosetEnemyPoint);
             FireState.Construct(heroDocument.Core.FireSection.OnFire);
         }
     }

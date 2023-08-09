@@ -9,7 +9,7 @@ namespace AtomicProject.Hero
     [Serializable]
     public class MoveSection
     {
-        [SerializeField] public AtomicVariable<float> Speed;
+        public AtomicVariable<float> Speed;
         public AtomicEvent<Vector3> OnMove = new();
         public AtomicVariable<Vector3> Direction;
 
@@ -17,7 +17,7 @@ namespace AtomicProject.Hero
         public AtomicEvent OnMoveFinished;
 
         [Construct]
-        public void Construct(HeroDocument heroDocument)
+        public void Construct()
         {
             OnMove += direction =>
             {

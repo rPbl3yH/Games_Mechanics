@@ -2,18 +2,19 @@
 using AtomicProject.Hero;
 using Declarative;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace AtomicProject.Enemy.Document
 {
     [Serializable]
-    public class EnemyDeathSection
+    public class DeathSection
     {
         [Construct]
-        public void Construct(EnemyDocument document, LifeSection lifeSection)
+        public void Construct(DeclarativeModel root, LifeSection lifeSection)
         {
             lifeSection.OnDeath += () =>
             {
-                GameObject.Destroy(document.gameObject);
+                Object.Destroy(root.gameObject);
             };
         }
     }

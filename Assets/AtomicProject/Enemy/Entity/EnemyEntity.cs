@@ -14,7 +14,7 @@ namespace AtomicProject.Enemy.Entity
         private void Awake()
         {
             Add(new TakeBulletDamageComponent(_enemyDocument.LifeSection.OnTakeDamage));
-            Add(new FollowComponent(_enemyDocument.FollowSection.OnFollow));
+            Add(new FollowComponent(_enemyDocument._followSection.FollowRequest));
             Add(new TransformComponent(_enemyDocument.transform));
         }
     }

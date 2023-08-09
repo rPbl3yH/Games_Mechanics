@@ -14,6 +14,8 @@ namespace Declarative
 
         private static readonly Type TRANSFORM_TYPE = typeof(Transform);
         
+        private static readonly Type DECLARATIVE_MODEL_TYPE = typeof(DeclarativeModel);
+        
         internal static void ConstructSection(object section, DeclarativeModel root)
         {
             var sectionType = section.GetType();
@@ -60,6 +62,11 @@ namespace Declarative
             if (parameterType == TRANSFORM_TYPE)
             {
                 return root.transform;
+            }
+            
+            if (parameterType == DECLARATIVE_MODEL_TYPE)
+            {
+                return root;
             }
 
             if (root.TryGetSection(parameterType, out var section))

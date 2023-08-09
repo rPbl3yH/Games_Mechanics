@@ -13,21 +13,21 @@ namespace AtomicProject.Enemy.Document
         public AtomicVariable<float> Speed;
         public AtomicVariable<float> MinDistance;
         
-        public AtomicEvent<Transform> OnFollow = new();
+        public AtomicAction<Transform> FollowRequest = new();
         public FollowMechanics FollowMechanics = new();
         private AtomicVariable<Transform> _target = new();
         private AtomicVariable<bool> _isMoveRequired = new ();
         
         [Construct]
-        public void Construct(EnemyDocument enemyDocument)
+        public void Construct(DeclarativeModel declarativeModel)
         {
-            FollowMechanics.Construct(_isMoveRequired, enemyDocument.Transform, _target, Speed, MinDistance);
-            
-            OnFollow += target =>
+            FollowRequest.Use(target => 
             {
                 _target.Value = target;
                 _isMoveRequired.Value = true;
-            };
+            });
+            
+            FollowMechanics.Construct(_isMoveRequired, declarativeModel.transform, _target, Speed, MinDistance);
         }
     }
 }

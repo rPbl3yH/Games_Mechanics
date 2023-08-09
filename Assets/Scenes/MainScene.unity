@@ -869,7 +869,7 @@ GameObject:
   m_Component:
   - component: {fileID: 814271095}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1015,22 +1015,22 @@ MonoBehaviour:
       Direction:
         value: {x: 0, y: 0, z: 0}
     RotateSection:
-      TargetPoint:
+      LookPoint:
         value: {x: 0, y: 0, z: 0}
     FireSection:
       Parent: {fileID: 366684790}
       BulletPrefab: {fileID: 7655893833624640705, guid: d078c2cfc13e9c14e9feb547291d54c2,
         type: 3}
-      SpawnPoint: {fileID: 814271095}
-      BulletCount:
-        value: 0
+      FirePoint: {fileID: 814271095}
       ReloadTime:
         value: 1
-      RefillSection:
-        BulletRefillDelay:
+      _addBulletSection:
+        AddBulletDelay:
           value: 1
-        MaxCount:
+        MaxBulletCount:
           value: 5
+        BulletCount:
+          value: 0
     States:
       StateMachine:
         CurrentStateType: 0

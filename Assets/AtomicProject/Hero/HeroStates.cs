@@ -31,13 +31,13 @@ namespace AtomicProject.Hero
             
             StateMachine.OnStateSwitched += type =>
             {
-                if (type == HeroStateType.Idle && heroCore.FindEnemySection.IsFind.Value)
+                if (type == HeroStateType.Idle && heroCore._findEnemySection.IsFind.Value)
                 {
                     StateMachine.SwitchState(HeroStateType.Shoot);
                 }
             };
 
-            heroCore.FindEnemySection.OnEnemyFind += _ =>
+            heroCore._findEnemySection.OnEnemyFind += _ =>
             {
                 if (StateMachine.CurrentStateType == HeroStateType.Idle)
                 {

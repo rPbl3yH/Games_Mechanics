@@ -22,7 +22,7 @@ namespace StateMachine.States
         {
             var moveSection = heroDocument.Core.MoveSection;
             MoveState.Construct(heroDocument.Transform, moveSection.Direction, moveSection.Speed);
-            RotateState.Construct(heroDocument.Transform, heroDocument.Core.RotateSection.TargetPoint);
+            RotateState.Construct(heroDocument.Transform, heroDocument.Core.RotateSection.LookPoint);
         }
     }
 }

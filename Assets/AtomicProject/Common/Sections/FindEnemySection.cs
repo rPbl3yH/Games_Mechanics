@@ -17,7 +17,7 @@ namespace AtomicProject.Hero
         private AtomicVariable<Transform> _closetEnemy;
 
         [Construct]
-        public void Construct(HeroDocument heroDocument)
+        public void Construct(DeclarativeModel root)
         {
             OnEnemyFind += enemy =>
             {
@@ -26,7 +26,7 @@ namespace AtomicProject.Hero
                 _closetEnemy.Value = enemy.Get<TransformComponent>().Transform;
             };
 
-            heroDocument.onFixedUpdate += _ =>
+            root.onFixedUpdate += _ =>
             {
                 if (_closetEnemy.Value)
                 {

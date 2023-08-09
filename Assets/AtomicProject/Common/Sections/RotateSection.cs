@@ -9,15 +9,15 @@ namespace AtomicProject.Hero
     [Serializable]
     public class RotateSection
     {
-        [SerializeField] public AtomicVariable<Vector3> TargetPoint;
-        [SerializeField] public AtomicEvent<Vector3> OnRotate;
+        public AtomicVariable<Vector3> LookPoint;
+        public AtomicEvent<Vector3> OnRotate;
         
         [Construct]
-        public void Construct(HeroDocument heroDocument)
+        public void Construct()
         {
-            OnRotate += targetPoint =>
+            OnRotate += lookPoint =>
             {
-                TargetPoint.Value = targetPoint;
+                LookPoint.Value = lookPoint;
             };
         }
     }

@@ -4,6 +4,7 @@ using AtomicProject.Atomic.Custom;
 using AtomicProject.Atomic.Values;
 using Declarative;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace AtomicProject.Hero
 {
@@ -12,26 +13,21 @@ namespace AtomicProject.Hero
     {
         public Transform Parent;
         public GameObject BulletPrefab;
-        public Transform SpawnPoint;
+        public Transform FirePoint;
 
-        public AtomicVariable<int> BulletCount;
         public AtomicEvent OnFire = new();
         
         public AtomicVariable<float> ReloadTime;
         public Timer _reloadTimer = new();
 
         [Section]
-        public RefillSection RefillSection;
+        public AddBulletSection _addBulletSection;
         
         [Construct]
-        public void Construct()
+        public void Construct(AddBulletSection addBulletSection)
         {
             _reloadTimer.Construct(ReloadTime.Value);
-            ConstructFire();
-        }
-        
-        private void ConstructFire()
-        {
+            
             OnFire += () =>
             {
                 if (_reloadTimer.IsPlaying)
@@ -39,13 +35,13 @@ namespace AtomicProject.Hero
                     return;
                 }
 
-                if (BulletCount.Value <= 0)
+                if (addBulletSection.BulletCount.Value <= 0)
                 {
                     return;
                 }
                 
-                GameObject.Instantiate(BulletPrefab, SpawnPoint.position, SpawnPoint.rotation, Parent);
-                BulletCount.Value--;
+                Object.Instantiate(BulletPrefab, FirePoint.position, FirePoint.rotation, Parent);
+                addBulletSection.BulletCount.Value--;
                 _reloadTimer.StartTimer();
             };
         }

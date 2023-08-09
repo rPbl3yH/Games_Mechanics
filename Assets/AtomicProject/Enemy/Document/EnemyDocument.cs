@@ -12,10 +12,10 @@ namespace AtomicProject.Enemy.Document
         public LifeSection LifeSection;
 
         [Section]
-        public EnemyDeathSection _enemyDeathSection;
+        public DeathSection _deathSection;
 
         [Section]
-        public FollowSection FollowSection;
+        public FollowSection _followSection;
 
         [Section]
         public AttackSection AttackSection;

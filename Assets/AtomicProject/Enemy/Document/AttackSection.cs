@@ -20,19 +20,20 @@ namespace AtomicProject.Enemy.Document
         private Transform _target;
             
         [Construct]
-        public void Construct(EnemyDocument enemyDocument, FollowSection followSection)
+        public void Construct(DeclarativeModel root, FollowSection followSection)
         {
             _reloadTimer.Construct(TimeToAttack.Value);
 
-            ConstructTargetReach(followSection);
-            ConstructTargetLose(followSection);
+            followSection.FollowMechanics.OnTargetLose += _ => _target = null;
+            followSection.FollowMechanics.OnTargetReach += target => _target = target;
+            
             ConstructAttack();
-            ConstructCheckTarget(enemyDocument);
+            ConstructCheckTarget(root);
         }
 
-        private void ConstructCheckTarget(DeclarativeModel model)
+        private void ConstructCheckTarget(DeclarativeModel root)
         {
-            model.onFixedUpdate += _ =>
+            root.onFixedUpdate += _ =>
             {
                 if (_reloadTimer.IsPlaying)
                 {
@@ -65,16 +66,6 @@ namespace AtomicProject.Enemy.Document
                 takeDamageComponent.TakeDamage(Damage.Value);
                 _reloadTimer.StartTimer();
             };
-        }
-
-        private void ConstructTargetLose(FollowSection followSection)
-        {
-            followSection.FollowMechanics.OnTargetLose += _ => _target = null;
-        }
-
-        private void ConstructTargetReach(FollowSection followSection)
-        {
-            followSection.FollowMechanics.OnTargetReach += target => _target = target;
         }
     }
 }
