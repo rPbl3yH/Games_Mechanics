@@ -4,17 +4,11 @@ using Zenject;
 
 namespace EventBusPattern
 {
-    public class ExplosionBarrelDeathHandler : IInitializable, IDisposable
+    public class ExplosionBarrelDeathHandler : BaseHandler<ExplosionBarrelDeathEvent>
     {
-        [Inject] private EventBus _eventBus;
         [Inject] private LevelMap _levelMap;
 
-        public void Initialize()
-        {
-            _eventBus.Subscribe<ExplosionBarrelDeathEvent>(OnDeath);
-        }
-
-        private void OnDeath(ExplosionBarrelDeathEvent evt)
+        protected override void OnHandleEvent(ExplosionBarrelDeathEvent evt)
         {
             var barrel = evt.Barrel;
             var neighbourEntities = _levelMap.GetNeighbourEntities(barrel.transform.position);
@@ -25,15 +19,9 @@ namespace EventBusPattern
                 {
                     effect.Source = barrel;
                     effect.Target = entity;
-                    _eventBus.RaiseEvent(effect);
+                    EventBus.RaiseEvent(effect);
                 }    
             }
-            
-        }
-
-        public void Dispose()
-        {
-            _eventBus.Unsubscribe<ExplosionBarrelDeathEvent>(OnDeath);
         }
     }
 }
