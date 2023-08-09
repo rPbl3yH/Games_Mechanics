@@ -11,6 +11,7 @@ namespace EventBusPattern
         {
             _turnTaskPipeline.AddTask(new StartTask());
             _turnTaskPipeline.AddTask(_container.Instantiate<PlayerInputTask>());
+            _turnTaskPipeline.AddTask(_container.Instantiate<VisualTask>());
             _turnTaskPipeline.AddTask(new FinishTask());
         }
     }

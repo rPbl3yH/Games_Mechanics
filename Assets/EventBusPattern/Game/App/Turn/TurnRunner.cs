@@ -7,7 +7,17 @@ namespace EventBusPattern
 {
     public class TurnRunner : MonoBehaviour
     {
+        [SerializeField] private bool _runOnStart = true;
+        [SerializeField] private bool _runOnFinish = true;
         [Inject] private TurnTaskPipeline _turnTaskPipeline;
+
+        private void Start()
+        {
+            if (_runOnStart)
+            {
+                Run();
+            }
+        }
 
         private void OnEnable()
         {
@@ -27,7 +37,10 @@ namespace EventBusPattern
 
         private void OnFinished()
         {
-            
+            if (_runOnFinish)
+            {
+                Run();
+            }
         }
     }
 }

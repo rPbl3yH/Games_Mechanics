@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="784c52bd-8de3-408c-90cd-016db315fbc4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Otus_Homevorks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Otus_Homevorks/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/Tasks/StartTurnTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/Tasks/StartTask.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/Tasks/StartTurnTask.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/Tasks/StartTask.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/Tasks/TurnTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/Tasks/Task.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/Tasks/TurnTask.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/Tasks/Task.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/TurnPipelineInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/TurnPipelineInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/TurnTaskPipeline.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/TurnTaskPipeline.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Installer/GameSystemInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Installer/GameSystemInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/LifeEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Entities/LifeEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/LifeEntity.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Entities/LifeEntity.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Entities/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Player.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Entities/Player.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/PlayerInputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Controllers/PlayerInputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/PlayerInputController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Controllers/PlayerInputController.cs.meta" afterDir="false" />
-    </list>
+    <list default="true" id="784c52bd-8de3-408c-90cd-016db315fbc4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +18,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c2a97e0383e8404c9fc0ae19d58f57f146a800/4b/2dedec95/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c2a97e0383e8404c9fc0ae19d58f57f146a800/d2/ecbc9600/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f5b293c74049457cabc28437c5a763925a00/aa/23caa4bb/ITickable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/LifeEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Core/Events/AnimatorMessageListener.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Core/Events/UnityMessageListener.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Otus_UnityProfessional/Assets/Modules/AI/Agents/Scripts/Internal/MonoHelper.cs" root0="SKIP_HIGHLIGHTING" />
@@ -97,10 +81,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="16796">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="16796" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
