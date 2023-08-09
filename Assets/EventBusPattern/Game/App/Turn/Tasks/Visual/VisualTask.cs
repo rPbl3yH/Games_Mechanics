@@ -19,6 +19,7 @@ namespace EventBusPattern
         {
             Debug.Log("Visual finished");
             _visualTaskPipeline.OnFinished -= OnFinished;
+            _visualTaskPipeline.Clear();
             Finish();
         }
     }
