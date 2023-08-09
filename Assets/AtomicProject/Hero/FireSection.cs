@@ -10,6 +10,7 @@ namespace AtomicProject.Hero
     [Serializable]
     public class FireSection
     {
+        public Transform Parent;
         public GameObject BulletPrefab;
         public Transform SpawnPoint;
 
@@ -43,7 +44,7 @@ namespace AtomicProject.Hero
                     return;
                 }
                 
-                GameObject.Instantiate(BulletPrefab, SpawnPoint.position, SpawnPoint.rotation);
+                GameObject.Instantiate(BulletPrefab, SpawnPoint.position, SpawnPoint.rotation, Parent);
                 BulletCount.Value--;
                 _reloadTimer.StartTimer();
             };

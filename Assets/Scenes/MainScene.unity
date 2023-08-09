@@ -1018,6 +1018,7 @@ MonoBehaviour:
       TargetPoint:
         value: {x: 0, y: 0, z: 0}
     FireSection:
+      Parent: {fileID: 366684790}
       BulletPrefab: {fileID: 7655893833624640705, guid: d078c2cfc13e9c14e9feb547291d54c2,
         type: 3}
       SpawnPoint: {fileID: 814271095}
