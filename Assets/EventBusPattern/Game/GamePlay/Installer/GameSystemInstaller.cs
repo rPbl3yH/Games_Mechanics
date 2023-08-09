@@ -1,3 +1,4 @@
+using EventBusPattern.Game.GamePlay.Handlers.Logic;
 using EventBusPattern.Visual;
 using Zenject;
 
@@ -43,6 +44,8 @@ namespace EventBusPattern.Game.GamePlay.Installer
             Container.BindInterfacesAndSelfTo<ExplosionBarrelDeathHandler>().FromNew().AsSingle();
             Container.BindInterfacesAndSelfTo<ForceDirectionEffectHandler>().FromNew().AsSingle();
             Container.BindInterfacesAndSelfTo<DealDamageHandler>().FromNew().AsSingle();
+            Container.BindInterfacesAndSelfTo<DeathHandler>().FromNew().AsSingle();
+            
         }
 
         private void InstallPlayer()

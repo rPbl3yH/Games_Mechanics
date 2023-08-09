@@ -6,7 +6,12 @@ namespace EventBusPattern
     {
         protected override void OnHandleEvent(DealDamageEvent evt)
         {
-            evt.Target.TakeDamage(evt.Source.GetDamage());
+            evt.Target.Life -= evt.Source.Damage;
+            
+            if (evt.Target.Life <= 0)
+            {
+                EventBus.RaiseEvent(new DeathEvent(evt.Target));    
+            }
         }
     }
 }
