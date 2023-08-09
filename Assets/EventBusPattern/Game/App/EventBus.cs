@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace EventBusPattern
@@ -8,6 +9,9 @@ namespace EventBusPattern
     {
         private Dictionary<Type, IEventHandlerCollection> _handlers = new();
 
+        private Queue<object> _eventQueue = new();
+        private bool _isRunning;
+        
         public void Subscribe<TEvent>(Action<TEvent> handler)
         {
             var eventType = typeof(TEvent);
@@ -29,6 +33,14 @@ namespace EventBusPattern
     
         public void RaiseEvent<TEvent>(TEvent evt)
         {
+            if (_isRunning)
+            {
+                _eventQueue.Enqueue(evt);
+                return;
+            }
+            
+            _isRunning = true;
+            
             var eventType = evt.GetType();
             Debug.Log(eventType);
 
@@ -38,6 +50,13 @@ namespace EventBusPattern
             }
 
             eventHandlerCollection?.RaiseEvent(evt);
+
+            _isRunning = false;
+
+            if (_eventQueue.Any())
+            {
+                RaiseEvent(_eventQueue.Dequeue());
+            }
         }
     }
 

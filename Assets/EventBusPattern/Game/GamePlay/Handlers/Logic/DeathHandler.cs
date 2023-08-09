@@ -11,7 +11,7 @@ namespace EventBusPattern.Game.GamePlay.Handlers.Logic
             {
                 EventBus.RaiseEvent(new ExplosionBarrelDeathEvent(barrel));
             }
-            Object.Destroy(evt.LifeEntity.gameObject);
+            //Object.Destroy(evt.LifeEntity.gameObject);
         }
     }
 }

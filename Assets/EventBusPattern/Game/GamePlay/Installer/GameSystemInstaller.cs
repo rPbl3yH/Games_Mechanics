@@ -28,6 +28,7 @@ namespace EventBusPattern.Game.GamePlay.Installer
         {
             Container.Bind<VisualTaskPipeline>().FromNew().AsSingle();
             Container.BindInterfacesAndSelfTo<MoveVisualHandler>().FromNew().AsSingle();
+            Container.BindInterfacesAndSelfTo<DeathVisualHandler>().FromNew().AsSingle();
         }
 
         private void InstallEventBus()
