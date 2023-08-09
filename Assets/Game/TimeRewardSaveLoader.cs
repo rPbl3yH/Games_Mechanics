@@ -12,11 +12,12 @@ namespace Game
 
         private void Awake()
         {
-            _timeReward.OnStarted += OnStarted;
+            _timeReward.OnTimerStarted += TimerStarted;
         }
 
-        private void OnStarted()
+        private void TimerStarted()
         {
+            Debug.Log("Save time");
             PlayerPrefs.SetString(_key, DateTime.Now.ToString(CultureInfo.InvariantCulture));
         }
 

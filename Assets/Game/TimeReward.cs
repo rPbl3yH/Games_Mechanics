@@ -7,7 +7,7 @@ namespace Game
 {
     public class TimeReward : MonoBehaviour
     {
-        public event Action OnStarted;
+        public event Action OnTimerStarted;
         
         [SerializeField] private int _rewardMoney = 100;
         [SerializeField] private float _timeToReceive = 5f;
@@ -21,16 +21,20 @@ namespace Game
         {
             _moneyStorage = FindObjectOfType<MoneyStorage>();
             _timer.Duration = _timeToReceive;
-            _timer.OnFinished += ReceiveReward;
         }
-        
+
         private void Start()
+        {
+            StartTimer();
+        }
+
+        private void StartTimer()
         {
             _timer.Play();
             
             if (_timer.Progress == 0)
             {
-                OnStarted?.Invoke();
+                OnTimerStarted?.Invoke();
             }
         }
 
@@ -39,12 +43,20 @@ namespace Game
             _timer.CurrentTime = currentTime;
         }
 
+        private void Restart()
+        {
+            _timer.ResetTime();
+            StartTimer();
+        }
+
+        [Button]
         private void ReceiveReward()
         {
             if (_timer.Progress >= 1)
             {
                 _moneyStorage.AddMoney(_rewardMoney);
                 Debug.Log($"You received reward {_rewardMoney}!");
+                Restart();
             }
             else
             {
