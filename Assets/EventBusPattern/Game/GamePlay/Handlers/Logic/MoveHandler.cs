@@ -10,7 +10,6 @@ namespace EventBusPattern.Game.GamePlay
         {
             var transform = evt.LifeEntity.transform;
             transform.LookAt(evt.TargetPoint);
-            transform.localPosition = evt.TargetPoint;
         }
     }
 }

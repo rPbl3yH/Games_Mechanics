@@ -50,7 +50,6 @@ namespace EventBusPattern.Game.GamePlay.Installer
             Container.Bind<Player>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesAndSelfTo<KeyBoardInput>().FromNew().AsSingle();
             Container.BindInterfacesAndSelfTo<FireInput>().FromNew().AsSingle();
-            //Container.BindInterfacesAndSelfTo<PlayerInputController>().FromNew().AsSingle();
         }
 
         private void InstallLevelMapSystem()

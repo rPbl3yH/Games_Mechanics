@@ -18,7 +18,7 @@ namespace EventBusPattern
                 _levelMap.RemovePoint(LevelMapUtils.GetVector2Int(evt.LifeEntity.transform.position));
                 _levelMap.AddEntity(nextPointInt, evt.LifeEntity);
                 
-                EventBus.RaiseEvent(new MoveEvent(evt.LifeEntity, nextPoint));
+                EventBus.RaiseEvent(new MoveEvent(evt.LifeEntity, nextPoint, 0.3f));
             }
         }
     }

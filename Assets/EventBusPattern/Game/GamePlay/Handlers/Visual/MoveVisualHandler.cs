@@ -1,3 +1,4 @@
+using DG.Tweening;
 using EventBusPattern.Game.App.Events;
 using UnityEngine;
 
@@ -7,7 +8,7 @@ namespace EventBusPattern.Visual
     {
         protected override void OnHandleEvent(MoveEvent evt)
         {
-            Debug.Log(nameof(MoveVisualHandler));
+            evt.LifeEntity.transform.DOMove(evt.TargetPoint, 0.5f);
         }
     }
 }
