@@ -28,7 +28,7 @@ namespace AtomicProject.Hero
 
             root.onFixedUpdate += _ =>
             {
-                if (_closetEnemy.Value)
+                if (IsFind.Value && _closetEnemy.Value)
                 {
                     ClosetEnemyPoint.Value = _closetEnemy.Value.position;
                 }

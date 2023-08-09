@@ -22,6 +22,6 @@ namespace AtomicProject.Hero
         public HeroStates States;
 
         [Section] 
-        public FindEnemySection _findEnemySection;
+        public FindEnemySection FindEnemySection;
     }
 }

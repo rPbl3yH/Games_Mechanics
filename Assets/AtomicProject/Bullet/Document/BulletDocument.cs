@@ -11,7 +11,7 @@ namespace AtomicProject.Bullet.Document
         public Transform Transform;
         public AtomicVariable<float> Speed;
 
-        public CollideDetectionMechanic CollideDetectionMechanic;
+        public TriggerDetection _triggerDetection;
 
         public AtomicVariable<int> Damage;
 
@@ -23,11 +23,11 @@ namespace AtomicProject.Bullet.Document
                 Transform.Translate(Vector3.forward * (Speed.Value * deltaTime));
             };
 
-            CollideDetectionMechanic.OnTriggerEntered += entity =>
+            _triggerDetection.OnTriggerEntered += entity =>
             {
-                if (entity.TryGet(out ITakeBulletDamageComponent takeDamageComponent))
+                if (entity.TryGet(out ITakeDamageComponent component))
                 {
-                    takeDamageComponent.TakeDamage(Damage.Value);
+                    component.TakeDamage(Damage.Value);
                     Destroy(gameObject);
                 }
             };

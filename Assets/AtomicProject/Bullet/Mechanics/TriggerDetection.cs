@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace AtomicProject.Bullet.Mechanics
 {
-    public class CollideDetectionMechanic : MonoBehaviour
+    public class TriggerDetection : MonoBehaviour
     {
         public event Action<IEntity> OnTriggerEntered;
             
