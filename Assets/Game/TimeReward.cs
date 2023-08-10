@@ -5,9 +5,10 @@ using UnityEngine;
 
 namespace Game
 {
-    public class TimeReward : MonoBehaviour
+    public class TimeReward : MonoBehaviour, IRealtimeTimer
     {
-        public event Action OnTimerStarted;
+        public event Action<IRealtimeTimer> OnStarted;
+        public string Id => nameof(TimeReward);
 
         [SerializeField] private TimeRewardConfig _timeRewardConfig;
         [SerializeField] private TimeRewardReceiver _timeRewardReceiver;
@@ -31,11 +32,11 @@ namespace Game
             
             if (_timer.Progress == 0)
             {
-                OnTimerStarted?.Invoke();
+                OnStarted?.Invoke(this);
             }
         }
 
-        public void SetCurrentTime(float currentTime)
+        public void Synchronize(float currentTime)
         {
             _timer.CurrentTime = currentTime;
         }

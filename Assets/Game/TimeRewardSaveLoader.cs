@@ -12,11 +12,11 @@ namespace Game
 
         private void Awake()
         {
-            _timeReward.OnTimerStarted += TimerStarted;
+            _timeReward.OnStarted += TimerStarted;
             LoadTime();
         }
 
-        private void TimerStarted()
+        private void TimerStarted(IRealtimeTimer obj)
         {
             SaveTime();
         }
@@ -36,7 +36,7 @@ namespace Game
                 var timeSpan = DateTime.Now - previousTime;
                 var pauseSeconds = timeSpan.TotalSeconds;  
                 Debug.Log("Pause seconds = " + pauseSeconds);
-                _timeReward.SetCurrentTime((float)pauseSeconds);
+                _timeReward.Synchronize((float)pauseSeconds);
             }
         }
     }
