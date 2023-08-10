@@ -13,15 +13,21 @@ namespace Game
         private void Awake()
         {
             _timeReward.OnTimerStarted += TimerStarted;
+            LoadTime();
         }
 
         private void TimerStarted()
+        {
+            SaveTime();
+        }
+
+        private void SaveTime()
         {
             Debug.Log("Save time");
             PlayerPrefs.SetString(_key, DateTime.Now.ToString(CultureInfo.InvariantCulture));
         }
 
-        private void Start()
+        private void LoadTime()
         {
             if (PlayerPrefs.HasKey(_key))
             {

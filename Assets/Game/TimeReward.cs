@@ -9,17 +9,14 @@ namespace Game
     {
         public event Action OnTimerStarted;
         
-        [SerializeField] private int _rewardMoney = 100;
         [SerializeField] private float _timeToReceive = 5f;
+        [SerializeField] private TimeRewardReceiver _timeRewardReceiver;
 
         [ShowInInspector, ReadOnly]
         private Timer _timer = new();
 
-        private MoneyStorage _moneyStorage;
-
         private void Awake()
         {
-            _moneyStorage = FindObjectOfType<MoneyStorage>();
             _timer.Duration = _timeToReceive;
         }
 
@@ -54,8 +51,7 @@ namespace Game
         {
             if (_timer.Progress >= 1)
             {
-                _moneyStorage.AddMoney(_rewardMoney);
-                Debug.Log($"You received reward {_rewardMoney}!");
+                _timeRewardReceiver.ReceiveReward();
                 Restart();
             }
             else
