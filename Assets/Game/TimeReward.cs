@@ -5,23 +5,22 @@ using UnityEngine;
 
 namespace Game
 {
-    public class TimeReward : MonoBehaviour, IRealtimeTimer
+    [Serializable]
+    public class TimeReward : IRealtimeTimer
     {
         public event Action<IRealtimeTimer> OnStarted;
+        public event Action<IRealtimeTimer> OnFinish;
         public string Id => nameof(TimeReward);
-
-        [SerializeField] private TimeRewardConfig _timeRewardConfig;
-        [SerializeField] private TimeRewardReceiver _timeRewardReceiver;
 
         [ShowInInspector, ReadOnly]
         private Timer _timer = new();
 
-        public void Construct()
+        public void Construct(TimeRewardConfig timeRewardConfig)
         {
-            _timer.Duration = _timeRewardConfig.ReceivingTime;
+            _timer.Duration = timeRewardConfig.ReceivingTime;
         }
 
-        private void Start()
+        public void Start()
         {
             StartTimer();
         }
@@ -57,7 +56,7 @@ namespace Game
         {
             if (CanReceiveReward())
             {
-                _timeRewardReceiver.ReceiveReward();
+                OnFinish?.Invoke(this);
                 Restart();
             }
             else

@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Game.Reward;
 using UnityEngine;
 using Zenject;
 
@@ -7,22 +6,22 @@ namespace Game
 {
     public class TimeRewardReceiver : MonoBehaviour
     {
-        [SerializeField] private TimeRewardConfig _config;
         private List<Reward.Reward> _rewards = new();
-        private MoneyStorage _moneyStorage;
 
         [Inject] private DiContainer _container;
-        
-        private void Awake()
+
+        public void Construct(TimeRewardConfig config, IRealtimeTimer timer)
         {
-            _rewards = _config.Rewards;
+            _rewards = config.Rewards;
             foreach (var reward in _rewards)
             {
                 reward.Construct(_container);
             }
+            
+            timer.OnFinish += ReceiveReward;
         }
 
-        public void ReceiveReward()
+        private void ReceiveReward(IRealtimeTimer timer)
         {
             foreach (var reward in _rewards)
             {

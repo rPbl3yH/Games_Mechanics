@@ -512,7 +512,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b908a0d8937140f0ba2236938fb386c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _config: {fileID: 11400000, guid: a807e328a00228647a5edc92389a2abb, type: 2}
 --- !u!1 &1488356319
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,7 +565,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1684012501}
-  - component: {fileID: 1684012500}
   - component: {fileID: 1684012502}
   - component: {fileID: 1684012503}
   m_Layer: 0
@@ -576,20 +574,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1684012500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1684012499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5065d0027481c645baba66898fa9eec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _timeRewardConfig: {fileID: 11400000, guid: a807e328a00228647a5edc92389a2abb, type: 2}
-  _timeRewardReceiver: {fileID: 771598507}
 --- !u!4 &1684012501
 Transform:
   m_ObjectHideFlags: 0
@@ -629,8 +613,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4041078561c43e2bbe9ea37b6c0ebcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeReward: {fileID: 1684012500}
   _timeRewardConfig: {fileID: 11400000, guid: a807e328a00228647a5edc92389a2abb, type: 2}
+  _timeRewardReceiver: {fileID: 771598507}
   _saveLoader: {fileID: 1684012502}
 --- !u!1 &1741761797
 GameObject:
