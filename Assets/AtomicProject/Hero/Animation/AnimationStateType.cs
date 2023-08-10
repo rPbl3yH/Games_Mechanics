@@ -4,7 +4,7 @@
     {
         Idle,
         Run,
-        Death,
         Shoot,
+        Death,
     }
 }

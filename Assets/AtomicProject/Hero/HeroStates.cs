@@ -39,6 +39,14 @@ namespace AtomicProject.Hero
             };
             heroCore.LifeSection.OnDeath += () => StateMachine.SwitchState(HeroStateType.Dead);
 
+            heroCore.FindEnemySection.IsFind.OnChanged += isFind =>
+            {
+                if (!isFind && StateMachine.CurrentStateType == HeroStateType.Shoot)
+                {
+                    StateMachine.SwitchState(HeroStateType.Idle);
+                }
+            };
+
             heroDocument.onStart += () => StateMachine.Enter();
         }
     }
