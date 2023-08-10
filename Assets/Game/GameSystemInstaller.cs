@@ -1,11 +1,14 @@
-using Game;
 using Zenject;
 
-public class GameSystemInstaller : MonoInstaller<GameSystemInstaller>
+namespace Game
 {
-    public override void InstallBindings()
+    public class GameSystemInstaller : MonoInstaller<GameSystemInstaller>
     {
-        Container.Bind<MoneyStorage>().FromComponentInHierarchy().AsSingle();
-        Container.BindInterfacesAndSelfTo<TimeRewardModule>().FromComponentInHierarchy().AsSingle();
+        public override void InstallBindings()
+        {
+            Container.Bind<MoneyStorage>().FromComponentInHierarchy().AsSingle();
+            Container.Bind<RealTimeSaveLoader>().FromNew().AsSingle();
+            Container.BindInterfacesAndSelfTo<TimeRewardModule>().FromComponentInHierarchy().AsSingle();
+        }
     }
 }
