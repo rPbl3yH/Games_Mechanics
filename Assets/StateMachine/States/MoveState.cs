@@ -36,7 +36,7 @@ namespace StateMachine.States
         {
             if (_isEnabled)
             {
-                _transform.Translate(_direction.Value * (_speed.Value * deltaTime));
+                _transform.Translate(_direction.Value * (_speed.Value * deltaTime), Space.World);
             }
         }
     }

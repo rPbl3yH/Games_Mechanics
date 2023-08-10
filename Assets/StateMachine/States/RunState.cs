@@ -24,7 +24,7 @@ namespace StateMachine.States
             var moveSection = heroDocument.Core.MoveSection;
             MoveState.Construct(heroDocument.Transform, moveSection.Direction, moveSection.Speed);
             RotateState.Construct(heroDocument.Transform, 
-                new AtomicValue<Quaternion>(() => Quaternion.LookRotation(heroDocument.Core.RotateSection.LookDirection.Value)));
+                new AtomicValue<Quaternion>(() => Quaternion.LookRotation(heroDocument.Core.MoveSection.Direction.Value)));
         }
     }
 }
