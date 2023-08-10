@@ -40,6 +40,11 @@ namespace Game
             _timer.CurrentTime = currentTime;
         }
 
+        private bool CanReceiveReward()
+        {
+            return _timer.Progress >= 1;
+        }
+        
         private void Restart()
         {
             _timer.ResetTime();
@@ -49,7 +54,7 @@ namespace Game
         [Button]
         private void ReceiveReward()
         {
-            if (_timer.Progress >= 1)
+            if (CanReceiveReward())
             {
                 _timeRewardReceiver.ReceiveReward();
                 Restart();

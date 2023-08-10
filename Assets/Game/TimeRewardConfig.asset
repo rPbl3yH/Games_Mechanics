@@ -13,7 +13,12 @@ MonoBehaviour:
   m_Name: TimeRewardConfig
   m_EditorClassIdentifier: 
   ReceivingTime: 5
-  Rewards: []
+  Rewards:
+  - rid: 414609577848602634
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 414609577848602634
+      type: {class: MoneyReward, ns: Game.Reward, asm: Assembly-CSharp}
+      data:
+        Money: 100

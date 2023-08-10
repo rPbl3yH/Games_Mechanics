@@ -1,24 +1,25 @@
 ﻿using System.Collections.Generic;
 using Game.Reward;
 using UnityEngine;
+using Zenject;
 
 namespace Game
 {
     public class TimeRewardReceiver : MonoBehaviour
     {
         [SerializeField] private TimeRewardConfig _config;
-        private List<IReward> _rewards = new();
+        private List<Reward.Reward> _rewards = new();
         private MoneyStorage _moneyStorage;
 
+        [Inject] private DiContainer _container;
+        
         private void Awake()
         {
             _rewards = _config.Rewards;
-            _moneyStorage = FindObjectOfType<MoneyStorage>();
-        }
-
-        private void Start()
-        {
-            _rewards.Add(new MoneyReward(100, _moneyStorage));
+            foreach (var reward in _rewards)
+            {
+                reward.Construct(_container);
+            }
         }
 
         public void ReceiveReward()
