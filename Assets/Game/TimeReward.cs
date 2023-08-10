@@ -8,8 +8,8 @@ namespace Game
     public class TimeReward : MonoBehaviour
     {
         public event Action OnTimerStarted;
-        
-        [SerializeField] private float _timeToReceive = 5f;
+
+        [SerializeField] private TimeRewardConfig _timeRewardConfig;
         [SerializeField] private TimeRewardReceiver _timeRewardReceiver;
 
         [ShowInInspector, ReadOnly]
@@ -17,7 +17,7 @@ namespace Game
 
         private void Awake()
         {
-            _timer.Duration = _timeToReceive;
+            _timer.Duration = _timeRewardConfig.ReceivingTime;
         }
 
         private void Start()

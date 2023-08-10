@@ -478,7 +478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b908a0d8937140f0ba2236938fb386c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moneyReward: 100
+  _config: {fileID: 11400000, guid: a807e328a00228647a5edc92389a2abb, type: 2}
 --- !u!1 &1684012499
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,7 +509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5065d0027481c645baba66898fa9eec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeToReceive: 10
+  _timeRewardConfig: {fileID: 11400000, guid: a807e328a00228647a5edc92389a2abb, type: 2}
   _timeRewardReceiver: {fileID: 771598507}
 --- !u!4 &1684012501
 Transform:

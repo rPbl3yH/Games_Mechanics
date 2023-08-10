@@ -1,4 +1,6 @@
-﻿namespace Game.Reward
+﻿using Zenject;
+
+namespace Game.Reward
 {
     public interface IReward
     {
@@ -7,18 +9,18 @@
 
     class MoneyReward : IReward
     {
-        private readonly int _money;
+        public int Money;
         private readonly MoneyStorage _moneyStorage;
 
         public MoneyReward(int money, MoneyStorage moneyStorage)
         {
-            _money = money;
+            Money = money;
             _moneyStorage = moneyStorage;
         }
 
         public void ReceiveReward()
         {
-            _moneyStorage.AddMoney(_money);
+            _moneyStorage.AddMoney(Money);
         }
     }
 }
