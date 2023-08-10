@@ -8,6 +8,7 @@ namespace Game
         {
             Container.Bind<MoneyStorage>().FromNew().AsSingle();
             Container.Bind<RealTimeSaveLoader>().FromNew().AsSingle();
+            Container.Bind<RealTimeRewardReceiver>().FromNew().AsSingle();
             Container.BindInterfacesAndSelfTo<TimeRewardModule>().FromComponentInHierarchy().AsSingle();
         }
     }

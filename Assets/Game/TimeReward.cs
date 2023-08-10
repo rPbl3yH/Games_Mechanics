@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Elementary;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -9,7 +10,7 @@ namespace Game
     public class TimeReward : IRealtimeTimer
     {
         public event Action<IRealtimeTimer> OnStarted;
-        public event Action<IRealtimeTimer> OnFinish;
+        public event Action<IRealtimeTimer> OnFinished;
         public string Id => nameof(TimeReward);
 
         [ShowInInspector, ReadOnly]
@@ -56,7 +57,7 @@ namespace Game
         {
             if (CanReceiveReward())
             {
-                OnFinish?.Invoke(this);
+                OnFinished?.Invoke(this);
                 Restart();
             }
             else

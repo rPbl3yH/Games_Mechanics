@@ -1,5 +1,4 @@
-﻿using System;
-using Sirenix.OdinInspector;
+﻿using Sirenix.OdinInspector;
 using UnityEngine;
 using Zenject;
 
@@ -9,13 +8,17 @@ namespace Game
     {
         [ShowInInspector] private TimeReward _timeReward = new();
         [SerializeField] private TimeRewardConfig _timeRewardConfig;
-        [SerializeField] private TimeRewardReceiver _timeRewardReceiver;
+        [Inject] private RealTimeRewardReceiver _realTimeRewardReceiver;
         [Inject] private RealTimeSaveLoader _saveLoader;
+        
+        [Header("Debug")]
+        [ShowInInspector] 
+        [Inject] private MoneyStorage _moneyStorage;
         
         public void Initialize()
         {
             _timeReward.Construct(_timeRewardConfig);
-            _timeRewardReceiver.Construct(_timeRewardConfig, _timeReward);
+            _realTimeRewardReceiver.RegisterTimer(_timeReward, _timeRewardConfig);
             _saveLoader.RegisterTimer(_timeReward);
         }
 

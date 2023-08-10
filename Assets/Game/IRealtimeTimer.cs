@@ -5,7 +5,7 @@ namespace Game
     public interface IRealtimeTimer
     {
         event Action<IRealtimeTimer> OnStarted;
-        event Action<IRealtimeTimer> OnFinish;
+        event Action<IRealtimeTimer> OnFinished;
         
         string Id { get; }
         
