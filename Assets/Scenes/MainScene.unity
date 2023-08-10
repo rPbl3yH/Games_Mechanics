@@ -1022,6 +1022,8 @@ MonoBehaviour:
       BulletPrefab: {fileID: 7655893833624640705, guid: d078c2cfc13e9c14e9feb547291d54c2,
         type: 3}
       FirePoint: {fileID: 814271095}
+      IsFire:
+        value: 0
       ReloadTime:
         value: 1
       _addBulletSection:

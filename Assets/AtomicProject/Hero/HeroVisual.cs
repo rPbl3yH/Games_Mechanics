@@ -19,7 +19,7 @@ namespace AtomicProject.Hero
 
             _animatorStateMachine.AddTransition(AnimationStateType.Idle, () => coreFSM.CurrentStateType == HeroStateType.Idle);
             _animatorStateMachine.AddTransition(AnimationStateType.Run, () => coreFSM.CurrentStateType == HeroStateType.Run);
-            _animatorStateMachine.AddTransition(AnimationStateType.Shoot, () => coreFSM.CurrentStateType == HeroStateType.Shoot);
+            _animatorStateMachine.AddTransition(AnimationStateType.Shoot, () => heroDocument.Core.FireSection.IsFire.Value);
             _animatorStateMachine.AddTransition(AnimationStateType.Death, () => coreFSM.CurrentStateType == HeroStateType.Dead);
         }
     }

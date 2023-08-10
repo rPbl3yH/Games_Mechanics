@@ -26,24 +26,18 @@ namespace AtomicProject.Hero
                 );
 
             heroCore.MoveSection.OnMoveStarted += () => StateMachine.SwitchState(HeroStateType.Run);
-            heroCore.MoveSection.OnMoveFinished += () => StateMachine.SwitchState(HeroStateType.Idle);
+            heroCore.MoveSection.OnMoveFinished += () =>
+            {
+                if (heroCore.FindEnemySection.IsFind.Value)
+                {
+                    StateMachine.SwitchState(HeroStateType.Shoot);
+                }
+                else
+                {
+                    StateMachine.SwitchState(HeroStateType.Idle);
+                }
+            };
             heroCore.LifeSection.OnDeath += () => StateMachine.SwitchState(HeroStateType.Dead);
-            
-            StateMachine.OnStateSwitched += type =>
-            {
-                if (type == HeroStateType.Idle && heroCore.FindEnemySection.IsFind.Value)
-                {
-                    StateMachine.SwitchState(HeroStateType.Shoot);
-                }
-            };
-
-            heroCore.FindEnemySection.OnEnemyFind += _ =>
-            {
-                if (StateMachine.CurrentStateType == HeroStateType.Idle)
-                {
-                    StateMachine.SwitchState(HeroStateType.Shoot);
-                }
-            };
 
             heroDocument.onStart += () => StateMachine.Enter();
         }

@@ -7,12 +7,12 @@ namespace StateMachine.States
     [Serializable]
     public class FireState : IState, IFixedUpdateListener
     {
-        private IAtomicAction _onFire;
+        private IAtomicAction _fireRequest;
         private bool _isEnabled;
 
         public void Construct(IAtomicAction onFire)
         {
-            _onFire = onFire;
+            _fireRequest = onFire;
         }
         
         public void Enter()
@@ -32,7 +32,7 @@ namespace StateMachine.States
                 return;
             }
             
-            _onFire?.Invoke();
+            _fireRequest?.Invoke();
         }
     }
 }
