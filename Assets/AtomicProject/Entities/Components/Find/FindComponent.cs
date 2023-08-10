@@ -3,11 +3,6 @@ using Entities;
 
 namespace AtomicProject.Entities.Components
 {
-    public interface IFindComponent
-    {
-        void Find(IEntity entity);
-    }
-
     class FindComponent : IFindComponent
     {
         private readonly IAtomicAction<IEntity> _onFind;

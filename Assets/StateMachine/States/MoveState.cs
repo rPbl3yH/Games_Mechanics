@@ -10,16 +10,16 @@ namespace StateMachine.States
     public class MoveState : IState, IFixedUpdateListener
     {
         private Transform _transform;
-        private IAtomicValue<Vector3> Direction;
-        private IAtomicValue<float> Speed;
+        private IAtomicValue<Vector3> _direction;
+        private IAtomicValue<float> _speed;
 
         private bool _isEnabled;
         
         public void Construct(Transform transform, IAtomicValue<Vector3> direction, IAtomicValue<float> speed)
         {
             _transform = transform;
-            Direction = direction;
-            Speed = speed;
+            _direction = direction;
+            _speed = speed;
         }
         
         public void Enter()
@@ -36,7 +36,7 @@ namespace StateMachine.States
         {
             if (_isEnabled)
             {
-                _transform.Translate(Direction.Value * (Speed.Value * deltaTime));
+                _transform.Translate(_direction.Value * (_speed.Value * deltaTime));
             }
         }
     }

@@ -8,13 +8,13 @@ namespace StateMachine.States
     [Serializable]
     public class RotateState : IState, IFixedUpdateListener
     {
-        private AtomicVariable<Vector3> _targetPoint;
+        private IAtomicValue<Quaternion> _rotation;
         private Transform _transform;
         private bool _isEnabled;
 
-        public void Construct(Transform transform, AtomicVariable<Vector3> targetPoint)
+        public void Construct(Transform transform, IAtomicValue<Quaternion> rotation)
         {
-            _targetPoint = targetPoint;
+            _rotation = rotation;
             _transform = transform;
         }
 
@@ -27,7 +27,7 @@ namespace StateMachine.States
         {
             if (_isEnabled)
             {
-                _transform.transform.rotation = Quaternion.LookRotation(_targetPoint.Value);
+                _transform.transform.rotation = _rotation.Value;
             }
         }
 

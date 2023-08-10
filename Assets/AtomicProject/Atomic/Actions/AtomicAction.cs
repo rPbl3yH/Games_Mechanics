@@ -4,9 +4,19 @@ namespace AtomicProject.Atomic.Actions
 {
     public sealed class AtomicAction : IAtomicAction
     {
-        private readonly System.Action action;
+        private System.Action action;
 
         public AtomicAction(System.Action action)
+        {
+            this.action = action;
+        }
+
+        public AtomicAction()
+        {
+            
+        }
+        
+        public void Use(System.Action action)
         {
             this.action = action;
         }

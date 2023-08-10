@@ -10,7 +10,7 @@ namespace AtomicProject.Hero
     public class MoveSection
     {
         public AtomicVariable<float> Speed;
-        public AtomicEvent<Vector3> OnMove = new();
+        public AtomicAction<Vector3> MoveRequest = new();
         public AtomicVariable<Vector3> Direction;
 
         public AtomicEvent OnMoveStarted;
@@ -19,7 +19,7 @@ namespace AtomicProject.Hero
         [Construct]
         public void Construct()
         {
-            OnMove += direction =>
+            MoveRequest.Use(direction =>
             {
                 if (Direction.Value == Vector3.zero && direction != Vector3.zero)
                 {
@@ -31,7 +31,7 @@ namespace AtomicProject.Hero
                 }
                 
                 Direction.Value = direction;
-            };
+            }); 
         }
     }
 }

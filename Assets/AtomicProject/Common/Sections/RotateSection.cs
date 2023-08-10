@@ -9,15 +9,15 @@ namespace AtomicProject.Hero
     [Serializable]
     public class RotateSection
     {
-        public AtomicVariable<Vector3> LookPoint;
+        public AtomicVariable<Vector3> LookDirection;
         public AtomicEvent<Vector3> OnRotate;
         
         [Construct]
-        public void Construct()
+        public void Construct(DeclarativeModel root)
         {
             OnRotate += lookPoint =>
             {
-                LookPoint.Value = lookPoint;
+                LookDirection.Value = lookPoint - root.transform.position;
             };
         }
     }

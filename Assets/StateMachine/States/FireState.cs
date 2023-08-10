@@ -7,10 +7,10 @@ namespace StateMachine.States
     [Serializable]
     public class FireState : IState, IFixedUpdateListener
     {
-        private AtomicEvent _onFire;
+        private IAtomicAction _onFire;
         private bool _isEnabled;
 
-        public void Construct(AtomicEvent onFire)
+        public void Construct(IAtomicAction onFire)
         {
             _onFire = onFire;
         }

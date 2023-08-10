@@ -1015,7 +1015,7 @@ MonoBehaviour:
       Direction:
         value: {x: 0, y: 0, z: 0}
     RotateSection:
-      LookPoint:
+      LookDirection:
         value: {x: 0, y: 0, z: 0}
     FireSection:
       Parent: {fileID: 366684790}
@@ -1043,10 +1043,8 @@ MonoBehaviour:
       ClosetEnemyPoint:
         value: {x: 0, y: 0, z: 0}
   Visual:
-    HeroAnimationStates:
-      _animationStateMachine:
-        CurrentStateType: 0
-        _animator: {fileID: 1782754807}
+    _animatorStateMachine:
+      _animator: {fileID: 1782754807}
 --- !u!4 &952267567
 Transform:
   m_ObjectHideFlags: 0

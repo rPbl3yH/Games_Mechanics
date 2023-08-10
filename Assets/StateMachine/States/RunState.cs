@@ -1,4 +1,5 @@
 ﻿using System;
+using AtomicProject.Atomic.Values;
 using AtomicProject.Hero;
 using Declarative;
 using UnityEngine;
@@ -22,7 +23,8 @@ namespace StateMachine.States
         {
             var moveSection = heroDocument.Core.MoveSection;
             MoveState.Construct(heroDocument.Transform, moveSection.Direction, moveSection.Speed);
-            RotateState.Construct(heroDocument.Transform, heroDocument.Core.RotateSection.LookPoint);
+            RotateState.Construct(heroDocument.Transform, 
+                new AtomicValue<Quaternion>(() => Quaternion.LookRotation(heroDocument.Core.RotateSection.LookDirection.Value)));
         }
     }
 }

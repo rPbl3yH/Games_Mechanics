@@ -15,7 +15,8 @@ namespace AtomicProject.Hero
         public GameObject BulletPrefab;
         public Transform FirePoint;
 
-        public AtomicEvent OnFire = new();
+        public AtomicAction FireRequest = new();
+        public AtomicAction FireAction = new();
         
         public AtomicVariable<float> ReloadTime;
         public Timer _reloadTimer = new();
@@ -28,7 +29,7 @@ namespace AtomicProject.Hero
         {
             _reloadTimer.Construct(ReloadTime.Value);
             
-            OnFire += () =>
+            FireRequest.Use(() =>
             {
                 if (_reloadTimer.IsPlaying)
                 {
@@ -40,10 +41,15 @@ namespace AtomicProject.Hero
                     return;
                 }
                 
+                FireAction?.Invoke();
+            });
+            
+            FireAction.Use(() =>
+            {
                 Object.Instantiate(BulletPrefab, FirePoint.position, FirePoint.rotation, Parent);
                 addBulletSection.BulletCount.Value--;
                 _reloadTimer.StartTimer();
-            };
+            });
         }
     }
 }

@@ -29,6 +29,7 @@ namespace AtomicProject.Hero
                 if (_addBulletTime >= AddBulletDelay.Value)
                 {
                     BulletCount.Value++;
+                    _addBulletTime = 0;
                 }
             };
         }

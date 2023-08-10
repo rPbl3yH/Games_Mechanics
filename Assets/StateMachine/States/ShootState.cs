@@ -1,4 +1,5 @@
 ﻿using System;
+using AtomicProject.Atomic.Values;
 using AtomicProject.Hero;
 using Declarative;
 using UnityEngine;
@@ -22,8 +23,10 @@ namespace StateMachine.States
         [Construct]
         public void ConstructStates(HeroDocument heroDocument)
         {
-            RotateState.Construct(heroDocument.Transform, heroDocument.Core.FindEnemySection.ClosetEnemyPoint);
-            FireState.Construct(heroDocument.Core.FireSection.OnFire);
+            RotateState.Construct(heroDocument.Transform,
+                new AtomicValue<Quaternion>(() =>
+                    Quaternion.LookRotation(heroDocument.Core.FindEnemySection.ClosetEnemyPoint.Value - heroDocument.Transform.position)));
+            FireState.Construct(heroDocument.Core.FireSection.FireRequest);
         }
     }
 }
