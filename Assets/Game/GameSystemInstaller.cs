@@ -6,7 +6,7 @@ namespace Game
     {
         public override void InstallBindings()
         {
-            Container.Bind<MoneyStorage>().FromComponentInHierarchy().AsSingle();
+            Container.Bind<MoneyStorage>().FromNew().AsSingle();
             Container.Bind<RealTimeSaveLoader>().FromNew().AsSingle();
             Container.BindInterfacesAndSelfTo<TimeRewardModule>().FromComponentInHierarchy().AsSingle();
         }

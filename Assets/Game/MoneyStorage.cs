@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game
 {
-    public class MoneyStorage : MonoBehaviour
+    public class MoneyStorage 
     {
         [ShowInInspector,ReadOnly]
         private int _money;
