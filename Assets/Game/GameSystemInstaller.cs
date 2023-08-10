@@ -6,5 +6,6 @@ public class GameSystemInstaller : MonoInstaller<GameSystemInstaller>
     public override void InstallBindings()
     {
         Container.Bind<MoneyStorage>().FromComponentInHierarchy().AsSingle();
+        Container.BindInterfacesAndSelfTo<TimeRewardModule>().FromComponentInHierarchy().AsSingle();
     }
 }

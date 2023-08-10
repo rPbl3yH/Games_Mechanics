@@ -16,7 +16,7 @@ namespace Game
         [ShowInInspector, ReadOnly]
         private Timer _timer = new();
 
-        private void Awake()
+        public void Construct()
         {
             _timer.Duration = _timeRewardConfig.ReceivingTime;
         }

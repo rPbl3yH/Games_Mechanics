@@ -6,12 +6,12 @@ namespace Game
 {
     public class TimeRewardSaveLoader : MonoBehaviour
     {
-        [SerializeField] private TimeReward _timeReward;
-
+        private IRealtimeTimer _timeReward;
         private readonly string _key = nameof(TimeReward);
 
-        private void Awake()
+        public void Construct(IRealtimeTimer timer)
         {
+            _timeReward = timer;
             _timeReward.OnStarted += TimerStarted;
             LoadTime();
         }
