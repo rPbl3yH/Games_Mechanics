@@ -21,8 +21,7 @@ namespace EventBusPattern
                 var movementVector = playerPoint - enemyPoint;
                 if (movementVector.sqrMagnitude == 1)
                 {
-                    Debug.Log("Attack!");
-                    //TODO: enemy attack event
+                    _eventBus.RaiseEvent(new DealDamageEvent(enemy, player));
                 }
                 else
                 {
