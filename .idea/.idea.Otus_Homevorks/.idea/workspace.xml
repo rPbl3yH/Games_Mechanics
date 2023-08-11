@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="784c52bd-8de3-408c-90cd-016db315fbc4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Handlers/Logic/SpawnEntityEventHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Otus_Homevorks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Otus_Homevorks/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/Tasks/EnemyMoveTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/Tasks/EnemyMoveTask.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/TurnPipeline/TurnPipelineInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/TurnPipeline/TurnPipelineInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/Tasks/EnemySpawnTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/Tasks/EnemySpawnTask.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Enemy/EnemySpawner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Enemy/EnemySpawner.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Handlers/Logic/SpawnEntityEventHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Installer/GameSystemInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Installer/GameSystemInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EventBusScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EventBusScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +116,7 @@
       <workItem from="1690950956031" duration="18169000" />
       <workItem from="1690993331668" duration="2926000" />
       <workItem from="1691495068030" duration="5085000" />
-      <workItem from="1691735414107" duration="2817000" />
+      <workItem from="1691735414107" duration="3738000" />
     </task>
     <servers />
   </component>

@@ -932,7 +932,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1969375429}
-  - component: {fileID: 1969375430}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -955,23 +954,6 @@ Transform:
   m_Father: {fileID: 284002224}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1969375430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1969375428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00fbe37b25fe44f1ac951771efa8a48d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawnPoints:
-  - {x: -1, y: 2}
-  - {x: 2, y: 3}
-  - {x: -3, y: -1}
-  _prefab: {fileID: 779950010874586715, guid: 35bcf8b7ce94e184286af635f81d94d4, type: 3}
 --- !u!1 &2015215836
 GameObject:
   m_ObjectHideFlags: 0

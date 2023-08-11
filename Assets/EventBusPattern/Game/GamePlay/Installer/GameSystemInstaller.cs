@@ -13,7 +13,6 @@ namespace EventBusPattern.Game.GamePlay.Installer
             InstallLevelMapSystem();
             InstallPlayer();
             InstallHandlers();
-            InstallEnemySystem();
             InstallVisualPipeline();
         }
 
@@ -46,7 +45,7 @@ namespace EventBusPattern.Game.GamePlay.Installer
             Container.BindInterfacesAndSelfTo<ForceDirectionEffectHandler>().FromNew().AsSingle();
             Container.BindInterfacesAndSelfTo<DealDamageHandler>().FromNew().AsSingle();
             Container.BindInterfacesAndSelfTo<DeathHandler>().FromNew().AsSingle();
-            
+            Container.BindInterfacesAndSelfTo<SpawnEntityEventHandler>().FromNew().AsSingle();
         }
 
         private void InstallPlayer()
@@ -59,11 +58,6 @@ namespace EventBusPattern.Game.GamePlay.Installer
         private void InstallLevelMapSystem()
         {
             Container.Bind<LevelMap>().FromNew().AsSingle().NonLazy();
-        }
-
-        private void InstallEnemySystem()
-        {
-            Container.BindInterfacesAndSelfTo<EnemySpawner>().FromComponentInHierarchy().AsSingle();
         }
     }
 }
