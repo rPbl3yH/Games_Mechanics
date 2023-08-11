@@ -1,8 +1,10 @@
+using UnityEngine;
+
 namespace Game.GamePlay.Upgrades
 {
-    public sealed class UpgradePurchaser
+    public sealed class UpgradePurchaser : MonoBehaviour
     {
-        private readonly IMoneyStorage _moneyStorage;
+        [SerializeReference] private IMoneyStorage _moneyStorage;
 
         public UpgradePurchaser(IMoneyStorage moneyStorage) =>
             _moneyStorage = moneyStorage;
