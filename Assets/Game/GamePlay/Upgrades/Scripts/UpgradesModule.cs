@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Zenject;
 
 namespace Game.GamePlay.Upgrades
 {
@@ -15,6 +16,8 @@ namespace Game.GamePlay.Upgrades
 
         [Header("Debug")] 
         [SerializeField] private string _upgradeId;
+
+        [Inject] private DiContainer _container;
         
         private void Awake()
         {
@@ -22,7 +25,12 @@ namespace Game.GamePlay.Upgrades
             foreach (UpgradeConfig config in _catalog.Configs)
             {
                 _upgrades.Add(config.InstantiateUpgrade());
-            } 
+            }
+
+            foreach (var upgrade in _upgrades)
+            {
+                _container.Inject(upgrade);
+            }
         }
 
         public Upgrade GetUpgradeBy(string id)
@@ -34,6 +42,12 @@ namespace Game.GamePlay.Upgrades
             
             Debug.Log("Upgrade didn't find");
             return null;
+        }
+
+        [Button]
+        public void IncreaseMoney(int money)
+        {
+            _moneyStorage.EarnMoney(money);
         }
 
         [Button]

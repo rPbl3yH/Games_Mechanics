@@ -14,7 +14,7 @@ namespace Game.GamePlay.Upgrades
         public bool IsMaxLevel => _currentLevel == MaxLevel;
         public int NextPrice => _config.PriceTable.GetPrice(Level + 1);
 
-        private readonly UpgradeConfig _config;
+        protected readonly UpgradeConfig _config;
 
         private int _currentLevel;
 
