@@ -6,13 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="784c52bd-8de3-408c-90cd-016db315fbc4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Otus_Homevorks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Otus_Homevorks/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/Tasks/EnemyMoveTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/Tasks/EnemyMoveTask.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/TurnPipeline/TurnPipelineInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/App/Turn/TurnPipeline/TurnPipelineInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GameEngine.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Area/LevelMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Area/LevelMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Handlers/Logic/DeathHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Handlers/Logic/DeathHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/Meta.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventBusPattern/Game/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +113,7 @@
       <workItem from="1690950956031" duration="18169000" />
       <workItem from="1690993331668" duration="2926000" />
       <workItem from="1691495068030" duration="5085000" />
-      <workItem from="1691735414107" duration="569000" />
+      <workItem from="1691735414107" duration="2128000" />
     </task>
     <servers />
   </component>
@@ -135,13 +131,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/EventBusPattern/Game/GamePlay/Area/LevelMap.cs</url>
-          <line>82</line>
+          <line>111</line>
           <properties documentPath="C:\Users\Admin.BEST-KOMP\Otus_Homevorks\Assets\EventBusPattern\Game\GamePlay\Area\LevelMap.cs" initialLine="68" containingFunctionPresentation="Method 'IsWalkable'">
             <startOffsets>
-              <option value="2193" />
+              <option value="2848" />
             </startOffsets>
             <endOffsets>
-              <option value="2222" />
+              <option value="2877" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
