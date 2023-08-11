@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Game.GamePlay.Upgrades
@@ -6,15 +7,16 @@ namespace Game.GamePlay.Upgrades
     public sealed class UpgradesModule : MonoBehaviour
     {
         [SerializeField] private UpgradesCatalog _catalog;
-        [SerializeField] private UpgradesModule _upgradesModule;
         [SerializeField] private UpgradePurchaser _upgradePurchaser;
+        [SerializeField] private MoneyStorage _moneyStorage;
         [Header("Debug")]
         [SerializeField] private string _upgradeID;
 
-        private List<Upgrade> _upgrades;
+        private readonly List<Upgrade> _upgrades = new();
 
         private void Awake()
         {
+            _upgradePurchaser.Construct(_moneyStorage);
             foreach (UpgradeConfig config in _catalog.Configs)
             {
                 _upgrades.Add(config.InstantiateUpgrade());
@@ -26,9 +28,10 @@ namespace Game.GamePlay.Upgrades
             return _upgrades.Find(upgrade => upgrade.Id == id);
         }
 
+        [Button]
         public void Purchase()
         {
-            Upgrade upgrade = _upgradesModule.GetUpgradeBy(_upgradeID);
+            Upgrade upgrade = GetUpgradeBy(_upgradeID);
             if (upgrade != null)
             {
                 bool purchaseResult = _upgradePurchaser.TryPurchase(upgrade);
