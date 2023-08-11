@@ -4,40 +4,24 @@ namespace Game.GamePlay.Upgrades
 {
     public abstract class Upgrade
     {
-        public string Id
-        {
-            get { return config.Id; }
-        }
-
+        public string Id => _config.Id;
         public int Level
         {
-            get { return currentLevel; }
-            set { currentLevel = value; }
+            get => _currentLevel;
+            set => _currentLevel = value;
         }
+        public int MaxLevel => _config.MaxLevel;
+        public bool IsMaxLevel => _currentLevel == MaxLevel;
+        public int NextPrice => _config.PriceTable.GetPrice(Level + 1);
 
-        public int MaxLevel
-        {
-            get { return config.MaxLevel; }
-        }
+        private readonly UpgradeConfig _config;
 
-        public bool IsMaxLevel
-        {
-            get { return currentLevel == MaxLevel; }
-        }
-    
-        public int NextPrice
-        {
-            get { return config.PriceTable.GetPrice(Level + 1); }
-        }
+        private int _currentLevel;
 
-        private readonly UpgradeConfig config;
-
-        private int currentLevel;
-        
-        public Upgrade(UpgradeConfig config)
+        protected Upgrade(UpgradeConfig config)
         {
-            currentLevel = 1;
-            this.config = config;
+            _currentLevel = 1;
+            _config = config;
         }
 
         public void LevelUp()
@@ -47,8 +31,8 @@ namespace Game.GamePlay.Upgrades
                 throw new Exception("Max level is reached!");
             }
 
-            currentLevel++;
-            OnUpgrade(currentLevel);
+            _currentLevel++;
+            OnUpgrade(_currentLevel);
         }
 
         protected abstract void OnUpgrade(int newLevel);

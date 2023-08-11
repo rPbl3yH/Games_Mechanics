@@ -171,7 +171,7 @@ MonoBehaviour:
   _catalog: {fileID: 11400000, guid: 0184c94e527b1604ca409825cac14b2d, type: 2}
   _upgradePurchaser: {fileID: 186457507}
   _moneyStorage: {fileID: 316180450}
-  _upgradeID: LoadStorage
+  _upgradeId: LoadStorage
 --- !u!114 &186457507
 MonoBehaviour:
   m_ObjectHideFlags: 0

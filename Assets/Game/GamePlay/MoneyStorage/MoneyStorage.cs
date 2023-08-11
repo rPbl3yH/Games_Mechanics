@@ -1,29 +1,33 @@
 using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Game.GamePlay.Upgrades
 {
-    internal class MoneyStorage : MonoBehaviour, IMoneyStorage
+    public class MoneyStorage : MonoBehaviour, IMoneyStorage
     {
         public event Action<int> OnMoneyChanged;
         public event Action<int> OnMoneyEarned;
         public event Action<int> OnMoneySpent;
-        public int Money { get; }
+        public int Money => _money;
+
+        [ShowInInspector, ReadOnly]
+        private int _money;
         
         public void EarnMoney(int amount)
         {
-            Debug.Log("Earn money " + amount);
+            _money += amount;
         }
 
         public void SpendMoney(int amount)
         {
-            Debug.Log("Spend money " + amount);
+            _money -= amount;
         }
 
         public bool CanSpendMoney(int amount)
         {
-            var result = amount >= Money;
-            Debug.Log($"Can spend money {result}");
+            var result = amount <= _money;
+            Debug.Log($"Can spend {amount} of all money {_money} = {result}");
             return result;
         }
     }
