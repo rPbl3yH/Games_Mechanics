@@ -64,6 +64,20 @@ namespace EventBusPattern
             return GetEntity(pointInt);
         }
 
+        public List<T> GetEntities<T>()
+        {
+            var result = new List<T>();
+            foreach (var pair in _map)
+            {
+                if (pair.Value is T entity)
+                {
+                    result.Add(entity);
+                }
+            }
+
+            return result;
+        }
+
         public bool IsWalkable(Vector2Int point)
         {
             if (!_map.ContainsKey(point))
