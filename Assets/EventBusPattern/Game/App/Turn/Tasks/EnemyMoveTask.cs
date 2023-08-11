@@ -8,13 +8,13 @@ namespace EventBusPattern
     {
         [Inject] private LevelMap _levelMap;
         [Inject] private EventBus _eventBus;
-        
+
         protected override void OnRun()
         {
             var enemies = _levelMap.GetEntities<Enemy>();
             var player = _levelMap.GetEntity<Player>();
             var playerPoint = _levelMap.GetPoint(player);
-            
+
             foreach (var enemy in enemies)
             {
                 var enemyPoint = _levelMap.GetPoint(enemy);
@@ -34,9 +34,11 @@ namespace EventBusPattern
                     {
                         direction = movementVector.y > 0 ? Vector3.forward : Vector3.back;
                     }
+
                     _eventBus.RaiseEvent(new ApplyMoveDirectionEvent(enemy, direction));
                 }
             }
+
             Finish();
         }
     }

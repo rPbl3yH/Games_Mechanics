@@ -13,6 +13,7 @@ namespace EventBusPattern
             _taskPipeline.AddTask(_container.Instantiate<PlayerInputTask>());
             _taskPipeline.AddTask(_container.Instantiate<EnemyMoveTask>());
             _taskPipeline.AddTask(_container.Instantiate<VisualTask>());
+            _taskPipeline.AddTask(_container.Instantiate<EnemySpawnTask>());
             _taskPipeline.AddTask(new FinishTask());
         }
     }
