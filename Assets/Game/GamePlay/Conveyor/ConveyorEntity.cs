@@ -11,7 +11,9 @@ namespace Game.GamePlay.Conveyor
         
         private void Awake()
         {
-            Add(new Conveyor_LoadComponent(_model.LoadStorageCapacity));            
+            Add(new Conveyor_SetLoadStorageComponent(_model.LoadStorageCapacity));            
+            Add(new Conveyor_SetUnloadStorageComponent(_model.UnloadStorageCapacity));            
+            Add(new Conveyor_SetProduceTimeComponent(_model.ProduceTime));            
         }
     }
 }
