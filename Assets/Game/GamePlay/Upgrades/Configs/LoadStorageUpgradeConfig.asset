@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: ba040ae09a6d4c949ed14cb310b64cad, type: 3}
   m_Name: LoadStorageUpgradeConfig
   m_EditorClassIdentifier: Assembly-CSharp:Game.GamePlay.Upgrades:LoadStorageUpgradeConfig
   Id: LoadStorage
@@ -17,3 +17,7 @@ MonoBehaviour:
   PriceTable:
     basePrice: 0
     levels: 0a000000140000001e000000
+  StorageUpgradeTable:
+    _startDamage: 1
+    _loadStorageStep: 1
+    _values: 0100000002000000030000000400000005000000

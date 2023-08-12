@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
@@ -6,19 +7,18 @@ using Zenject;
 
 namespace Game.GamePlay.Upgrades
 {
-    public sealed class UpgradesModule : MonoBehaviour
+    public sealed class UpgradesModule : MonoBehaviour, IInitializable
     {
         [SerializeField] private UpgradesCatalog _catalog;
         [SerializeField] private UpgradePurchaser _upgradePurchaser;
         [SerializeField] private MoneyStorage _moneyStorage;
-        
-        private readonly List<Upgrade> _upgrades = new();
 
         [Header("Debug")] 
         [SerializeField] private string _upgradeId;
-
-        [Inject] private DiContainer _container;
         
+        [Inject] private DiContainer _container;
+        private readonly List<Upgrade> _upgrades = new();
+
         private void Awake()
         {
             _upgradePurchaser.Construct(_moneyStorage);
@@ -33,7 +33,12 @@ namespace Game.GamePlay.Upgrades
             }
         }
 
-        public Upgrade GetUpgradeBy(string id)
+        public void Initialize()
+        {
+            
+        }
+
+        private Upgrade GetUpgradeBy(string id)
         {
             if (_upgrades.Any(upgrade => upgrade.Id == id))
             {
@@ -56,7 +61,7 @@ namespace Game.GamePlay.Upgrades
             Purchase(_upgradeId);
         }
 
-        public void Purchase(string upgradeId)
+        private void Purchase(string upgradeId)
         {
             Upgrade upgrade = GetUpgradeBy(upgradeId);
             if (upgrade != null)
