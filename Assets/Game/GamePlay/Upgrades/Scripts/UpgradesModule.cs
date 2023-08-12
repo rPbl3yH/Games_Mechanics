@@ -19,7 +19,7 @@ namespace Game.GamePlay.Upgrades
         [Inject] private DiContainer _container;
         private readonly List<Upgrade> _upgrades = new();
 
-        private void Awake()
+        public void Initialize()
         {
             _upgradePurchaser.Construct(_moneyStorage);
             foreach (UpgradeConfig config in _catalog.Configs)
@@ -33,12 +33,7 @@ namespace Game.GamePlay.Upgrades
             }
         }
 
-        public void Initialize()
-        {
-            
-        }
-
-        private Upgrade GetUpgradeBy(string id)
+        private Upgrade GetUpgrade(string id)
         {
             if (_upgrades.Any(upgrade => upgrade.Id == id))
             {
@@ -50,20 +45,20 @@ namespace Game.GamePlay.Upgrades
         }
 
         [Button]
-        public void IncreaseMoney(int money)
-        {
-            _moneyStorage.EarnMoney(money);
-        }
-
-        [Button]
         public void PurchaseDebug()
         {
             Purchase(_upgradeId);
         }
 
+        [Button]
+        public void IncreaseMoney(int money)
+        {
+            _moneyStorage.EarnMoney(money);
+        }
+
         private void Purchase(string upgradeId)
         {
-            Upgrade upgrade = GetUpgradeBy(upgradeId);
+            Upgrade upgrade = GetUpgrade(upgradeId);
             if (upgrade != null)
             {
                 bool purchaseResult = _upgradePurchaser.TryPurchase(upgrade);

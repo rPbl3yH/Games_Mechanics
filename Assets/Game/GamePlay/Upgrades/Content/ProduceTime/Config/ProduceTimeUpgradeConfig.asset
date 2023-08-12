@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bff0c035f8884044a81625143ef17fde, type: 3}
   m_Name: ProduceTimeUpgradeConfig
   m_EditorClassIdentifier: 
-  Id: 
+  Id: ProduceTime
   MaxLevel: 5
   PriceTable:
     basePrice: 0

@@ -1,5 +1,6 @@
 using Entities;
 using Game.GamePlay.Conveyor;
+using Game.GamePlay.Upgrades;
 using Zenject;
 
 namespace Game.GamePlay.GameEngine
@@ -9,6 +10,7 @@ namespace Game.GamePlay.GameEngine
         public override void InstallBindings()
         {
             Container.Bind<IEntity>().To<ConveyorEntity>().FromComponentInHierarchy().AsSingle();
+            Container.BindInterfacesTo<UpgradesModule>().FromComponentInHierarchy().AsSingle();
         }
     }
 }
