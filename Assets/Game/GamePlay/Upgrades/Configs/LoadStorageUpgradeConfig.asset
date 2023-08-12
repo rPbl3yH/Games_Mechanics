@@ -19,5 +19,5 @@ MonoBehaviour:
     levels: 0a000000140000001e000000
   StorageUpgradeTable:
     _startDamage: 1
-    _loadStorageStep: 1
-    _values: 0100000002000000030000000400000005000000
+    _loadStorageStep: 5
+    _values: 01000000060000000b0000001000000015000000

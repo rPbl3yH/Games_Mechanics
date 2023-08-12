@@ -12,7 +12,7 @@ namespace Game.GamePlay.Upgrades
             get { return this._loadStorageStep; }
         }
 
-        [InfoBox("Damage: Linear Function")] [SerializeField]
+        [InfoBox("Load Storage: Linear Function")] [SerializeField]
         private int _startDamage = 1;
 
         [SerializeField] private int _loadStorageStep = 1;
