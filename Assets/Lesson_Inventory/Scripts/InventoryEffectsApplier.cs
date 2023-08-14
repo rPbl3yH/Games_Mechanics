@@ -3,7 +3,7 @@ using Game.GameEngine.Mechanics;
 
 namespace Lessons.MetaGame.Inventory
 {
-    public sealed class InventoryEffectsApplier : IInventoryObserver
+    public sealed class InventoryEffectsApplier : IInventoryListener
     {
         private readonly IEntity hero;
 
@@ -12,7 +12,7 @@ namespace Lessons.MetaGame.Inventory
             this.hero = hero;
         }
 
-        void IInventoryObserver.OnItemAdded(InventoryItem item)
+        void IInventoryListener.OnItemAdded(InventoryItem item)
         {
             if (IsEffectible(item))
             {
@@ -21,7 +21,7 @@ namespace Lessons.MetaGame.Inventory
             }
         }
 
-        void IInventoryObserver.OnItemRemoved(InventoryItem item)
+        void IInventoryListener.OnItemRemoved(InventoryItem item)
         {
             if (IsEffectible(item))
             {

@@ -8,7 +8,7 @@ namespace Lessons.MetaGame.Inventory
     {
         [ShowInInspector, ReadOnly]
         private readonly List<InventoryItem> items;
-        private readonly List<IInventoryObserver> observers = new();
+        private readonly List<IInventoryListener> observers = new();
 
         public ListInventory(params InventoryItem[] items)
         {
@@ -45,14 +45,14 @@ namespace Lessons.MetaGame.Inventory
             return this.items.ToList();
         }
 
-        public void AddObserver(IInventoryObserver observer)
+        public void AddObserver(IInventoryListener listener)
         {
-            this.observers.Add(observer);
+            this.observers.Add(listener);
         }
 
-        public void RemoveObserver(IInventoryObserver observer)
+        public void RemoveObserver(IInventoryListener listener)
         {
-            this.observers.Remove(observer);            
+            this.observers.Remove(listener);            
         }
 
         public bool FindItem(string name, out InventoryItem result)

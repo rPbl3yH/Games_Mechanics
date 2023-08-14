@@ -1,6 +1,6 @@
 namespace Lessons.MetaGame.Inventory
 {
-    public interface IInventoryObserver
+    public interface IInventoryListener
     {
         void OnItemAdded(InventoryItem item);
         void OnItemRemoved(InventoryItem item);

@@ -1,15 +1,20 @@
+using Entities;
+using Game;
 using Game.Gameplay.Hero;
 using GameSystem;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Zenject;
 
 namespace Lessons.MetaGame.Inventory
 {
-    public sealed class InventoryContext : MonoBehaviour, IGameConstructElement
+    public sealed class InventoryContext : MonoBehaviour, IInitializable
     {
         [ShowInInspector]
         private readonly ListInventory inventory = new();
 
+        [Inject] private IEntity _entity;
+        
         [Button]
         public void AddItem(InventoryItemConfig config)
         {
@@ -24,10 +29,9 @@ namespace Lessons.MetaGame.Inventory
             this.inventory.RemoveItem(config.item.Name);
         }
 
-        void IGameConstructElement.ConstructGame(GameContext context)
+        public void Initialize()
         {
-            var hero = context.GetService<IHeroService>().GetHero();
-            this.inventory.AddObserver(new InventoryEffectsApplier(hero));
+            inventory.AddObserver(new InventoryItemEquiper(_entity));
         }
     }
 }

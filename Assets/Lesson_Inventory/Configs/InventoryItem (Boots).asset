@@ -14,33 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item:
     name: boots
-    flags: 12
+    flags: 4
     metadata:
       title: Simple Boots
       description: X2 SPEED
       icon: {fileID: 21300000, guid: 345cfbcc2796f458eba0947ea191ebf0, type: 3}
     components:
-    - rid: 8522961787393933590
-    - rid: 8522961787393933593
+    - rid: 414609673888202752
   references:
     version: 2
     RefIds:
-    - rid: 8522961787393933590
-      type: {class: Component_Effect, ns: Game.GameEngine.Mechanics, asm: Assets}
+    - rid: 414609673888202752
+      type: {class: EquipmentComponent, ns: , asm: Assembly-CSharp}
       data:
-        effect:
-          rid: 8522961787393933591
-    - rid: 8522961787393933591
-      type: {class: Effect, ns: Game.GameEngine.Mechanics, asm: Assets}
-      data:
-        parameters:
-        - rid: 8522961787393933592
-    - rid: 8522961787393933592
-      type: {class: FloatEffectParameter, ns: Game.GameEngine.Mechanics, asm: Assets}
-      data:
-        name: 0
-        value: 2
-    - rid: 8522961787393933593
-      type: {class: Component_EquipType, ns: Game.GameEngine.Mechanics, asm: Assets}
-      data:
-        type: 3
+        <Type>k__BackingField: 0
