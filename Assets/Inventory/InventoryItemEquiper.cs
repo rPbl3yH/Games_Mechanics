@@ -16,12 +16,16 @@ public class InventoryItemEquiper : IInventoryListener
         if (item.Flags.HasFlag(InventoryItemFlags.EQUPPABLE))
         {
             var type = item.GetComponent<IComponent_Equipment>().Type;
-            _player.Get<IComponent_SetEquipment>().Equip(type);
+            _player.Get<IComponent_EquipItem>().Equip(type);
         }
     }
 
     public void OnItemRemoved(InventoryItem item)
     {
-        
+        if (item.Flags.HasFlag(InventoryItemFlags.EQUPPABLE))
+        {
+            var type = item.GetComponent<IComponent_Equipment>().Type;
+            _player.Get<IComponent_TakeOffItem>().TakeOff(type);
+        }
     }
 }

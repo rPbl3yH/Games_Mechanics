@@ -9,7 +9,8 @@ namespace Game
 
         public PlayerEntity()
         {
-            Add(new ComponentSetEquipment());
+            Add(new ComponentEquipItem());
+            Add(new ComponentTakeOffItem());
         }
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-class ComponentSetEquipment : IComponent_SetEquipment
+class ComponentEquipItem : IComponent_EquipItem
 {
     public void Equip(EquipmentType type)
     {
