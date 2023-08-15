@@ -6,11 +6,11 @@ namespace Inventory.Equiper
 {
     public class InventoryItemEquiper : IInventoryListener
     {
-        private IEntity _player;
+        private readonly IEntity _entity;
 
         public InventoryItemEquiper(IEntity entity)
         {
-            _player = entity;
+            _entity = entity;
         }
 
         public void OnItemAdded(InventoryItem item)
@@ -18,7 +18,7 @@ namespace Inventory.Equiper
             if (item.Flags.HasFlag(InventoryItemFlags.EQUPPABLE))
             {
                 var type = item.GetComponent<IComponent_Equipment>().Type;
-                _player.Get<IComponent_EquipItem>().Equip(type);
+                _entity.Get<IComponent_EquipItem>().Equip(type, item);
             }
         }
 
@@ -27,7 +27,7 @@ namespace Inventory.Equiper
             if (item.Flags.HasFlag(InventoryItemFlags.EQUPPABLE))
             {
                 var type = item.GetComponent<IComponent_Equipment>().Type;
-                _player.Get<IComponent_TakeOffItem>().TakeOff(type);
+                _entity.Get<IComponent_TakeOffItem>().TakeOff(type);
             }
         }
     }

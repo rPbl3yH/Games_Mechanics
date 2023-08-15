@@ -1,4 +1,3 @@
-using Inventory.Player;
 using NUnit.Framework;
 using UnityEngine;
 
