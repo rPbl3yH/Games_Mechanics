@@ -32,6 +32,7 @@ namespace Lessons.MetaGame.Inventory
         public void Initialize()
         {
             inventory.AddObserver(new InventoryItemEquiper(_entity));
+            inventory.AddObserver(new InventoryEffectsApplier(_entity));
         }
     }
 }
