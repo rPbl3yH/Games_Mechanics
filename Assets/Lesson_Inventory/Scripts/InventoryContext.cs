@@ -2,6 +2,7 @@ using Entities;
 using Game;
 using Game.Gameplay.Hero;
 using GameSystem;
+using Inventory.Equiper;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using Zenject;

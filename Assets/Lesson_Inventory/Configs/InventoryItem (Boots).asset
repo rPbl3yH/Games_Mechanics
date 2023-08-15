@@ -28,7 +28,7 @@ MonoBehaviour:
     - rid: 414609673888202752
       type: {class: EquipmentComponent, ns: , asm: Assembly-CSharp}
       data:
-        <Type>k__BackingField: 0
+        <Type>k__BackingField: 2
     - rid: 414609687891148800
       type: {class: Component_Effect, ns: Game.GameEngine.Mechanics, asm: Assembly-CSharp}
       data:

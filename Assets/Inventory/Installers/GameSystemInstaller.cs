@@ -1,8 +1,9 @@
 using Entities;
+using Inventory.Equiper;
 using Lessons.MetaGame.Inventory;
 using Zenject;
 
-namespace Game
+namespace Inventory.Installers
 {
     public class GameSystemInstaller : MonoInstaller<GameSystemInstaller>
     {

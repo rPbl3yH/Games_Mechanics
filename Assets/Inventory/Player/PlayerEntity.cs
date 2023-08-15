@@ -1,11 +1,11 @@
-using System;
 using AtomicProject.Atomic.Values;
 using Elementary;
 using Entities;
 using Game.GameEngine.Mechanics;
+using Inventory.Components;
 using UnityEngine;
 
-namespace Game
+namespace Inventory.Player
 {
     public class PlayerEntity : MonoEntityBase
     {
