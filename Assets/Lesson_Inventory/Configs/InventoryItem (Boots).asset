@@ -20,26 +20,26 @@ MonoBehaviour:
       description: X2 SPEED
       icon: {fileID: 21300000, guid: 345cfbcc2796f458eba0947ea191ebf0, type: 3}
     components:
-    - rid: 414609673888202752
-    - rid: 414609687891148800
+    - rid: 414609687891148804
+    - rid: 414609687891148805
   references:
     version: 2
     RefIds:
-    - rid: 414609673888202752
-      type: {class: EquipmentComponent, ns: , asm: Assembly-CSharp}
+    - rid: 414609687891148804
+      type: {class: EquipmentComponent, ns: Inventory.Components, asm: Assembly-CSharp}
       data:
-        <Type>k__BackingField: 2
-    - rid: 414609687891148800
+        <Type>k__BackingField: 0
+    - rid: 414609687891148805
       type: {class: Component_Effect, ns: Game.GameEngine.Mechanics, asm: Assembly-CSharp}
       data:
         effect:
-          rid: 414609687891148801
-    - rid: 414609687891148801
+          rid: 414609687891148806
+    - rid: 414609687891148806
       type: {class: Effect, ns: Game.GameEngine.Mechanics, asm: Assembly-CSharp}
       data:
         parameters:
-        - rid: 414609687891148802
-    - rid: 414609687891148802
+        - rid: 414609687891148807
+    - rid: 414609687891148807
       type: {class: FloatEffectParameter, ns: Game.GameEngine.Mechanics, asm: Assembly-CSharp}
       data:
         name: 1
