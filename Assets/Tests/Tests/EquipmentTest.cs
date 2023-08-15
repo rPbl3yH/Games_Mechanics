@@ -1,4 +1,6 @@
 using System.Collections;
+using Game.GameEngine.Mechanics;
+using Inventory.Components;
 using Lessons.MetaGame.Inventory;
 using NUnit.Framework;
 using UnityEngine;
@@ -11,12 +13,17 @@ public class EquipmentTest
     {
         //Arrange
         var gameObject = new GameObject();
-        gameObject.AddComponent<InventoryContext>();
+        var inventoryContext = gameObject.AddComponent<InventoryContext>();
+        var config = UnityEditor.AssetDatabase.LoadAssetAtPath<InventoryItemConfig>(
+            "Assets/Lesson_Inventory/Configs/InventoryItem (Boots).asset"
+            );
         
         //Act
+        inventoryContext.AddItem(config);
+        Debug.Log("Add Item ");
+        
         //Assert
 
         yield return null;
-        Assert.True(true);
     }
 }
