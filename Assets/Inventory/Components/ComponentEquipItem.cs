@@ -4,7 +4,7 @@ using Lessons.MetaGame.Inventory;
 
 namespace Inventory.Components
 {
-    class ComponentEquipItem : IComponent_EquipItem
+    public class ComponentEquipItem : IComponent_EquipItem
     {
         private readonly Dictionary<EquipmentType, InventoryItem> _equipments;
 

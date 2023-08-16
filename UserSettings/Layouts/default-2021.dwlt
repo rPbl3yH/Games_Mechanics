@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 1007
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Game
   m_RootView: {fileID: 4}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 681
     width: 550
     height: 276
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 317
+  controlID: 185
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 500, y: 200}
   m_MaxSize: {x: 40480, y: 16192}
   vertical: 0
-  controlID: 316
+  controlID: 15
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 134
+  controlID: 150
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 85
+  controlID: 82
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -372,8 +372,8 @@ MonoBehaviour:
     y: 0
     width: 550
     height: 681
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 22}
@@ -408,7 +408,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 661
+    ID: 213
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -440,7 +440,7 @@ MonoBehaviour:
       name: Otus_Homevorks
       fullName: Otus_Homevorks
       resultStatus: 1
-      duration: 0.0190784
+      duration: 0.0645752
       messages: 
       output: 
       stacktrace: 
@@ -455,8 +455,8 @@ MonoBehaviour:
       uniqueId: '[Tests][C:/Users/Admin.BEST-KOMP/Otus_Homevorks/Library/ScriptAssemblies/Tests.dll][suite]'
       name: Tests.dll
       fullName: C:/Users/Admin.BEST-KOMP/Otus_Homevorks/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0514573
       messages: 
       output: 
       stacktrace: 
@@ -468,11 +468,11 @@ MonoBehaviour:
       parentId: 1000
       parentUniqueId: '[Otus_Homevorks][suite]'
     - id: 1001
-      uniqueId: Tests.dll/[Tests][EuqipmentTest][suite]
-      name: EuqipmentTest
-      fullName: EuqipmentTest
-      resultStatus: 0
-      duration: 0
+      uniqueId: Tests.dll/[Tests][EquipmentTest][suite]
+      name: EquipmentTest
+      fullName: EquipmentTest
+      resultStatus: 1
+      duration: 0.0448678
       messages: 
       output: 
       stacktrace: 
@@ -481,16 +481,16 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1004
+      parentId: 1003
       parentUniqueId: '[Tests][C:/Users/Admin.BEST-KOMP/Otus_Homevorks/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1003
-      uniqueId: Tests.dll/EuqipmentTest/[Tests][EuqipmentTest.EuqipmentTestWithEnumeratorPasses]
-      name: EuqipmentTestWithEnumeratorPasses
-      fullName: EuqipmentTest.EuqipmentTestWithEnumeratorPasses
-      resultStatus: 0
-      duration: 0
+    - id: 1002
+      uniqueId: Tests.dll/EquipmentTest/[Tests][EquipmentTest.EquipmentBoots]
+      name: EquipmentBoots
+      fullName: EquipmentTest.EquipmentBoots
+      resultStatus: 1
+      duration: 0.0310318
       messages: 
-      output: 
+      output: "Add Item \r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -499,14 +499,18 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][EuqipmentTest][suite]
-    m_ResultText: Test (0.000s)
+      parentUniqueId: Tests.dll/[Tests][EquipmentTest][suite]
+    m_ResultText: 'EquipmentBoots (0.031s)
+
+      ---
+
+      Add Item'
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d0af5914
-      m_LastClickedID: 341422032
-      m_ExpandedIDs: ce91fd8519c3ef8705b5fc88344c948cd6646895be95c895dc889898791b40a527c860a7c30c7aa7247a0badd8f6ebad8cb207b3f5a5b2b4e5ed68b667bea2bfdbe0e6bff5e4f3bf6e811fc24ba1e5d1ebab89ece2451cf11cb0fef1caaaf2f2c1a216f3233320f343d00af4330266fb820e0000dd79140383b30c0a8877bb15ffedab170f13eb219ed8dc2423a786257f7585273ee43930fa873a324d0df4361a4a753d87be6e3e1300753f0e5fc841d261b6465373044704bb4b4fb38490510e7900542bca5858c795555c733fd067d9746071c2d067783cee807afa14837dffffff7f
+      m_SelectedIDs: 935a4bd3
+      m_LastClickedID: -750036333
+      m_ExpandedIDs: ce91fd8519c3ef8705b5fc88344c948cd6646895be95c895dc889898791b40a527c860a7c30c7aa798efa8ab247a0badd8f6ebad8cb207b3f5a5b2b4e5ed68b667bea2bfdbe0e6bff5e4f3bf6e811fc24ba1e5d1ebab89ec896addede2451cf11cb0fef1caaaf2f2c1a216f3233320f343d00af4330266fb820e0000dd79140383b30c0a8877bb15ffedab170f13eb219ed8dc2423a786257f7585273ee43930fa873a324d0df436f155a83b1a4a753d87be6e3e1300753f0e5fc841d261b6465373044704bb4b4fb38490510e7900542bca5858c795555c733fd067d9746071c2d067783cee807afa14837dffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -10145,9 +10149,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 0a7e0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 34e5fefffce5feff8ae8feffdae9feffa2eafeff36edfefff82fffffc030ffff6233ffffac60ffff7461ffff0264ffff7265ffff3a66ffff0a85fffff6f0ffffb6f7ffff2afbffff107300003c730000487300004c730000
+      m_ExpandedIDs: 5e23ffff2624ffffc026ffffa045ffff6846fffffc48ffff4c4affff144bffffae4dffff5a55ffff3456ffffec57ffff4e76ffff1677ffffae79ffff5e89ffff3a93ffff68b1ffff1cb2ffff06b3ffff2af2fffff2f2ffff8af5ffff2cfbffffb6710000f2770000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -10213,22 +10217,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Tests/Tests
+    - Assets/Lesson_Inventory/Configs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Tests/Tests
+  - Assets/Lesson_Inventory/Configs
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Admin.BEST-KOMP\Otus_Homevorks
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: fa7d0000
-    m_LastClickedID: 32250
-    m_ExpandedIDs: 0000000070700000727000007470000076700000787000007a7000007c7000007e70000080700000827000008470000086700000887000008a7000008c7000008e7000009070000092700000947000009a7000009c7000009e700000a0700000a2700000a4700000a6700000a8700000aa700000ac700000ae700000b0700000b2700000b4700000b6700000b8700000bc700000ce7000009c7700009e770000a0770000a4770000c4770000f077000008780000247800003e780000847c000000ca9a3bffffff7f
+    m_SelectedIDs: d6700000
+    m_LastClickedID: 28886
+    m_ExpandedIDs: 00000000026f0000046f0000066f0000086f00000a6f00000c6f00000e6f0000106f0000126f0000146f0000166f0000186f00001a6f00001c6f00001e6f0000206f0000226f0000246f0000266f0000286f00002a6f00002c6f00002e6f0000306f0000326f0000346f0000366f0000386f00003a6f00003c6f00003e6f0000406f0000426f0000446f0000466f0000486f00004a6f00004c6f00004e6f0000d8700000e0700000cc72000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -10256,7 +10260,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000070700000727000007470000076700000787000007a7000007c7000007e70000080700000827000008470000086700000887000008a7000008c7000008e70000090700000927000009470000096700000987000009a7000009c7000009e700000a0700000a2700000a4700000a6700000a8700000aa700000ac700000ae700000b0700000b2700000b4700000b6700000b8700000ba700000bc700000
+    m_ExpandedIDs: 00000000026f0000046f0000066f0000086f00000a6f00000c6f00000e6f0000106f0000126f0000146f0000166f0000186f00001a6f00001c6f00001e6f0000206f0000226f0000246f0000266f0000286f00002a6f00002c6f00002e6f0000306f0000326f0000346f0000366f0000386f00003a6f00003c6f00003e6f0000406f0000426f0000446f0000466f0000486f00004a6f00004c6f00004e6f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -10287,18 +10291,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: EuqipmentTest
-      m_OriginalName: EuqipmentTest
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 32266
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 13}
     m_CreateAssetUtility:
