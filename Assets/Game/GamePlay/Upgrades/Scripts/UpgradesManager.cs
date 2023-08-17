@@ -1,18 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Game.GamePlay.Upgrades
 {
     public sealed class UpgradesManager : MonoBehaviour
     {
-        [SerializeField] private MoneyStorage _moneyStorage;
-
-        [Header("Debug")] 
-        [SerializeField] private string _upgradeId;
-
         private List<Upgrade> _upgrades;
         private UpgradePurchaser _upgradePurchaser;
 
@@ -33,19 +27,7 @@ namespace Game.GamePlay.Upgrades
             return null;
         }
 
-        [Button]
-        public void PurchaseDebug()
-        {
-            Purchase(_upgradeId);
-        }
-
-        [Button]
-        public void IncreaseMoney(int money)
-        {
-            _moneyStorage.EarnMoney(money);
-        }
-
-        private void Purchase(string upgradeId)
+        public void Purchase(string upgradeId)
         {
             Upgrade upgrade = GetUpgrade(upgradeId);
             if (upgrade != null)
