@@ -3,7 +3,6 @@ using Zenject;
 
 namespace Game.Reward
 {
-    
     public class MoneyReward : Reward
     {
         private readonly int _money;
@@ -16,7 +15,6 @@ namespace Game.Reward
 
         public override void ReceiveReward()
         {
-            Debug.Log("get money");
             _moneyStorage.AddMoney(_money);
         }
     }
