@@ -7,9 +7,6 @@ namespace Game.GamePlay.Upgrades
     public class UpgradeInstaller : MonoInstaller<UpgradeInstaller>
     {
         [SerializeField] private UpgradesCatalog _catalog;
-        [SerializeField] private MoneyStorage _moneyStorage;
-        private UpgradesManager _upgradesManager;
-        
         private readonly List<Upgrade> _upgrades = new();
 
         public override void InstallBindings()
@@ -18,9 +15,9 @@ namespace Game.GamePlay.Upgrades
             {
                 _upgrades.Add(config.InstantiateUpgrade());
             }
-            
-            var purchaser = new UpgradePurchaser(_moneyStorage);
-            Container.Bind<UpgradesManager>().FromNew().AsSingle().WithArguments(_upgrades, purchaser);
+
+            Container.Bind<UpgradePurchaser>().FromNew().AsSingle();
+            Container.Bind<UpgradesManager>().FromNew().AsSingle().WithArguments(_upgrades);
         }
 
         public override void Start()

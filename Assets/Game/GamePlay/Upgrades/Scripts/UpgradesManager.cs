@@ -2,18 +2,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Zenject;
 
 namespace Game.GamePlay.Upgrades
 {
     public sealed class UpgradesManager
     {
         private readonly List<Upgrade> _upgrades;
-        private readonly UpgradePurchaser _upgradePurchaser;
+        [Inject] private readonly UpgradePurchaser _upgradePurchaser;
 
-        public UpgradesManager(List<Upgrade> upgrades, UpgradePurchaser upgradePurchaser)
+        public UpgradesManager(List<Upgrade> upgrades)
         {
             _upgrades = upgrades;
-            _upgradePurchaser = upgradePurchaser;
         }
         
         private Upgrade GetUpgrade(string id)

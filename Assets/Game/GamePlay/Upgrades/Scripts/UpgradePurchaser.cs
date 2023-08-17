@@ -1,13 +1,10 @@
+using Zenject;
+
 namespace Game.GamePlay.Upgrades
 {
     public sealed class UpgradePurchaser
     {
-        private IMoneyStorage _moneyStorage;
-
-        public UpgradePurchaser(IMoneyStorage moneyStorage)
-        {
-            _moneyStorage = moneyStorage;
-        }
+        [Inject] private IMoneyStorage _moneyStorage;
 
         private bool CanPurchase(Upgrade upgrade)
         {

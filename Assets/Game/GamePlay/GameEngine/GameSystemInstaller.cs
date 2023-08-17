@@ -10,6 +10,7 @@ namespace Game.GamePlay.GameEngine
         public override void InstallBindings()
         {
             Container.Bind<IEntity>().To<ConveyorEntity>().FromComponentInHierarchy().AsSingle();
+            Container.Bind<IMoneyStorage>().To<MoneyStorage>().FromComponentInHierarchy().AsSingle();
         }
     }
 }
