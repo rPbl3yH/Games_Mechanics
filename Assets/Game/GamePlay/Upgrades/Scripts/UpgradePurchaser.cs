@@ -3,16 +3,16 @@ using UnityEngine;
 
 namespace Game.GamePlay.Upgrades
 {
-    public sealed class UpgradePurchaser : MonoBehaviour
+    public sealed class UpgradePurchaser
     {
-        [ShowInInspector, ReadOnly] private IMoneyStorage _moneyStorage;
+        private IMoneyStorage _moneyStorage;
 
-        public void Construct(IMoneyStorage moneyStorage)
+        public UpgradePurchaser(IMoneyStorage moneyStorage)
         {
             _moneyStorage = moneyStorage;
         }
 
-        public bool CanPurchase(Upgrade upgrade)
+        private bool CanPurchase(Upgrade upgrade)
         {
             if (upgrade.IsMaxLevel)
             {

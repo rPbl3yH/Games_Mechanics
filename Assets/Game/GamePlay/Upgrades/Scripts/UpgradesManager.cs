@@ -3,36 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using Zenject;
 
 namespace Game.GamePlay.Upgrades
 {
-    public sealed class UpgradesModule : MonoBehaviour, IInitializable
+    public sealed class UpgradesManager : MonoBehaviour
     {
-        [SerializeField] private UpgradesCatalog _catalog;
-        [SerializeField] private UpgradePurchaser _upgradePurchaser;
         [SerializeField] private MoneyStorage _moneyStorage;
 
         [Header("Debug")] 
         [SerializeField] private string _upgradeId;
-        
-        [Inject] private DiContainer _container;
-        private readonly List<Upgrade> _upgrades = new();
 
-        public void Initialize()
+        private List<Upgrade> _upgrades;
+        private UpgradePurchaser _upgradePurchaser;
+
+        public void Construct(List<Upgrade> upgrades, UpgradePurchaser purchaser)
         {
-            _upgradePurchaser.Construct(_moneyStorage);
-            foreach (UpgradeConfig config in _catalog.Configs)
-            {
-                _upgrades.Add(config.InstantiateUpgrade());
-            }
-
-            foreach (var upgrade in _upgrades)
-            {
-                _container.Inject(upgrade);
-            }
+            _upgrades = upgrades;
+            _upgradePurchaser = purchaser;
         }
-
+        
         private Upgrade GetUpgrade(string id)
         {
             if (_upgrades.Any(upgrade => upgrade.Id == id))

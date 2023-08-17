@@ -10,7 +10,6 @@ namespace Game.GamePlay.GameEngine
         public override void InstallBindings()
         {
             Container.Bind<IEntity>().To<ConveyorEntity>().FromComponentInHierarchy().AsSingle();
-            Container.BindInterfacesTo<UpgradesModule>().FromComponentInHierarchy().AsSingle();
         }
     }
 }
