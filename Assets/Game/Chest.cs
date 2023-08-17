@@ -16,7 +16,7 @@ namespace Game
         [ShowInInspector, ReadOnly]
         private Timer _timer = new();
 
-        public void Construct(ChestRewardConfig chestRewardConfig)
+        public Chest(ChestRewardConfig chestRewardConfig)
         {
             _timer.Duration = chestRewardConfig.ReceivingTime;
         }

@@ -7,11 +7,12 @@ namespace Game
     {
         public override void InstallBindings()
         {
-            Container.Bind<MoneyStorage>().FromNew().AsSingle();
-            Container.Bind<RealTimeSaveLoader>().FromNew().AsSingle();
-            Container.Bind<ChestRewardObserver>().FromNew().AsSingle();
-            Container.BindInterfacesAndSelfTo<TimeRewardModule>().FromComponentInHierarchy().AsSingle();
+            Container.Bind<MoneyStorage>().AsSingle();
+            Container.Bind<RealTimeSaveLoader>().AsSingle();
+            Container.Bind<ChestRewardObserver>().AsSingle();
+            Container.BindInterfacesAndSelfTo<ChestTimeRewardModule>().FromComponentInHierarchy().AsSingle();
             Container.Bind<RewardFactory>().AsSingle();
+            Container.BindInterfacesAndSelfTo<ChestRewardInstaller>().FromComponentsInHierarchy().AsSingle();
         }
     }
 }
