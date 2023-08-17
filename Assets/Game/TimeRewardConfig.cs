@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Game.Reward;
 using UnityEngine;
 
 namespace Game
@@ -7,6 +8,6 @@ namespace Game
     public class TimeRewardConfig : ScriptableObject
     {
         public float ReceivingTime;
-        [SerializeReference] public List<Reward.Reward> Rewards;
+        [SerializeReference] public List<RewardConfig> RewardConfigs;
     }
 }

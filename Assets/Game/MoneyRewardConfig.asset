@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac0b556e95ca456cbe0fb30b677fa461, type: 3}
-  m_Name: TimeRewardConfig
+  m_Script: {fileID: 11500000, guid: 411b924975374f0c9373f012dac5ff30, type: 3}
+  m_Name: MoneyRewardConfig
   m_EditorClassIdentifier: 
-  ReceivingTime: 5
-  RewardConfigs:
-  - {fileID: 11400000, guid: b095b57390de4d64b98056a3582917d1, type: 2}
+  Money: 100

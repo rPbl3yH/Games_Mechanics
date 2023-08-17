@@ -1,20 +1,23 @@
-﻿using Zenject;
+﻿using UnityEngine;
+using Zenject;
 
 namespace Game.Reward
 {
-    class MoneyReward : Reward
+    
+    public class MoneyReward : Reward
     {
-        public int Money;
-        private MoneyStorage _moneyStorage;
+        private readonly int _money;
+        [Inject] private MoneyStorage _moneyStorage;
 
-        public override void Construct(DiContainer container)
+        public MoneyReward(MoneyRewardConfig config)
         {
-            _moneyStorage = container.Resolve<MoneyStorage>();
+            _money = config.Money;
         }
 
         public override void ReceiveReward()
         {
-            _moneyStorage.AddMoney(Money);
+            Debug.Log("get money");
+            _moneyStorage.AddMoney(_money);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Game.Reward;
 using UnityEngine;
 using Zenject;
 
@@ -8,27 +9,23 @@ namespace Game
     {
         private readonly Dictionary<IRealtimeTimer, TimeRewardConfig> _timers = new();
 
-        [Inject] private DiContainer _container;
+        [Inject] private RewardFactory _rewardFactory;
 
         public void RegisterTimer(IRealtimeTimer timer, TimeRewardConfig config)
         {
             if (_timers.TryAdd(timer, config))
             {
-                foreach (var reward in config.Rewards)
-                {
-                    reward.Construct(_container);
-                }
-                
                 timer.OnFinished += ReceiveReward;
             }
         }
         
         private void ReceiveReward(IRealtimeTimer timer)
         {
-            if (!_timers.TryGetValue(timer, out var config)) return;
+            if (!_timers.TryGetValue(timer, out var configs)) return;
             
-            foreach (var reward in config.Rewards)
+            foreach (var config in configs.RewardConfigs)
             {
+                var reward = _rewardFactory.Create(config);
                 reward.ReceiveReward();
                 Debug.Log($"You received reward {reward.GetType()}!");
             }
