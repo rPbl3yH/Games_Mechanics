@@ -7,18 +7,18 @@ using UnityEngine;
 namespace Game
 {
     [Serializable]
-    public class TimeReward : IRealtimeTimer
+    public class Chest : IRealtimeTimer
     {
         public event Action<IRealtimeTimer> OnStarted;
-        public event Action<IRealtimeTimer> OnFinished;
-        public string Id => nameof(TimeReward);
+        public event Action<Chest> OnFinished;
+        public string Id => nameof(Chest);
 
         [ShowInInspector, ReadOnly]
         private Timer _timer = new();
 
-        public void Construct(TimeRewardConfig timeRewardConfig)
+        public void Construct(ChestRewardConfig chestRewardConfig)
         {
-            _timer.Duration = timeRewardConfig.ReceivingTime;
+            _timer.Duration = chestRewardConfig.ReceivingTime;
         }
 
         public void Start()
@@ -41,7 +41,7 @@ namespace Game
             _timer.CurrentTime = currentTime;
         }
 
-        private bool CanReceiveReward()
+        private bool CanOpen()
         {
             return _timer.Progress >= 1;
         }
@@ -53,9 +53,9 @@ namespace Game
         }
 
         [Button]
-        private void ReceiveReward()
+        private void Open()
         {
-            if (CanReceiveReward())
+            if (CanOpen())
             {
                 OnFinished?.Invoke(this);
                 Restart();

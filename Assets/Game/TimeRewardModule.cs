@@ -6,9 +6,9 @@ namespace Game
 {
     public class TimeRewardModule : MonoBehaviour, IInitializable
     {
-        [ShowInInspector] private TimeReward _timeReward = new();
-        [SerializeField] private TimeRewardConfig _timeRewardConfig;
-        [Inject] private RealTimeRewardReceiver _realTimeRewardReceiver;
+        [ShowInInspector] private Chest _chest = new();
+        [SerializeField] private ChestRewardConfig _chestRewardConfig;
+        [Inject] private ChestRewardObserver _chestRewardObserver;
         [Inject] private RealTimeSaveLoader _saveLoader;
         
         [Header("Debug")]
@@ -17,15 +17,15 @@ namespace Game
         
         public void Initialize()
         {
-            _timeReward.Construct(_timeRewardConfig);
-            _realTimeRewardReceiver.RegisterTimer(_timeReward, _timeRewardConfig);
-            _saveLoader.RegisterTimer(_timeReward);
+            _chest.Construct(_chestRewardConfig);
+            _chestRewardObserver.RegisterChest(_chest, _chestRewardConfig);
+            _saveLoader.RegisterTimer(_chest);
         }
 
         private void Start()
         {
             _saveLoader.OnLoadGame();
-            _timeReward.Start();
+            _chest.Start();
         }
     }
 }
