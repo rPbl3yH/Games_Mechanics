@@ -5,15 +5,15 @@ using UnityEngine;
 
 namespace Game.GamePlay.Upgrades
 {
-    public sealed class UpgradesManager : MonoBehaviour
+    public sealed class UpgradesManager
     {
-        private List<Upgrade> _upgrades;
-        private UpgradePurchaser _upgradePurchaser;
+        private readonly List<Upgrade> _upgrades;
+        private readonly UpgradePurchaser _upgradePurchaser;
 
-        public void Construct(List<Upgrade> upgrades, UpgradePurchaser purchaser)
+        public UpgradesManager(List<Upgrade> upgrades, UpgradePurchaser upgradePurchaser)
         {
             _upgrades = upgrades;
-            _upgradePurchaser = purchaser;
+            _upgradePurchaser = upgradePurchaser;
         }
         
         private Upgrade GetUpgrade(string id)

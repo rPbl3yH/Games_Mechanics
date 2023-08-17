@@ -1,5 +1,6 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Zenject;
 
 namespace Game.GamePlay.Upgrades
 {
@@ -10,7 +11,7 @@ namespace Game.GamePlay.Upgrades
         [Header("Debug")] 
         [SerializeField] private string _upgradeId;
 
-        [SerializeField] private UpgradesManager _upgradesManager;
+        [Inject] private UpgradesManager _upgradesManager;
         
         [Button]
         public void PurchaseDebug()

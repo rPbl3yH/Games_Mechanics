@@ -8,7 +8,7 @@ namespace Game.GamePlay.Upgrades
     {
         [SerializeField] private UpgradesCatalog _catalog;
         [SerializeField] private MoneyStorage _moneyStorage;
-        [SerializeField] private UpgradesManager _upgradesManager;
+        private UpgradesManager _upgradesManager;
         
         private readonly List<Upgrade> _upgrades = new();
 
@@ -20,8 +20,7 @@ namespace Game.GamePlay.Upgrades
             }
             
             var purchaser = new UpgradePurchaser(_moneyStorage);
-            _upgradesManager.Construct(_upgrades, purchaser);
-            Container.Bind<UpgradesManager>().FromInstance(_upgradesManager).AsSingle();
+            Container.Bind<UpgradesManager>().FromNew().AsSingle().WithArguments(_upgrades, purchaser);
         }
 
         public override void Start()
