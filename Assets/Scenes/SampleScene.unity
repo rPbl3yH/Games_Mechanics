@@ -600,6 +600,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _chestRewardConfigs:
   - {fileID: 11400000, guid: a807e328a00228647a5edc92389a2abb, type: 2}
+  - {fileID: 11400000, guid: e1b71667cd24dfc489230ec94766ee26, type: 2}
+  - {fileID: 11400000, guid: dbe7ab0290afdb4459e3ef0d61443f29, type: 2}
   _chestTimeRewardModule: {fileID: 275214330}
 --- !u!1 &1684012499
 GameObject:

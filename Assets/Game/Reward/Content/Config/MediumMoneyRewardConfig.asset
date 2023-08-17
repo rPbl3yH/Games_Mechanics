@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 411b924975374f0c9373f012dac5ff30, type: 3}
-  m_Name: MoneyRewardConfig
+  m_Name: MediumMoneyRewardConfig
   m_EditorClassIdentifier: 
-  Money: 100
+  Money: 500
