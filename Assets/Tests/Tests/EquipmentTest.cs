@@ -1,8 +1,8 @@
-using System.Collections.Generic;
 using Inventory.Components;
 using Inventory.Equiper;
 using Lessons.MetaGame.Inventory;
 using NUnit.Framework;
+
 
 public class EquipmentTest
 {
@@ -81,69 +81,15 @@ public class EquipmentTest
             equipmentComponent
         );
         listInventory.AddItem(item); 
-        EquipmentController equipmentController = new EquipmentController();
+        ListEquipment listEquipment = new ListEquipment();
 
         //Act
         InventoryItem legsItem = equipmentService.GetItem(EquipmentType.Legs);
 
         //Assert
-        bool canEquip = equipmentController.CanEquip(legsItem);
+        bool canEquip = listEquipment.CanEquip(legsItem);
         Assert.True(canEquip);
     }
-    
-    
-    public class EquipmentController
-    {
-        private readonly Dictionary<EquipmentType, InventoryItem> _equipments = new();
-        
-        public bool CanEquip(InventoryItem legsItem)
-        {
-            var type = legsItem.GetComponent<EquipmentComponent>().Type;
-            return _equipments.TryAdd(type, legsItem);
-        }
-    }
-
-    
-    // public class TestEntity : MonoEntityBase
-    // {
-    //         
-    // }
-    //
-    // [UnityTest]
-    // public IEnumerator WhenAddBoots_ArrangeInventoryIsEmpty_ThenBootsShouldBeEquip()
-    // {
-    //     //Arrange
-    //     var gameObject = new GameObject();
-    //     var inventory = new ListInventory();
-    //     var config = UnityEditor.AssetDatabase.LoadAssetAtPath<InventoryItemConfig>(
-    //         "Assets/Lesson_Inventory/Configs/InventoryItem (Boots).asset"
-    //         );
-    //
-    //     var model = gameObject.AddComponent<PlayerModel>();
-    //     var entity = gameObject.AddComponent<TestEntity>();
-    //     var component = new ComponentEquipItem(model.Equipments);
-    //     entity.Add(component);
-    //     var inventoryItemEquiper = new InventoryItemEquiper(entity);
-    //     inventory.AddObserver(inventoryItemEquiper);
-    //     
-    //     //Act
-    //     inventory.AddItem(config.item.Clone());
-    //     Debug.Log("Add Item " + config != null);
-    //     Debug.Log(model.Equipments.Count);
-    //     
-    //     //Assert
-    //     if (model.Equipments.TryGetValue(EquipmentType.Legs, out var item))
-    //     {
-    //         Debug.Log($"{config.item.Name} and {item.Name}");
-    //         Assert.AreEqual(config.item.Name, item.Name);
-    //     }
-    //     else
-    //     {
-    //         Assert.Fail();
-    //     }
-    //
-    //     yield return null;
-    // }
 }
 
 
