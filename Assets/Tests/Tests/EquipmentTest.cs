@@ -7,7 +7,6 @@ using Inventory.Equiper;
 using Inventory.Player;
 using Lessons.MetaGame.Inventory;
 using NUnit.Framework;
-using UnityEngine;
 
 
 public class EquipmentTest
@@ -17,8 +16,7 @@ public class EquipmentTest
     {
         //Arrange
         ListInventory listInventory = new ListInventory();
-        EquipmentService equipmentService = new EquipmentService();
-        listInventory.AddListener(equipmentService);
+        EquipmentService equipmentService = new EquipmentService(listInventory);
         var equipmentComponent = new EquipmentComponent
         {
             Type = EquipmentType.Legs
@@ -33,7 +31,7 @@ public class EquipmentTest
         ));
         
         //Assert
-        bool isHaveLegs = equipmentService.CheckItem(EquipmentType.Legs);
+        bool isHaveLegs = equipmentService.FindItem(EquipmentType.Legs, out var result);
         Assert.True(isHaveLegs);
     }
 
@@ -42,8 +40,7 @@ public class EquipmentTest
     {
         //Arrange
         ListInventory listInventory = new ListInventory();
-        EquipmentService equipmentService = new EquipmentService();
-        listInventory.AddListener(equipmentService);
+        EquipmentService equipmentService = new EquipmentService(listInventory);
         
         var equipmentComponent = new EquipmentComponent
         {
@@ -63,7 +60,7 @@ public class EquipmentTest
         listInventory.RemoveItem(item);
         
         //Assert
-        bool isHaveLegs = equipmentService.CheckItem(EquipmentType.Legs);
+        bool isHaveLegs = equipmentService.FindItem(EquipmentType.Legs, out var result);
         Assert.False(isHaveLegs);
     }
 
@@ -72,8 +69,7 @@ public class EquipmentTest
     {
         //Arrange
         ListInventory listInventory = new ListInventory();
-        EquipmentService equipmentService = new EquipmentService();
-        listInventory.AddListener(equipmentService);
+        EquipmentService equipmentService = new EquipmentService(listInventory);
         
         var equipmentComponent = new EquipmentComponent
         {
@@ -87,7 +83,7 @@ public class EquipmentTest
             equipmentComponent
         );
         listInventory.AddItem(item); 
-        ListEquipment listEquipment = new ListEquipment();
+        ListEquipment listEquipment = new ListEquipment(equipmentService);
 
         //Act
         InventoryItem legsItem = equipmentService.GetItem(EquipmentType.Legs);
@@ -102,8 +98,7 @@ public class EquipmentTest
     {
         //Arrange
         ListInventory listInventory = new ListInventory();
-        EquipmentService equipmentService = new EquipmentService();
-        listInventory.AddListener(equipmentService);
+        EquipmentService equipmentService = new EquipmentService(listInventory);
         
         var equipmentComponent = new EquipmentComponent
         {
@@ -117,7 +112,7 @@ public class EquipmentTest
             equipmentComponent
         );
         listInventory.AddItem(item); 
-        ListEquipment listEquipment = new ListEquipment();
+        ListEquipment listEquipment = new ListEquipment(equipmentService);
         InventoryItem legsItem = equipmentService.GetItem(EquipmentType.Legs);
 
         //Act
@@ -126,16 +121,14 @@ public class EquipmentTest
         //Assert
         Assert.AreEqual(legsItem, listEquipment.GetItem(EquipmentType.Legs));
     }
-
-    public class TestEntity : MonoEntityBase
-    {
-        
-    }
+    
     [Test]
     public void WhenEquipBoots_AndEquipmentIsEmpty_ThenAddDamage()
     {
         //Arrange
-        var listEquipment = new ListEquipment();
+        ListInventory listInventory = new ListInventory();
+        EquipmentService equipmentService = new EquipmentService(listInventory);
+        var listEquipment = new ListEquipment(equipmentService);
         var entity = Substitution.CreateComponent<TestEntity>();
         var effector = new Effector<IEffect>();
         var playerModel = Substitution.CreateComponent<PlayerModel>();
@@ -143,23 +136,21 @@ public class EquipmentTest
         entity.Add(new Component_Effector(effector));
         effector.AddHandler(new DamageEffectHandler(playerModel.Damage));
         var effectApplier = new EquipmentEffectApplier(entity, listEquipment);
-        
-        //Act
         var config = UnityEditor.AssetDatabase.LoadAssetAtPath<InventoryItemConfig>(
             "Assets/Lesson_Inventory/Configs/InventoryItem (Boots).asset"
-            );
+        );
         InventoryItem item = config.item.Clone();
+        listInventory.AddItem(item);
+        
+        //Act
         listEquipment.Equip(item);
         
         //Assert
         Assert.AreEqual(2f, playerModel.Damage.Value);
     }
-}
-
-public static class Substitution
-{
-    public static T CreateComponent<T>() where T : Component
+    
+    public class TestEntity : MonoEntityBase
     {
-        return new GameObject().AddComponent<T>();
+        
     }
 }

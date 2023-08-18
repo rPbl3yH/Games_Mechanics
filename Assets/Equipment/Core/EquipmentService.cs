@@ -1,63 +1,38 @@
 using System.Collections.Generic;
+using Entities;
 using Inventory.Components;
 using Inventory.Equiper;
 using Lessons.MetaGame.Inventory;
 using UnityEngine;
 
-public class EquipmentService : IInventoryListener
+public class EquipmentService
 {
-    private readonly Dictionary<InventoryItem, EquipmentType> _availableItems = new();
-        
-    public bool CheckItem(EquipmentType type)
+    private ListInventory _listInventory;
+
+    public EquipmentService(ListInventory listInventory)
     {
-        return FindItem(type, out var result);
+        _listInventory = listInventory;
     }
 
-    private bool FindItem(EquipmentType type, out InventoryItem result)
+    public bool CheckItem(InventoryItem equipmentItem)
+    {
+        return _listInventory.GetItems().Contains(equipmentItem);
+    }
+
+    public bool FindItem(EquipmentType type, out InventoryItem result)
     {
         result = null;
         
-        foreach (var pair in _availableItems)
+        foreach (var item in _listInventory.GetItems())
         {
-            if (pair.Value == type)
+            var component = item.GetComponent<EquipmentComponent>(); 
+            if (component.Type == type)
             {
-                result = pair.Key;
+                result = item;
                 return true;
             }
         }
         return false;
-    }
-
-    public void OnItemAdded(InventoryItem item)
-    {
-        if (!item.Flags.HasFlag(InventoryItemFlags.EQUPPABLE))
-        {
-            return;
-        }
-            
-        var type = item.GetComponent<EquipmentComponent>().Type;
-
-        if (_availableItems.TryAdd(item, type))
-        {
-                   
-        }
-        else
-        {
-            Debug.Log("Don't add to available items " + item.Name);
-        }
-    }
-
-    public void OnItemRemoved(InventoryItem item)
-    {
-        if (!item.Flags.HasFlag(InventoryItemFlags.EQUPPABLE))
-        {
-            return;
-        }
-        
-        if (_availableItems.ContainsKey(item))
-        {
-            _availableItems.Remove(item);
-        }
     }
 
     public InventoryItem GetItem(EquipmentType type)

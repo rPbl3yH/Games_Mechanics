@@ -8,11 +8,22 @@ public class ListEquipment
 {
     public Action<InventoryItem> OnEquipped;
     private readonly Dictionary<EquipmentType, InventoryItem> _equipments = new();
-        
+    private readonly EquipmentService _equipmentService;
+
+    public ListEquipment(EquipmentService equipmentService)
+    {
+        _equipmentService = equipmentService;
+    }
+
     public bool Equip(InventoryItem item)
     {
         var equipmentComponent = item.GetComponent<EquipmentComponent>();
         if (equipmentComponent is null)
+        {
+            return false;
+        }
+
+        if (!_equipmentService.CheckItem(item))
         {
             return false;
         }

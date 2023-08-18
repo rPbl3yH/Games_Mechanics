@@ -1,7 +1,7 @@
 using Elementary;
 using Entities;
 using Game.GameEngine.Mechanics;
-using Inventory.Components;
+using Inventory.EffectHandlers;
 using UnityEngine;
 
 namespace Inventory.Player
@@ -9,11 +9,14 @@ namespace Inventory.Player
     public class PlayerEntity : MonoEntityBase
     {
         [SerializeField] private PlayerModel _playerModel;
-        [SerializeField] private MonoEffector<IEffect> _monoEffector;
+        
         private void Awake()
         {
-            Add(new Component_Effector(_monoEffector));
             Add(new ComponentGetDamage(_playerModel.Damage));
+            
+            var effector = new Effector<IEffect>();
+            effector.AddHandler(new DamageEffectHandler(_playerModel.Damage));
+            Add(new Component_Effector(effector));
         }
     }
 }
