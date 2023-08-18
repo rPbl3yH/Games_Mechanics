@@ -4,11 +4,11 @@ using Lessons.MetaGame.Inventory;
 
 namespace Inventory.Components
 {
-    public class ComponentEquipItem : IComponent_EquipItem
+    public class EquipmentSystem 
     {
         private readonly Dictionary<EquipmentType, InventoryItem> _equipments;
 
-        public ComponentEquipItem(Dictionary<EquipmentType, InventoryItem> equipments)
+        public EquipmentSystem(Dictionary<EquipmentType, InventoryItem> equipments)
         {
             _equipments = equipments;
         }
@@ -16,6 +16,14 @@ namespace Inventory.Components
         public void Equip(EquipmentType type, InventoryItem inventoryItem)
         {
             _equipments.TryAdd(type, inventoryItem);
+        }
+
+        public void TakeOff(EquipmentType type)
+        {
+            if (_equipments.ContainsKey(type))
+            {
+                _equipments.Remove(type);
+            }
         }
     }
 }

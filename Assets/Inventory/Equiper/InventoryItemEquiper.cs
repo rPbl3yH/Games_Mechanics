@@ -7,7 +7,8 @@ namespace Inventory.Equiper
     public class InventoryItemEquiper : IInventoryListener
     {
         private readonly IEntity _entity;
-
+        private readonly EquipmentSystem _equipmentSystem;
+        
         public InventoryItemEquiper(IEntity entity)
         {
             _entity = entity;
@@ -18,7 +19,7 @@ namespace Inventory.Equiper
             if (item.Flags.HasFlag(InventoryItemFlags.EQUPPABLE))
             {
                 var type = item.GetComponent<IComponent_Equipment>().Type;
-                _entity.Get<IComponent_EquipItem>().Equip(type, item);
+                _equipmentSystem.Equip(type,item);
             }
         }
 
@@ -27,7 +28,7 @@ namespace Inventory.Equiper
             if (item.Flags.HasFlag(InventoryItemFlags.EQUPPABLE))
             {
                 var type = item.GetComponent<IComponent_Equipment>().Type;
-                _entity.Get<IComponent_TakeOffItem>().TakeOff(type);
+                _equipmentSystem.TakeOff(type);
             }
         }
     }
