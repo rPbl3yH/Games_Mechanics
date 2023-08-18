@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Inventory.Components;
 using Inventory.Equiper;
 using Lessons.MetaGame.Inventory;
@@ -59,8 +60,46 @@ public class EquipmentTest
         bool isHaveLegs = equipmentService.CheckItem(EquipmentType.Legs);
         Assert.False(isHaveLegs);
     }
+
+    [Test]
+    public void WhenGetItem_AndInventoryHasLegsAndEquipmentSystemIsEmpty_ThenCanEquip()
+    {
+        //Arrange
+        ListInventory listInventory = new ListInventory();
+        EquipmentService equipmentService = new EquipmentService();
+        listInventory.AddListener(equipmentService);
+        
+        var equipmentComponent = new EquipmentComponent
+        {
+            Type = EquipmentType.Legs
+        };
+        
+        var item = new InventoryItem(
+            "Boots",
+            InventoryItemFlags.EQUPPABLE,
+            new InventoryItemMetadata(),
+            equipmentComponent
+        );
+        
+        EquipmentController equipmentController = new EquipmentController();
+
+        //Act
+        InventoryItem legsItem = equipmentService.GetItem(EquipmentType.Legs);
+
+        //Assert
+        bool canEquip = equipmentController.CanEquip(legsItem);
+        Assert.True(canEquip);
+    }
     
     
+    public class EquipmentController
+    {
+        public bool CanEquip(InventoryItem legsItem)
+        {
+            return true;
+        }
+    }
+
     
     // public class TestEntity : MonoEntityBase
     // {

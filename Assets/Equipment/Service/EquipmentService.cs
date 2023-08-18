@@ -10,19 +10,21 @@ public class EquipmentService : IInventoryListener
         
     public bool CheckItem(EquipmentType type)
     {
-        return FindItem(type);
+        return FindItem(type, out var result);
     }
 
-    private bool FindItem(EquipmentType type)
+    private bool FindItem(EquipmentType type, out InventoryItem result)
     {
+        result = null;
+        
         foreach (var pair in _availableItems)
         {
             if (pair.Value == type)
             {
+                result = pair.Key;
                 return true;
             }
         }
-
         return false;
     }
 
@@ -56,5 +58,15 @@ public class EquipmentService : IInventoryListener
         {
             _availableItems.Remove(item);
         }
+    }
+
+    public InventoryItem GetItem(EquipmentType type)
+    {
+        if (FindItem(type, out var result))
+        {
+            return result;
+        }
+
+        return null;
     }
 }
