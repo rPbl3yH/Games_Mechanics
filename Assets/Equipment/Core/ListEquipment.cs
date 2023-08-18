@@ -21,4 +21,10 @@ public class ListEquipment
         OnEquipped?.Invoke(item);
         return true;
     }
+
+    public InventoryItem GetItem(EquipmentType type)
+    {
+        _equipments.TryGetValue(type, out var item);
+        return item;
+    }
 }

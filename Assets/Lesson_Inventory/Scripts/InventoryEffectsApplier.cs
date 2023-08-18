@@ -14,20 +14,20 @@ namespace Lessons.MetaGame.Inventory
 
         void IInventoryListener.OnItemAdded(InventoryItem item)
         {
-            if (IsEffectible(item))
-            {
-                var effect = GetEffect(item);
-                this.hero.Get<IComponent_Effector>().Apply(effect);
-            }
+            // if (IsEffectible(item))
+            // {
+            //     var effect = GetEffect(item);
+            //     this.hero.Get<IComponent_Effector>().Apply(effect);
+            // }
         }
 
         void IInventoryListener.OnItemRemoved(InventoryItem item)
         {
-            if (IsEffectible(item))
-            {
-                var effect = GetEffect(item);
-                this.hero.Get<IComponent_Effector>().Discard(effect);
-            }
+            // if (IsEffectible(item))
+            // {
+            //     var effect = GetEffect(item);
+            //     this.hero.Get<IComponent_Effector>().Discard(effect);
+            // }
         }
 
         private static IEffect GetEffect(InventoryItem item)

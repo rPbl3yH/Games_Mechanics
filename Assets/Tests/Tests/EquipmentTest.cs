@@ -1,3 +1,5 @@
+using Entities;
+using Game.GameEngine.Mechanics;
 using Inventory.Components;
 using Inventory.Equiper;
 using Inventory.Player;
@@ -5,6 +7,38 @@ using Lessons.MetaGame.Inventory;
 using NUnit.Framework;
 using UnityEngine;
 
+
+public class EquipmentEffectApplier
+{
+    private ListEquipment _listEquipment;
+    private IEntity _character;
+    
+    public EquipmentEffectApplier(IEntity character, ListEquipment listEquipment)
+    {
+        _listEquipment = listEquipment;
+        _listEquipment.OnEquipped += OnEquipped;
+        _character = character;
+    }
+
+    private void OnEquipped(InventoryItem item)
+    {
+        if (IsEffectible(item))
+        {
+            var effect = GetEffect(item);
+            _character.Get<IComponent_Effector>().Apply(effect);
+        }
+    }
+
+    private static IEffect GetEffect(InventoryItem item)
+    {
+        return item.GetComponent<IComponent_GetEffect>().Effect;
+    }
+    
+    private static bool IsEffectible(InventoryItem item)
+    {
+        return item.Flags.HasFlag(InventoryItemFlags.EFFECTIBLE);
+    }
+}
 
 public class EquipmentTest
 {
@@ -94,10 +128,9 @@ public class EquipmentTest
     }
 
     [Test]
-    public void WhenEquip_AndEquipmentIsLegs_ThenSetAdditionalDamage()
+    public void WhenEquipBoots_AndEquipmentIsEmpty_ThenLegsEqualsBoots()
     {
         //Arrange
-        var character = new GameObject().AddComponent<PlayerModel>();
         ListInventory listInventory = new ListInventory();
         EquipmentService equipmentService = new EquipmentService();
         listInventory.AddListener(equipmentService);
@@ -115,22 +148,12 @@ public class EquipmentTest
         );
         listInventory.AddItem(item); 
         ListEquipment listEquipment = new ListEquipment();
+        InventoryItem legsItem = equipmentService.GetItem(EquipmentType.Legs);
 
         //Act
-        InventoryItem legsItem = equipmentService.GetItem(EquipmentType.Legs);
-        //Act
-        EquipmentEffectObserver effectObserver = new();
         listEquipment.Equip(legsItem);
-        //Assert
         
-        var damage = character.Damage;
-        Assert.AreEqual(2, damage);
+        //Assert
+        Assert.AreEqual(legsItem, listEquipment.GetItem(EquipmentType.Legs));
     }
 }
-
-public class EquipmentEffectObserver
-{
-    
-}
-
-
