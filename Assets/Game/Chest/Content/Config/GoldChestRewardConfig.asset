@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b556e95ca456cbe0fb30b677fa461, type: 3}
   m_Name: GoldChestRewardConfig
   m_EditorClassIdentifier: 
-  ReceivingTime: 5
+  Id: GoldChest
+  ReceivingTime: 20
   RewardConfigs:
   - {fileID: 11400000, guid: de3fd913912f2574295989b69aefc3c2, type: 2}

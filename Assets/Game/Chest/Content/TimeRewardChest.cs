@@ -7,18 +7,19 @@ using UnityEngine;
 namespace Game
 {
     [Serializable]
-    public class Chest : IRealtimeTimer
+    public class TimeRewardChest : IRealtimeTimer
     {
         public event Action<IRealtimeTimer> OnStarted;
-        public event Action<Chest> OnFinished;
-        public string Id => nameof(Chest);
+        public event Action<TimeRewardChest> OnFinished;
+        public string Id { get; }
 
         [ShowInInspector, ReadOnly]
         private Timer _timer = new();
 
-        public Chest(ChestRewardConfig chestRewardConfig)
+        public TimeRewardChest(ChestRewardConfig chestRewardConfig)
         {
             _timer.Duration = chestRewardConfig.ReceivingTime;
+            Id = chestRewardConfig.Id;
         }
 
         public void Start()

@@ -7,11 +7,11 @@ namespace Game
 {
     public class ChestRewardObserver 
     {
-        private readonly Dictionary<Chest, ChestRewardConfig> _timers = new();
+        private readonly Dictionary<TimeRewardChest, ChestRewardConfig> _timers = new();
 
         [Inject] private RewardFactory _rewardFactory;
 
-        public void RegisterChest(Chest timer, ChestRewardConfig config)
+        public void RegisterChest(TimeRewardChest timer, ChestRewardConfig config)
         {
             if (_timers.TryAdd(timer, config))
             {
@@ -19,9 +19,9 @@ namespace Game
             }
         }
         
-        private void ReceiveReward(Chest chest)
+        private void ReceiveReward(TimeRewardChest timeRewardChest)
         {
-            if (!_timers.TryGetValue(chest, out var configs)) return;
+            if (!_timers.TryGetValue(timeRewardChest, out var configs)) return;
 
             var config = configs.GetRandom();
             var reward = _rewardFactory.Create(config);

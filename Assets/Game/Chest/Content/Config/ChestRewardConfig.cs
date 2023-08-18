@@ -7,6 +7,7 @@ namespace Game
     [CreateAssetMenu(menuName = "Rewards/ChestRewardConfig", fileName = "TimeRewardConfig", order = 0)]
     public class ChestRewardConfig : ScriptableObject
     {
+        public string Id;
         public float ReceivingTime;
         public List<RewardConfig> RewardConfigs;
 

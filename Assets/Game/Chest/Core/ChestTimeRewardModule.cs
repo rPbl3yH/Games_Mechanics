@@ -7,13 +7,13 @@ namespace Game
 {
     public class ChestTimeRewardModule : MonoBehaviour
     {
-        [ShowInInspector] private List<Chest> _chests = new();
+        [ShowInInspector] private List<TimeRewardChest> _chests = new();
         [Inject] private ChestRewardObserver _chestRewardObserver;
         [Inject] private RealTimeSaveLoader _saveLoader;
 
         public void AddChest(ChestRewardConfig config)
         {
-            var chest = new Chest(config);
+            var chest = new TimeRewardChest(config);
             _chestRewardObserver.RegisterChest(chest, config);
             _saveLoader.RegisterTimer(chest);
             _chests.Add(chest);
