@@ -10,11 +10,13 @@ public class EquipmentTest
     {
         //Arrange
         ListInventory listInventory = new ListInventory();
-        BootsChecker bootsChecker = new BootsChecker();
-        listInventory.AddListener(bootsChecker);
-        var equipmentComponent = new EquipmentComponent();
-        equipmentComponent.Type = EquipmentType.Legs;
-        
+        EquipmentService equipmentService = new EquipmentService();
+        listInventory.AddListener(equipmentService);
+        var equipmentComponent = new EquipmentComponent
+        {
+            Type = EquipmentType.Legs
+        };
+
         //Act
         listInventory.AddItem(new InventoryItem(
             "Boots",
@@ -24,36 +26,11 @@ public class EquipmentTest
             ));
         
         //Assert
-        bool isHaveBoots = bootsChecker.Check();
-        Assert.True(isHaveBoots);
+        bool isHaveLegs = equipmentService.CheckItem(EquipmentType.Legs);
+        Assert.True(isHaveLegs);
     }
     
-    public class BootsChecker : IInventoryListener
-    {
-        private EquipmentType _equipmentType;
-        private bool _isHaveBoots;
-        
-        public bool Check()
-        {
-            return _isHaveBoots;
-        }
-
-        public void OnItemAdded(InventoryItem item)
-        {
-            if (item.Flags.HasFlag(InventoryItemFlags.EQUPPABLE))
-            {
-                if (item.GetComponent<EquipmentComponent>().Type == EquipmentType.Legs)
-                {
-                    _isHaveBoots = true;
-                }
-            }
-        }
-
-        public void OnItemRemoved(InventoryItem item)
-        {
-            
-        }
-    }
+    
     
     // public class TestEntity : MonoEntityBase
     // {
