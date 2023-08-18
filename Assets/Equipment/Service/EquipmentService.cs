@@ -47,6 +47,14 @@ public class EquipmentService : IInventoryListener
 
     public void OnItemRemoved(InventoryItem item)
     {
-            
+        if (!item.Flags.HasFlag(InventoryItemFlags.EQUPPABLE))
+        {
+            return;
+        }
+        
+        if (_availableItems.ContainsKey(item))
+        {
+            _availableItems.Remove(item);
+        }
     }
 }
