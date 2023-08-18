@@ -45,7 +45,7 @@ namespace Lessons.MetaGame.Inventory
             return this.items.ToList();
         }
 
-        public void AddObserver(IInventoryListener listener)
+        public void AddListener(IInventoryListener listener)
         {
             this.observers.Add(listener);
         }

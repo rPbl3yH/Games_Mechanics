@@ -1,4 +1,5 @@
 using Inventory.Components;
+using Inventory.Equiper;
 using Lessons.MetaGame.Inventory;
 using NUnit.Framework;
 
@@ -9,33 +10,48 @@ public class EquipmentTest
     {
         //Arrange
         ListInventory listInventory = new ListInventory();
-        EquipObserver equipObserver = new EquipObserver(listInventory);
-
+        BootsChecker bootsChecker = new BootsChecker();
+        listInventory.AddListener(bootsChecker);
+        var equipmentComponent = new EquipmentComponent();
+        equipmentComponent.Type = EquipmentType.Legs;
+        
         //Act
         listInventory.AddItem(new InventoryItem(
             "Boots",
             InventoryItemFlags.EQUPPABLE,
             new InventoryItemMetadata(),
-            new EquipmentComponent()
+            equipmentComponent
             ));
         
         //Assert
-        bool isHaveBoots = equipObserver.Check("Boots");
+        bool isHaveBoots = bootsChecker.Check();
         Assert.True(isHaveBoots);
     }
     
-    public class EquipObserver
+    public class BootsChecker : IInventoryListener
     {
-        private readonly ListInventory _listInventory;
-
-        public EquipObserver(ListInventory listInventory)
+        private EquipmentType _equipmentType;
+        private bool _isHaveBoots;
+        
+        public bool Check()
         {
-            _listInventory = listInventory;
+            return _isHaveBoots;
         }
 
-        public bool Check(string name)
+        public void OnItemAdded(InventoryItem item)
         {
-            return _listInventory.FindItem(name, out InventoryItem result);
+            if (item.Flags.HasFlag(InventoryItemFlags.EQUPPABLE))
+            {
+                if (item.GetComponent<EquipmentComponent>().Type == EquipmentType.Legs)
+                {
+                    _isHaveBoots = true;
+                }
+            }
+        }
+
+        public void OnItemRemoved(InventoryItem item)
+        {
+            
         }
     }
     
