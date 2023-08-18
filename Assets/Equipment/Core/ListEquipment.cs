@@ -12,4 +12,14 @@ public class ListEquipment
         var type = legsItem.GetComponent<EquipmentComponent>().Type;
         return _equipments.TryAdd(type, legsItem);
     }
+
+    public bool TryEquip(InventoryItem legsItem)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public InventoryItem GetEquipmentItem(EquipmentType legs)
+    {
+        throw new System.NotImplementedException();
+    }
 }

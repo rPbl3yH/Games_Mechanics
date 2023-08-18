@@ -90,6 +90,36 @@ public class EquipmentTest
         bool canEquip = listEquipment.CanEquip(legsItem);
         Assert.True(canEquip);
     }
+    
+    [Test]
+    public void WhenGetItem_AndInventoryHasLegsAndEquipmentSystemIsEmpty_ThenEquip()
+    {
+        //Arrange
+        ListInventory listInventory = new ListInventory();
+        EquipmentService equipmentService = new EquipmentService();
+        listInventory.AddListener(equipmentService);
+        
+        var equipmentComponent = new EquipmentComponent
+        {
+            Type = EquipmentType.Legs
+        };
+        
+        var item = new InventoryItem(
+            "Boots",
+            InventoryItemFlags.EQUPPABLE,
+            new InventoryItemMetadata(),
+            equipmentComponent
+        );
+        listInventory.AddItem(item); 
+        ListEquipment listEquipment = new ListEquipment();
+
+        //Act
+        InventoryItem legsItem = equipmentService.GetItem(EquipmentType.Legs);
+
+        //Assert
+        var result = listEquipment.TryEquip(legsItem);
+        Assert.True(result);
+    }
 }
 
 
