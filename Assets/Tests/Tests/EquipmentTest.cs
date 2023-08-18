@@ -87,7 +87,7 @@ public class EquipmentTest
         InventoryItem legsItem = equipmentService.GetItem(EquipmentType.Legs);
 
         //Assert
-        bool canEquip = listEquipment.TryEquip(legsItem);
+        bool canEquip = listEquipment.Equip(legsItem);
         Assert.True(canEquip);
     }
 }
