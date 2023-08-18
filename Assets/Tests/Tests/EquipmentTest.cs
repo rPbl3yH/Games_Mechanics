@@ -80,7 +80,7 @@ public class EquipmentTest
             new InventoryItemMetadata(),
             equipmentComponent
         );
-        
+        listInventory.AddItem(item); 
         EquipmentController equipmentController = new EquipmentController();
 
         //Act
@@ -94,9 +94,12 @@ public class EquipmentTest
     
     public class EquipmentController
     {
+        private readonly Dictionary<EquipmentType, InventoryItem> _equipments = new();
+        
         public bool CanEquip(InventoryItem legsItem)
         {
-            return true;
+            var type = legsItem.GetComponent<EquipmentComponent>().Type;
+            return _equipments.TryAdd(type, legsItem);
         }
     }
 
