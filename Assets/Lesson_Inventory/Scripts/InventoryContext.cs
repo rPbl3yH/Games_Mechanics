@@ -32,8 +32,12 @@ namespace Lessons.MetaGame.Inventory
 
         public void Initialize()
         {
-            inventory.AddListener(new InventoryItemEquiper(_entity));
-            inventory.AddListener(new InventoryEffectsApplier(_entity));
+            //inventory.AddListener(new InventoryEffectsApplier(_entity));
+        }
+
+        public ListInventory GetInventory()
+        {
+            return inventory;
         }
     }
 }

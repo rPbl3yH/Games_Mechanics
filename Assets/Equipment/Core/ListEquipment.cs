@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using Inventory.Components;
 using Inventory.Equiper;
 using Lessons.MetaGame.Inventory;
+using Sirenix.OdinInspector;
+using UnityEngine;
 
 public class ListEquipment
 {
     public Action<InventoryItem> OnEquipped;
+    [ShowInInspector]
     private readonly Dictionary<EquipmentType, InventoryItem> _equipments = new();
     private readonly EquipmentService _equipmentService;
 
@@ -30,6 +33,7 @@ public class ListEquipment
 
         _equipments[equipmentComponent.Type] = item;
         OnEquipped?.Invoke(item);
+        Debug.Log("Equip " + item);
         return true;
     }
 
