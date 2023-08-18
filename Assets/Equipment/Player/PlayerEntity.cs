@@ -12,8 +12,6 @@ namespace Inventory.Player
         [SerializeField] private MonoEffector<IEffect> _monoEffector;
         private void Awake()
         {
-            Add(new EquipmentSystem(_playerModel.Equipments));
-            Add(new ComponentTakeOffItem(_playerModel.Equipments));
             Add(new Component_Effector(_monoEffector));
             Add(new ComponentGetDamage(_playerModel.Damage));
         }

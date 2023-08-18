@@ -7,17 +7,16 @@ using Zenject;
 
 namespace Inventory.EffectHandlers
 {
-    public sealed class DamageEffectHandler : MonoEffectHandler<IEffect>
+    public sealed class DamageEffectHandler : IEffectHandler<IEffect>
     {
         private AtomicVariable<float> _damage;
-        [Inject] private IEntity _entity;
 
-        private void Start()
+        public DamageEffectHandler(AtomicVariable<float> damage)
         {
-            _damage = _entity.Get<ComponentGetDamage>().GetDamage();
+            _damage = damage;
         }
 
-        public override void OnApply(IEffect effect)
+        public void OnApply(IEffect effect)
         {
             if (effect.TryGetParameter<float>(EffectId.DAMAGE, out var value))
             {
@@ -25,7 +24,7 @@ namespace Inventory.EffectHandlers
             }
         }
         
-        public override void OnDiscard(IEffect effect)
+        public void OnDiscard(IEffect effect)
         {
             if (effect.TryGetParameter<float>(EffectId.DAMAGE, out var multiplier))
             {

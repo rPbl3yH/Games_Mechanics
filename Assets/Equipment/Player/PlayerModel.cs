@@ -10,8 +10,6 @@ namespace Inventory.Player
 {
     public class PlayerModel : MonoBehaviour
     {
-        public AtomicVariable<float> Damage;
-        [ShowInInspector]
-        public Dictionary<EquipmentType, InventoryItem> Equipments = new();
+        public AtomicVariable<float> Damage = new();
     }
 }

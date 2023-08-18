@@ -1,44 +1,14 @@
+using Elementary;
 using Entities;
 using Game.GameEngine.Mechanics;
 using Inventory.Components;
+using Inventory.EffectHandlers;
 using Inventory.Equiper;
 using Inventory.Player;
 using Lessons.MetaGame.Inventory;
 using NUnit.Framework;
 using UnityEngine;
 
-
-public class EquipmentEffectApplier
-{
-    private ListEquipment _listEquipment;
-    private IEntity _character;
-    
-    public EquipmentEffectApplier(IEntity character, ListEquipment listEquipment)
-    {
-        _listEquipment = listEquipment;
-        _listEquipment.OnEquipped += OnEquipped;
-        _character = character;
-    }
-
-    private void OnEquipped(InventoryItem item)
-    {
-        if (IsEffectible(item))
-        {
-            var effect = GetEffect(item);
-            _character.Get<IComponent_Effector>().Apply(effect);
-        }
-    }
-
-    private static IEffect GetEffect(InventoryItem item)
-    {
-        return item.GetComponent<IComponent_GetEffect>().Effect;
-    }
-    
-    private static bool IsEffectible(InventoryItem item)
-    {
-        return item.Flags.HasFlag(InventoryItemFlags.EFFECTIBLE);
-    }
-}
 
 public class EquipmentTest
 {
@@ -60,7 +30,7 @@ public class EquipmentTest
             InventoryItemFlags.EQUPPABLE,
             new InventoryItemMetadata(),
             equipmentComponent
-            ));
+        ));
         
         //Assert
         bool isHaveLegs = equipmentService.CheckItem(EquipmentType.Legs);
@@ -155,5 +125,41 @@ public class EquipmentTest
         
         //Assert
         Assert.AreEqual(legsItem, listEquipment.GetItem(EquipmentType.Legs));
+    }
+
+    public class TestEntity : MonoEntityBase
+    {
+        
+    }
+    [Test]
+    public void WhenEquipBoots_AndEquipmentIsEmpty_ThenAddDamage()
+    {
+        //Arrange
+        var listEquipment = new ListEquipment();
+        var entity = Substitution.CreateComponent<TestEntity>();
+        var effector = new Effector<IEffect>();
+        var playerModel = Substitution.CreateComponent<PlayerModel>();
+        entity.Add(new ComponentGetDamage(playerModel.Damage));
+        entity.Add(new Component_Effector(effector));
+        effector.AddHandler(new DamageEffectHandler(playerModel.Damage));
+        var effectApplier = new EquipmentEffectApplier(entity, listEquipment);
+        
+        //Act
+        var config = UnityEditor.AssetDatabase.LoadAssetAtPath<InventoryItemConfig>(
+            "Assets/Lesson_Inventory/Configs/InventoryItem (Boots).asset"
+            );
+        InventoryItem item = config.item.Clone();
+        listEquipment.Equip(item);
+        
+        //Assert
+        Assert.AreEqual(2f, playerModel.Damage.Value);
+    }
+}
+
+public static class Substitution
+{
+    public static T CreateComponent<T>() where T : Component
+    {
+        return new GameObject().AddComponent<T>();
     }
 }
