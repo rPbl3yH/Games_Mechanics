@@ -1,7 +1,9 @@
 using Inventory.Components;
 using Inventory.Equiper;
+using Inventory.Player;
 using Lessons.MetaGame.Inventory;
 using NUnit.Framework;
+using UnityEngine;
 
 
 public class EquipmentTest
@@ -87,9 +89,48 @@ public class EquipmentTest
         InventoryItem legsItem = equipmentService.GetItem(EquipmentType.Legs);
 
         //Assert
-        bool canEquip = listEquipment.Equip(legsItem);
-        Assert.True(canEquip);
+        bool isEquip = listEquipment.Equip(legsItem);
+        Assert.True(isEquip);
     }
+
+    [Test]
+    public void WhenEquip_AndEquipmentIsLegs_ThenSetAdditionalDamage()
+    {
+        //Arrange
+        var character = new GameObject().AddComponent<PlayerModel>();
+        ListInventory listInventory = new ListInventory();
+        EquipmentService equipmentService = new EquipmentService();
+        listInventory.AddListener(equipmentService);
+        
+        var equipmentComponent = new EquipmentComponent
+        {
+            Type = EquipmentType.Legs
+        };
+        
+        var item = new InventoryItem(
+            "Boots",
+            InventoryItemFlags.EQUPPABLE,
+            new InventoryItemMetadata(),
+            equipmentComponent
+        );
+        listInventory.AddItem(item); 
+        ListEquipment listEquipment = new ListEquipment();
+
+        //Act
+        InventoryItem legsItem = equipmentService.GetItem(EquipmentType.Legs);
+        //Act
+        EquipmentEffectObserver effectObserver = new();
+        listEquipment.Equip(legsItem);
+        //Assert
+        
+        var damage = character.Damage;
+        Assert.AreEqual(2, damage);
+    }
+}
+
+public class EquipmentEffectObserver
+{
+    
 }
 
 
