@@ -6,7 +6,7 @@ using NUnit.Framework;
 public class EquipmentTest
 {
     [Test]
-    public void WhenAddBoots_ArrangeInventoryIsEmpty_ThenShouldViewNewBoots()
+    public void WhenAddLegs_ArrangeInventoryIsEmpty_ThenCheckLegsIsTrue()
     {
         //Arrange
         ListInventory listInventory = new ListInventory();
@@ -28,6 +28,36 @@ public class EquipmentTest
         //Assert
         bool isHaveLegs = equipmentService.CheckItem(EquipmentType.Legs);
         Assert.True(isHaveLegs);
+    }
+
+    [Test]
+    public void WhenRemoveLegs_AndInventoryHasLegs_ThenAvailableItemIsEmpty()
+    {
+        //Arrange
+        ListInventory listInventory = new ListInventory();
+        EquipmentService equipmentService = new EquipmentService();
+        listInventory.AddListener(equipmentService);
+        
+        var equipmentComponent = new EquipmentComponent
+        {
+            Type = EquipmentType.Legs
+        };
+        
+        var item = new InventoryItem(
+            "Boots",
+            InventoryItemFlags.EQUPPABLE,
+            new InventoryItemMetadata(),
+            equipmentComponent
+        );
+        
+        listInventory.AddItem(item); 
+        
+        //Act
+        listInventory.RemoveItem(item);
+        
+        //Assert
+        bool isHaveLegs = equipmentService.CheckItem(EquipmentType.Legs);
+        Assert.False(isHaveLegs);
     }
     
     
