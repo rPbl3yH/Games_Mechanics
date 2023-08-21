@@ -1,9 +1,4 @@
-using System.Collections.Generic;
 using AtomicProject.Atomic.Values;
-using Declarative;
-using Inventory.Equiper;
-using Lessons.MetaGame.Inventory;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Inventory.Player

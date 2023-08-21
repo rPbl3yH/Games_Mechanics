@@ -3,7 +3,6 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using GameSystem;
 using UnityEditor.Callbacks;
 
 namespace GameSystem.UnityEditor

@@ -1,9 +1,6 @@
 using AtomicProject.Atomic.Values;
 using Elementary;
-using Entities;
 using Game.GameEngine.Mechanics;
-using Inventory.Player;
-using Zenject;
 
 namespace Inventory.EffectHandlers
 {

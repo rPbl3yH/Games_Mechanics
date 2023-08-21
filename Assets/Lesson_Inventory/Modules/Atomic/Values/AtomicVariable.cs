@@ -1,8 +1,6 @@
 using System;
-using Declarative;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using Object = System.Object;
 
 namespace AtomicProject.Atomic.Values
 {
