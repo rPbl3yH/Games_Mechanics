@@ -1,12 +1,15 @@
 using Entities;
+using Equipment.Core;
 using Game.GameEngine.Mechanics;
 using Lessons.MetaGame.Inventory;
+using Zenject;
 
 public class EquipmentEffectApplier
 {
     private ListEquipment _listEquipment;
     private IEntity _character;
     
+    [Inject]
     public EquipmentEffectApplier(IEntity character, ListEquipment listEquipment)
     {
         _listEquipment = listEquipment;

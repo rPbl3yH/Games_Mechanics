@@ -1,45 +1,31 @@
 using System;
 using System.Collections.Generic;
-using Inventory.Components;
 using Inventory.Equiper;
 using Lessons.MetaGame.Inventory;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class ListEquipment
+namespace Equipment.Core
 {
-    public Action<InventoryItem> OnEquipped;
-    [ShowInInspector]
-    private readonly Dictionary<EquipmentType, InventoryItem> _equipments = new();
-    private readonly EquipmentService _equipmentService;
-
-    public ListEquipment(EquipmentService equipmentService)
+    public class ListEquipment
     {
-        _equipmentService = equipmentService;
-    }
-
-    public bool Equip(InventoryItem item)
-    {
-        var equipmentComponent = item.GetComponent<EquipmentComponent>();
-        if (equipmentComponent is null)
+        public Action<InventoryItem> OnEquipped;
+    
+        [ShowInInspector]
+        private readonly Dictionary<EquipmentType, InventoryItem> _equipments = new();
+    
+        public bool Equip(EquipmentType type, InventoryItem item)
         {
-            return false;
+            _equipments[type] = item;
+            OnEquipped?.Invoke(item);
+            Debug.Log("Equip " + item);
+            return true;
         }
 
-        if (!_equipmentService.CheckItem(item))
+        public InventoryItem GetItem(EquipmentType type)
         {
-            return false;
+            _equipments.TryGetValue(type, out var item);
+            return item;
         }
-
-        _equipments[equipmentComponent.Type] = item;
-        OnEquipped?.Invoke(item);
-        Debug.Log("Equip " + item);
-        return true;
-    }
-
-    public InventoryItem GetItem(EquipmentType type)
-    {
-        _equipments.TryGetValue(type, out var item);
-        return item;
     }
 }

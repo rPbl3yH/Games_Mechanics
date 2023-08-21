@@ -1,5 +1,6 @@
 using Elementary;
 using Entities;
+using Equipment.Core;
 using Game.GameEngine.Mechanics;
 using Inventory.Components;
 using Inventory.EffectHandlers;

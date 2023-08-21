@@ -1,31 +1,16 @@
 using Entities;
-using Lessons.MetaGame.Inventory;
-using Sirenix.OdinInspector;
-using UnityEngine;
+using Inventory.Equiper;
 using Zenject;
 
 namespace Equipment.Core
 {
-    public class EquipmentInstaller : MonoBehaviour
+    public class EquipmentInstaller : MonoInstaller<EquipmentInstaller>
     {
-        [ShowInInspector]
-        private ListEquipment _listEquipment;
-
-        [Inject] private InventoryContext _inventoryContext;
-        [Inject] private IEntity _entity;
-        
-        private void Start()
+        public override void InstallBindings()
         {
-            var equipmentService = new EquipmentService(_inventoryContext.GetInventory());
-            _listEquipment = new ListEquipment(equipmentService);
-            var effectApplier = new EquipmentEffectApplier(_entity, _listEquipment);
+            Container.Bind<ListEquipment>().AsSingle();
+            Container.Bind<InventoryItemEquipment>().AsSingle();
+            Container.Bind<EquipmentEffectApplier>().AsSingle();
         }
-
-        [Button]
-        public void DebugEquip()
-        {
-            _inventoryContext.GetInventory().FindItem("boots", out var result);
-            _listEquipment.Equip(result);
-        } 
     }
 }

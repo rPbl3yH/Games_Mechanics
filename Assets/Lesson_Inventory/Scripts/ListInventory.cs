@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
+using Inventory.Components;
+using Inventory.Equiper;
 using Sirenix.OdinInspector;
 
 namespace Lessons.MetaGame.Inventory
@@ -84,6 +86,37 @@ namespace Lessons.MetaGame.Inventory
             {
                 observer.OnItemRemoved(item);
             }
+        }
+        
+        public bool CheckItem(InventoryItem equipmentItem)
+        {
+            return items.Contains(equipmentItem);
+        }
+
+        public bool FindItem(EquipmentType type, out InventoryItem result)
+        {
+            result = null;
+        
+            foreach (var item in items)
+            {
+                var component = item.GetComponent<EquipmentComponent>(); 
+                if (component.Type == type)
+                {
+                    result = item;
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public InventoryItem GetItem(EquipmentType type)
+        {
+            if (FindItem(type, out var result))
+            {
+                return result;
+            }
+
+            return null;
         }
     }
 }

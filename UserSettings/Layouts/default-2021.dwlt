@@ -19,63 +19,12 @@ MonoBehaviour:
     width: 1920
     height: 1007
   m_ShowMode: 4
-  m_Title: Game
-  m_RootView: {fileID: 4}
+  m_Title: Inspector
+  m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 681
-    width: 550
-    height: 276
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 16}
-  m_Panes:
-  - {fileID: 16}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &3
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 15}
-  - {fileID: 2}
-  m_Position:
-    serializedVersion: 2
-    x: 1370
-    y: 0
-    width: 550
-    height: 957
-  m_MinSize: {x: 100, y: 200}
-  m_MaxSize: {x: 8096, y: 16192}
-  vertical: 1
-  controlID: 185
---- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,9 +37,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
+  - {fileID: 3}
   - {fileID: 5}
-  - {fileID: 7}
-  - {fileID: 6}
+  - {fileID: 4}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -103,7 +52,7 @@ MonoBehaviour:
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &5
+--- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &6
+--- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,7 +95,7 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &7
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,10 +108,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
+  - {fileID: 6}
+  - {fileID: 7}
   - {fileID: 8}
-  - {fileID: 9}
-  - {fileID: 10}
-  - {fileID: 3}
+  - {fileID: 13}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -172,8 +121,8 @@ MonoBehaviour:
   m_MinSize: {x: 500, y: 200}
   m_MaxSize: {x: 40480, y: 16192}
   vertical: 0
-  controlID: 15
---- !u!114 &8
+  controlID: 166
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,12 +143,12 @@ MonoBehaviour:
     height: 957
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 17}
+  m_ActualView: {fileID: 15}
   m_Panes:
-  - {fileID: 17}
+  - {fileID: 15}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &9
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,16 +165,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 441
     y: 0
-    width: 381
+    width: 291
     height: 957
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 18}
+  - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &10
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -238,19 +187,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 11}
-  - {fileID: 14}
+  - {fileID: 9}
+  - {fileID: 12}
   m_Position:
     serializedVersion: 2
-    x: 822
+    x: 732
     y: 0
-    width: 548
+    width: 574
     height: 957
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 150
---- !u!114 &11
+  controlID: 145
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -263,19 +212,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 12}
-  - {fileID: 13}
+  - {fileID: 10}
+  - {fileID: 11}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 548
+    width: 574
     height: 663
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 82
---- !u!114 &12
+  controlID: 146
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -292,16 +241,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 165
+    width: 190
     height: 663
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 19}
+  m_ActualView: {fileID: 17}
   m_Panes:
-  - {fileID: 19}
+  - {fileID: 17}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &13
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -316,18 +265,18 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 165
+    x: 190
     y: 0
-    width: 383
+    width: 384
     height: 663
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 20}
+  - {fileID: 18}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &14
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -344,16 +293,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 663
-    width: 548
+    width: 574
     height: 294
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 21}
+  m_ActualView: {fileID: 19}
   m_Panes:
-  - {fileID: 21}
+  - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &15
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -368,18 +317,19 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 0
+    x: 1306
     y: 0
-    width: 550
-    height: 681
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 22}
+    width: 614
+    height: 957
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 20}
   m_Panes:
-  - {fileID: 22}
+  - {fileID: 20}
+  - {fileID: 14}
   m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &16
+  m_LastSelected: 1
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -399,21 +349,21 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1370
-    y: 754
-    width: 549
-    height: 255
+    x: 1306
+    y: 73
+    width: 613
+    height: 936
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 213
+    ID: 1190
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
-    - 139
-    - 46
+    - 649
+    - 217
     relativeSizes:
     - 0.75
     - 0.25
@@ -423,7 +373,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 185
+    lastTotalSize: 866
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -431,16 +381,16 @@ MonoBehaviour:
     oldMinSizes: 
     oldMaxSizes: 
     oldSplitSize: 0
-  m_TestTypeToolbarIndex: 0
+  m_TestTypeToolbarIndex: 1
   m_PlayModeTestListGUI:
-    m_Window: {fileID: 16}
+    m_Window: {fileID: 14}
     m_NewResultList:
-    - id: 2653
+    - id: 1547
       uniqueId: '[Otus_Homevorks][suite]'
       name: Otus_Homevorks
       fullName: Otus_Homevorks
       resultStatus: 1
-      duration: 0.0645752
+      duration: 0.0702444
       messages: 
       output: 
       stacktrace: 
@@ -451,66 +401,13 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1004
-      uniqueId: '[Tests][C:/Users/Admin.BEST-KOMP/Otus_Homevorks/Library/ScriptAssemblies/Tests.dll][suite]'
-      name: Tests.dll
-      fullName: C:/Users/Admin.BEST-KOMP/Otus_Homevorks/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 1
-      duration: 0.0514573
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1000
-      parentUniqueId: '[Otus_Homevorks][suite]'
-    - id: 1001
-      uniqueId: Tests.dll/[Tests][EquipmentTest][suite]
-      name: EquipmentTest
-      fullName: EquipmentTest
-      resultStatus: 1
-      duration: 0.0448678
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1003
-      parentUniqueId: '[Tests][C:/Users/Admin.BEST-KOMP/Otus_Homevorks/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1002
-      uniqueId: Tests.dll/EquipmentTest/[Tests][EquipmentTest.EquipmentBoots]
-      name: EquipmentBoots
-      fullName: EquipmentTest.EquipmentBoots
-      resultStatus: 1
-      duration: 0.0310318
-      messages: 
-      output: "Add Item \r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][EquipmentTest][suite]
-    m_ResultText: 'EquipmentBoots (0.031s)
-
-      ---
-
-      Add Item'
+    m_ResultText: 
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 935a4bd3
-      m_LastClickedID: -750036333
-      m_ExpandedIDs: ce91fd8519c3ef8705b5fc88344c948cd6646895be95c895dc889898791b40a527c860a7c30c7aa798efa8ab247a0badd8f6ebad8cb207b3f5a5b2b4e5ed68b667bea2bfdbe0e6bff5e4f3bf6e811fc24ba1e5d1ebab89ec896addede2451cf11cb0fef1caaaf2f2c1a216f3233320f343d00af4330266fb820e0000dd79140383b30c0a8877bb15ffedab170f13eb219ed8dc2423a786257f7585273ee43930fa873a324d0df436f155a83b1a4a753d87be6e3e1300753f0e5fc841d261b6465373044704bb4b4fb38490510e7900542bca5858c795555c733fd067d9746071c2d067783cee807afa14837dffffff7f
+      m_SelectedIDs: 0f99a52e
+      m_LastClickedID: 782604559
+      m_ExpandedIDs: 98efa8ab8877bb15f155a83bffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -538,14 +435,14 @@ MonoBehaviour:
       - Uncategorized
     m_SelectedOption: 0
   m_EditModeTestListGUI:
-    m_Window: {fileID: 16}
+    m_Window: {fileID: 14}
     m_NewResultList:
     - id: 1000
       uniqueId: '[Otus_Homevorks][suite]'
       name: Otus_Homevorks
       fullName: Otus_Homevorks
       resultStatus: 1
-      duration: 1.7065955
+      duration: 0.078347
       messages: 
       output: 
       stacktrace: 
@@ -556,12 +453,129 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
+    - id: 1003
+      uniqueId: '[EquipmentTest][C:/Users/Admin.BEST-KOMP/Otus_Homevorks/Library/ScriptAssemblies/EquipmentTest.dll][suite]'
+      name: EquipmentTest.dll
+      fullName: C:/Users/Admin.BEST-KOMP/Otus_Homevorks/Library/ScriptAssemblies/EquipmentTest.dll
+      resultStatus: 1
+      duration: 0.0670238
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[Otus_Homevorks][suite]'
+    - id: 1001
+      uniqueId: EquipmentTest.dll/[EquipmentTest][suite]
+      name: EquipmentTest
+      fullName: EquipmentTest
+      resultStatus: 1
+      duration: 0.0655464
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1003
+      parentUniqueId: '[EquipmentTest][C:/Users/Admin.BEST-KOMP/Otus_Homevorks/Library/ScriptAssemblies/EquipmentTest.dll][suite]'
+    - id: 1002
+      uniqueId: EquipmentTest.dll/EquipmentTest/[EquipmentTest][EquipmentTest.WhenAddLegs_ArrangeInventoryIsEmpty_ThenCheckLegsIsTrue]
+      name: WhenAddLegs_ArrangeInventoryIsEmpty_ThenCheckLegsIsTrue
+      fullName: EquipmentTest.WhenAddLegs_ArrangeInventoryIsEmpty_ThenCheckLegsIsTrue
+      resultStatus: 1
+      duration: 0.0189703
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EquipmentTest.dll/[EquipmentTest][suite]
+    - id: 1006
+      uniqueId: EquipmentTest.dll/EquipmentTest/[EquipmentTest][EquipmentTest.WhenEquipBoots_AndEquipmentIsEmpty_ThenAddDamage]
+      name: WhenEquipBoots_AndEquipmentIsEmpty_ThenAddDamage
+      fullName: EquipmentTest.WhenEquipBoots_AndEquipmentIsEmpty_ThenAddDamage
+      resultStatus: 1
+      duration: 0.032631
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EquipmentTest.dll/[EquipmentTest][suite]
+    - id: 1005
+      uniqueId: EquipmentTest.dll/EquipmentTest/[EquipmentTest][EquipmentTest.WhenEquipBoots_AndEquipmentIsEmpty_ThenLegsEqualsBoots]
+      name: WhenEquipBoots_AndEquipmentIsEmpty_ThenLegsEqualsBoots
+      fullName: EquipmentTest.WhenEquipBoots_AndEquipmentIsEmpty_ThenLegsEqualsBoots
+      resultStatus: 1
+      duration: 0.000638
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EquipmentTest.dll/[EquipmentTest][suite]
+    - id: 1005
+      uniqueId: EquipmentTest.dll/EquipmentTest/[EquipmentTest][EquipmentTest.WhenGetItem_AndInventoryHasLegsAndEquipmentSystemIsEmpty_ThenEquip]
+      name: WhenGetItem_AndInventoryHasLegsAndEquipmentSystemIsEmpty_ThenEquip
+      fullName: EquipmentTest.WhenGetItem_AndInventoryHasLegsAndEquipmentSystemIsEmpty_ThenEquip
+      resultStatus: 1
+      duration: 0.0002417
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EquipmentTest.dll/[EquipmentTest][suite]
+    - id: 1003
+      uniqueId: EquipmentTest.dll/EquipmentTest/[EquipmentTest][EquipmentTest.WhenRemoveLegs_AndInventoryHasLegs_ThenAvailableItemIsEmpty]
+      name: WhenRemoveLegs_AndInventoryHasLegs_ThenAvailableItemIsEmpty
+      fullName: EquipmentTest.WhenRemoveLegs_AndInventoryHasLegs_ThenAvailableItemIsEmpty
+      resultStatus: 1
+      duration: 0.0005312
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EquipmentTest.dll/[EquipmentTest][suite]
     - id: 1533
       uniqueId: '[Zenject-UnitTests-Editor.dll][suite]'
       name: Zenject-UnitTests-Editor.dll
       fullName: C:/Users/Admin.BEST-KOMP/Otus_Homevorks/Library/ScriptAssemblies/Zenject-UnitTests-Editor.dll
       resultStatus: 1
-      duration: 1.6607403
+      duration: 1.8673877
       messages: 
       output: 
       stacktrace: 
@@ -577,7 +591,7 @@ MonoBehaviour:
       name: Zenject
       fullName: Zenject
       resultStatus: 1
-      duration: 1.6556985
+      duration: 1.8578659
       messages: 
       output: 
       stacktrace: 
@@ -593,7 +607,7 @@ MonoBehaviour:
       name: Tests
       fullName: Zenject.Tests
       resultStatus: 1
-      duration: 1.655312
+      duration: 1.8563693
       messages: 
       output: 
       stacktrace: 
@@ -609,7 +623,7 @@ MonoBehaviour:
       name: AbstractFactory
       fullName: Zenject.Tests.AbstractFactory
       resultStatus: 1
-      duration: 0.0382901
+      duration: 0.1218441
       messages: 
       output: 
       stacktrace: 
@@ -625,7 +639,7 @@ MonoBehaviour:
       name: TestFactory
       fullName: Zenject.Tests.AbstractFactory.TestFactory
       resultStatus: 1
-      duration: 0.0342775
+      duration: 0.1186358
       messages: 
       output: 
       stacktrace: 
@@ -641,7 +655,7 @@ MonoBehaviour:
       name: TestToSelf
       fullName: Zenject.Tests.AbstractFactory.TestFactory.TestToSelf
       resultStatus: 1
-      duration: 0.0307573
+      duration: 0.1097819
       messages: 
       output: 
       stacktrace: 
@@ -658,7 +672,7 @@ MonoBehaviour:
       name: BindFeatures
       fullName: Zenject.Tests.BindFeatures
       resultStatus: 1
-      duration: 0.0656188
+      duration: 0.0428659
       messages: 
       output: 
       stacktrace: 
@@ -674,7 +688,7 @@ MonoBehaviour:
       name: TestConcreteIdentifier
       fullName: Zenject.Tests.BindFeatures.TestConcreteIdentifier
       resultStatus: 1
-      duration: 0.0071513
+      duration: 0.0075464
       messages: 
       output: 
       stacktrace: 
@@ -690,7 +704,7 @@ MonoBehaviour:
       name: Test1
       fullName: Zenject.Tests.BindFeatures.TestConcreteIdentifier.Test1
       resultStatus: 1
-      duration: 0.0063304
+      duration: 0.0066775
       messages: 
       output: 
       stacktrace: 
@@ -707,7 +721,7 @@ MonoBehaviour:
       name: TestIfNotBound
       fullName: Zenject.Tests.BindFeatures.TestIfNotBound
       resultStatus: 1
-      duration: 0.0072706
+      duration: 0.0042032
       messages: 
       output: 
       stacktrace: 
@@ -723,7 +737,7 @@ MonoBehaviour:
       name: Test1
       fullName: Zenject.Tests.BindFeatures.TestIfNotBound.Test1
       resultStatus: 1
-      duration: 0.0009921
+      duration: 0.0010028
       messages: 
       output: 
       stacktrace: 
@@ -740,7 +754,7 @@ MonoBehaviour:
       name: Test2
       fullName: Zenject.Tests.BindFeatures.TestIfNotBound.Test2
       resultStatus: 1
-      duration: 0.0008594
+      duration: 0.0009087
       messages: 
       output: 
       stacktrace: 
@@ -757,7 +771,7 @@ MonoBehaviour:
       name: TestMultipleContractTypes
       fullName: Zenject.Tests.BindFeatures.TestMultipleContractTypes
       resultStatus: 1
-      duration: 0.0079118
+      duration: 0.0052469
       messages: 
       output: 
       stacktrace: 
@@ -773,7 +787,7 @@ MonoBehaviour:
       name: TestMultiBind1
       fullName: Zenject.Tests.BindFeatures.TestMultipleContractTypes.TestMultiBind1
       resultStatus: 1
-      duration: 0.0014699
+      duration: 0.001562
       messages: 
       output: 
       stacktrace: 
@@ -790,7 +804,7 @@ MonoBehaviour:
       name: TestMultiBindListInjection
       fullName: Zenject.Tests.BindFeatures.TestMultipleContractTypes.TestMultiBindListInjection
       resultStatus: 1
-      duration: 0.0015406
+      duration: 0.0015064
       messages: 
       output: 
       stacktrace: 
@@ -807,7 +821,7 @@ MonoBehaviour:
       name: TestMultipleContractTypes2
       fullName: Zenject.Tests.BindFeatures.TestMultipleContractTypes2
       resultStatus: 1
-      duration: 0.0099811
+      duration: 0.0069854
       messages: 
       output: 
       stacktrace: 
@@ -823,7 +837,7 @@ MonoBehaviour:
       name: Test1
       fullName: Zenject.Tests.BindFeatures.TestMultipleContractTypes2.Test1
       resultStatus: 1
-      duration: 0.0007047
+      duration: 0.0006168
       messages: 
       output: 
       stacktrace: 
@@ -840,7 +854,7 @@ MonoBehaviour:
       name: TestAllInterfaces
       fullName: Zenject.Tests.BindFeatures.TestMultipleContractTypes2.TestAllInterfaces
       resultStatus: 1
-      duration: 0.0013128
+      duration: 0.0011885
       messages: 
       output: 
       stacktrace: 
@@ -857,7 +871,7 @@ MonoBehaviour:
       name: TestAllInterfacesAndSelf
       fullName: Zenject.Tests.BindFeatures.TestMultipleContractTypes2.TestAllInterfacesAndSelf
       resultStatus: 1
-      duration: 0.0006125
+      duration: 0.0005861
       messages: 
       output: 
       stacktrace: 
@@ -874,7 +888,7 @@ MonoBehaviour:
       name: TestAllInterfacesAndSelfMistake
       fullName: Zenject.Tests.BindFeatures.TestMultipleContractTypes2.TestAllInterfacesAndSelfMistake
       resultStatus: 1
-      duration: 0.0007338
+      duration: 0.000704
       messages: 
       output: 
       stacktrace: 
@@ -891,7 +905,7 @@ MonoBehaviour:
       name: TestAllInterfacesMistake
       fullName: Zenject.Tests.BindFeatures.TestMultipleContractTypes2.TestAllInterfacesMistake
       resultStatus: 1
-      duration: 0.0004073
+      duration: 0.0004144
       messages: 
       output: 
       stacktrace: 
@@ -908,7 +922,7 @@ MonoBehaviour:
       name: TestInterfaces
       fullName: Zenject.Tests.BindFeatures.TestMultipleContractTypes2.TestInterfaces
       resultStatus: 1
-      duration: 0.0004205
+      duration: 0.0004247
       messages: 
       output: 
       stacktrace: 
@@ -925,7 +939,7 @@ MonoBehaviour:
       name: TestMultipleContractTypes3
       fullName: Zenject.Tests.BindFeatures.TestMultipleContractTypes3
       resultStatus: 1
-      duration: 0.0070307
+      duration: 0.0039836
       messages: 
       output: 
       stacktrace: 
@@ -941,7 +955,7 @@ MonoBehaviour:
       name: TestMultiBind2
       fullName: Zenject.Tests.BindFeatures.TestMultipleContractTypes3.TestMultiBind2
       resultStatus: 1
-      duration: 0.0019547
+      duration: 0.001934
       messages: 
       output: 
       stacktrace: 
@@ -958,7 +972,7 @@ MonoBehaviour:
       name: TestRebind
       fullName: Zenject.Tests.BindFeatures.TestRebind
       resultStatus: 1
-      duration: 0.0067332
+      duration: 0.0031972
       messages: 
       output: 
       stacktrace: 
@@ -974,7 +988,7 @@ MonoBehaviour:
       name: Run
       fullName: Zenject.Tests.BindFeatures.TestRebind.Run
       resultStatus: 1
-      duration: 0.0014812
+      duration: 0.0012982
       messages: 
       output: 
       stacktrace: 
@@ -991,7 +1005,7 @@ MonoBehaviour:
       name: TestUnbind
       fullName: Zenject.Tests.BindFeatures.TestUnbind
       resultStatus: 1
-      duration: 0.0070414
+      duration: 0.0042864
       messages: 
       output: 
       stacktrace: 
@@ -1007,7 +1021,7 @@ MonoBehaviour:
       name: Run
       fullName: Zenject.Tests.BindFeatures.TestUnbind.Run
       resultStatus: 1
-      duration: 0.0006855
+      duration: 0.0007483
       messages: 
       output: 
       stacktrace: 
@@ -1024,7 +1038,7 @@ MonoBehaviour:
       name: TestUnbindInterfaces
       fullName: Zenject.Tests.BindFeatures.TestUnbind.TestUnbindInterfaces
       resultStatus: 1
-      duration: 0.0012356
+      duration: 0.0014069
       messages: 
       output: 
       stacktrace: 
@@ -1041,7 +1055,7 @@ MonoBehaviour:
       name: TestWithArguments
       fullName: Zenject.Tests.BindFeatures.TestWithArguments
       resultStatus: 1
-      duration: 0.006648
+      duration: 0.0042707
       messages: 
       output: 
       stacktrace: 
@@ -1057,7 +1071,7 @@ MonoBehaviour:
       name: Test1
       fullName: Zenject.Tests.BindFeatures.TestWithArguments.Test1
       resultStatus: 1
-      duration: 0.0012445
+      duration: 0.0012805
       messages: 
       output: 
       stacktrace: 
@@ -1074,7 +1088,7 @@ MonoBehaviour:
       name: TestNullValues
       fullName: Zenject.Tests.BindFeatures.TestWithArguments.TestNullValues
       resultStatus: 1
-      duration: 0.0005496
+      duration: 0.0006509
       messages: 
       output: 
       stacktrace: 
@@ -1091,7 +1105,7 @@ MonoBehaviour:
       name: Bindings
       fullName: Zenject.Tests.Bindings
       resultStatus: 1
-      duration: 0.4542497
+      duration: 0.5796054
       messages: 
       output: 
       stacktrace: 
@@ -1107,7 +1121,7 @@ MonoBehaviour:
       name: Singletons
       fullName: Zenject.Tests.Bindings.Singletons
       resultStatus: 1
-      duration: 0.0221274
+      duration: 0.0396344
       messages: 
       output: 
       stacktrace: 
@@ -1123,7 +1137,7 @@ MonoBehaviour:
       name: TestAsSingle
       fullName: Zenject.Tests.Bindings.Singletons.TestAsSingle
       resultStatus: 1
-      duration: 0.0120948
+      duration: 0.0250996
       messages: 
       output: 
       stacktrace: 
@@ -1139,7 +1153,7 @@ MonoBehaviour:
       name: TestAsSingleAndResolveNoThrow
       fullName: Zenject.Tests.Bindings.Singletons.TestAsSingle.TestAsSingleAndResolveNoThrow
       resultStatus: 1
-      duration: 0.0012821
+      duration: 0.0012265
       messages: 
       output: 
       stacktrace: 
@@ -1156,7 +1170,7 @@ MonoBehaviour:
       name: TestAsSingleAndTransientThrows
       fullName: Zenject.Tests.Bindings.Singletons.TestAsSingle.TestAsSingleAndTransientThrows
       resultStatus: 1
-      duration: 0.0005386
+      duration: 0.0004518
       messages: 
       output: 
       stacktrace: 
@@ -1173,7 +1187,7 @@ MonoBehaviour:
       name: TestAsSingleThrows
       fullName: Zenject.Tests.Bindings.Singletons.TestAsSingle.TestAsSingleThrows
       resultStatus: 1
-      duration: 0.0004141
+      duration: 0.0004254
       messages: 
       output: 
       stacktrace: 
@@ -1190,7 +1204,7 @@ MonoBehaviour:
       name: TestToSingleFactory
       fullName: Zenject.Tests.Bindings.Singletons.TestAsSingle.TestToSingleFactory
       resultStatus: 1
-      duration: 0.0022406
+      duration: 0.0164267
       messages: 
       output: 
       stacktrace: 
@@ -1207,7 +1221,7 @@ MonoBehaviour:
       name: TestToSingleInstance
       fullName: Zenject.Tests.Bindings.Singletons.TestAsSingle.TestToSingleInstance
       resultStatus: 1
-      duration: 0.0006809
+      duration: 0.0008425
       messages: 
       output: 
       stacktrace: 
@@ -1224,7 +1238,7 @@ MonoBehaviour:
       name: TestToSingleMethod
       fullName: Zenject.Tests.Bindings.Singletons.TestAsSingle.TestToSingleMethod
       resultStatus: 1
-      duration: 0.0006837
+      duration: 0.0007025
       messages: 
       output: 
       stacktrace: 
@@ -1241,7 +1255,7 @@ MonoBehaviour:
       name: TestToSingleMethod1
       fullName: Zenject.Tests.Bindings.Singletons.TestAsSingle.TestToSingleMethod1
       resultStatus: 1
-      duration: 0.0006526
+      duration: 0.0006941
       messages: 
       output: 
       stacktrace: 
@@ -1258,7 +1272,7 @@ MonoBehaviour:
       name: TestLazy
       fullName: Zenject.Tests.Bindings.Singletons.TestLazy
       resultStatus: 1
-      duration: 0.0094979
+      duration: 0.0140073
       messages: 
       output: 
       stacktrace: 
@@ -1274,7 +1288,7 @@ MonoBehaviour:
       name: Test1
       fullName: Zenject.Tests.Bindings.Singletons.TestLazy.Test1
       resultStatus: 1
-      duration: 0.0019158
+      duration: 0.0088256
       messages: 
       output: 
       stacktrace: 
@@ -1291,7 +1305,7 @@ MonoBehaviour:
       name: TestOptional1
       fullName: Zenject.Tests.Bindings.Singletons.TestLazy.TestOptional1
       resultStatus: 1
-      duration: 0.0009217
+      duration: 0.0010351
       messages: 
       output: 
       stacktrace: 
@@ -1308,7 +1322,7 @@ MonoBehaviour:
       name: TestOptional2
       fullName: Zenject.Tests.Bindings.Singletons.TestLazy.TestOptional2
       resultStatus: 1
-      duration: 0.0005313
+      duration: 0.0005659
       messages: 
       output: 
       stacktrace: 
@@ -1325,7 +1339,7 @@ MonoBehaviour:
       name: TestOptional3
       fullName: Zenject.Tests.Bindings.Singletons.TestLazy.TestOptional3
       resultStatus: 1
-      duration: 0.000622
+      duration: 0.0006463
       messages: 
       output: 
       stacktrace: 
@@ -1342,7 +1356,7 @@ MonoBehaviour:
       name: TestFactoryFrom0
       fullName: Zenject.Tests.Bindings.TestFactoryFrom0
       resultStatus: 1
-      duration: 0.0108242
+      duration: 0.0084514
       messages: 
       output: 
       stacktrace: 
@@ -1358,7 +1372,7 @@ MonoBehaviour:
       name: TestConcrete
       fullName: Zenject.Tests.Bindings.TestFactoryFrom0.TestConcrete
       resultStatus: 1
-      duration: 0.0011101
+      duration: 0.0011359
       messages: 
       output: 
       stacktrace: 
@@ -1375,7 +1389,7 @@ MonoBehaviour:
       name: TestConcreteUntyped
       fullName: Zenject.Tests.Bindings.TestFactoryFrom0.TestConcreteUntyped
       resultStatus: 1
-      duration: 0.0005579
+      duration: 0.0005944
       messages: 
       output: 
       stacktrace: 
@@ -1392,7 +1406,7 @@ MonoBehaviour:
       name: TestFactoryScopeDefault
       fullName: Zenject.Tests.Bindings.TestFactoryFrom0.TestFactoryScopeDefault
       resultStatus: 1
-      duration: 0.0013946
+      duration: 0.0015082
       messages: 
       output: 
       stacktrace: 
@@ -1409,7 +1423,7 @@ MonoBehaviour:
       name: TestFactoryScopeTransient
       fullName: Zenject.Tests.Bindings.TestFactoryFrom0.TestFactoryScopeTransient
       resultStatus: 1
-      duration: 0.0005146
+      duration: 0.0005626
       messages: 
       output: 
       stacktrace: 
@@ -1426,7 +1440,7 @@ MonoBehaviour:
       name: TestSelf1
       fullName: Zenject.Tests.Bindings.TestFactoryFrom0.TestSelf1
       resultStatus: 1
-      duration: 0.000374
+      duration: 0.0003955
       messages: 
       output: 
       stacktrace: 
@@ -1443,7 +1457,7 @@ MonoBehaviour:
       name: TestSelf2
       fullName: Zenject.Tests.Bindings.TestFactoryFrom0.TestSelf2
       resultStatus: 1
-      duration: 0.0003542
+      duration: 0.0003705
       messages: 
       output: 
       stacktrace: 
@@ -1460,7 +1474,7 @@ MonoBehaviour:
       name: TestSelf3
       fullName: Zenject.Tests.Bindings.TestFactoryFrom0.TestSelf3
       resultStatus: 1
-      duration: 0.000475
+      duration: 0.0005041
       messages: 
       output: 
       stacktrace: 
@@ -1477,7 +1491,7 @@ MonoBehaviour:
       name: TestFactoryFrom1
       fullName: Zenject.Tests.Bindings.TestFactoryFrom1
       resultStatus: 1
-      duration: 0.0083049
+      duration: 0.0053419
       messages: 
       output: 
       stacktrace: 
@@ -1493,7 +1507,7 @@ MonoBehaviour:
       name: TestConcrete
       fullName: Zenject.Tests.Bindings.TestFactoryFrom1.TestConcrete
       resultStatus: 1
-      duration: 0.0016888
+      duration: 0.0016048
       messages: 
       output: 
       stacktrace: 
@@ -1510,7 +1524,7 @@ MonoBehaviour:
       name: TestSelf
       fullName: Zenject.Tests.Bindings.TestFactoryFrom1.TestSelf
       resultStatus: 1
-      duration: 0.0014366
+      duration: 0.0014734
       messages: 
       output: 
       stacktrace: 
@@ -1527,7 +1541,7 @@ MonoBehaviour:
       name: TestFactoryFrom5
       fullName: Zenject.Tests.Bindings.TestFactoryFrom5
       resultStatus: 1
-      duration: 0.0113677
+      duration: 0.0059834
       messages: 
       output: 
       stacktrace: 
@@ -1543,7 +1557,7 @@ MonoBehaviour:
       name: TestConcrete
       fullName: Zenject.Tests.Bindings.TestFactoryFrom5.TestConcrete
       resultStatus: 1
-      duration: 0.0019879
+      duration: 0.0021031
       messages: 
       output: 
       stacktrace: 
@@ -1560,7 +1574,7 @@ MonoBehaviour:
       name: TestSelf1
       fullName: Zenject.Tests.Bindings.TestFactoryFrom5.TestSelf1
       resultStatus: 1
-      duration: 0.0010648
+      duration: 0.0010377
       messages: 
       output: 
       stacktrace: 
@@ -1577,7 +1591,7 @@ MonoBehaviour:
       name: TestSelf2
       fullName: Zenject.Tests.Bindings.TestFactoryFrom5.TestSelf2
       resultStatus: 1
-      duration: 0.0003698
+      duration: 0.0003778
       messages: 
       output: 
       stacktrace: 
@@ -1594,7 +1608,7 @@ MonoBehaviour:
       name: TestFactoryFromFactory0
       fullName: Zenject.Tests.Bindings.TestFactoryFromFactory0
       resultStatus: 1
-      duration: 0.0105077
+      duration: 0.028663
       messages: 
       output: 
       stacktrace: 
@@ -1610,7 +1624,7 @@ MonoBehaviour:
       name: TestConcrete
       fullName: Zenject.Tests.Bindings.TestFactoryFromFactory0.TestConcrete
       resultStatus: 1
-      duration: 0.0024188
+      duration: 0.0236894
       messages: 
       output: 
       stacktrace: 
@@ -1627,7 +1641,7 @@ MonoBehaviour:
       name: TestFactoryValidation
       fullName: Zenject.Tests.Bindings.TestFactoryFromFactory0.TestFactoryValidation
       resultStatus: 1
-      duration: 0.0006615
+      duration: 0.000778
       messages: 
       output: 
       stacktrace: 
@@ -1644,7 +1658,7 @@ MonoBehaviour:
       name: TestSelf
       fullName: Zenject.Tests.Bindings.TestFactoryFromFactory0.TestSelf
       resultStatus: 1
-      duration: 0.0016212
+      duration: 0.0017211
       messages: 
       output: 
       stacktrace: 
@@ -1661,7 +1675,7 @@ MonoBehaviour:
       name: TestFactoryFromFactory1
       fullName: Zenject.Tests.Bindings.TestFactoryFromFactory1
       resultStatus: 1
-      duration: 0.0087475
+      duration: 0.0199854
       messages: 
       output: 
       stacktrace: 
@@ -1677,7 +1691,7 @@ MonoBehaviour:
       name: TestConcrete
       fullName: Zenject.Tests.Bindings.TestFactoryFromFactory1.TestConcrete
       resultStatus: 1
-      duration: 0.0020013
+      duration: 0.0158288
       messages: 
       output: 
       stacktrace: 
@@ -1694,7 +1708,7 @@ MonoBehaviour:
       name: TestSelf
       fullName: Zenject.Tests.Bindings.TestFactoryFromFactory1.TestSelf
       resultStatus: 1
-      duration: 0.001511
+      duration: 0.0015861
       messages: 
       output: 
       stacktrace: 
@@ -1711,7 +1725,7 @@ MonoBehaviour:
       name: TestFactoryFromGetter0
       fullName: Zenject.Tests.Bindings.TestFactoryFromGetter0
       resultStatus: 1
-      duration: 0.0070221
+      duration: 0.0184384
       messages: 
       output: 
       stacktrace: 
@@ -1727,7 +1741,7 @@ MonoBehaviour:
       name: TestSelf
       fullName: Zenject.Tests.Bindings.TestFactoryFromGetter0.TestSelf
       resultStatus: 1
-      duration: 0.0022698
+      duration: 0.0162251
       messages: 
       output: 
       stacktrace: 
@@ -1744,7 +1758,7 @@ MonoBehaviour:
       name: TestFactoryFromInstance0
       fullName: Zenject.Tests.Bindings.TestFactoryFromInstance0
       resultStatus: 1
-      duration: 0.0085159
+      duration: 0.0054223
       messages: 
       output: 
       stacktrace: 
@@ -1760,7 +1774,7 @@ MonoBehaviour:
       name: TestConcrete
       fullName: Zenject.Tests.Bindings.TestFactoryFromInstance0.TestConcrete
       resultStatus: 1
-      duration: 0.0015603
+      duration: 0.0013823
       messages: 
       output: 
       stacktrace: 
@@ -1777,7 +1791,7 @@ MonoBehaviour:
       name: TestSelf
       fullName: Zenject.Tests.Bindings.TestFactoryFromInstance0.TestSelf
       resultStatus: 1
-      duration: 0.0015091
+      duration: 0.0015979
       messages: 
       output: 
       stacktrace: 
@@ -1794,7 +1808,7 @@ MonoBehaviour:
       name: TestFactoryFromMethod0
       fullName: Zenject.Tests.Bindings.TestFactoryFromMethod0
       resultStatus: 1
-      duration: 0.0090731
+      duration: 0.0193516
       messages: 
       output: 
       stacktrace: 
@@ -1810,7 +1824,7 @@ MonoBehaviour:
       name: TestConcrete
       fullName: Zenject.Tests.Bindings.TestFactoryFromMethod0.TestConcrete
       resultStatus: 1
-      duration: 0.0014892
+      duration: 0.0153929
       messages: 
       output: 
       stacktrace: 
@@ -1827,7 +1841,7 @@ MonoBehaviour:
       name: TestSelf
       fullName: Zenject.Tests.Bindings.TestFactoryFromMethod0.TestSelf
       resultStatus: 1
-      duration: 0.001589
+      duration: 0.0015819
       messages: 
       output: 
       stacktrace: 
@@ -1844,7 +1858,7 @@ MonoBehaviour:
       name: TestFactoryFromMethod1
       fullName: Zenject.Tests.Bindings.TestFactoryFromMethod1
       resultStatus: 1
-      duration: 0.0083799
+      duration: 0.0308786
       messages: 
       output: 
       stacktrace: 
@@ -1860,7 +1874,7 @@ MonoBehaviour:
       name: TestConcrete
       fullName: Zenject.Tests.Bindings.TestFactoryFromMethod1.TestConcrete
       resultStatus: 1
-      duration: 0.0016655
+      duration: 0.0156803
       messages: 
       output: 
       stacktrace: 
@@ -1877,7 +1891,7 @@ MonoBehaviour:
       name: TestSelf
       fullName: Zenject.Tests.Bindings.TestFactoryFromMethod1.TestSelf
       resultStatus: 1
-      duration: 0.0015557
+      duration: 0.0016936
       messages: 
       output: 
       stacktrace: 
@@ -1894,7 +1908,7 @@ MonoBehaviour:
       name: TestFactoryFromResolve0
       fullName: Zenject.Tests.Bindings.TestFactoryFromResolve0
       resultStatus: 1
-      duration: 0.0089037
+      duration: 0.0062571
       messages: 
       output: 
       stacktrace: 
@@ -1910,7 +1924,7 @@ MonoBehaviour:
       name: TestConcrete
       fullName: Zenject.Tests.Bindings.TestFactoryFromResolve0.TestConcrete
       resultStatus: 1
-      duration: 0.0011607
+      duration: 0.0010728
       messages: 
       output: 
       stacktrace: 
@@ -1927,7 +1941,7 @@ MonoBehaviour:
       name: TestConcreteIdentifier
       fullName: Zenject.Tests.Bindings.TestFactoryFromResolve0.TestConcreteIdentifier
       resultStatus: 1
-      duration: 0.0005449
+      duration: 0.0005499
       messages: 
       output: 
       stacktrace: 
@@ -1944,7 +1958,7 @@ MonoBehaviour:
       name: TestSelf
       fullName: Zenject.Tests.Bindings.TestFactoryFromResolve0.TestSelf
       resultStatus: 1
-      duration: 0.0013754
+      duration: 0.0013707
       messages: 
       output: 
       stacktrace: 
@@ -1961,7 +1975,7 @@ MonoBehaviour:
       name: TestSelfIdentifier
       fullName: Zenject.Tests.Bindings.TestFactoryFromResolve0.TestSelfIdentifier
       resultStatus: 1
-      duration: 0.000432
+      duration: 0.000447
       messages: 
       output: 
       stacktrace: 
@@ -1978,7 +1992,7 @@ MonoBehaviour:
       name: TestFactoryFromSubContainerInstaller0
       fullName: Zenject.Tests.Bindings.TestFactoryFromSubContainerInstaller0
       resultStatus: 1
-      duration: 0.0107092
+      duration: 0.0153848
       messages: 
       output: 
       stacktrace: 
@@ -1994,7 +2008,7 @@ MonoBehaviour:
       name: TestConcrete
       fullName: Zenject.Tests.Bindings.TestFactoryFromSubContainerInstaller0.TestConcrete
       resultStatus: 1
-      duration: 0.0038837
+      duration: 0.0113048
       messages: 
       output: 
       stacktrace: 
@@ -2011,7 +2025,7 @@ MonoBehaviour:
       name: TestSelf
       fullName: Zenject.Tests.Bindings.TestFactoryFromSubContainerInstaller0.TestSelf
       resultStatus: 1
-      duration: 0.0015318
+      duration: 0.0016353
       messages: 
       output: 
       stacktrace: 
@@ -2028,7 +2042,7 @@ MonoBehaviour:
       name: TestFactoryFromSubContainerInstaller1
       fullName: Zenject.Tests.Bindings.TestFactoryFromSubContainerInstaller1
       resultStatus: 1
-      duration: 0.0088159
+      duration: 0.0059339
       messages: 
       output: 
       stacktrace: 
@@ -2044,7 +2058,7 @@ MonoBehaviour:
       name: TestConcrete
       fullName: Zenject.Tests.Bindings.TestFactoryFromSubContainerInstaller1.TestConcrete
       resultStatus: 1
-      duration: 0.001974
+      duration: 0.0019258
       messages: 
       output: 
       stacktrace: 
@@ -2061,7 +2075,7 @@ MonoBehaviour:
       name: TestSelf
       fullName: Zenject.Tests.Bindings.TestFactoryFromSubContainerInstaller1.TestSelf
       resultStatus: 1
-      duration: 0.0015121
+      duration: 0.0014817
       messages: 
       output: 
       stacktrace: 
@@ -2078,7 +2092,7 @@ MonoBehaviour:
       name: TestFactoryFromSubContainerMethod0
       fullName: Zenject.Tests.Bindings.TestFactoryFromSubContainerMethod0
       resultStatus: 1
-      duration: 0.0083114
+      duration: 0.0051521
       messages: 
       output: 
       stacktrace: 
@@ -2094,7 +2108,7 @@ MonoBehaviour:
       name: TestConcrete
       fullName: Zenject.Tests.Bindings.TestFactoryFromSubContainerMethod0.TestConcrete
       resultStatus: 1
-      duration: 0.0016219
+      duration: 0.0014488
       messages: 
       output: 
       stacktrace: 
@@ -2111,7 +2125,7 @@ MonoBehaviour:
       name: TestSelf
       fullName: Zenject.Tests.Bindings.TestFactoryFromSubContainerMethod0.TestSelf
       resultStatus: 1
-      duration: 0.0014858
+      duration: 0.0014121
       messages: 
       output: 
       stacktrace: 
@@ -2128,7 +2142,7 @@ MonoBehaviour:
       name: TestFactoryFromSubContainerMethod1
       fullName: Zenject.Tests.Bindings.TestFactoryFromSubContainerMethod1
       resultStatus: 1
-      duration: 0.0088686
+      duration: 0.0197104
       messages: 
       output: 
       stacktrace: 
@@ -2144,7 +2158,7 @@ MonoBehaviour:
       name: TestConcrete
       fullName: Zenject.Tests.Bindings.TestFactoryFromSubContainerMethod1.TestConcrete
       resultStatus: 1
-      duration: 0.00198
+      duration: 0.0159235
       messages: 
       output: 
       stacktrace: 
@@ -2161,7 +2175,7 @@ MonoBehaviour:
       name: TestSelf
       fullName: Zenject.Tests.Bindings.TestFactoryFromSubContainerMethod1.TestSelf
       resultStatus: 1
-      duration: 0.001572
+      duration: 0.0015506
       messages: 
       output: 
       stacktrace: 
@@ -2178,7 +2192,7 @@ MonoBehaviour:
       name: TestFactoryWithArguments
       fullName: Zenject.Tests.Bindings.TestFactoryWithArguments
       resultStatus: 1
-      duration: 0.008474
+      duration: 0.0055672
       messages: 
       output: 
       stacktrace: 
@@ -2194,7 +2208,7 @@ MonoBehaviour:
       name: TestWithArguments1
       fullName: Zenject.Tests.Bindings.TestFactoryWithArguments.TestWithArguments1
       resultStatus: 1
-      duration: 0.0019062
+      duration: 0.0018469
       messages: 
       output: 
       stacktrace: 
@@ -2211,7 +2225,7 @@ MonoBehaviour:
       name: TestWithFactoryArguments1
       fullName: Zenject.Tests.Bindings.TestFactoryWithArguments.TestWithFactoryArguments1
       resultStatus: 1
-      duration: 0.0013906
+      duration: 0.0013502
       messages: 
       output: 
       stacktrace: 
@@ -2228,7 +2242,7 @@ MonoBehaviour:
       name: TestFrom
       fullName: Zenject.Tests.Bindings.TestFrom
       resultStatus: 1
-      duration: 0.0191158
+      duration: 0.0160906
       messages: 
       output: 
       stacktrace: 
@@ -2244,7 +2258,7 @@ MonoBehaviour:
       name: TestConcreteCached
       fullName: Zenject.Tests.Bindings.TestFrom.TestConcreteCached
       resultStatus: 1
-      duration: 0.0008297
+      duration: 0.0007874
       messages: 
       output: 
       stacktrace: 
@@ -2261,7 +2275,7 @@ MonoBehaviour:
       name: TestConcreteMultipleSingle
       fullName: Zenject.Tests.Bindings.TestFrom.TestConcreteMultipleSingle
       resultStatus: 1
-      duration: 0.0010447
+      duration: 0.001045
       messages: 
       output: 
       stacktrace: 
@@ -2278,7 +2292,7 @@ MonoBehaviour:
       name: TestConcreteMultipleTransient
       fullName: Zenject.Tests.Bindings.TestFrom.TestConcreteMultipleTransient
       resultStatus: 1
-      duration: 0.0005488
+      duration: 0.0005515
       messages: 
       output: 
       stacktrace: 
@@ -2295,7 +2309,7 @@ MonoBehaviour:
       name: TestConcreteSingle
       fullName: Zenject.Tests.Bindings.TestFrom.TestConcreteSingle
       resultStatus: 1
-      duration: 0.0005423
+      duration: 0.0005346
       messages: 
       output: 
       stacktrace: 
@@ -2312,7 +2326,7 @@ MonoBehaviour:
       name: TestConcreteTransient
       fullName: Zenject.Tests.Bindings.TestFrom.TestConcreteTransient
       resultStatus: 1
-      duration: 0.0004092
+      duration: 0.0004137
       messages: 
       output: 
       stacktrace: 
@@ -2329,7 +2343,7 @@ MonoBehaviour:
       name: TestConcreteTransient2
       fullName: Zenject.Tests.Bindings.TestFrom.TestConcreteTransient2
       resultStatus: 1
-      duration: 0.0004014
+      duration: 0.0004047
       messages: 
       output: 
       stacktrace: 
@@ -2346,7 +2360,7 @@ MonoBehaviour:
       name: TestDuplicateBindingsFail
       fullName: Zenject.Tests.Bindings.TestFrom.TestDuplicateBindingsFail
       resultStatus: 1
-      duration: 0.0004362
+      duration: 0.0004531
       messages: 
       output: 
       stacktrace: 
@@ -2363,7 +2377,7 @@ MonoBehaviour:
       name: TestMultipleBindingsCached
       fullName: Zenject.Tests.Bindings.TestFrom.TestMultipleBindingsCached
       resultStatus: 1
-      duration: 0.0004371
+      duration: 0.0004215
       messages: 
       output: 
       stacktrace: 
@@ -2380,7 +2394,7 @@ MonoBehaviour:
       name: TestMultipleBindingsConcreteMultipleCached
       fullName: Zenject.Tests.Bindings.TestFrom.TestMultipleBindingsConcreteMultipleCached
       resultStatus: 1
-      duration: 0.0010906
+      duration: 0.0011149
       messages: 
       output: 
       stacktrace: 
@@ -2397,7 +2411,7 @@ MonoBehaviour:
       name: TestMultipleBindingsConcreteMultipleSingle
       fullName: Zenject.Tests.Bindings.TestFrom.TestMultipleBindingsConcreteMultipleSingle
       resultStatus: 1
-      duration: 0.0005602
+      duration: 0.0006425
       messages: 
       output: 
       stacktrace: 
@@ -2414,7 +2428,7 @@ MonoBehaviour:
       name: TestMultipleBindingsConcreteMultipleTransient
       fullName: Zenject.Tests.Bindings.TestFrom.TestMultipleBindingsConcreteMultipleTransient
       resultStatus: 1
-      duration: 0.000615
+      duration: 0.0005499
       messages: 
       output: 
       stacktrace: 
@@ -2431,7 +2445,7 @@ MonoBehaviour:
       name: TestMultipleBindingsSingle
       fullName: Zenject.Tests.Bindings.TestFrom.TestMultipleBindingsSingle
       resultStatus: 1
-      duration: 0.0004411
+      duration: 0.0004258
       messages: 
       output: 
       stacktrace: 
@@ -2448,7 +2462,7 @@ MonoBehaviour:
       name: TestMultipleBindingsSingleFail1
       fullName: Zenject.Tests.Bindings.TestFrom.TestMultipleBindingsSingleFail1
       resultStatus: 1
-      duration: 0.0004426
+      duration: 0.000419
       messages: 
       output: 
       stacktrace: 
@@ -2465,7 +2479,7 @@ MonoBehaviour:
       name: TestMultipleBindingsSingleFail2
       fullName: Zenject.Tests.Bindings.TestFrom.TestMultipleBindingsSingleFail2
       resultStatus: 1
-      duration: 0.0004004
+      duration: 0.0004247
       messages: 
       output: 
       stacktrace: 
@@ -2482,7 +2496,7 @@ MonoBehaviour:
       name: TestMultipleBindingsTransient
       fullName: Zenject.Tests.Bindings.TestFrom.TestMultipleBindingsTransient
       resultStatus: 1
-      duration: 0.0004704
+      duration: 0.0004766
       messages: 
       output: 
       stacktrace: 
@@ -2499,7 +2513,7 @@ MonoBehaviour:
       name: TestSelfCached
       fullName: Zenject.Tests.Bindings.TestFrom.TestSelfCached
       resultStatus: 1
-      duration: 0.0003619
+      duration: 0.0003708
       messages: 
       output: 
       stacktrace: 
@@ -2516,7 +2530,7 @@ MonoBehaviour:
       name: TestSelfSingle
       fullName: Zenject.Tests.Bindings.TestFrom.TestSelfSingle
       resultStatus: 1
-      duration: 0.0003812
+      duration: 0.0003828
       messages: 
       output: 
       stacktrace: 
@@ -2533,7 +2547,7 @@ MonoBehaviour:
       name: TestSelfSingleExplicit
       fullName: Zenject.Tests.Bindings.TestFrom.TestSelfSingleExplicit
       resultStatus: 1
-      duration: 0.0006481
+      duration: 0.0006433
       messages: 
       output: 
       stacktrace: 
@@ -2550,7 +2564,7 @@ MonoBehaviour:
       name: TestSelfTransient
       fullName: Zenject.Tests.Bindings.TestFrom.TestSelfTransient
       resultStatus: 1
-      duration: 0.0003813
+      duration: 0.0003918
       messages: 
       output: 
       stacktrace: 
@@ -2567,7 +2581,7 @@ MonoBehaviour:
       name: TestFromFactory
       fullName: Zenject.Tests.Bindings.TestFromFactory
       resultStatus: 1
-      duration: 0.0144722
+      duration: 0.0194136
       messages: 
       output: 
       stacktrace: 
@@ -2583,7 +2597,7 @@ MonoBehaviour:
       name: Test1
       fullName: Zenject.Tests.Bindings.TestFromFactory.Test1
       resultStatus: 1
-      duration: 0.0010308
+      duration: 0.0009795
       messages: 
       output: 
       stacktrace: 
@@ -2600,7 +2614,7 @@ MonoBehaviour:
       name: Test2
       fullName: Zenject.Tests.Bindings.TestFromFactory.Test2
       resultStatus: 1
-      duration: 0.0005277
+      duration: 0.0004957
       messages: 
       output: 
       stacktrace: 
@@ -2617,7 +2631,7 @@ MonoBehaviour:
       name: Test3
       fullName: Zenject.Tests.Bindings.TestFromFactory.Test3
       resultStatus: 1
-      duration: 0.000506
+      duration: 0.0005245
       messages: 
       output: 
       stacktrace: 
@@ -2634,7 +2648,7 @@ MonoBehaviour:
       name: TestConcreteCached
       fullName: Zenject.Tests.Bindings.TestFromFactory.TestConcreteCached
       resultStatus: 1
-      duration: 0.00053
+      duration: 0.0005405
       messages: 
       output: 
       stacktrace: 
@@ -2651,7 +2665,7 @@ MonoBehaviour:
       name: TestConcreteSingle
       fullName: Zenject.Tests.Bindings.TestFromFactory.TestConcreteSingle
       resultStatus: 1
-      duration: 0.00048
+      duration: 0.0004891
       messages: 
       output: 
       stacktrace: 
@@ -2668,7 +2682,7 @@ MonoBehaviour:
       name: TestMoveIntoSubcontainers
       fullName: Zenject.Tests.Bindings.TestFromFactory.TestMoveIntoSubcontainers
       resultStatus: 1
-      duration: 0.002652
+      duration: 0.0029134
       messages: 
       output: 
       stacktrace: 
@@ -2685,7 +2699,7 @@ MonoBehaviour:
       name: TestOldVersion
       fullName: Zenject.Tests.Bindings.TestFromFactory.TestOldVersion
       resultStatus: 1
-      duration: 0.0009041
+      duration: 0.0082842
       messages: 
       output: 
       stacktrace: 
@@ -2702,7 +2716,7 @@ MonoBehaviour:
       name: TestSelfAndConcreteSingle
       fullName: Zenject.Tests.Bindings.TestFromFactory.TestSelfAndConcreteSingle
       resultStatus: 1
-      duration: 0.0005673
+      duration: 0.0007546
       messages: 
       output: 
       stacktrace: 
@@ -2719,7 +2733,7 @@ MonoBehaviour:
       name: TestSelfCached
       fullName: Zenject.Tests.Bindings.TestFromFactory.TestSelfCached
       resultStatus: 1
-      duration: 0.000521
+      duration: 0.000502
       messages: 
       output: 
       stacktrace: 
@@ -2736,7 +2750,7 @@ MonoBehaviour:
       name: TestFromGetter
       fullName: Zenject.Tests.Bindings.TestFromGetter
       resultStatus: 1
-      duration: 0.0118461
+      duration: 0.0162948
       messages: 
       output: 
       stacktrace: 
@@ -2752,7 +2766,7 @@ MonoBehaviour:
       name: TestInjectSource1
       fullName: Zenject.Tests.Bindings.TestFromGetter.TestInjectSource1
       resultStatus: 1
-      duration: 0.0018628
+      duration: 0.0089667
       messages: 
       output: 
       stacktrace: 
@@ -2769,7 +2783,7 @@ MonoBehaviour:
       name: TestInjectSource2
       fullName: Zenject.Tests.Bindings.TestFromGetter.TestInjectSource2
       resultStatus: 1
-      duration: 0.0006218
+      duration: 0.000644
       messages: 
       output: 
       stacktrace: 
@@ -2786,7 +2800,7 @@ MonoBehaviour:
       name: TestInjectSource3
       fullName: Zenject.Tests.Bindings.TestFromGetter.TestInjectSource3
       resultStatus: 1
-      duration: 0.0006741
+      duration: 0.0007283
       messages: 
       output: 
       stacktrace: 
@@ -2803,7 +2817,7 @@ MonoBehaviour:
       name: TestInjectSource4
       fullName: Zenject.Tests.Bindings.TestFromGetter.TestInjectSource4
       resultStatus: 1
-      duration: 0.0005594
+      duration: 0.0005791
       messages: 
       output: 
       stacktrace: 
@@ -2820,7 +2834,7 @@ MonoBehaviour:
       name: TestMultiple
       fullName: Zenject.Tests.Bindings.TestFromGetter.TestMultiple
       resultStatus: 1
-      duration: 0.0005488
+      duration: 0.000663
       messages: 
       output: 
       stacktrace: 
@@ -2837,7 +2851,7 @@ MonoBehaviour:
       name: TestSingleFailure
       fullName: Zenject.Tests.Bindings.TestFromGetter.TestSingleFailure
       resultStatus: 1
-      duration: 0.0005734
+      duration: 0.0005992
       messages: 
       output: 
       stacktrace: 
@@ -2854,7 +2868,7 @@ MonoBehaviour:
       name: TestTransient
       fullName: Zenject.Tests.Bindings.TestFromGetter.TestTransient
       resultStatus: 1
-      duration: 0.0004968
+      duration: 0.0004953
       messages: 
       output: 
       stacktrace: 
@@ -2871,7 +2885,7 @@ MonoBehaviour:
       name: TestFromIFactory
       fullName: Zenject.Tests.Bindings.TestFromIFactory
       resultStatus: 1
-      duration: 0.0092796
+      duration: 0.0065542
       messages: 
       output: 
       stacktrace: 
@@ -2887,7 +2901,7 @@ MonoBehaviour:
       name: Test1
       fullName: Zenject.Tests.Bindings.TestFromIFactory.Test1
       resultStatus: 1
-      duration: 0.0042106
+      duration: 0.0043658
       messages: 
       output: 
       stacktrace: 
@@ -2904,7 +2918,7 @@ MonoBehaviour:
       name: TestFromIFactory2
       fullName: Zenject.Tests.Bindings.TestFromIFactory2
       resultStatus: 1
-      duration: 0.0083713
+      duration: 0.0057202
       messages: 
       output: 
       stacktrace: 
@@ -2920,7 +2934,7 @@ MonoBehaviour:
       name: Test1
       fullName: Zenject.Tests.Bindings.TestFromIFactory2.Test1
       resultStatus: 1
-      duration: 0.003414
+      duration: 0.0035075
       messages: 
       output: 
       stacktrace: 
@@ -2937,7 +2951,7 @@ MonoBehaviour:
       name: TestFromInstance
       fullName: Zenject.Tests.Bindings.TestFromInstance
       resultStatus: 1
-      duration: 0.0077764
+      duration: 0.0039711
       messages: 
       output: 
       stacktrace: 
@@ -2953,7 +2967,7 @@ MonoBehaviour:
       name: TestCached
       fullName: Zenject.Tests.Bindings.TestFromInstance.TestCached
       resultStatus: 1
-      duration: 0.0007861
+      duration: 0.0006534
       messages: 
       output: 
       stacktrace: 
@@ -2970,7 +2984,7 @@ MonoBehaviour:
       name: TestSingle
       fullName: Zenject.Tests.Bindings.TestFromInstance.TestSingle
       resultStatus: 1
-      duration: 0.0005124
+      duration: 0.0004872
       messages: 
       output: 
       stacktrace: 
@@ -2987,7 +3001,7 @@ MonoBehaviour:
       name: TestTransient
       fullName: Zenject.Tests.Bindings.TestFromInstance.TestTransient
       resultStatus: 1
-      duration: 0.0004186
+      duration: 0.0003816
       messages: 
       output: 
       stacktrace: 
@@ -3004,7 +3018,7 @@ MonoBehaviour:
       name: TestFromMethod
       fullName: Zenject.Tests.Bindings.TestFromMethod
       resultStatus: 1
-      duration: 0.0085581
+      duration: 0.013067
       messages: 
       output: 
       stacktrace: 
@@ -3020,7 +3034,7 @@ MonoBehaviour:
       name: TestCached
       fullName: Zenject.Tests.Bindings.TestFromMethod.TestCached
       resultStatus: 1
-      duration: 0.0008229
+      duration: 0.0079002
       messages: 
       output: 
       stacktrace: 
@@ -3037,7 +3051,7 @@ MonoBehaviour:
       name: TestCached2
       fullName: Zenject.Tests.Bindings.TestFromMethod.TestCached2
       resultStatus: 1
-      duration: 0.0007365
+      duration: 0.0008861
       messages: 
       output: 
       stacktrace: 
@@ -3054,7 +3068,7 @@ MonoBehaviour:
       name: TestSingle
       fullName: Zenject.Tests.Bindings.TestFromMethod.TestSingle
       resultStatus: 1
-      duration: 0.0004094
+      duration: 0.0004437
       messages: 
       output: 
       stacktrace: 
@@ -3071,7 +3085,7 @@ MonoBehaviour:
       name: TestTransient
       fullName: Zenject.Tests.Bindings.TestFromMethod.TestTransient
       resultStatus: 1
-      duration: 0.0003996
+      duration: 0.0004083
       messages: 
       output: 
       stacktrace: 
@@ -3088,7 +3102,7 @@ MonoBehaviour:
       name: TestTransient2
       fullName: Zenject.Tests.Bindings.TestFromMethod.TestTransient2
       resultStatus: 1
-      duration: 0.0005837
+      duration: 0.0006009
       messages: 
       output: 
       stacktrace: 
@@ -3105,7 +3119,7 @@ MonoBehaviour:
       name: TestFromMethodMultiple
       fullName: Zenject.Tests.Bindings.TestFromMethodMultiple
       resultStatus: 1
-      duration: 0.0117217
+      duration: 0.0231987
       messages: 
       output: 
       stacktrace: 
@@ -3121,7 +3135,7 @@ MonoBehaviour:
       name: TestCached
       fullName: Zenject.Tests.Bindings.TestFromMethodMultiple.TestCached
       resultStatus: 1
-      duration: 0.0014751
+      duration: 0.0154277
       messages: 
       output: 
       stacktrace: 
@@ -3138,7 +3152,7 @@ MonoBehaviour:
       name: TestCached2
       fullName: Zenject.Tests.Bindings.TestFromMethodMultiple.TestCached2
       resultStatus: 1
-      duration: 0.0007578
+      duration: 0.0007898
       messages: 
       output: 
       stacktrace: 
@@ -3155,7 +3169,7 @@ MonoBehaviour:
       name: TestMisc
       fullName: Zenject.Tests.Bindings.TestFromMethodMultiple.TestMisc
       resultStatus: 1
-      duration: 0.0006779
+      duration: 0.0007181
       messages: 
       output: 
       stacktrace: 
@@ -3172,7 +3186,7 @@ MonoBehaviour:
       name: TestMisc2
       fullName: Zenject.Tests.Bindings.TestFromMethodMultiple.TestMisc2
       resultStatus: 1
-      duration: 0.0006158
+      duration: 0.0006113
       messages: 
       output: 
       stacktrace: 
@@ -3189,7 +3203,7 @@ MonoBehaviour:
       name: TestSingle
       fullName: Zenject.Tests.Bindings.TestFromMethodMultiple.TestSingle
       resultStatus: 1
-      duration: 0.0004287
+      duration: 0.0004359
       messages: 
       output: 
       stacktrace: 
@@ -3206,7 +3220,7 @@ MonoBehaviour:
       name: TestSingle5
       fullName: Zenject.Tests.Bindings.TestFromMethodMultiple.TestSingle5
       resultStatus: 1
-      duration: 0.0004662
+      duration: 0.0005943
       messages: 
       output: 
       stacktrace: 
@@ -3223,7 +3237,7 @@ MonoBehaviour:
       name: TestTransient
       fullName: Zenject.Tests.Bindings.TestFromMethodMultiple.TestTransient
       resultStatus: 1
-      duration: 0.0004212
+      duration: 0.0004175
       messages: 
       output: 
       stacktrace: 
@@ -3240,7 +3254,7 @@ MonoBehaviour:
       name: TestTransient2
       fullName: Zenject.Tests.Bindings.TestFromMethodMultiple.TestTransient2
       resultStatus: 1
-      duration: 0.0005844
+      duration: 0.0005921
       messages: 
       output: 
       stacktrace: 
@@ -3257,7 +3271,7 @@ MonoBehaviour:
       name: TestFromMethodMultipleUntyped
       fullName: Zenject.Tests.Bindings.TestFromMethodMultipleUntyped
       resultStatus: 1
-      duration: 0.0115339
+      duration: 0.008762
       messages: 
       output: 
       stacktrace: 
@@ -3273,7 +3287,7 @@ MonoBehaviour:
       name: TestCached
       fullName: Zenject.Tests.Bindings.TestFromMethodMultipleUntyped.TestCached
       resultStatus: 1
-      duration: 0.0012163
+      duration: 0.0011626
       messages: 
       output: 
       stacktrace: 
@@ -3290,7 +3304,7 @@ MonoBehaviour:
       name: TestCached2
       fullName: Zenject.Tests.Bindings.TestFromMethodMultipleUntyped.TestCached2
       resultStatus: 1
-      duration: 0.0006648
+      duration: 0.0007043
       messages: 
       output: 
       stacktrace: 
@@ -3307,7 +3321,7 @@ MonoBehaviour:
       name: TestMisc
       fullName: Zenject.Tests.Bindings.TestFromMethodMultipleUntyped.TestMisc
       resultStatus: 1
-      duration: 0.0006323
+      duration: 0.0007064
       messages: 
       output: 
       stacktrace: 
@@ -3324,7 +3338,7 @@ MonoBehaviour:
       name: TestMisc2
       fullName: Zenject.Tests.Bindings.TestFromMethodMultipleUntyped.TestMisc2
       resultStatus: 1
-      duration: 0.0005679
+      duration: 0.0006107
       messages: 
       output: 
       stacktrace: 
@@ -3341,7 +3355,7 @@ MonoBehaviour:
       name: TestSingle
       fullName: Zenject.Tests.Bindings.TestFromMethodMultipleUntyped.TestSingle
       resultStatus: 1
-      duration: 0.0004237
+      duration: 0.0004432
       messages: 
       output: 
       stacktrace: 
@@ -3358,7 +3372,7 @@ MonoBehaviour:
       name: TestSingle5
       fullName: Zenject.Tests.Bindings.TestFromMethodMultipleUntyped.TestSingle5
       resultStatus: 1
-      duration: 0.0004861
+      duration: 0.0004851
       messages: 
       output: 
       stacktrace: 
@@ -3375,7 +3389,7 @@ MonoBehaviour:
       name: TestTransient
       fullName: Zenject.Tests.Bindings.TestFromMethodMultipleUntyped.TestTransient
       resultStatus: 1
-      duration: 0.0004188
+      duration: 0.0004186
       messages: 
       output: 
       stacktrace: 
@@ -3392,7 +3406,7 @@ MonoBehaviour:
       name: TestTransient2
       fullName: Zenject.Tests.Bindings.TestFromMethodMultipleUntyped.TestTransient2
       resultStatus: 1
-      duration: 0.0005893
+      duration: 0.0005797
       messages: 
       output: 
       stacktrace: 
@@ -3409,7 +3423,7 @@ MonoBehaviour:
       name: TestFromPoolableMemoryPoolOne
       fullName: Zenject.Tests.Bindings.TestFromPoolableMemoryPoolOne
       resultStatus: 1
-      duration: 0.0119276
+      duration: 0.0386297
       messages: 
       output: 
       stacktrace: 
@@ -3425,7 +3439,7 @@ MonoBehaviour:
       name: Test1
       fullName: Zenject.Tests.Bindings.TestFromPoolableMemoryPoolOne.Test1
       resultStatus: 1
-      duration: 0.0068315
+      duration: 0.0365631
       messages: 
       output: 
       stacktrace: 
@@ -3442,7 +3456,7 @@ MonoBehaviour:
       name: TestFromPoolableMemoryPoolSix
       fullName: Zenject.Tests.Bindings.TestFromPoolableMemoryPoolSix
       resultStatus: 1
-      duration: 0.0094219
+      duration: 0.0063562
       messages: 
       output: 
       stacktrace: 
@@ -3458,7 +3472,7 @@ MonoBehaviour:
       name: Test1
       fullName: Zenject.Tests.Bindings.TestFromPoolableMemoryPoolSix.Test1
       resultStatus: 1
-      duration: 0.0040943
+      duration: 0.0039442
       messages: 
       output: 
       stacktrace: 
@@ -3475,7 +3489,7 @@ MonoBehaviour:
       name: TestFromPoolableMemoryPoolValidation
       fullName: Zenject.Tests.Bindings.TestFromPoolableMemoryPoolValidation
       resultStatus: 1
-      duration: 0.0143758
+      duration: 0.0255257
       messages: 
       output: 
       stacktrace: 
@@ -3491,7 +3505,7 @@ MonoBehaviour:
       name: TestFailure
       fullName: Zenject.Tests.Bindings.TestFromPoolableMemoryPoolValidation.TestFailure
       resultStatus: 1
-      duration: 0.0065884
+      duration: 0.0136618
       messages: 
       output: 
       stacktrace: 
@@ -3508,7 +3522,7 @@ MonoBehaviour:
       name: TestSuccess
       fullName: Zenject.Tests.Bindings.TestFromPoolableMemoryPoolValidation.TestSuccess
       resultStatus: 1
-      duration: 0.0025134
+      duration: 0.0096293
       messages: 
       output: 
       stacktrace: 
@@ -3525,7 +3539,7 @@ MonoBehaviour:
       name: TestFromPoolableMemoryPoolZero
       fullName: Zenject.Tests.Bindings.TestFromPoolableMemoryPoolZero
       resultStatus: 1
-      duration: 0.0082631
+      duration: 0.0051525
       messages: 
       output: 
       stacktrace: 
@@ -3541,7 +3555,7 @@ MonoBehaviour:
       name: Test1
       fullName: Zenject.Tests.Bindings.TestFromPoolableMemoryPoolZero.Test1
       resultStatus: 1
-      duration: 0.0030923
+      duration: 0.0029351
       messages: 
       output: 
       stacktrace: 
@@ -3558,7 +3572,7 @@ MonoBehaviour:
       name: TestFromResolve
       fullName: Zenject.Tests.Bindings.TestFromResolve
       resultStatus: 1
-      duration: 0.0171053
+      duration: 0.0141152
       messages: 
       output: 
       stacktrace: 
@@ -3574,7 +3588,7 @@ MonoBehaviour:
       name: TestCached
       fullName: Zenject.Tests.Bindings.TestFromResolve.TestCached
       resultStatus: 1
-      duration: 0.000809
+      duration: 0.0007291
       messages: 
       output: 
       stacktrace: 
@@ -3591,7 +3605,7 @@ MonoBehaviour:
       name: TestIdentifier
       fullName: Zenject.Tests.Bindings.TestFromResolve.TestIdentifier
       resultStatus: 1
-      duration: 0.00054
+      duration: 0.0005834
       messages: 
       output: 
       stacktrace: 
@@ -3608,7 +3622,7 @@ MonoBehaviour:
       name: TestInfiniteLoop
       fullName: Zenject.Tests.Bindings.TestFromResolve.TestInfiniteLoop
       resultStatus: 1
-      duration: 0.0005296
+      duration: 0.0005231
       messages: 
       output: 
       stacktrace: 
@@ -3625,7 +3639,7 @@ MonoBehaviour:
       name: TestInjectSource1
       fullName: Zenject.Tests.Bindings.TestFromResolve.TestInjectSource1
       resultStatus: 1
-      duration: 0.0004373
+      duration: 0.0004356
       messages: 
       output: 
       stacktrace: 
@@ -3642,7 +3656,7 @@ MonoBehaviour:
       name: TestInjectSource2
       fullName: Zenject.Tests.Bindings.TestFromResolve.TestInjectSource2
       resultStatus: 1
-      duration: 0.0010897
+      duration: 0.0013522
       messages: 
       output: 
       stacktrace: 
@@ -3659,7 +3673,7 @@ MonoBehaviour:
       name: TestNoMatch
       fullName: Zenject.Tests.Bindings.TestFromResolve.TestNoMatch
       resultStatus: 1
-      duration: 0.0004548
+      duration: 0.0004546
       messages: 
       output: 
       stacktrace: 
@@ -3676,7 +3690,7 @@ MonoBehaviour:
       name: TestResolveManyCached
       fullName: Zenject.Tests.Bindings.TestFromResolve.TestResolveManyCached
       resultStatus: 1
-      duration: 0.0005826
+      duration: 0.000592
       messages: 
       output: 
       stacktrace: 
@@ -3693,7 +3707,7 @@ MonoBehaviour:
       name: TestResolveManyCached2
       fullName: Zenject.Tests.Bindings.TestFromResolve.TestResolveManyCached2
       resultStatus: 1
-      duration: 0.0011008
+      duration: 0.0011959
       messages: 
       output: 
       stacktrace: 
@@ -3710,7 +3724,7 @@ MonoBehaviour:
       name: TestResolveManyCached3
       fullName: Zenject.Tests.Bindings.TestFromResolve.TestResolveManyCached3
       resultStatus: 1
-      duration: 0.0006468
+      duration: 0.0006595
       messages: 
       output: 
       stacktrace: 
@@ -3727,7 +3741,7 @@ MonoBehaviour:
       name: TestResolveManyTransient
       fullName: Zenject.Tests.Bindings.TestFromResolve.TestResolveManyTransient
       resultStatus: 1
-      duration: 0.0005068
+      duration: 0.0004676
       messages: 
       output: 
       stacktrace: 
@@ -3744,7 +3758,7 @@ MonoBehaviour:
       name: TestResolveManyTransient2
       fullName: Zenject.Tests.Bindings.TestFromResolve.TestResolveManyTransient2
       resultStatus: 1
-      duration: 0.0005244
+      duration: 0.0005256
       messages: 
       output: 
       stacktrace: 
@@ -3761,7 +3775,7 @@ MonoBehaviour:
       name: TestResolveSingleLocal
       fullName: Zenject.Tests.Bindings.TestFromResolve.TestResolveSingleLocal
       resultStatus: 1
-      duration: 0.0004522
+      duration: 0.0004751
       messages: 
       output: 
       stacktrace: 
@@ -3778,7 +3792,7 @@ MonoBehaviour:
       name: TestSingle
       fullName: Zenject.Tests.Bindings.TestFromResolve.TestSingle
       resultStatus: 1
-      duration: 0.0004028
+      duration: 0.0003928
       messages: 
       output: 
       stacktrace: 
@@ -3795,7 +3809,7 @@ MonoBehaviour:
       name: TestSingleFailure
       fullName: Zenject.Tests.Bindings.TestFromResolve.TestSingleFailure
       resultStatus: 1
-      duration: 0.0004527
+      duration: 0.0004359
       messages: 
       output: 
       stacktrace: 
@@ -3812,7 +3826,7 @@ MonoBehaviour:
       name: TestTransient
       fullName: Zenject.Tests.Bindings.TestFromResolve.TestTransient
       resultStatus: 1
-      duration: 0.0004657
+      duration: 0.0004518
       messages: 
       output: 
       stacktrace: 
@@ -3829,7 +3843,7 @@ MonoBehaviour:
       name: TestFromSubContainerInstaller
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstaller
       resultStatus: 1
-      duration: 0.0142177
+      duration: 0.0178593
       messages: 
       output: 
       stacktrace: 
@@ -3845,7 +3859,7 @@ MonoBehaviour:
       name: TestInstallerSelfCached
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstaller.TestInstallerSelfCached
       resultStatus: 1
-      duration: 0.0032803
+      duration: 0.0097578
       messages: 
       output: 
       stacktrace: 
@@ -3862,7 +3876,7 @@ MonoBehaviour:
       name: TestInstallerSelfCachedMultipleContracts
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstaller.TestInstallerSelfCachedMultipleContracts
       resultStatus: 1
-      duration: 0.0007996
+      duration: 0.0008401
       messages: 
       output: 
       stacktrace: 
@@ -3879,7 +3893,7 @@ MonoBehaviour:
       name: TestInstallerSelfIdentifiers
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstaller.TestInstallerSelfIdentifiers
       resultStatus: 1
-      duration: 0.0005585
+      duration: 0.0005698
       messages: 
       output: 
       stacktrace: 
@@ -3896,7 +3910,7 @@ MonoBehaviour:
       name: TestInstallerSelfIdentifiersFails
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstaller.TestInstallerSelfIdentifiersFails
       resultStatus: 1
-      duration: 0.0005311
+      duration: 0.0005383
       messages: 
       output: 
       stacktrace: 
@@ -3913,7 +3927,7 @@ MonoBehaviour:
       name: TestInstallerSelfSingle
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstaller.TestInstallerSelfSingle
       resultStatus: 1
-      duration: 0.0005009
+      duration: 0.0005005
       messages: 
       output: 
       stacktrace: 
@@ -3930,7 +3944,7 @@ MonoBehaviour:
       name: TestInstallerSelfSingleMultipleContracts
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstaller.TestInstallerSelfSingleMultipleContracts
       resultStatus: 1
-      duration: 0.0005056
+      duration: 0.0005072
       messages: 
       output: 
       stacktrace: 
@@ -3947,7 +3961,7 @@ MonoBehaviour:
       name: TestInstallerSelfSingleMultipleMatches
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstaller.TestInstallerSelfSingleMultipleMatches
       resultStatus: 1
-      duration: 0.0008457
+      duration: 0.0008507
       messages: 
       output: 
       stacktrace: 
@@ -3964,7 +3978,7 @@ MonoBehaviour:
       name: TestInstallerSelfTransient
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstaller.TestInstallerSelfTransient
       resultStatus: 1
-      duration: 0.0006539
+      duration: 0.0006552
       messages: 
       output: 
       stacktrace: 
@@ -3981,7 +3995,7 @@ MonoBehaviour:
       name: TestFromSubContainerInstance
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstance
       resultStatus: 1
-      duration: 0.0114217
+      duration: 0.0083341
       messages: 
       output: 
       stacktrace: 
@@ -3997,7 +4011,7 @@ MonoBehaviour:
       name: TestInstallerSelfCached
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstance.TestInstallerSelfCached
       resultStatus: 1
-      duration: 0.0012988
+      duration: 0.0011949
       messages: 
       output: 
       stacktrace: 
@@ -4014,7 +4028,7 @@ MonoBehaviour:
       name: TestInstallerSelfCachedMultipleContracts
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstance.TestInstallerSelfCachedMultipleContracts
       resultStatus: 1
-      duration: 0.0005184
+      duration: 0.0004845
       messages: 
       output: 
       stacktrace: 
@@ -4031,7 +4045,7 @@ MonoBehaviour:
       name: TestInstallerSelfIdentifiers
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstance.TestInstallerSelfIdentifiers
       resultStatus: 1
-      duration: 0.0005016
+      duration: 0.0005178
       messages: 
       output: 
       stacktrace: 
@@ -4048,7 +4062,7 @@ MonoBehaviour:
       name: TestInstallerSelfIdentifiersFails
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstance.TestInstallerSelfIdentifiersFails
       resultStatus: 1
-      duration: 0.0004604
+      duration: 0.0005403
       messages: 
       output: 
       stacktrace: 
@@ -4065,7 +4079,7 @@ MonoBehaviour:
       name: TestInstallerSelfSingle
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstance.TestInstallerSelfSingle
       resultStatus: 1
-      duration: 0.0003977
+      duration: 0.0004332
       messages: 
       output: 
       stacktrace: 
@@ -4082,7 +4096,7 @@ MonoBehaviour:
       name: TestInstallerSelfSingleMultipleContracts
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstance.TestInstallerSelfSingleMultipleContracts
       resultStatus: 1
-      duration: 0.0004379
+      duration: 0.0004448
       messages: 
       output: 
       stacktrace: 
@@ -4099,7 +4113,7 @@ MonoBehaviour:
       name: TestInstallerSelfSingleMultipleMatches
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstance.TestInstallerSelfSingleMultipleMatches
       resultStatus: 1
-      duration: 0.0006584
+      duration: 0.0007093
       messages: 
       output: 
       stacktrace: 
@@ -4116,7 +4130,7 @@ MonoBehaviour:
       name: TestInstallerSelfTransient
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstance.TestInstallerSelfTransient
       resultStatus: 1
-      duration: 0.0004174
+      duration: 0.0004109
       messages: 
       output: 
       stacktrace: 
@@ -4133,7 +4147,7 @@ MonoBehaviour:
       name: TestFromSubContainerInstanceGetter
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstanceGetter
       resultStatus: 1
-      duration: 0.0118123
+      duration: 0.0085896
       messages: 
       output: 
       stacktrace: 
@@ -4149,7 +4163,7 @@ MonoBehaviour:
       name: TestInstallerSelfCached
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstanceGetter.TestInstallerSelfCached
       resultStatus: 1
-      duration: 0.001374
+      duration: 0.0013394
       messages: 
       output: 
       stacktrace: 
@@ -4166,7 +4180,7 @@ MonoBehaviour:
       name: TestInstallerSelfCachedMultipleContracts
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstanceGetter.TestInstallerSelfCachedMultipleContracts
       resultStatus: 1
-      duration: 0.0005813
+      duration: 0.0005408
       messages: 
       output: 
       stacktrace: 
@@ -4183,7 +4197,7 @@ MonoBehaviour:
       name: TestInstallerSelfIdentifiers
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstanceGetter.TestInstallerSelfIdentifiers
       resultStatus: 1
-      duration: 0.0005432
+      duration: 0.0005254
       messages: 
       output: 
       stacktrace: 
@@ -4200,7 +4214,7 @@ MonoBehaviour:
       name: TestInstallerSelfIdentifiersFails
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstanceGetter.TestInstallerSelfIdentifiersFails
       resultStatus: 1
-      duration: 0.0004996
+      duration: 0.0005161
       messages: 
       output: 
       stacktrace: 
@@ -4217,7 +4231,7 @@ MonoBehaviour:
       name: TestInstallerSelfSingle
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstanceGetter.TestInstallerSelfSingle
       resultStatus: 1
-      duration: 0.0004717
+      duration: 0.0004419
       messages: 
       output: 
       stacktrace: 
@@ -4234,7 +4248,7 @@ MonoBehaviour:
       name: TestInstallerSelfSingleMultipleContracts
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstanceGetter.TestInstallerSelfSingleMultipleContracts
       resultStatus: 1
-      duration: 0.0004873
+      duration: 0.0004958
       messages: 
       output: 
       stacktrace: 
@@ -4251,7 +4265,7 @@ MonoBehaviour:
       name: TestInstallerSelfSingleMultipleMatches
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstanceGetter.TestInstallerSelfSingleMultipleMatches
       resultStatus: 1
-      duration: 0.0007378
+      duration: 0.000791
       messages: 
       output: 
       stacktrace: 
@@ -4268,7 +4282,7 @@ MonoBehaviour:
       name: TestInstallerSelfTransient
       fullName: Zenject.Tests.Bindings.TestFromSubContainerInstanceGetter.TestInstallerSelfTransient
       resultStatus: 1
-      duration: 0.0004588
+      duration: 0.0004783
       messages: 
       output: 
       stacktrace: 
@@ -4285,7 +4299,7 @@ MonoBehaviour:
       name: TestFromSubContainerMethod
       fullName: Zenject.Tests.Bindings.TestFromSubContainerMethod
       resultStatus: 1
-      duration: 0.0134418
+      duration: 0.0102141
       messages: 
       output: 
       stacktrace: 
@@ -4301,7 +4315,7 @@ MonoBehaviour:
       name: TestDanglingBinding
       fullName: Zenject.Tests.Bindings.TestFromSubContainerMethod.TestDanglingBinding
       resultStatus: 1
-      duration: 0.0005858
+      duration: 0.0004697
       messages: 
       output: 
       stacktrace: 
@@ -4318,7 +4332,7 @@ MonoBehaviour:
       name: TestMethodConcreteCached
       fullName: Zenject.Tests.Bindings.TestFromSubContainerMethod.TestMethodConcreteCached
       resultStatus: 1
-      duration: 0.0011697
+      duration: 0.0011931
       messages: 
       output: 
       stacktrace: 
@@ -4335,7 +4349,7 @@ MonoBehaviour:
       name: TestMethodConcreteCachedMultipleContracts
       fullName: Zenject.Tests.Bindings.TestFromSubContainerMethod.TestMethodConcreteCachedMultipleContracts
       resultStatus: 1
-      duration: 0.0005383
+      duration: 0.0005275
       messages: 
       output: 
       stacktrace: 
@@ -4352,7 +4366,7 @@ MonoBehaviour:
       name: TestMethodConcreteSingle
       fullName: Zenject.Tests.Bindings.TestFromSubContainerMethod.TestMethodConcreteSingle
       resultStatus: 1
-      duration: 0.0004879
+      duration: 0.000477
       messages: 
       output: 
       stacktrace: 
@@ -4369,7 +4383,7 @@ MonoBehaviour:
       name: TestMethodConcreteTransient
       fullName: Zenject.Tests.Bindings.TestFromSubContainerMethod.TestMethodConcreteTransient
       resultStatus: 1
-      duration: 0.0005202
+      duration: 0.0005227
       messages: 
       output: 
       stacktrace: 
@@ -4386,7 +4400,7 @@ MonoBehaviour:
       name: TestMethodSelfCached
       fullName: Zenject.Tests.Bindings.TestFromSubContainerMethod.TestMethodSelfCached
       resultStatus: 1
-      duration: 0.0005401
+      duration: 0.0004836
       messages: 
       output: 
       stacktrace: 
@@ -4403,7 +4417,7 @@ MonoBehaviour:
       name: TestMethodSelfCachedMultipleContracts
       fullName: Zenject.Tests.Bindings.TestFromSubContainerMethod.TestMethodSelfCachedMultipleContracts
       resultStatus: 1
-      duration: 0.0004779
+      duration: 0.0004852
       messages: 
       output: 
       stacktrace: 
@@ -4420,7 +4434,7 @@ MonoBehaviour:
       name: TestMethodSelfIdentifiers
       fullName: Zenject.Tests.Bindings.TestFromSubContainerMethod.TestMethodSelfIdentifiers
       resultStatus: 1
-      duration: 0.0005209
+      duration: 0.0005628
       messages: 
       output: 
       stacktrace: 
@@ -4437,7 +4451,7 @@ MonoBehaviour:
       name: TestMethodSelfIdentifiersFails
       fullName: Zenject.Tests.Bindings.TestFromSubContainerMethod.TestMethodSelfIdentifiersFails
       resultStatus: 1
-      duration: 0.000504
+      duration: 0.0005113
       messages: 
       output: 
       stacktrace: 
@@ -4454,7 +4468,7 @@ MonoBehaviour:
       name: TestMethodSelfSingle
       fullName: Zenject.Tests.Bindings.TestFromSubContainerMethod.TestMethodSelfSingle
       resultStatus: 1
-      duration: 0.0004811
+      duration: 0.0004862
       messages: 
       output: 
       stacktrace: 
@@ -4471,7 +4485,7 @@ MonoBehaviour:
       name: TestMethodSelfTransient
       fullName: Zenject.Tests.Bindings.TestFromSubContainerMethod.TestMethodSelfTransient
       resultStatus: 1
-      duration: 0.0005297
+      duration: 0.0005392
       messages: 
       output: 
       stacktrace: 
@@ -4488,7 +4502,7 @@ MonoBehaviour:
       name: TestIFactory
       fullName: Zenject.Tests.Bindings.TestIFactory
       resultStatus: 1
-      duration: 0.0108022
+      duration: 0.0075991
       messages: 
       output: 
       stacktrace: 
@@ -4504,7 +4518,7 @@ MonoBehaviour:
       name: Test1
       fullName: Zenject.Tests.Bindings.TestIFactory.Test1
       resultStatus: 1
-      duration: 0.001856
+      duration: 0.0018195
       messages: 
       output: 
       stacktrace: 
@@ -4521,7 +4535,7 @@ MonoBehaviour:
       name: Test2
       fullName: Zenject.Tests.Bindings.TestIFactory.Test2
       resultStatus: 1
-      duration: 0.0008969
+      duration: 0.000875
       messages: 
       output: 
       stacktrace: 
@@ -4538,7 +4552,7 @@ MonoBehaviour:
       name: Test2Error
       fullName: Zenject.Tests.Bindings.TestIFactory.Test2Error
       resultStatus: 1
-      duration: 0.0007122
+      duration: 0.0006924
       messages: 
       output: 
       stacktrace: 
@@ -4555,7 +4569,7 @@ MonoBehaviour:
       name: Test5
       fullName: Zenject.Tests.Bindings.TestIFactory.Test5
       resultStatus: 1
-      duration: 0.0016077
+      duration: 0.0015756
       messages: 
       output: 
       stacktrace: 
@@ -4572,7 +4586,7 @@ MonoBehaviour:
       name: TestMemoryPool0
       fullName: Zenject.Tests.Bindings.TestMemoryPool0
       resultStatus: 1
-      duration: 0.0159119
+      duration: 0.0145511
       messages: 
       output: 
       stacktrace: 
@@ -4588,7 +4602,7 @@ MonoBehaviour:
       name: TestExpandAndShrinkManually
       fullName: Zenject.Tests.Bindings.TestMemoryPool0.TestExpandAndShrinkManually
       resultStatus: 1
-      duration: 0.0022974
+      duration: 0.0030317
       messages: 
       output: 
       stacktrace: 
@@ -4605,7 +4619,7 @@ MonoBehaviour:
       name: TestExpandDouble
       fullName: Zenject.Tests.Bindings.TestMemoryPool0.TestExpandDouble
       resultStatus: 1
-      duration: 0.0007281
+      duration: 0.0008264
       messages: 
       output: 
       stacktrace: 
@@ -4622,7 +4636,7 @@ MonoBehaviour:
       name: TestFactoryProperties
       fullName: Zenject.Tests.Bindings.TestMemoryPool0.TestFactoryProperties
       resultStatus: 1
-      duration: 0.0006349
+      duration: 0.0006591
       messages: 
       output: 
       stacktrace: 
@@ -4639,7 +4653,7 @@ MonoBehaviour:
       name: TestFactoryPropertiesDefault
       fullName: Zenject.Tests.Bindings.TestMemoryPool0.TestFactoryPropertiesDefault
       resultStatus: 1
-      duration: 0.0007173
+      duration: 0.0008578
       messages: 
       output: 
       stacktrace: 
@@ -4656,7 +4670,7 @@ MonoBehaviour:
       name: TestFactoryScopeDefault
       fullName: Zenject.Tests.Bindings.TestMemoryPool0.TestFactoryScopeDefault
       resultStatus: 1
-      duration: 0.0003648
+      duration: 0.0003544
       messages: 
       output: 
       stacktrace: 
@@ -4673,7 +4687,7 @@ MonoBehaviour:
       name: TestFactoryScopeTransient
       fullName: Zenject.Tests.Bindings.TestMemoryPool0.TestFactoryScopeTransient
       resultStatus: 1
-      duration: 0.0003817
+      duration: 0.0003844
       messages: 
       output: 
       stacktrace: 
@@ -4690,7 +4704,7 @@ MonoBehaviour:
       name: TestFixedSize
       fullName: Zenject.Tests.Bindings.TestMemoryPool0.TestFixedSize
       resultStatus: 1
-      duration: 0.0007412
+      duration: 0.0007831
       messages: 
       output: 
       stacktrace: 
@@ -4707,7 +4721,7 @@ MonoBehaviour:
       name: TestIds
       fullName: Zenject.Tests.Bindings.TestMemoryPool0.TestIds
       resultStatus: 1
-      duration: 0.0004404
+      duration: 0.0004458
       messages: 
       output: 
       stacktrace: 
@@ -4724,7 +4738,7 @@ MonoBehaviour:
       name: TestInitialSize
       fullName: Zenject.Tests.Bindings.TestMemoryPool0.TestInitialSize
       resultStatus: 1
-      duration: 0.0004276
+      duration: 0.0004544
       messages: 
       output: 
       stacktrace: 
@@ -4741,7 +4755,7 @@ MonoBehaviour:
       name: TestMaxSize
       fullName: Zenject.Tests.Bindings.TestMemoryPool0.TestMaxSize
       resultStatus: 1
-      duration: 0.0007101
+      duration: 0.0007328
       messages: 
       output: 
       stacktrace: 
@@ -4758,7 +4772,7 @@ MonoBehaviour:
       name: TestSubContainers
       fullName: Zenject.Tests.Bindings.TestMemoryPool0.TestSubContainers
       resultStatus: 1
-      duration: 0.0013843
+      duration: 0.0014911
       messages: 
       output: 
       stacktrace: 
@@ -4775,7 +4789,7 @@ MonoBehaviour:
       name: TestMemoryPoolCustomFactory
       fullName: Zenject.Tests.Bindings.TestMemoryPoolCustomFactory
       resultStatus: 1
-      duration: 0.0076534
+      duration: 0.0047728
       messages: 
       output: 
       stacktrace: 
@@ -4791,7 +4805,7 @@ MonoBehaviour:
       name: TestFromBinding
       fullName: Zenject.Tests.Bindings.TestMemoryPoolCustomFactory.TestFromBinding
       resultStatus: 1
-      duration: 0.0018266
+      duration: 0.0018297
       messages: 
       output: 
       stacktrace: 
@@ -4808,7 +4822,7 @@ MonoBehaviour:
       name: TestFromRuntime
       fullName: Zenject.Tests.Bindings.TestMemoryPoolCustomFactory.TestFromRuntime
       resultStatus: 1
-      duration: 0.0005058
+      duration: 0.0004807
       messages: 
       output: 
       stacktrace: 
@@ -4825,7 +4839,7 @@ MonoBehaviour:
       name: TestNonGeneric
       fullName: Zenject.Tests.Bindings.TestNonGeneric
       resultStatus: 1
-      duration: 0.0074839
+      duration: 0.0045256
       messages: 
       output: 
       stacktrace: 
@@ -4841,7 +4855,7 @@ MonoBehaviour:
       name: Test1
       fullName: Zenject.Tests.Bindings.TestNonGeneric.Test1
       resultStatus: 1
-      duration: 0.0005304
+      duration: 0.0004257
       messages: 
       output: 
       stacktrace: 
@@ -4858,7 +4872,7 @@ MonoBehaviour:
       name: Test2
       fullName: Zenject.Tests.Bindings.TestNonGeneric.Test2
       resultStatus: 1
-      duration: 0.0004882
+      duration: 0.00043
       messages: 
       output: 
       stacktrace: 
@@ -4875,7 +4889,7 @@ MonoBehaviour:
       name: Test3
       fullName: Zenject.Tests.Bindings.TestNonGeneric.Test3
       resultStatus: 1
-      duration: 0.0003791
+      duration: 0.0003533
       messages: 
       output: 
       stacktrace: 
@@ -4892,7 +4906,7 @@ MonoBehaviour:
       name: Test4
       fullName: Zenject.Tests.Bindings.TestNonGeneric.Test4
       resultStatus: 1
-      duration: 0.0006054
+      duration: 0.0006075
       messages: 
       output: 
       stacktrace: 
@@ -4909,7 +4923,7 @@ MonoBehaviour:
       name: TestNonLazy
       fullName: Zenject.Tests.Bindings.TestNonLazy
       resultStatus: 1
-      duration: 0.0072378
+      duration: 0.0039957
       messages: 
       output: 
       stacktrace: 
@@ -4925,7 +4939,7 @@ MonoBehaviour:
       name: Test1
       fullName: Zenject.Tests.Bindings.TestNonLazy.Test1
       resultStatus: 1
-      duration: 0.0006616
+      duration: 0.0005934
       messages: 
       output: 
       stacktrace: 
@@ -4942,7 +4956,7 @@ MonoBehaviour:
       name: Test2
       fullName: Zenject.Tests.Bindings.TestNonLazy.Test2
       resultStatus: 1
-      duration: 0.0003453
+      duration: 0.0003031
       messages: 
       output: 
       stacktrace: 
@@ -4959,7 +4973,7 @@ MonoBehaviour:
       name: Test3
       fullName: Zenject.Tests.Bindings.TestNonLazy.Test3
       resultStatus: 1
-      duration: 0.0005058
+      duration: 0.0005063
       messages: 
       output: 
       stacktrace: 
@@ -4976,7 +4990,7 @@ MonoBehaviour:
       name: TestWithKernel
       fullName: Zenject.Tests.Bindings.TestWithKernel
       resultStatus: 1
-      duration: 0.0212764
+      duration: 0.0480152
       messages: 
       output: 
       stacktrace: 
@@ -4992,7 +5006,7 @@ MonoBehaviour:
       name: TestByInstaller
       fullName: Zenject.Tests.Bindings.TestWithKernel.TestByInstaller
       resultStatus: 1
-      duration: 0.0106676
+      duration: 0.0322886
       messages: 
       output: 
       stacktrace: 
@@ -5009,7 +5023,7 @@ MonoBehaviour:
       name: TestByInstallerCustomOrder
       fullName: Zenject.Tests.Bindings.TestWithKernel.TestByInstallerCustomOrder
       resultStatus: 1
-      duration: 0.001553
+      duration: 0.0015534
       messages: 
       output: 
       stacktrace: 
@@ -5026,7 +5040,7 @@ MonoBehaviour:
       name: TestByInstallerCustomOrder2
       fullName: Zenject.Tests.Bindings.TestWithKernel.TestByInstallerCustomOrder2
       resultStatus: 1
-      duration: 0.0028865
+      duration: 0.0106331
       messages: 
       output: 
       stacktrace: 
@@ -5043,7 +5057,7 @@ MonoBehaviour:
       name: TestByMethod
       fullName: Zenject.Tests.Bindings.TestWithKernel.TestByMethod
       resultStatus: 1
-      duration: 0.0008216
+      duration: 0.0009413
       messages: 
       output: 
       stacktrace: 
@@ -5060,7 +5074,7 @@ MonoBehaviour:
       name: Conditions
       fullName: Zenject.Tests.Conditions
       resultStatus: 1
-      duration: 0.0760241
+      duration: 0.0562123
       messages: 
       output: 
       stacktrace: 
@@ -5076,7 +5090,7 @@ MonoBehaviour:
       name: TestConditionsBasic
       fullName: Zenject.Tests.Conditions.TestConditionsBasic
       resultStatus: 1
-      duration: 0.002806
+      duration: 0.0097917
       messages: 
       output: 
       stacktrace: 
@@ -5092,7 +5106,7 @@ MonoBehaviour:
       name: Test1
       fullName: Zenject.Tests.Conditions.TestConditionsBasic.Test1
       resultStatus: 1
-      duration: 0.0010063
+      duration: 0.0010555
       messages: 
       output: 
       stacktrace: 
@@ -5109,7 +5123,7 @@ MonoBehaviour:
       name: Test2
       fullName: Zenject.Tests.Conditions.TestConditionsBasic.Test2
       resultStatus: 1
-      duration: 0.0008676
+      duration: 0.0078401
       messages: 
       output: 
       stacktrace: 
@@ -5126,7 +5140,7 @@ MonoBehaviour:
       name: TestConditionsComplex
       fullName: Zenject.Tests.Conditions.TestConditionsComplex
       resultStatus: 1
-      duration: 0.0061401
+      duration: 0.0036561
       messages: 
       output: 
       stacktrace: 
@@ -5142,7 +5156,7 @@ MonoBehaviour:
       name: TestCorrespondingIdentifiers
       fullName: Zenject.Tests.Conditions.TestConditionsComplex.TestCorrespondingIdentifiers
       resultStatus: 1
-      duration: 0.0014185
+      duration: 0.0015812
       messages: 
       output: 
       stacktrace: 
@@ -5159,7 +5173,7 @@ MonoBehaviour:
       name: TestConditionsFieldName
       fullName: Zenject.Tests.Conditions.TestConditionsFieldName
       resultStatus: 1
-      duration: 0.0066585
+      duration: 0.0036077
       messages: 
       output: 
       stacktrace: 
@@ -5175,7 +5189,7 @@ MonoBehaviour:
       name: TestNameConditionError
       fullName: Zenject.Tests.Conditions.TestConditionsFieldName.TestNameConditionError
       resultStatus: 1
-      duration: 0.0010313
+      duration: 0.0009149
       messages: 
       output: 
       stacktrace: 
@@ -5192,7 +5206,7 @@ MonoBehaviour:
       name: TestNameConditionSuccess
       fullName: Zenject.Tests.Conditions.TestConditionsFieldName.TestNameConditionSuccess
       resultStatus: 1
-      duration: 0.0006235
+      duration: 0.0006168
       messages: 
       output: 
       stacktrace: 
@@ -5209,7 +5223,7 @@ MonoBehaviour:
       name: TestConditionsIdentifier
       fullName: Zenject.Tests.Conditions.TestConditionsIdentifier
       resultStatus: 1
-      duration: 0.0111251
+      duration: 0.007938
       messages: 
       output: 
       stacktrace: 
@@ -5225,7 +5239,7 @@ MonoBehaviour:
       name: TestFailConstructorInjectionEnum
       fullName: Zenject.Tests.Conditions.TestConditionsIdentifier.TestFailConstructorInjectionEnum
       resultStatus: 1
-      duration: 0.0009319
+      duration: 0.0008374
       messages: 
       output: 
       stacktrace: 
@@ -5242,7 +5256,7 @@ MonoBehaviour:
       name: TestFailFieldInjectionEnum
       fullName: Zenject.Tests.Conditions.TestConditionsIdentifier.TestFailFieldInjectionEnum
       resultStatus: 1
-      duration: 0.0006613
+      duration: 0.0006016
       messages: 
       output: 
       stacktrace: 
@@ -5259,7 +5273,7 @@ MonoBehaviour:
       name: TestSuccessConstructorInjectionEnum
       fullName: Zenject.Tests.Conditions.TestConditionsIdentifier.TestSuccessConstructorInjectionEnum
       resultStatus: 1
-      duration: 0.000546
+      duration: 0.0005155
       messages: 
       output: 
       stacktrace: 
@@ -5276,7 +5290,7 @@ MonoBehaviour:
       name: TestSuccessConstructorInjectionString
       fullName: Zenject.Tests.Conditions.TestConditionsIdentifier.TestSuccessConstructorInjectionString
       resultStatus: 1
-      duration: 0.0005993
+      duration: 0.000583
       messages: 
       output: 
       stacktrace: 
@@ -5293,7 +5307,7 @@ MonoBehaviour:
       name: TestSuccessFieldInjectionEnum
       fullName: Zenject.Tests.Conditions.TestConditionsIdentifier.TestSuccessFieldInjectionEnum
       resultStatus: 1
-      duration: 0.0005598
+      duration: 0.0005489
       messages: 
       output: 
       stacktrace: 
@@ -5310,7 +5324,7 @@ MonoBehaviour:
       name: TestSuccessFieldInjectionString
       fullName: Zenject.Tests.Conditions.TestConditionsIdentifier.TestSuccessFieldInjectionString
       resultStatus: 1
-      duration: 0.0005753
+      duration: 0.0005705
       messages: 
       output: 
       stacktrace: 
@@ -5327,7 +5341,7 @@ MonoBehaviour:
       name: TestUnspecifiedNameConstructorInjection
       fullName: Zenject.Tests.Conditions.TestConditionsIdentifier.TestUnspecifiedNameConstructorInjection
       resultStatus: 1
-      duration: 0.0004686
+      duration: 0.0004658
       messages: 
       output: 
       stacktrace: 
@@ -5344,7 +5358,7 @@ MonoBehaviour:
       name: TestUnspecifiedNameFieldInjection
       fullName: Zenject.Tests.Conditions.TestConditionsIdentifier.TestUnspecifiedNameFieldInjection
       resultStatus: 1
-      duration: 0.000522
+      duration: 0.0004927
       messages: 
       output: 
       stacktrace: 
@@ -5361,7 +5375,7 @@ MonoBehaviour:
       name: TestConditionsParents
       fullName: Zenject.Tests.Conditions.TestConditionsParents
       resultStatus: 1
-      duration: 0.0110581
+      duration: 0.0077197
       messages: 
       output: 
       stacktrace: 
@@ -5377,7 +5391,7 @@ MonoBehaviour:
       name: TestCase1
       fullName: Zenject.Tests.Conditions.TestConditionsParents.TestCase1
       resultStatus: 1
-      duration: 0.0013577
+      duration: 0.0013318
       messages: 
       output: 
       stacktrace: 
@@ -5394,7 +5408,7 @@ MonoBehaviour:
       name: TestCase2
       fullName: Zenject.Tests.Conditions.TestConditionsParents.TestCase2
       resultStatus: 1
-      duration: 0.0006312
+      duration: 0.0006184
       messages: 
       output: 
       stacktrace: 
@@ -5411,7 +5425,7 @@ MonoBehaviour:
       name: TestCase3
       fullName: Zenject.Tests.Conditions.TestConditionsParents.TestCase3
       resultStatus: 1
-      duration: 0.0009351
+      duration: 0.0009483
       messages: 
       output: 
       stacktrace: 
@@ -5428,7 +5442,7 @@ MonoBehaviour:
       name: TestCase4
       fullName: Zenject.Tests.Conditions.TestConditionsParents.TestCase4
       resultStatus: 1
-      duration: 0.0007422
+      duration: 0.0006824
       messages: 
       output: 
       stacktrace: 
@@ -5445,7 +5459,7 @@ MonoBehaviour:
       name: TestCase5
       fullName: Zenject.Tests.Conditions.TestConditionsParents.TestCase5
       resultStatus: 1
-      duration: 0.0005527
+      duration: 0.0005673
       messages: 
       output: 
       stacktrace: 
@@ -5462,7 +5476,7 @@ MonoBehaviour:
       name: TestCase6
       fullName: Zenject.Tests.Conditions.TestConditionsParents.TestCase6
       resultStatus: 1
-      duration: 0.0006194
+      duration: 0.0006205
       messages: 
       output: 
       stacktrace: 
@@ -5479,7 +5493,7 @@ MonoBehaviour:
       name: TestConditionsTarget
       fullName: Zenject.Tests.Conditions.TestConditionsTarget
       resultStatus: 1
-      duration: 0.0066842
+      duration: 0.0036615
       messages: 
       output: 
       stacktrace: 
@@ -5495,7 +5509,7 @@ MonoBehaviour:
       name: TestTargetConditionError
       fullName: Zenject.Tests.Conditions.TestConditionsTarget.TestTargetConditionError
       resultStatus: 1
-      duration: 0.0009994
+      duration: 0.0008821
       messages: 
       output: 
       stacktrace: 
@@ -5512,7 +5526,7 @@ MonoBehaviour:
       name: TestTargetConditionSuccess
       fullName: Zenject.Tests.Conditions.TestConditionsTarget.TestTargetConditionSuccess
       resultStatus: 1
-      duration: 0.0006032
+      duration: 0.0005939
       messages: 
       output: 
       stacktrace: 
@@ -5529,7 +5543,7 @@ MonoBehaviour:
       name: TestConditionsTargetInstance
       fullName: Zenject.Tests.Conditions.TestConditionsTargetInstance
       resultStatus: 1
-      duration: 0.0057404
+      duration: 0.0028556
       messages: 
       output: 
       stacktrace: 
@@ -5545,7 +5559,7 @@ MonoBehaviour:
       name: TestTargetConditionError
       fullName: Zenject.Tests.Conditions.TestConditionsTargetInstance.TestTargetConditionError
       resultStatus: 1
-      duration: 0.0009937
+      duration: 0.0009567
       messages: 
       output: 
       stacktrace: 
@@ -5562,7 +5576,7 @@ MonoBehaviour:
       name: TestIdentifiers
       fullName: Zenject.Tests.Conditions.TestIdentifiers
       resultStatus: 1
-      duration: 0.0086591
+      duration: 0.0057441
       messages: 
       output: 
       stacktrace: 
@@ -5578,7 +5592,7 @@ MonoBehaviour:
       name: TestBasic
       fullName: Zenject.Tests.Conditions.TestIdentifiers.TestBasic
       resultStatus: 1
-      duration: 0.0007126
+      duration: 0.0006172
       messages: 
       output: 
       stacktrace: 
@@ -5595,7 +5609,7 @@ MonoBehaviour:
       name: TestBasic2
       fullName: Zenject.Tests.Conditions.TestIdentifiers.TestBasic2
       resultStatus: 1
-      duration: 0.0004739
+      duration: 0.0004519
       messages: 
       output: 
       stacktrace: 
@@ -5612,7 +5626,7 @@ MonoBehaviour:
       name: TestBasic3
       fullName: Zenject.Tests.Conditions.TestIdentifiers.TestBasic3
       resultStatus: 1
-      duration: 0.0006836
+      duration: 0.0006736
       messages: 
       output: 
       stacktrace: 
@@ -5629,7 +5643,7 @@ MonoBehaviour:
       name: TestBasic4
       fullName: Zenject.Tests.Conditions.TestIdentifiers.TestBasic4
       resultStatus: 1
-      duration: 0.0009677
+      duration: 0.0009403
       messages: 
       output: 
       stacktrace: 
@@ -5646,7 +5660,7 @@ MonoBehaviour:
       name: TestFromMethodUntyped
       fullName: Zenject.Tests.Conditions.TestIdentifiers.TestFromMethodUntyped
       resultStatus: 1
-      duration: 0.0004782
+      duration: 0.0004584
       messages: 
       output: 
       stacktrace: 
@@ -5663,7 +5677,7 @@ MonoBehaviour:
       name: TestIdentifierTypes
       fullName: Zenject.Tests.Conditions.TestIdentifierTypes
       resultStatus: 1
-      duration: 0.0112268
+      duration: 0.0079508
       messages: 
       output: 
       stacktrace: 
@@ -5679,7 +5693,7 @@ MonoBehaviour:
       name: TestEnumIdentifiers1
       fullName: Zenject.Tests.Conditions.TestIdentifierTypes.TestEnumIdentifiers1
       resultStatus: 1
-      duration: 0.0012039
+      duration: 0.0009528
       messages: 
       output: 
       stacktrace: 
@@ -5696,7 +5710,7 @@ MonoBehaviour:
       name: TestEnumIdentifiers2
       fullName: Zenject.Tests.Conditions.TestIdentifierTypes.TestEnumIdentifiers2
       resultStatus: 1
-      duration: 0.0005205
+      duration: 0.0005021
       messages: 
       output: 
       stacktrace: 
@@ -5713,7 +5727,7 @@ MonoBehaviour:
       name: TestEnumIdentifiers3
       fullName: Zenject.Tests.Conditions.TestIdentifierTypes.TestEnumIdentifiers3
       resultStatus: 1
-      duration: 0.0005306
+      duration: 0.000518
       messages: 
       output: 
       stacktrace: 
@@ -5730,7 +5744,7 @@ MonoBehaviour:
       name: TestIntIdentifiers1
       fullName: Zenject.Tests.Conditions.TestIdentifierTypes.TestIntIdentifiers1
       resultStatus: 1
-      duration: 0.000714
+      duration: 0.0008074
       messages: 
       output: 
       stacktrace: 
@@ -5747,7 +5761,7 @@ MonoBehaviour:
       name: TestIntIdentifiers2
       fullName: Zenject.Tests.Conditions.TestIdentifierTypes.TestIntIdentifiers2
       resultStatus: 1
-      duration: 0.0004697
+      duration: 0.0004651
       messages: 
       output: 
       stacktrace: 
@@ -5764,7 +5778,7 @@ MonoBehaviour:
       name: TestIntIdentifiers3
       fullName: Zenject.Tests.Conditions.TestIdentifierTypes.TestIntIdentifiers3
       resultStatus: 1
-      duration: 0.0004463
+      duration: 0.0004408
       messages: 
       output: 
       stacktrace: 
@@ -5781,7 +5795,7 @@ MonoBehaviour:
       name: TestStringIdentifiers1
       fullName: Zenject.Tests.Conditions.TestIdentifierTypes.TestStringIdentifiers1
       resultStatus: 1
-      duration: 0.0005558
+      duration: 0.0005434
       messages: 
       output: 
       stacktrace: 
@@ -5798,7 +5812,7 @@ MonoBehaviour:
       name: TestStringIdentifiers2
       fullName: Zenject.Tests.Conditions.TestIdentifierTypes.TestStringIdentifiers2
       resultStatus: 1
-      duration: 0.0004447
+      duration: 0.0004473
       messages: 
       output: 
       stacktrace: 
@@ -5815,7 +5829,7 @@ MonoBehaviour:
       name: Convention
       fullName: Zenject.Tests.Convention
       resultStatus: 1
-      duration: 0.5529948
+      duration: 0.5593332
       messages: 
       output: 
       stacktrace: 
@@ -5831,7 +5845,7 @@ MonoBehaviour:
       name: Names
       fullName: Zenject.Tests.Convention.Names
       resultStatus: 1
-      duration: 0.2250855
+      duration: 0.2327806
       messages: 
       output: 
       stacktrace: 
@@ -5847,7 +5861,7 @@ MonoBehaviour:
       name: TestConventionNames
       fullName: Zenject.Tests.Convention.Names.TestConventionNames
       resultStatus: 1
-      duration: 0.2247772
+      duration: 0.2324496
       messages: 
       output: 
       stacktrace: 
@@ -5863,7 +5877,7 @@ MonoBehaviour:
       name: TestMatchingRegex
       fullName: Zenject.Tests.Convention.Names.TestConventionNames.TestMatchingRegex
       resultStatus: 1
-      duration: 0.1436378
+      duration: 0.1845123
       messages: 
       output: 
       stacktrace: 
@@ -5880,7 +5894,7 @@ MonoBehaviour:
       name: TestWithPrefix
       fullName: Zenject.Tests.Convention.Names.TestConventionNames.TestWithPrefix
       resultStatus: 1
-      duration: 0.0251223
+      duration: 0.0223951
       messages: 
       output: 
       stacktrace: 
@@ -5897,7 +5911,7 @@ MonoBehaviour:
       name: TestWithSuffix
       fullName: Zenject.Tests.Convention.Names.TestConventionNames.TestWithSuffix
       resultStatus: 1
-      duration: 0.0517234
+      duration: 0.0217028
       messages: 
       output: 
       stacktrace: 
@@ -5914,7 +5928,7 @@ MonoBehaviour:
       name: TestConvention
       fullName: Zenject.Tests.Convention.TestConvention
       resultStatus: 1
-      duration: 0.2105961
+      duration: 0.2424455
       messages: 
       output: 
       stacktrace: 
@@ -5930,7 +5944,7 @@ MonoBehaviour:
       name: TestAttributeFilter
       fullName: Zenject.Tests.Convention.TestConvention.TestAttributeFilter
       resultStatus: 1
-      duration: 0.0517079
+      duration: 0.0660248
       messages: 
       output: 
       stacktrace: 
@@ -5947,7 +5961,7 @@ MonoBehaviour:
       name: TestAttributeWhereFilter
       fullName: Zenject.Tests.Convention.TestConvention.TestAttributeWhereFilter
       resultStatus: 1
-      duration: 0.0228653
+      duration: 0.0294437
       messages: 
       output: 
       stacktrace: 
@@ -5964,7 +5978,7 @@ MonoBehaviour:
       name: TestDerivingFrom
       fullName: Zenject.Tests.Convention.TestConvention.TestDerivingFrom
       resultStatus: 1
-      duration: 0.001911
+      duration: 0.0021753
       messages: 
       output: 
       stacktrace: 
@@ -5981,7 +5995,7 @@ MonoBehaviour:
       name: TestDerivingFrom2
       fullName: Zenject.Tests.Convention.TestConvention.TestDerivingFrom2
       resultStatus: 1
-      duration: 0.0504833
+      duration: 0.0585046
       messages: 
       output: 
       stacktrace: 
@@ -5998,7 +6012,7 @@ MonoBehaviour:
       name: TestDerivingFromFail
       fullName: Zenject.Tests.Convention.TestConvention.TestDerivingFromFail
       resultStatus: 1
-      duration: 0.0023065
+      duration: 0.0025719
       messages: 
       output: 
       stacktrace: 
@@ -6015,7 +6029,7 @@ MonoBehaviour:
       name: TestInNamespace
       fullName: Zenject.Tests.Convention.TestConvention.TestInNamespace
       resultStatus: 1
-      duration: 0.0228094
+      duration: 0.0226719
       messages: 
       output: 
       stacktrace: 
@@ -6032,7 +6046,7 @@ MonoBehaviour:
       name: TestMatchAll
       fullName: Zenject.Tests.Convention.TestConvention.TestMatchAll
       resultStatus: 1
-      duration: 0.0510117
+      duration: 0.0569207
       messages: 
       output: 
       stacktrace: 
@@ -6049,7 +6063,7 @@ MonoBehaviour:
       name: Two
       fullName: Zenject.Tests.Convention.Two
       resultStatus: 1
-      duration: 0.1126316
+      duration: 0.0821222
       messages: 
       output: 
       stacktrace: 
@@ -6065,7 +6079,7 @@ MonoBehaviour:
       name: TestConvention2
       fullName: Zenject.Tests.Convention.Two.TestConvention2
       resultStatus: 1
-      duration: 0.1071205
+      duration: 0.0799378
       messages: 
       output: 
       stacktrace: 
@@ -6081,7 +6095,7 @@ MonoBehaviour:
       name: TestBindAllInterfaces2
       fullName: Zenject.Tests.Convention.Two.TestConvention2.TestBindAllInterfaces2
       resultStatus: 1
-      duration: 0.0895528
+      duration: 0.0623682
       messages: 
       output: 
       stacktrace: 
@@ -6098,7 +6112,7 @@ MonoBehaviour:
       name: TestBindAllInterfacesSimple
       fullName: Zenject.Tests.Convention.Two.TestConvention2.TestBindAllInterfacesSimple
       resultStatus: 1
-      duration: 0.0164219
+      duration: 0.0164963
       messages: 
       output: 
       stacktrace: 
@@ -6115,7 +6129,7 @@ MonoBehaviour:
       name: Injection
       fullName: Zenject.Tests.Injection
       resultStatus: 1
-      duration: 0.1232443
+      duration: 0.0805442
       messages: 
       output: 
       stacktrace: 
@@ -6131,7 +6145,7 @@ MonoBehaviour:
       name: TestAllInjectionTypes
       fullName: Zenject.Tests.Injection.TestAllInjectionTypes
       resultStatus: 1
-      duration: 0.0034199
+      duration: 0.0037629
       messages: 
       output: 
       stacktrace: 
@@ -6147,7 +6161,7 @@ MonoBehaviour:
       name: TestCase1
       fullName: Zenject.Tests.Injection.TestAllInjectionTypes.TestCase1
       resultStatus: 1
-      duration: 0.0020466
+      duration: 0.0022382
       messages: 
       output: 
       stacktrace: 
@@ -6164,7 +6178,7 @@ MonoBehaviour:
       name: TestBaseClassPropertyInjection
       fullName: Zenject.Tests.Injection.TestBaseClassPropertyInjection
       resultStatus: 1
-      duration: 0.0059289
+      duration: 0.0035455
       messages: 
       output: 
       stacktrace: 
@@ -6180,7 +6194,7 @@ MonoBehaviour:
       name: TestCaseBaseClassPropertyInjection
       fullName: Zenject.Tests.Injection.TestBaseClassPropertyInjection.TestCaseBaseClassPropertyInjection
       resultStatus: 1
-      duration: 0.0009832
+      duration: 0.0011093
       messages: 
       output: 
       stacktrace: 
@@ -6197,7 +6211,7 @@ MonoBehaviour:
       name: TestCircularDependencies
       fullName: Zenject.Tests.Injection.TestCircularDependencies
       resultStatus: 1
-      duration: 0.0084338
+      duration: 0.005721
       messages: 
       output: 
       stacktrace: 
@@ -6213,7 +6227,7 @@ MonoBehaviour:
       name: TestConstructorInject
       fullName: Zenject.Tests.Injection.TestCircularDependencies.TestConstructorInject
       resultStatus: 1
-      duration: 0.0008826
+      duration: 0.000938
       messages: 
       output: 
       stacktrace: 
@@ -6230,7 +6244,7 @@ MonoBehaviour:
       name: TestFields
       fullName: Zenject.Tests.Injection.TestCircularDependencies.TestFields
       resultStatus: 1
-      duration: 0.0007998
+      duration: 0.0007886
       messages: 
       output: 
       stacktrace: 
@@ -6247,7 +6261,7 @@ MonoBehaviour:
       name: TestPostInject
       fullName: Zenject.Tests.Injection.TestCircularDependencies.TestPostInject
       resultStatus: 1
-      duration: 0.0007934
+      duration: 0.0008243
       messages: 
       output: 
       stacktrace: 
@@ -6264,7 +6278,7 @@ MonoBehaviour:
       name: TestSelfDependency
       fullName: Zenject.Tests.Injection.TestCircularDependencies.TestSelfDependency
       resultStatus: 1
-      duration: 0.0006044
+      duration: 0.0005857
       messages: 
       output: 
       stacktrace: 
@@ -6281,7 +6295,7 @@ MonoBehaviour:
       name: TestConstructorInjection
       fullName: Zenject.Tests.Injection.TestConstructorInjection
       resultStatus: 1
-      duration: 0.0088001
+      duration: 0.0062846
       messages: 
       output: 
       stacktrace: 
@@ -6297,7 +6311,7 @@ MonoBehaviour:
       name: TestInstantiate
       fullName: Zenject.Tests.Injection.TestConstructorInjection.TestInstantiate
       resultStatus: 1
-      duration: 0.0007563
+      duration: 0.0006725
       messages: 
       output: 
       stacktrace: 
@@ -6314,7 +6328,7 @@ MonoBehaviour:
       name: TestMultipleChooseLeastArguments
       fullName: Zenject.Tests.Injection.TestConstructorInjection.TestMultipleChooseLeastArguments
       resultStatus: 1
-      duration: 0.0016084
+      duration: 0.0019077
       messages: 
       output: 
       stacktrace: 
@@ -6331,7 +6345,7 @@ MonoBehaviour:
       name: TestMultipleWithOneTagged
       fullName: Zenject.Tests.Injection.TestConstructorInjection.TestMultipleWithOneTagged
       resultStatus: 1
-      duration: 0.0006082
+      duration: 0.000714
       messages: 
       output: 
       stacktrace: 
@@ -6348,7 +6362,7 @@ MonoBehaviour:
       name: TestResolve
       fullName: Zenject.Tests.Injection.TestConstructorInjection.TestResolve
       resultStatus: 1
-      duration: 0.000419
+      duration: 0.0004415
       messages: 
       output: 
       stacktrace: 
@@ -6365,7 +6379,7 @@ MonoBehaviour:
       name: TestConstructorInjectionOptional
       fullName: Zenject.Tests.Injection.TestConstructorInjectionOptional
       resultStatus: 1
-      duration: 0.0071301
+      duration: 0.0045048
       messages: 
       output: 
       stacktrace: 
@@ -6381,7 +6395,7 @@ MonoBehaviour:
       name: TestCase1
       fullName: Zenject.Tests.Injection.TestConstructorInjectionOptional.TestCase1
       resultStatus: 1
-      duration: 0.0009302
+      duration: 0.0009293
       messages: 
       output: 
       stacktrace: 
@@ -6398,7 +6412,7 @@ MonoBehaviour:
       name: TestCase2
       fullName: Zenject.Tests.Injection.TestConstructorInjectionOptional.TestCase2
       resultStatus: 1
-      duration: 0.0006859
+      duration: 0.0005426
       messages: 
       output: 
       stacktrace: 
@@ -6415,7 +6429,7 @@ MonoBehaviour:
       name: TestConstructByFactory
       fullName: Zenject.Tests.Injection.TestConstructorInjectionOptional.TestConstructByFactory
       resultStatus: 1
-      duration: 0.0004085
+      duration: 0.0003867
       messages: 
       output: 
       stacktrace: 
@@ -6432,7 +6446,7 @@ MonoBehaviour:
       name: TestDuplicateInjection
       fullName: Zenject.Tests.Injection.TestDuplicateInjection
       resultStatus: 1
-      duration: 0.0058437
+      duration: 0.0026683
       messages: 
       output: 
       stacktrace: 
@@ -6448,7 +6462,7 @@ MonoBehaviour:
       name: TestCaseDuplicateInjection
       fullName: Zenject.Tests.Injection.TestDuplicateInjection.TestCaseDuplicateInjection
       resultStatus: 1
-      duration: 0.0007889
+      duration: 0.0007243
       messages: 
       output: 
       stacktrace: 
@@ -6465,7 +6479,7 @@ MonoBehaviour:
       name: TestInjectSources
       fullName: Zenject.Tests.Injection.TestInjectSources
       resultStatus: 1
-      duration: 0.0091631
+      duration: 0.0062644
       messages: 
       output: 
       stacktrace: 
@@ -6481,7 +6495,7 @@ MonoBehaviour:
       name: TestAny
       fullName: Zenject.Tests.Injection.TestInjectSources.TestAny
       resultStatus: 1
-      duration: 0.0006681
+      duration: 0.0006144
       messages: 
       output: 
       stacktrace: 
@@ -6498,7 +6512,7 @@ MonoBehaviour:
       name: TestLocal1
       fullName: Zenject.Tests.Injection.TestInjectSources.TestLocal1
       resultStatus: 1
-      duration: 0.0006146
+      duration: 0.0005507
       messages: 
       output: 
       stacktrace: 
@@ -6515,7 +6529,7 @@ MonoBehaviour:
       name: TestLocal2
       fullName: Zenject.Tests.Injection.TestInjectSources.TestLocal2
       resultStatus: 1
-      duration: 0.0003558
+      duration: 0.0003642
       messages: 
       output: 
       stacktrace: 
@@ -6532,7 +6546,7 @@ MonoBehaviour:
       name: TestParent1
       fullName: Zenject.Tests.Injection.TestInjectSources.TestParent1
       resultStatus: 1
-      duration: 0.0004641
+      duration: 0.0004828
       messages: 
       output: 
       stacktrace: 
@@ -6549,7 +6563,7 @@ MonoBehaviour:
       name: TestParent2
       fullName: Zenject.Tests.Injection.TestInjectSources.TestParent2
       resultStatus: 1
-      duration: 0.0004336
+      duration: 0.0004838
       messages: 
       output: 
       stacktrace: 
@@ -6566,7 +6580,7 @@ MonoBehaviour:
       name: TestParent3
       fullName: Zenject.Tests.Injection.TestInjectSources.TestParent3
       resultStatus: 1
-      duration: 0.0003711
+      duration: 0.0003774
       messages: 
       output: 
       stacktrace: 
@@ -6583,7 +6597,7 @@ MonoBehaviour:
       name: TestParentAny1
       fullName: Zenject.Tests.Injection.TestInjectSources.TestParentAny1
       resultStatus: 1
-      duration: 0.0004895
+      duration: 0.0005035
       messages: 
       output: 
       stacktrace: 
@@ -6600,7 +6614,7 @@ MonoBehaviour:
       name: TestListInjection
       fullName: Zenject.Tests.Injection.TestListInjection
       resultStatus: 1
-      duration: 0.0097874
+      duration: 0.0067966
       messages: 
       output: 
       stacktrace: 
@@ -6616,7 +6630,7 @@ MonoBehaviour:
       name: TestArrays
       fullName: Zenject.Tests.Injection.TestListInjection.TestArrays
       resultStatus: 1
-      duration: 0.0013278
+      duration: 0.0011588
       messages: 
       output: 
       stacktrace: 
@@ -6633,7 +6647,7 @@ MonoBehaviour:
       name: TestConstructor1
       fullName: Zenject.Tests.Injection.TestListInjection.TestConstructor1
       resultStatus: 1
-      duration: 0.0008567
+      duration: 0.0009384
       messages: 
       output: 
       stacktrace: 
@@ -6650,7 +6664,7 @@ MonoBehaviour:
       name: TestField1
       fullName: Zenject.Tests.Injection.TestListInjection.TestField1
       resultStatus: 1
-      duration: 0.0005918
+      duration: 0.000594
       messages: 
       output: 
       stacktrace: 
@@ -6667,7 +6681,7 @@ MonoBehaviour:
       name: TestIEnumerable
       fullName: Zenject.Tests.Injection.TestListInjection.TestIEnumerable
       resultStatus: 1
-      duration: 0.0006646
+      duration: 0.0006721
       messages: 
       output: 
       stacktrace: 
@@ -6684,7 +6698,7 @@ MonoBehaviour:
       name: TestIList
       fullName: Zenject.Tests.Injection.TestListInjection.TestIList
       resultStatus: 1
-      duration: 0.0006674
+      duration: 0.0007053
       messages: 
       output: 
       stacktrace: 
@@ -6701,7 +6715,7 @@ MonoBehaviour:
       name: TestNullableValues
       fullName: Zenject.Tests.Injection.TestNullableValues
       resultStatus: 1
-      duration: 0.0074169
+      duration: 0.0040136
       messages: 
       output: 
       stacktrace: 
@@ -6717,7 +6731,7 @@ MonoBehaviour:
       name: RunTest1
       fullName: Zenject.Tests.Injection.TestNullableValues.RunTest1
       resultStatus: 1
-      duration: 0.0014503
+      duration: 0.0013145
       messages: 
       output: 
       stacktrace: 
@@ -6734,7 +6748,7 @@ MonoBehaviour:
       name: RunTest2
       fullName: Zenject.Tests.Injection.TestNullableValues.RunTest2
       resultStatus: 1
-      duration: 0.0006046
+      duration: 0.0005923
       messages: 
       output: 
       stacktrace: 
@@ -6751,7 +6765,7 @@ MonoBehaviour:
       name: TestParameters
       fullName: Zenject.Tests.Injection.TestParameters
       resultStatus: 1
-      duration: 0.0062613
+      duration: 0.0033597
       messages: 
       output: 
       stacktrace: 
@@ -6767,7 +6781,7 @@ MonoBehaviour:
       name: TestExtraParametersSameType
       fullName: Zenject.Tests.Injection.TestParameters.TestExtraParametersSameType
       resultStatus: 1
-      duration: 0.000792
+      duration: 0.0007306
       messages: 
       output: 
       stacktrace: 
@@ -6784,7 +6798,7 @@ MonoBehaviour:
       name: TestMissingParameterThrows
       fullName: Zenject.Tests.Injection.TestParameters.TestMissingParameterThrows
       resultStatus: 1
-      duration: 0.0005947
+      duration: 0.0005839
       messages: 
       output: 
       stacktrace: 
@@ -6801,7 +6815,7 @@ MonoBehaviour:
       name: TestPostInjectCall
       fullName: Zenject.Tests.Injection.TestPostInjectCall
       resultStatus: 1
-      duration: 0.0084897
+      duration: 0.0059581
       messages: 
       output: 
       stacktrace: 
@@ -6817,7 +6831,7 @@ MonoBehaviour:
       name: Test
       fullName: Zenject.Tests.Injection.TestPostInjectCall.Test
       resultStatus: 1
-      duration: 0.0011196
+      duration: 0.0010797
       messages: 
       output: 
       stacktrace: 
@@ -6834,7 +6848,7 @@ MonoBehaviour:
       name: TestInheritance
       fullName: Zenject.Tests.Injection.TestPostInjectCall.TestInheritance
       resultStatus: 1
-      duration: 0.0008355
+      duration: 0.0007929
       messages: 
       output: 
       stacktrace: 
@@ -6851,7 +6865,7 @@ MonoBehaviour:
       name: TestInheritanceOrder
       fullName: Zenject.Tests.Injection.TestPostInjectCall.TestInheritanceOrder
       resultStatus: 1
-      duration: 0.0006103
+      duration: 0.0007065
       messages: 
       output: 
       stacktrace: 
@@ -6868,7 +6882,7 @@ MonoBehaviour:
       name: TestPrivateBaseClassPostInject
       fullName: Zenject.Tests.Injection.TestPostInjectCall.TestPrivateBaseClassPostInject
       resultStatus: 1
-      duration: 0.0006158
+      duration: 0.0006568
       messages: 
       output: 
       stacktrace: 
@@ -6885,7 +6899,7 @@ MonoBehaviour:
       name: TestPostInjectParameters
       fullName: Zenject.Tests.Injection.TestPostInjectParameters
       resultStatus: 1
-      duration: 0.0055923
+      duration: 0.0029294
       messages: 
       output: 
       stacktrace: 
@@ -6901,7 +6915,7 @@ MonoBehaviour:
       name: Test
       fullName: Zenject.Tests.Injection.TestPostInjectParameters.Test
       resultStatus: 1
-      duration: 0.0009609
+      duration: 0.0009465
       messages: 
       output: 
       stacktrace: 
@@ -6918,7 +6932,7 @@ MonoBehaviour:
       name: TestPropertyInjection
       fullName: Zenject.Tests.Injection.TestPropertyInjection
       resultStatus: 1
-      duration: 0.0060149
+      duration: 0.0032114
       messages: 
       output: 
       stacktrace: 
@@ -6934,7 +6948,7 @@ MonoBehaviour:
       name: TestCase2
       fullName: Zenject.Tests.Injection.TestPropertyInjection.TestCase2
       resultStatus: 1
-      duration: 0.0003162
+      duration: 0.0002768
       messages: 
       output: 
       stacktrace: 
@@ -6951,7 +6965,7 @@ MonoBehaviour:
       name: TestPublicPrivate
       fullName: Zenject.Tests.Injection.TestPropertyInjection.TestPublicPrivate
       resultStatus: 1
-      duration: 0.0009079
+      duration: 0.0008746
       messages: 
       output: 
       stacktrace: 
@@ -6968,7 +6982,7 @@ MonoBehaviour:
       name: TestStructInjection
       fullName: Zenject.Tests.Injection.TestStructInjection
       resultStatus: 1
-      duration: 0.0092903
+      duration: 0.0060944
       messages: 
       output: 
       stacktrace: 
@@ -6984,7 +6998,7 @@ MonoBehaviour:
       name: TestInjectConstructorOfStruct
       fullName: Zenject.Tests.Injection.TestStructInjection.TestInjectConstructorOfStruct
       resultStatus: 1
-      duration: 0.0015127
+      duration: 0.0013138
       messages: 
       output: 
       stacktrace: 
@@ -7001,7 +7015,7 @@ MonoBehaviour:
       name: TestInjectFieldsOfStruct
       fullName: Zenject.Tests.Injection.TestStructInjection.TestInjectFieldsOfStruct
       resultStatus: 1
-      duration: 0.0014811
+      duration: 0.0014817
       messages: 
       output: 
       stacktrace: 
@@ -7018,7 +7032,7 @@ MonoBehaviour:
       name: TestInjectStructIntoClass
       fullName: Zenject.Tests.Injection.TestStructInjection.TestInjectStructIntoClass
       resultStatus: 1
-      duration: 0.0010786
+      duration: 0.0010439
       messages: 
       output: 
       stacktrace: 
@@ -7035,7 +7049,7 @@ MonoBehaviour:
       name: TestTestOptional
       fullName: Zenject.Tests.Injection.TestTestOptional
       resultStatus: 1
-      duration: 0.0144605
+      duration: 0.0109787
       messages: 
       output: 
       stacktrace: 
@@ -7051,7 +7065,7 @@ MonoBehaviour:
       name: TestChildDependencyOptional
       fullName: Zenject.Tests.Injection.TestTestOptional.TestChildDependencyOptional
       resultStatus: 1
-      duration: 0.0008742
+      duration: 0.0007739
       messages: 
       output: 
       stacktrace: 
@@ -7068,7 +7082,7 @@ MonoBehaviour:
       name: TestFieldOptional
       fullName: Zenject.Tests.Injection.TestTestOptional.TestFieldOptional
       resultStatus: 1
-      duration: 0.0007317
+      duration: 0.0005728
       messages: 
       output: 
       stacktrace: 
@@ -7085,7 +7099,7 @@ MonoBehaviour:
       name: TestFieldOptional2
       fullName: Zenject.Tests.Injection.TestTestOptional.TestFieldOptional2
       resultStatus: 1
-      duration: 0.0005281
+      duration: 0.0005006
       messages: 
       output: 
       stacktrace: 
@@ -7102,7 +7116,7 @@ MonoBehaviour:
       name: TestFieldOptional3
       fullName: Zenject.Tests.Injection.TestTestOptional.TestFieldOptional3
       resultStatus: 1
-      duration: 0.0006674
+      duration: 0.0006241
       messages: 
       output: 
       stacktrace: 
@@ -7119,7 +7133,7 @@ MonoBehaviour:
       name: TestFieldRequired
       fullName: Zenject.Tests.Injection.TestTestOptional.TestFieldRequired
       resultStatus: 1
-      duration: 0.000469
+      duration: 0.0004484
       messages: 
       output: 
       stacktrace: 
@@ -7136,7 +7150,7 @@ MonoBehaviour:
       name: TestParameterOptional
       fullName: Zenject.Tests.Injection.TestTestOptional.TestParameterOptional
       resultStatus: 1
-      duration: 0.0005579
+      duration: 0.0005372
       messages: 
       output: 
       stacktrace: 
@@ -7153,7 +7167,7 @@ MonoBehaviour:
       name: TestParameterRequired
       fullName: Zenject.Tests.Injection.TestTestOptional.TestParameterRequired
       resultStatus: 1
-      duration: 0.0005538
+      duration: 0.0005539
       messages: 
       output: 
       stacktrace: 
@@ -7170,7 +7184,7 @@ MonoBehaviour:
       name: TestPrimitiveParamOptionalNullable
       fullName: Zenject.Tests.Injection.TestTestOptional.TestPrimitiveParamOptionalNullable
       resultStatus: 1
-      duration: 0.0005607
+      duration: 0.0005689
       messages: 
       output: 
       stacktrace: 
@@ -7187,7 +7201,7 @@ MonoBehaviour:
       name: TestPrimitiveParamOptionalUsesDefault
       fullName: Zenject.Tests.Injection.TestTestOptional.TestPrimitiveParamOptionalUsesDefault
       resultStatus: 1
-      duration: 0.0005332
+      duration: 0.0005903
       messages: 
       output: 
       stacktrace: 
@@ -7204,7 +7218,7 @@ MonoBehaviour:
       name: TestPrimitiveParamOptionalUsesExplicitDefault
       fullName: Zenject.Tests.Injection.TestTestOptional.TestPrimitiveParamOptionalUsesExplicitDefault
       resultStatus: 1
-      duration: 0.0006203
+      duration: 0.0006335
       messages: 
       output: 
       stacktrace: 
@@ -7221,7 +7235,7 @@ MonoBehaviour:
       name: TestPrimitiveParamOptionalUsesExplicitDefault2
       fullName: Zenject.Tests.Injection.TestTestOptional.TestPrimitiveParamOptionalUsesExplicitDefault2
       resultStatus: 1
-      duration: 0.0005357
+      duration: 0.0005505
       messages: 
       output: 
       stacktrace: 
@@ -7238,7 +7252,7 @@ MonoBehaviour:
       name: TestPrimitiveParamOptionalUsesExplicitDefault3
       fullName: Zenject.Tests.Injection.TestTestOptional.TestPrimitiveParamOptionalUsesExplicitDefault3
       resultStatus: 1
-      duration: 0.0004728
+      duration: 0.0004092
       messages: 
       output: 
       stacktrace: 
@@ -7255,7 +7269,7 @@ MonoBehaviour:
       name: Other
       fullName: Zenject.Tests.Other
       resultStatus: 1
-      duration: 0.1760657
+      duration: 0.1977904
       messages: 
       output: 
       stacktrace: 
@@ -7271,7 +7285,7 @@ MonoBehaviour:
       name: TestBindCallbacks
       fullName: Zenject.Tests.Other.TestBindCallbacks
       resultStatus: 1
-      duration: 0.0056262
+      duration: 0.0482358
       messages: 
       output: 
       stacktrace: 
@@ -7287,7 +7301,7 @@ MonoBehaviour:
       name: Test1
       fullName: Zenject.Tests.Other.TestBindCallbacks.Test1
       resultStatus: 1
-      duration: 0.0014471
+      duration: 0.0084082
       messages: 
       output: 
       stacktrace: 
@@ -7304,7 +7318,7 @@ MonoBehaviour:
       name: TestFactory1
       fullName: Zenject.Tests.Other.TestBindCallbacks.TestFactory1
       resultStatus: 1
-      duration: 0.0017964
+      duration: 0.0018077
       messages: 
       output: 
       stacktrace: 
@@ -7321,7 +7335,7 @@ MonoBehaviour:
       name: TestMemoryPool1
       fullName: Zenject.Tests.Other.TestBindCallbacks.TestMemoryPool1
       resultStatus: 1
-      duration: 0.0012173
+      duration: 0.0368775
       messages: 
       output: 
       stacktrace: 
@@ -7338,7 +7352,7 @@ MonoBehaviour:
       name: TestBindingInheritanceMethod
       fullName: Zenject.Tests.Other.TestBindingInheritanceMethod
       resultStatus: 1
-      duration: 0.0094901
+      duration: 0.0075189
       messages: 
       output: 
       stacktrace: 
@@ -7354,7 +7368,7 @@ MonoBehaviour:
       name: TestCopyDirect1
       fullName: Zenject.Tests.Other.TestBindingInheritanceMethod.TestCopyDirect1
       resultStatus: 1
-      duration: 0.0007017
+      duration: 0.0008224
       messages: 
       output: 
       stacktrace: 
@@ -7371,7 +7385,7 @@ MonoBehaviour:
       name: TestCopyIntoAll1
       fullName: Zenject.Tests.Other.TestBindingInheritanceMethod.TestCopyIntoAll1
       resultStatus: 1
-      duration: 0.0005806
+      duration: 0.0006904
       messages: 
       output: 
       stacktrace: 
@@ -7388,7 +7402,7 @@ MonoBehaviour:
       name: TestCopyIntoAll2
       fullName: Zenject.Tests.Other.TestBindingInheritanceMethod.TestCopyIntoAll2
       resultStatus: 1
-      duration: 0.0009706
+      duration: 0.0010676
       messages: 
       output: 
       stacktrace: 
@@ -7405,7 +7419,7 @@ MonoBehaviour:
       name: TestMoveAll
       fullName: Zenject.Tests.Other.TestBindingInheritanceMethod.TestMoveAll
       resultStatus: 1
-      duration: 0.0005069
+      duration: 0.0004944
       messages: 
       output: 
       stacktrace: 
@@ -7422,7 +7436,7 @@ MonoBehaviour:
       name: TestMoveDirect1
       fullName: Zenject.Tests.Other.TestBindingInheritanceMethod.TestMoveDirect1
       resultStatus: 1
-      duration: 0.0004364
+      duration: 0.0004442
       messages: 
       output: 
       stacktrace: 
@@ -7439,7 +7453,7 @@ MonoBehaviour:
       name: TestNoCopy
       fullName: Zenject.Tests.Other.TestBindingInheritanceMethod.TestNoCopy
       resultStatus: 1
-      duration: 0.000439
+      duration: 0.0004171
       messages: 
       output: 
       stacktrace: 
@@ -7456,7 +7470,7 @@ MonoBehaviour:
       name: TestCircularDependencies
       fullName: Zenject.Tests.Other.TestCircularDependencies
       resultStatus: 1
-      duration: 0.0083599
+      duration: 0.0046057
       messages: 
       output: 
       stacktrace: 
@@ -7472,7 +7486,7 @@ MonoBehaviour:
       name: TestField
       fullName: Zenject.Tests.Other.TestCircularDependencies.TestField
       resultStatus: 1
-      duration: 0.0009086
+      duration: 0.000753
       messages: 
       output: 
       stacktrace: 
@@ -7489,7 +7503,7 @@ MonoBehaviour:
       name: TestPostInject
       fullName: Zenject.Tests.Other.TestCircularDependencies.TestPostInject
       resultStatus: 1
-      duration: 0.0010394
+      duration: 0.0007136
       messages: 
       output: 
       stacktrace: 
@@ -7506,7 +7520,7 @@ MonoBehaviour:
       name: TestThrows
       fullName: Zenject.Tests.Other.TestCircularDependencies.TestThrows
       resultStatus: 1
-      duration: 0.0008778
+      duration: 0.0007325
       messages: 
       output: 
       stacktrace: 
@@ -7523,7 +7537,7 @@ MonoBehaviour:
       name: TestClearCacheProvider
       fullName: Zenject.Tests.Other.TestClearCacheProvider
       resultStatus: 1
-      duration: 0.008046
+      duration: 0.0047189
       messages: 
       output: 
       stacktrace: 
@@ -7539,7 +7553,7 @@ MonoBehaviour:
       name: Test1
       fullName: Zenject.Tests.Other.TestClearCacheProvider.Test1
       resultStatus: 1
-      duration: 0.00252
+      duration: 0.0028147
       messages: 
       output: 
       stacktrace: 
@@ -7556,7 +7570,7 @@ MonoBehaviour:
       name: TestCustomInjectAttribute
       fullName: Zenject.Tests.Other.TestCustomInjectAttribute
       resultStatus: 1
-      duration: 0.0065798
+      duration: 0.0033613
       messages: 
       output: 
       stacktrace: 
@@ -7572,7 +7586,7 @@ MonoBehaviour:
       name: Test1
       fullName: Zenject.Tests.Other.TestCustomInjectAttribute.Test1
       resultStatus: 1
-      duration: 0.0014984
+      duration: 0.0013722
       messages: 
       output: 
       stacktrace: 
@@ -7589,7 +7603,7 @@ MonoBehaviour:
       name: TestDecorators
       fullName: Zenject.Tests.Other.TestDecorators
       resultStatus: 1
-      duration: 0.0125029
+      duration: 0.0237315
       messages: 
       output: 
       stacktrace: 
@@ -7605,7 +7619,7 @@ MonoBehaviour:
       name: TestCaching
       fullName: Zenject.Tests.Other.TestDecorators.TestCaching
       resultStatus: 1
-      duration: 0.0034353
+      duration: 0.0174674
       messages: 
       output: 
       stacktrace: 
@@ -7622,7 +7636,7 @@ MonoBehaviour:
       name: TestCaching2
       fullName: Zenject.Tests.Other.TestDecorators.TestCaching2
       resultStatus: 1
-      duration: 0.000678
+      duration: 0.0007306
       messages: 
       output: 
       stacktrace: 
@@ -7639,7 +7653,7 @@ MonoBehaviour:
       name: TestContainerInheritance
       fullName: Zenject.Tests.Other.TestDecorators.TestContainerInheritance
       resultStatus: 1
-      duration: 0.0005957
+      duration: 0.0005928
       messages: 
       output: 
       stacktrace: 
@@ -7656,7 +7670,7 @@ MonoBehaviour:
       name: TestDecoratorMethod
       fullName: Zenject.Tests.Other.TestDecorators.TestDecoratorMethod
       resultStatus: 1
-      duration: 0.0006649
+      duration: 0.0006829
       messages: 
       output: 
       stacktrace: 
@@ -7673,7 +7687,7 @@ MonoBehaviour:
       name: TestMultiple
       fullName: Zenject.Tests.Other.TestDecorators.TestMultiple
       resultStatus: 1
-      duration: 0.0008656
+      duration: 0.0008972
       messages: 
       output: 
       stacktrace: 
@@ -7690,7 +7704,7 @@ MonoBehaviour:
       name: TestSimpleCase
       fullName: Zenject.Tests.Other.TestDecorators.TestSimpleCase
       resultStatus: 1
-      duration: 0.0004848
+      duration: 0.0004819
       messages: 
       output: 
       stacktrace: 
@@ -7707,7 +7721,7 @@ MonoBehaviour:
       name: TestDecoratorValidation
       fullName: Zenject.Tests.Other.TestDecoratorValidation
       resultStatus: 1
-      duration: 0.0090323
+      duration: 0.0130887
       messages: 
       output: 
       stacktrace: 
@@ -7723,7 +7737,7 @@ MonoBehaviour:
       name: TestFail1
       fullName: Zenject.Tests.Other.TestDecoratorValidation.TestFail1
       resultStatus: 1
-      duration: 0.0017765
+      duration: 0.0016686
       messages: 
       output: 
       stacktrace: 
@@ -7740,7 +7754,7 @@ MonoBehaviour:
       name: TestFail2
       fullName: Zenject.Tests.Other.TestDecoratorValidation.TestFail2
       resultStatus: 1
-      duration: 0.0007049
+      duration: 0.0007724
       messages: 
       output: 
       stacktrace: 
@@ -7757,7 +7771,7 @@ MonoBehaviour:
       name: TestSuccess1
       fullName: Zenject.Tests.Other.TestDecoratorValidation.TestSuccess1
       resultStatus: 1
-      duration: 0.0011887
+      duration: 0.0080927
       messages: 
       output: 
       stacktrace: 
@@ -7774,7 +7788,7 @@ MonoBehaviour:
       name: TestFacadeSubContainer
       fullName: Zenject.Tests.Other.TestFacadeSubContainer
       resultStatus: 1
-      duration: 0.0168121
+      duration: 0.018078
       messages: 
       output: 
       stacktrace: 
@@ -7790,7 +7804,7 @@ MonoBehaviour:
       name: Test1
       fullName: Zenject.Tests.Other.TestFacadeSubContainer.Test1
       resultStatus: 1
-      duration: 0.0118817
+      duration: 0.0159338
       messages: 
       output: 
       stacktrace: 
@@ -7807,7 +7821,7 @@ MonoBehaviour:
       name: TestFactoryMemoryPoolCustomInterface
       fullName: Zenject.Tests.Other.TestFactoryMemoryPoolCustomInterface
       resultStatus: 1
-      duration: 0.0092605
+      duration: 0.0054168
       messages: 
       output: 
       stacktrace: 
@@ -7823,7 +7837,7 @@ MonoBehaviour:
       name: Test1
       fullName: Zenject.Tests.Other.TestFactoryMemoryPoolCustomInterface.Test1
       resultStatus: 1
-      duration: 0.0022979
+      duration: 0.0019353
       messages: 
       output: 
       stacktrace: 
@@ -7840,7 +7854,7 @@ MonoBehaviour:
       name: Test2
       fullName: Zenject.Tests.Other.TestFactoryMemoryPoolCustomInterface.Test2
       resultStatus: 1
-      duration: 0.0011533
+      duration: 0.0011025
       messages: 
       output: 
       stacktrace: 
@@ -7857,7 +7871,7 @@ MonoBehaviour:
       name: TestGenericContract
       fullName: Zenject.Tests.Other.TestGenericContract
       resultStatus: 1
-      duration: 0.0100028
+      duration: 0.0064755
       messages: 
       output: 
       stacktrace: 
@@ -7873,7 +7887,7 @@ MonoBehaviour:
       name: TestToSingle
       fullName: Zenject.Tests.Other.TestGenericContract.TestToSingle
       resultStatus: 1
-      duration: 0.0013468
+      duration: 0.0012059
       messages: 
       output: 
       stacktrace: 
@@ -7890,7 +7904,7 @@ MonoBehaviour:
       name: TestToSingleMultipleContracts
       fullName: Zenject.Tests.Other.TestGenericContract.TestToSingleMultipleContracts
       resultStatus: 1
-      duration: 0.0008943
+      duration: 0.0009151
       messages: 
       output: 
       stacktrace: 
@@ -7907,7 +7921,7 @@ MonoBehaviour:
       name: TestToSingleMultipleContractsMismatch
       fullName: Zenject.Tests.Other.TestGenericContract.TestToSingleMultipleContractsMismatch
       resultStatus: 1
-      duration: 0.0006982
+      duration: 0.0007161
       messages: 
       output: 
       stacktrace: 
@@ -7924,7 +7938,7 @@ MonoBehaviour:
       name: TestToTransient
       fullName: Zenject.Tests.Other.TestGenericContract.TestToTransient
       resultStatus: 1
-      duration: 0.0010429
+      duration: 0.0011182
       messages: 
       output: 
       stacktrace: 
@@ -7941,7 +7955,7 @@ MonoBehaviour:
       name: TestKeyedFactoryExample
       fullName: Zenject.Tests.Other.TestKeyedFactoryExample
       resultStatus: 1
-      duration: 0.0095545
+      duration: 0.0064725
       messages: 
       output: 
       stacktrace: 
@@ -7957,7 +7971,7 @@ MonoBehaviour:
       name: Test1
       fullName: Zenject.Tests.Other.TestKeyedFactoryExample.Test1
       resultStatus: 1
-      duration: 0.004393
+      duration: 0.0044968
       messages: 
       output: 
       stacktrace: 
@@ -7974,7 +7988,7 @@ MonoBehaviour:
       name: TestNestedContainer
       fullName: Zenject.Tests.Other.TestNestedContainer
       resultStatus: 1
-      duration: 0.0065208
+      duration: 0.0033485
       messages: 
       output: 
       stacktrace: 
@@ -7990,7 +8004,7 @@ MonoBehaviour:
       name: TestCase1
       fullName: Zenject.Tests.Other.TestNestedContainer.TestCase1
       resultStatus: 1
-      duration: 0.0013002
+      duration: 0.0012109
       messages: 
       output: 
       stacktrace: 
@@ -8007,7 +8021,7 @@ MonoBehaviour:
       name: TestPoolableManager
       fullName: Zenject.Tests.Other.TestPoolableManager
       resultStatus: 1
-      duration: 0.0108057
+      duration: 0.00791
       messages: 
       output: 
       stacktrace: 
@@ -8023,7 +8037,7 @@ MonoBehaviour:
       name: TestDefaultOrder
       fullName: Zenject.Tests.Other.TestPoolableManager.TestDefaultOrder
       resultStatus: 1
-      duration: 0.0046904
+      duration: 0.0045637
       messages: 
       output: 
       stacktrace: 
@@ -8040,7 +8054,7 @@ MonoBehaviour:
       name: TestExplicitOrder
       fullName: Zenject.Tests.Other.TestPoolableManager.TestExplicitOrder
       resultStatus: 1
-      duration: 0.0010581
+      duration: 0.0012076
       messages: 
       output: 
       stacktrace: 
@@ -8057,7 +8071,7 @@ MonoBehaviour:
       name: TestResolve
       fullName: Zenject.Tests.Other.TestResolve
       resultStatus: 1
-      duration: 0.0078962
+      duration: 0.0049998
       messages: 
       output: 
       stacktrace: 
@@ -8073,7 +8087,7 @@ MonoBehaviour:
       name: TestDirectListBindings1
       fullName: Zenject.Tests.Other.TestResolve.TestDirectListBindings1
       resultStatus: 1
-      duration: 0.0013232
+      duration: 0.0014019
       messages: 
       output: 
       stacktrace: 
@@ -8090,7 +8104,7 @@ MonoBehaviour:
       name: TestResolveAmbiguousBindings1
       fullName: Zenject.Tests.Other.TestResolve.TestResolveAmbiguousBindings1
       resultStatus: 1
-      duration: 0.000586
+      duration: 0.0005994
       messages: 
       output: 
       stacktrace: 
@@ -8107,7 +8121,7 @@ MonoBehaviour:
       name: TestResolveAmbiguousBindings2
       fullName: Zenject.Tests.Other.TestResolve.TestResolveAmbiguousBindings2
       resultStatus: 1
-      duration: 0.0004553
+      duration: 0.0004577
       messages: 
       output: 
       stacktrace: 
@@ -8124,7 +8138,7 @@ MonoBehaviour:
       name: TestResolveMany
       fullName: Zenject.Tests.Other.TestResolveMany
       resultStatus: 1
-      duration: 0.0068802
+      duration: 0.0037237
       messages: 
       output: 
       stacktrace: 
@@ -8140,7 +8154,7 @@ MonoBehaviour:
       name: TestCase1
       fullName: Zenject.Tests.Other.TestResolveMany.TestCase1
       resultStatus: 1
-      duration: 0.0010313
+      duration: 0.0010224
       messages: 
       output: 
       stacktrace: 
@@ -8157,7 +8171,7 @@ MonoBehaviour:
       name: TestOptional
       fullName: Zenject.Tests.Other.TestResolveMany.TestOptional
       resultStatus: 1
-      duration: 0.0004115
+      duration: 0.0004047
       messages: 
       output: 
       stacktrace: 
@@ -8174,7 +8188,7 @@ MonoBehaviour:
       name: TestSubContainers
       fullName: Zenject.Tests.Other.TestSubContainers
       resultStatus: 1
-      duration: 0.0074174
+      duration: 0.0046904
       messages: 
       output: 
       stacktrace: 
@@ -8190,7 +8204,7 @@ MonoBehaviour:
       name: TestCase2
       fullName: Zenject.Tests.Other.TestSubContainers.TestCase2
       resultStatus: 1
-      duration: 0.0010984
+      duration: 0.0011367
       messages: 
       output: 
       stacktrace: 
@@ -8207,7 +8221,7 @@ MonoBehaviour:
       name: TestIsRemoved
       fullName: Zenject.Tests.Other.TestSubContainers.TestIsRemoved
       resultStatus: 1
-      duration: 0.0005339
+      duration: 0.0005295
       messages: 
       output: 
       stacktrace: 
@@ -8224,7 +8238,7 @@ MonoBehaviour:
       name: TestMultipleSingletonDifferentScope
       fullName: Zenject.Tests.Other.TestSubContainers.TestMultipleSingletonDifferentScope
       resultStatus: 1
-      duration: 0.0006966
+      duration: 0.000704
       messages: 
       output: 
       stacktrace: 
@@ -8241,7 +8255,7 @@ MonoBehaviour:
       name: TestSubContainers4
       fullName: Zenject.Tests.Other.TestSubContainers4
       resultStatus: 1
-      duration: 0.00696
+      duration: 0.0115768
       messages: 
       output: 
       stacktrace: 
@@ -8257,7 +8271,7 @@ MonoBehaviour:
       name: RunTest
       fullName: Zenject.Tests.Other.TestSubContainers4.RunTest
       resultStatus: 1
-      duration: 0.0017817
+      duration: 0.0088036
       messages: 
       output: 
       stacktrace: 
@@ -8274,7 +8288,7 @@ MonoBehaviour:
       name: TestTaskUpdater
       fullName: Zenject.Tests.Other.TestTaskUpdater
       resultStatus: 1
-      duration: 0.0069246
+      duration: 0.0112772
       messages: 
       output: 
       stacktrace: 
@@ -8290,7 +8304,7 @@ MonoBehaviour:
       name: TestOrder
       fullName: Zenject.Tests.Other.TestTaskUpdater.TestOrder
       resultStatus: 1
-      duration: 0.0017636
+      duration: 0.0088177
       messages: 
       output: 
       stacktrace: 
@@ -8307,7 +8321,7 @@ MonoBehaviour:
       name: TestTickablesAreOptional
       fullName: Zenject.Tests.Other.TestTaskUpdater.TestTickablesAreOptional
       resultStatus: 1
-      duration: 0.000312
+      duration: 0.0003215
       messages: 
       output: 
       stacktrace: 
@@ -8324,7 +8338,7 @@ MonoBehaviour:
       name: TestTransientMockProvider
       fullName: Zenject.Tests.Other.TestTransientMockProvider
       resultStatus: 1
-      duration: 0.0050114
+      duration: 0.0022647
       messages: 
       output: 
       stacktrace: 
@@ -8340,7 +8354,7 @@ MonoBehaviour:
       name: TestCase1
       fullName: Zenject.Tests.Other.TestTransientMockProvider.TestCase1
       resultStatus: 1
-      duration: 0.0003767
+      duration: 0.0002843
       messages: 
       output: 
       stacktrace: 
@@ -8357,7 +8371,7 @@ MonoBehaviour:
       name: ZenjectProfileTest
       fullName: Zenject.Tests.Other.ZenjectProfileTest
       resultStatus: 1
-      duration: 0.0049349
+      duration: 0.0019054
       messages: 
       output: 
       stacktrace: 
@@ -8373,7 +8387,7 @@ MonoBehaviour:
       name: Test
       fullName: Zenject.Tests.Other.ZenjectProfileTest.Test
       resultStatus: 1
-      duration: 0.0001759
+      duration: 0.0001506
       messages: 
       output: 
       stacktrace: 
@@ -8390,7 +8404,7 @@ MonoBehaviour:
       name: Signals
       fullName: Zenject.Tests.Signals
       resultStatus: 1
-      duration: 0.0970652
+      duration: 0.1676294
       messages: 
       output: 
       stacktrace: 
@@ -8406,7 +8420,7 @@ MonoBehaviour:
       name: TestAsyncSignals
       fullName: Zenject.Tests.Signals.TestAsyncSignals
       resultStatus: 1
-      duration: 0.0186319
+      duration: 0.0781246
       messages: 
       output: 
       stacktrace: 
@@ -8422,7 +8436,7 @@ MonoBehaviour:
       name: TestBasicAsync
       fullName: Zenject.Tests.Signals.TestAsyncSignals.TestBasicAsync
       resultStatus: 1
-      duration: 0.0155914
+      duration: 0.0719682
       messages: 
       output: 
       stacktrace: 
@@ -8439,7 +8453,7 @@ MonoBehaviour:
       name: TestTickPriority
       fullName: Zenject.Tests.Signals.TestAsyncSignals.TestTickPriority
       resultStatus: 1
-      duration: 0.0020401
+      duration: 0.0024852
       messages: 
       output: 
       stacktrace: 
@@ -8456,7 +8470,7 @@ MonoBehaviour:
       name: TestBindSignal
       fullName: Zenject.Tests.Signals.TestBindSignal
       resultStatus: 1
-      duration: 0.0159139
+      duration: 0.0229932
       messages: 
       output: 
       stacktrace: 
@@ -8472,7 +8486,7 @@ MonoBehaviour:
       name: TestBindWithoutDeclaration
       fullName: Zenject.Tests.Signals.TestBindSignal.TestBindWithoutDeclaration
       resultStatus: 1
-      duration: 0.0020333
+      duration: 0.0022872
       messages: 
       output: 
       stacktrace: 
@@ -8489,7 +8503,7 @@ MonoBehaviour:
       name: TestIncompleteBinding
       fullName: Zenject.Tests.Signals.TestBindSignal.TestIncompleteBinding
       resultStatus: 1
-      duration: 0.0005816
+      duration: 0.0005885
       messages: 
       output: 
       stacktrace: 
@@ -8506,7 +8520,7 @@ MonoBehaviour:
       name: TestInstanceMethodHandler
       fullName: Zenject.Tests.Signals.TestBindSignal.TestInstanceMethodHandler
       resultStatus: 1
-      duration: 0.0014338
+      duration: 0.001636
       messages: 
       output: 
       stacktrace: 
@@ -8523,7 +8537,7 @@ MonoBehaviour:
       name: TestInstanceMethodHandler2
       fullName: Zenject.Tests.Signals.TestBindSignal.TestInstanceMethodHandler2
       resultStatus: 1
-      duration: 0.0013088
+      duration: 0.0015293
       messages: 
       output: 
       stacktrace: 
@@ -8540,7 +8554,7 @@ MonoBehaviour:
       name: TestMoveIntoDirectSubContainers
       fullName: Zenject.Tests.Signals.TestBindSignal.TestMoveIntoDirectSubContainers
       resultStatus: 1
-      duration: 0.0022364
+      duration: 0.0041114
       messages: 
       output: 'Fired signal ''TestBindSignal.FooSignal'' but no subscriptions found! 
         If this is intentional then either add OptionalSubscriber() to the binding
@@ -8561,7 +8575,7 @@ MonoBehaviour:
       name: TestStaticMethodHandler
       fullName: Zenject.Tests.Signals.TestBindSignal.TestStaticMethodHandler
       resultStatus: 1
-      duration: 0.0008596
+      duration: 0.0079956
       messages: 
       output: 
       stacktrace: 
@@ -8578,7 +8592,7 @@ MonoBehaviour:
       name: TestStaticMethodHandlerWithArgs
       fullName: Zenject.Tests.Signals.TestBindSignal.TestStaticMethodHandlerWithArgs
       resultStatus: 1
-      duration: 0.0007337
+      duration: 0.0008014
       messages: 
       output: 
       stacktrace: 
@@ -8595,7 +8609,7 @@ MonoBehaviour:
       name: TestSignalIdentifiers
       fullName: Zenject.Tests.Signals.TestSignalIdentifiers
       resultStatus: 1
-      duration: 0.0154193
+      duration: 0.0216119
       messages: 
       output: 
       stacktrace: 
@@ -8611,7 +8625,7 @@ MonoBehaviour:
       name: TestBindWithoutDeclaration
       fullName: Zenject.Tests.Signals.TestSignalIdentifiers.TestBindWithoutDeclaration
       resultStatus: 1
-      duration: 0.001339
+      duration: 0.0012226
       messages: 
       output: 
       stacktrace: 
@@ -8628,7 +8642,7 @@ MonoBehaviour:
       name: TestIncompleteBinding
       fullName: Zenject.Tests.Signals.TestSignalIdentifiers.TestIncompleteBinding
       resultStatus: 1
-      duration: 0.0006617
+      duration: 0.0006282
       messages: 
       output: 
       stacktrace: 
@@ -8645,7 +8659,7 @@ MonoBehaviour:
       name: TestInstanceMethodHandler
       fullName: Zenject.Tests.Signals.TestSignalIdentifiers.TestInstanceMethodHandler
       resultStatus: 1
-      duration: 0.0015998
+      duration: 0.0016211
       messages: 
       output: 
       stacktrace: 
@@ -8662,7 +8676,7 @@ MonoBehaviour:
       name: TestMissingDeclaration
       fullName: Zenject.Tests.Signals.TestSignalIdentifiers.TestMissingDeclaration
       resultStatus: 1
-      duration: 0.0007029
+      duration: 0.0006952
       messages: 
       output: 
       stacktrace: 
@@ -8679,7 +8693,7 @@ MonoBehaviour:
       name: TestStaticMethodHandler
       fullName: Zenject.Tests.Signals.TestSignalIdentifiers.TestStaticMethodHandler
       resultStatus: 1
-      duration: 0.0007663
+      duration: 0.0007718
       messages: 
       output: 
       stacktrace: 
@@ -8696,7 +8710,7 @@ MonoBehaviour:
       name: TestStaticMethodHandlerWithArgs
       fullName: Zenject.Tests.Signals.TestSignalIdentifiers.TestStaticMethodHandlerWithArgs
       resultStatus: 1
-      duration: 0.0007485
+      duration: 0.000759
       messages: 
       output: 
       stacktrace: 
@@ -8713,7 +8727,7 @@ MonoBehaviour:
       name: TestSubscribeAndUnsubscribe
       fullName: Zenject.Tests.Signals.TestSignalIdentifiers.TestSubscribeAndUnsubscribe
       resultStatus: 1
-      duration: 0.0030386
+      duration: 0.0031399
       messages: 
       output: 'Fired signal ''TestSignalIdentifiers.FooSignal'' but no subscriptions
         found!  If this is intentional then either add OptionalSubscriber() to the
@@ -8734,7 +8748,7 @@ MonoBehaviour:
       name: TestSignalRuntimeDeclaration
       fullName: Zenject.Tests.Signals.TestSignalRuntimeDeclaration
       resultStatus: 1
-      duration: 0.0102818
+      duration: 0.0071846
       messages: 
       output: 
       stacktrace: 
@@ -8750,7 +8764,7 @@ MonoBehaviour:
       name: TestFireSuccess
       fullName: Zenject.Tests.Signals.TestSignalRuntimeDeclaration.TestFireSuccess
       resultStatus: 1
-      duration: 0.0018739
+      duration: 0.0018691
       messages: 
       output: 'Fired signal ''FooSignal'' but no subscriptions found!  If this is
         intentional then either add OptionalSubscriber() to the binding or change
@@ -8771,7 +8785,7 @@ MonoBehaviour:
       name: TestIdentifier
       fullName: Zenject.Tests.Signals.TestSignalRuntimeDeclaration.TestIdentifier
       resultStatus: 1
-      duration: 0.0010672
+      duration: 0.0011235
       messages: 
       output: 'Fired signal ''FooSignal'' but no subscriptions found!  If this is
         intentional then either add OptionalSubscriber() to the binding or change
@@ -8792,7 +8806,7 @@ MonoBehaviour:
       name: TestIdentifierMissing
       fullName: Zenject.Tests.Signals.TestSignalRuntimeDeclaration.TestIdentifierMissing
       resultStatus: 1
-      duration: 0.0006727
+      duration: 0.0006728
       messages: 
       output: 
       stacktrace: 
@@ -8809,7 +8823,7 @@ MonoBehaviour:
       name: TestMissingDeclaration
       fullName: Zenject.Tests.Signals.TestSignalRuntimeDeclaration.TestMissingDeclaration
       resultStatus: 1
-      duration: 0.000535
+      duration: 0.0005636
       messages: 
       output: 
       stacktrace: 
@@ -8826,7 +8840,7 @@ MonoBehaviour:
       name: TestSignals1
       fullName: Zenject.Tests.Signals.TestSignals1
       resultStatus: 1
-      duration: 0.0114275
+      duration: 0.0161516
       messages: 
       output: 
       stacktrace: 
@@ -8842,7 +8856,7 @@ MonoBehaviour:
       name: TestMissingDeclaration
       fullName: Zenject.Tests.Signals.TestSignals1.TestMissingDeclaration
       resultStatus: 1
-      duration: 0.0007346
+      duration: 0.0006986
       messages: 
       output: 
       stacktrace: 
@@ -8859,7 +8873,7 @@ MonoBehaviour:
       name: TestSubscribeAndUnsubscribe
       fullName: Zenject.Tests.Signals.TestSignals1.TestSubscribeAndUnsubscribe
       resultStatus: 1
-      duration: 0.0015704
+      duration: 0.0015992
       messages: 
       output: 'Fired signal ''TestSignals1.FooSignal'' but no subscriptions found! 
         If this is intentional then either add OptionalSubscriber() to the binding
@@ -8880,7 +8894,7 @@ MonoBehaviour:
       name: TestUnsubscribeWithoutSubscribe
       fullName: Zenject.Tests.Signals.TestSignals1.TestUnsubscribeWithoutSubscribe
       resultStatus: 1
-      duration: 0.0009885
+      duration: 0.0010288
       messages: 
       output: 
       stacktrace: 
@@ -8897,7 +8911,7 @@ MonoBehaviour:
       name: TestUntypedSubscribe
       fullName: Zenject.Tests.Signals.TestSignals1.TestUntypedSubscribe
       resultStatus: 1
-      duration: 0.0013391
+      duration: 0.0014609
       messages: 
       output: 'Fired signal ''TestSignals1.BarSignal'' but no subscriptions found! 
         If this is intentional then either add OptionalSubscriber() to the binding
@@ -8918,7 +8932,7 @@ MonoBehaviour:
       name: TestWithArgs
       fullName: Zenject.Tests.Signals.TestSignals1.TestWithArgs
       resultStatus: 1
-      duration: 0.0010511
+      duration: 0.0083411
       messages: 
       output: 
       stacktrace: 
@@ -8935,7 +8949,7 @@ MonoBehaviour:
       name: TestSignalsAdvanced
       fullName: Zenject.Tests.Signals.TestSignalsAdvanced
       resultStatus: 1
-      duration: 0.0204451
+      duration: 0.0191029
       messages: 
       output: 
       stacktrace: 
@@ -8951,7 +8965,7 @@ MonoBehaviour:
       name: TestIsDeclared1
       fullName: Zenject.Tests.Signals.TestSignalsAdvanced.TestIsDeclared1
       resultStatus: 1
-      duration: 0.0011335
+      duration: 0.0011152
       messages: 
       output: 
       stacktrace: 
@@ -8968,7 +8982,7 @@ MonoBehaviour:
       name: TestIsDeclared2
       fullName: Zenject.Tests.Signals.TestSignalsAdvanced.TestIsDeclared2
       resultStatus: 1
-      duration: 0.0006328
+      duration: 0.0006133
       messages: 
       output: 
       stacktrace: 
@@ -8985,7 +8999,7 @@ MonoBehaviour:
       name: TestSignalDeclarationSettingsRequireHandler
       fullName: Zenject.Tests.Signals.TestSignalsAdvanced.TestSignalDeclarationSettingsRequireHandler
       resultStatus: 1
-      duration: 0.0008249
+      duration: 0.0008716
       messages: 
       output: 
       stacktrace: 
@@ -9002,7 +9016,7 @@ MonoBehaviour:
       name: TestSignalDeclarationSettingsRequireHandlerMissing
       fullName: Zenject.Tests.Signals.TestSignalsAdvanced.TestSignalDeclarationSettingsRequireHandlerMissing
       resultStatus: 1
-      duration: 0.0011259
+      duration: 0.0013548
       messages: 
       output: 'Fired signal ''TestSignalsAdvanced.FooSignal'' but no subscriptions
         found!  If this is intentional then either add OptionalSubscriber() to the
@@ -9023,7 +9037,7 @@ MonoBehaviour:
       name: TestSignalDeclarationSettingsRunAsync1
       fullName: Zenject.Tests.Signals.TestSignalsAdvanced.TestSignalDeclarationSettingsRunAsync1
       resultStatus: 1
-      duration: 0.0015009
+      duration: 0.0015094
       messages: 
       output: 
       stacktrace: 
@@ -9040,7 +9054,7 @@ MonoBehaviour:
       name: TestSignalDeclarationSettingsRunAsync2
       fullName: Zenject.Tests.Signals.TestSignalsAdvanced.TestSignalDeclarationSettingsRunAsync2
       resultStatus: 1
-      duration: 0.0012565
+      duration: 0.001382
       messages: 
       output: 
       stacktrace: 
@@ -9057,7 +9071,7 @@ MonoBehaviour:
       name: TestSubcontainers1
       fullName: Zenject.Tests.Signals.TestSignalsAdvanced.TestSubcontainers1
       resultStatus: 1
-      duration: 0.0043476
+      duration: 0.0051855
       messages: 
       output: 'Fired signal ''TestSignalsAdvanced.FooSignal'' but no subscriptions
         found!  If this is intentional then either add OptionalSubscriber() to the
@@ -9078,7 +9092,7 @@ MonoBehaviour:
       name: TestSubscribeDeterministicOrder
       fullName: Zenject.Tests.Signals.TestSignalsAdvanced.TestSubscribeDeterministicOrder
       resultStatus: 1
-      duration: 0.0008922
+      duration: 0.0008711
       messages: 
       output: 
       stacktrace: 
@@ -9095,7 +9109,7 @@ MonoBehaviour:
       name: TestSubscribeUnsubscribeInsideHandler
       fullName: Zenject.Tests.Signals.TestSignalsAdvanced.TestSubscribeUnsubscribeInsideHandler
       resultStatus: 1
-      duration: 0.0020136
+      duration: 0.0022246
       messages: 
       output: 'Fired signal ''TestSignalsAdvanced.FooSignal'' but no subscriptions
         found!  If this is intentional then either add OptionalSubscriber() to the
@@ -9120,7 +9134,7 @@ MonoBehaviour:
       name: TestArrayPool
       fullName: Zenject.Tests.TestArrayPool
       resultStatus: 1
-      duration: 0.0078412
+      duration: 0.0045182
       messages: 
       output: 
       stacktrace: 
@@ -9136,7 +9150,7 @@ MonoBehaviour:
       name: RunTest
       fullName: Zenject.Tests.TestArrayPool.RunTest
       resultStatus: 1
-      duration: 0.0022668
+      duration: 0.0021781
       messages: 
       output: 
       stacktrace: 
@@ -9153,7 +9167,7 @@ MonoBehaviour:
       name: TestDisposeBlock
       fullName: Zenject.Tests.TestDisposeBlock
       resultStatus: 1
-      duration: 0.0095529
+      duration: 0.0070914
       messages: 
       output: 
       stacktrace: 
@@ -9169,7 +9183,7 @@ MonoBehaviour:
       name: TestExceptions
       fullName: Zenject.Tests.TestDisposeBlock.TestExceptions
       resultStatus: 1
-      duration: 0.0010391
+      duration: 0.001098
       messages: 
       output: 
       stacktrace: 
@@ -9186,7 +9200,7 @@ MonoBehaviour:
       name: TestWithNormalMemoryPool
       fullName: Zenject.Tests.TestDisposeBlock.TestWithNormalMemoryPool
       resultStatus: 1
-      duration: 0.0014477
+      duration: 0.0016103
       messages: 
       output: 
       stacktrace: 
@@ -9203,7 +9217,7 @@ MonoBehaviour:
       name: TestWithStaticMemoryPool
       fullName: Zenject.Tests.TestDisposeBlock.TestWithStaticMemoryPool
       resultStatus: 1
-      duration: 0.0014412
+      duration: 0.0014749
       messages: 
       output: 
       stacktrace: 
@@ -9220,7 +9234,7 @@ MonoBehaviour:
       name: TestPoolableStaticMemoryPool
       fullName: Zenject.Tests.TestPoolableStaticMemoryPool
       resultStatus: 1
-      duration: 0.0063936
+      duration: 0.0034315
       messages: 
       output: 
       stacktrace: 
@@ -9236,7 +9250,7 @@ MonoBehaviour:
       name: RunTest
       fullName: Zenject.Tests.TestPoolableStaticMemoryPool.RunTest
       resultStatus: 1
-      duration: 0.0014957
+      duration: 0.0013262
       messages: 
       output: 
       stacktrace: 
@@ -9253,7 +9267,7 @@ MonoBehaviour:
       name: TestStaticMemoryPool
       fullName: Zenject.Tests.TestStaticMemoryPool
       resultStatus: 1
-      duration: 0.0102553
+      duration: 0.0071762
       messages: 
       output: 
       stacktrace: 
@@ -9269,7 +9283,7 @@ MonoBehaviour:
       name: RunTest
       fullName: Zenject.Tests.TestStaticMemoryPool.RunTest
       resultStatus: 1
-      duration: 0.0016663
+      duration: 0.001486
       messages: 
       output: 
       stacktrace: 
@@ -9286,7 +9300,7 @@ MonoBehaviour:
       name: TestListPool
       fullName: Zenject.Tests.TestStaticMemoryPool.TestListPool
       resultStatus: 1
-      duration: 0.0010612
+      duration: 0.0010601
       messages: 
       output: 
       stacktrace: 
@@ -9303,7 +9317,7 @@ MonoBehaviour:
       name: TestPoolWrapper
       fullName: Zenject.Tests.TestStaticMemoryPool.TestPoolWrapper
       resultStatus: 1
-      duration: 0.0006079
+      duration: 0.0006973
       messages: 
       output: 
       stacktrace: 
@@ -9320,7 +9334,7 @@ MonoBehaviour:
       name: TestResize
       fullName: Zenject.Tests.TestStaticMemoryPool.TestResize
       resultStatus: 1
-      duration: 0.0013619
+      duration: 0.0013077
       messages: 
       output: 
       stacktrace: 
@@ -9337,7 +9351,7 @@ MonoBehaviour:
       name: TestTestUtil
       fullName: Zenject.Tests.TestTestUtil
       resultStatus: 1
-      duration: 0.0065026
+      duration: 0.0036733
       messages: 
       output: 
       stacktrace: 
@@ -9353,7 +9367,7 @@ MonoBehaviour:
       name: TestFalse
       fullName: Zenject.Tests.TestTestUtil.TestFalse
       resultStatus: 1
-      duration: 0.0009723
+      duration: 0.0012744
       messages: 
       output: 
       stacktrace: 
@@ -9370,7 +9384,7 @@ MonoBehaviour:
       name: TestTrue
       fullName: Zenject.Tests.TestTestUtil.TestTrue
       resultStatus: 1
-      duration: 0.0002873
+      duration: 0.0002408
       messages: 
       output: 
       stacktrace: 
@@ -9387,7 +9401,7 @@ MonoBehaviour:
       name: TestValidation
       fullName: Zenject.Tests.TestValidation
       resultStatus: 1
-      duration: 0.0186047
+      duration: 0.015577
       messages: 
       output: 
       stacktrace: 
@@ -9403,7 +9417,7 @@ MonoBehaviour:
       name: TestCustomValidatable
       fullName: Zenject.Tests.TestValidation.TestCustomValidatable
       resultStatus: 1
-      duration: 0.0013047
+      duration: 0.0012621
       messages: 
       output: 
       stacktrace: 
@@ -9420,7 +9434,7 @@ MonoBehaviour:
       name: TestFactoryFail
       fullName: Zenject.Tests.TestValidation.TestFactoryFail
       resultStatus: 1
-      duration: 0.0015072
+      duration: 0.0014755
       messages: 
       output: 
       stacktrace: 
@@ -9437,7 +9451,7 @@ MonoBehaviour:
       name: TestFactorySuccess
       fullName: Zenject.Tests.TestValidation.TestFactorySuccess
       resultStatus: 1
-      duration: 0.000766
+      duration: 0.000795
       messages: 
       output: 
       stacktrace: 
@@ -9454,7 +9468,7 @@ MonoBehaviour:
       name: TestFailure
       fullName: Zenject.Tests.TestValidation.TestFailure
       resultStatus: 1
-      duration: 0.0004969
+      duration: 0.0005031
       messages: 
       output: 
       stacktrace: 
@@ -9471,7 +9485,7 @@ MonoBehaviour:
       name: TestLazyFail
       fullName: Zenject.Tests.TestValidation.TestLazyFail
       resultStatus: 1
-      duration: 0.0010724
+      duration: 0.001092
       messages: 
       output: 
       stacktrace: 
@@ -9488,7 +9502,7 @@ MonoBehaviour:
       name: TestLazySuccess
       fullName: Zenject.Tests.TestValidation.TestLazySuccess
       resultStatus: 1
-      duration: 0.0008689
+      duration: 0.0009027
       messages: 
       output: 
       stacktrace: 
@@ -9505,7 +9519,7 @@ MonoBehaviour:
       name: TestMemoryPoolFailure
       fullName: Zenject.Tests.TestValidation.TestMemoryPoolFailure
       resultStatus: 1
-      duration: 0.0011916
+      duration: 0.0012414
       messages: 
       output: 
       stacktrace: 
@@ -9522,7 +9536,7 @@ MonoBehaviour:
       name: TestMemoryPoolSuccess
       fullName: Zenject.Tests.TestValidation.TestMemoryPoolSuccess
       resultStatus: 1
-      duration: 0.0004759
+      duration: 0.0004814
       messages: 
       output: 
       stacktrace: 
@@ -9539,7 +9553,7 @@ MonoBehaviour:
       name: TestNumCalls
       fullName: Zenject.Tests.TestValidation.TestNumCalls
       resultStatus: 1
-      duration: 0.0009169
+      duration: 0.0009209
       messages: 
       output: 
       stacktrace: 
@@ -9556,7 +9570,7 @@ MonoBehaviour:
       name: TestSubContainerInstallerFailure
       fullName: Zenject.Tests.TestValidation.TestSubContainerInstallerFailure
       resultStatus: 1
-      duration: 0.0008073
+      duration: 0.0008373
       messages: 
       output: 
       stacktrace: 
@@ -9573,7 +9587,7 @@ MonoBehaviour:
       name: TestSubContainerMethodFailure
       fullName: Zenject.Tests.TestValidation.TestSubContainerMethodFailure
       resultStatus: 1
-      duration: 0.0008142
+      duration: 0.000782
       messages: 
       output: 
       stacktrace: 
@@ -9590,7 +9604,7 @@ MonoBehaviour:
       name: TestSubContainerMethodSuccess
       fullName: Zenject.Tests.TestValidation.TestSubContainerMethodSuccess
       resultStatus: 1
-      duration: 0.0007931
+      duration: 0.0007826
       messages: 
       output: 
       stacktrace: 
@@ -9607,7 +9621,7 @@ MonoBehaviour:
       name: TestSuccess
       fullName: Zenject.Tests.TestValidation.TestSuccess
       resultStatus: 1
-      duration: 0.0004022
+      duration: 0.0004079
       messages: 
       output: 
       stacktrace: 
@@ -9624,7 +9638,7 @@ MonoBehaviour:
       name: TestValidationSettings
       fullName: Zenject.Tests.TestValidationSettings
       resultStatus: 1
-      duration: 0.0075701
+      duration: 0.0039746
       messages: 
       output: 
       stacktrace: 
@@ -9640,7 +9654,7 @@ MonoBehaviour:
       name: TestOutsideObjectGraph1
       fullName: Zenject.Tests.TestValidationSettings.TestOutsideObjectGraph1
       resultStatus: 1
-      duration: 0.000623
+      duration: 0.000516
       messages: 
       output: 
       stacktrace: 
@@ -9657,7 +9671,7 @@ MonoBehaviour:
       name: TestOutsideObjectGraph2
       fullName: Zenject.Tests.TestValidationSettings.TestOutsideObjectGraph2
       resultStatus: 1
-      duration: 0.0006081
+      duration: 0.0005605
       messages: 
       output: 
       stacktrace: 
@@ -9674,7 +9688,7 @@ MonoBehaviour:
       name: TestValidationErrorThrows
       fullName: Zenject.Tests.TestValidationSettings.TestValidationErrorThrows
       resultStatus: 1
-      duration: 0.0004133
+      duration: 0.0004228
       messages: 
       output: 
       stacktrace: 
@@ -9686,13 +9700,13 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1035
       parentUniqueId: Zenject-UnitTests-Editor.dll/Zenject/Tests/[Zenject-UnitTests-Editor][Zenject.Tests.TestValidationSettings][suite]
-    m_ResultText: Tests (0.021s)
+    m_ResultText: EquipmentTest (0.066s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 9cb3f2fc
-      m_LastClickedID: -51203172
-      m_ExpandedIDs: ba8a27802076b780a9cd0a838c3b7d859daf2e88f1fe3b892a6fd689d69f388ccfebdc8f30e5d1901cc3719205cb62951744ab9541b6fd9726d2ca997a9792a0c5dc25a1b40f83a68ac4e9a62cecfda865d8b8a9d3e1a6ab2b3ed9ab23b810ac8b1b2eadac1b46b00158ebb09d1511b1a47a31be5d514cc681f0d7c6e881e0c7eaedb4c92ed928ca954229cac1c4ffcb7a4f13cc09fa37d4b342aad8113b2dd91e3b3cd9ddad9bd9db76b8d97d0786ddbe4a90ddfc37dddd20fa82de599eacdf643d13e55fb13feb9ba435ec50e340ed149096ed6ce072ee37ccc9f071f0baf59cb3f2fc377d7dfd287c46fe581af0ffc9c8b60000025d026294700497db500aa9b1200bca982f0c4f00300c4e9b0d0f7eed1c1098ab6311fb7616148877bb15905f0e18a37852188eff8719d406c61b41cf001c0031b01c8adeda20a1c1ba237cf7e7231c5e6226870a6128be0da0295dedc92adc1d212bb804472c65bf832d6d272d3043b45a30c40107332e094933892b8534a65aa437ce55e9374c12d9399cccd23b8abb453df0ea4e3d9b09ca3e6745c23f97bca5410289c141818fec413526ff4b1af2164cfc2c484d5efce74ff9bc6151aa565c52d5130153b534de534b1ac05459e2e255b60302587d187c599695665cbc033a5db7afaf5d9b35a86078988866a286af66edb20971e586f075bcad74762be2c0786a8bb47c93d9ee7eb501497fffffff7f
+      m_SelectedIDs: 07caa7b0
+      m_LastClickedID: -1331181049
+      m_ExpandedIDs: ba8a27802076b780a9cd0a838c3b7d859daf2e88f1fe3b892a6fd689d69f388ccfebdc8f30e5d1901cc3719205cb62951744ab9541b6fd9726d2ca997a9792a0c5dc25a1b40f83a68ac4e9a62cecfda865d8b8a9d3e1a6ab98efa8ab2b3ed9ab23b810ac8b1b2eadac1b46b007caa7b00158ebb09d1511b1a47a31be5d514cc681f0d7c6e881e0c7eaedb4c92ed928ca954229cac1c4ffcb7a4f13cc09fa37d4b342aad8113b2dd91e3b3cd9ddad9bd9db76b8d97d0786ddfc37dddd20fa82de599eacdf643d13e55fb13feb9ba435ec50e340ed149096ed6ce072ee37ccc9f071f0baf5377d7dfd287c46fe581af0ffc9c8b60000025d026294700497db500aa9b1200bca982f0c4f00300c4e9b0d0f7eed1c1098ab6311fb7616148877bb15905f0e18a37852188eff8719d406c61b41cf001c0031b01c8adeda20a1c1ba237cf7e7231c5e6226870a6128be0da0295dedc92adc1d212bb804472c65bf832d6d272d3043b45a302e094933892b85345874d936a65aa437ce55e9374c12d939f155a83b9cccd23b8abb453df0ea4e3d9b09ca3e6745c23f97bca5410289c141818fec413526ff4b1af2164cfc2c484d5efce74ff9bc6151aa565c52d5130153b534de534b1ac05459e2e255b60302587d187c599695665cbc033a5d9b35a86078988866a286af66e586f075bcad74762be2c0786a8bb47c93d9ee7eb501497fffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -9718,7 +9732,7 @@ MonoBehaviour:
       selectedCategoryMask: 0
       availableCategories:
       - Uncategorized
---- !u!114 &17
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9811,7 +9825,7 @@ MonoBehaviour:
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &18
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9834,7 +9848,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 441
     y: 73
-    width: 379
+    width: 289
     height: 936
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -10117,7 +10131,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &19
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10138,9 +10152,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 822
+    x: 732
     y: 73
-    width: 163
+    width: 188
     height: 642
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -10149,9 +10163,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 5e23ffff2624ffffc026ffffa045ffff6846fffffc48ffff4c4affff144bffffae4dffff5a55ffff3456ffffec57ffff4e76ffff1677ffffae79ffff5e89ffff3a93ffff68b1ffff1cb2ffff06b3ffff2af2fffff2f2ffff8af5ffff2cfbffffb6710000f2770000
+      m_SelectedIDs: ba860000
+      m_LastClickedID: 34490
+      m_ExpandedIDs: e0d3feff2ad4feff5ee8feffa8e8feff90ebfeff74f3feff2a0dffff740dffff3010fffffc13ffffe21affff321bffffd623ffff2a28ffff8c34ffff743effff2c47ffff184affffac5affff625fffffba67ffffde68ffff7e6dffff0a76ffff947dffff9e83ffff3c8fffff1e94ffff4c9affff3a9dffff8ea4ffff4ea5ffffd2a7ffff1aa8ffff48c3ffff08c4ffff88c6ffff20cbffff2afbffff1e6e0000486e0000e2790000007a0000047a00006e8200009a820000a6820000aa8200006a83000096830000a2830000a683000048850000d4860000ec860000f0860000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -10167,7 +10181,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 12}
+        m_ClientGUIView: {fileID: 10}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -10175,7 +10189,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 48ca5181d9c0ec345a8b3116270747c0
---- !u!114 &20
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10196,9 +10210,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 987
+    x: 922
     y: 73
-    width: 381
+    width: 382
     height: 642
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -10230,9 +10244,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d6700000
-    m_LastClickedID: 28886
-    m_ExpandedIDs: 00000000026f0000046f0000066f0000086f00000a6f00000c6f00000e6f0000106f0000126f0000146f0000166f0000186f00001a6f00001c6f00001e6f0000206f0000226f0000246f0000266f0000286f00002a6f00002c6f00002e6f0000306f0000326f0000346f0000366f0000386f00003a6f00003c6f00003e6f0000406f0000426f0000446f0000466f0000486f00004a6f00004c6f00004e6f0000d8700000e0700000cc72000000ca9a3bffffff7f
+    m_SelectedIDs: 34790000
+    m_LastClickedID: 31028
+    m_ExpandedIDs: 000000008a6e00008c6e00008e6e0000906e0000926e0000946e0000966e0000986e00009a6e00009c6e00009e6e0000a06e0000a26e0000a46e0000a66e0000a86e0000aa6e0000ac6e0000ae6e0000b06e0000b26e0000b46e0000b66e0000b86e0000ba6e0000bc6e0000be6e0000c06e0000c26e0000c46e0000c66e0000c86e0000ca6e0000cc6e0000ce6e0000d06e0000d26e0000d46e0000d66e0000d86e0000da6e0000dc6e0000de6e0000e06e0000e26e0000e46e00004079000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -10248,7 +10262,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 13}
+      m_ClientGUIView: {fileID: 0}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -10260,7 +10274,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000026f0000046f0000066f0000086f00000a6f00000c6f00000e6f0000106f0000126f0000146f0000166f0000186f00001a6f00001c6f00001e6f0000206f0000226f0000246f0000266f0000286f00002a6f00002c6f00002e6f0000306f0000326f0000346f0000366f0000386f00003a6f00003c6f00003e6f0000406f0000426f0000446f0000466f0000486f00004a6f00004c6f00004e6f0000
+    m_ExpandedIDs: 000000008a6e00008c6e00008e6e0000906e0000926e0000946e0000966e0000986e00009a6e00009c6e00009e6e0000a06e0000a26e0000a46e0000a66e0000a86e0000aa6e0000ac6e0000ae6e0000b06e0000b26e0000b46e0000b66e0000b86e0000ba6e0000bc6e0000be6e0000c06e0000c26e0000c46e0000c66e0000c86e0000ca6e0000cc6e0000ce6e0000d06e0000d26e0000d46e0000d66e0000d86e0000da6e0000dc6e0000de6e0000e06e0000e26e0000e46e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -10304,7 +10318,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 13}
+      m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -10315,8 +10329,8 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 220
---- !u!114 &21
+  m_DirectoriesAreaWidth: 183
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10337,15 +10351,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 822
+    x: 732
     y: 736
-    width: 546
+    width: 572
     height: 273
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &22
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10366,10 +10380,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1370
+    x: 1306
     y: 73
-    width: 549
-    height: 660
+    width: 613
+    height: 936
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

@@ -10,7 +10,7 @@ namespace Inventory.Installers
         public override void InstallBindings()
         {
             Container.Bind<IEntity>().FromComponentInHierarchy().AsSingle();
-            Container.Bind<InventoryItemEquiper>().FromNew().AsSingle();
+            Container.Bind<InventoryItemEquipment>().FromNew().AsSingle();
             Container.BindInterfacesAndSelfTo<InventoryContext>().FromComponentInHierarchy().AsSingle();
         }
     }
