@@ -17,7 +17,6 @@ public class EquipmentTest
     {
         //Arrange
         ListInventory listInventory = new ListInventory();
-        EquipmentService equipmentService = new EquipmentService(listInventory);
         var equipmentComponent = new EquipmentComponent
         {
             Type = EquipmentType.Legs
@@ -32,7 +31,7 @@ public class EquipmentTest
         ));
         
         //Assert
-        bool isHaveLegs = equipmentService.FindItem(EquipmentType.Legs, out var result);
+        bool isHaveLegs = listInventory.FindItem(EquipmentType.Legs, out var result);
         Assert.True(isHaveLegs);
     }
 
@@ -41,7 +40,6 @@ public class EquipmentTest
     {
         //Arrange
         ListInventory listInventory = new ListInventory();
-        EquipmentService equipmentService = new EquipmentService(listInventory);
         
         var equipmentComponent = new EquipmentComponent
         {
@@ -61,7 +59,7 @@ public class EquipmentTest
         listInventory.RemoveItem(item);
         
         //Assert
-        bool isHaveLegs = equipmentService.FindItem(EquipmentType.Legs, out var result);
+        bool isHaveLegs = listInventory.FindItem(EquipmentType.Legs, out var result);
         Assert.False(isHaveLegs);
     }
 
@@ -70,7 +68,6 @@ public class EquipmentTest
     {
         //Arrange
         ListInventory listInventory = new ListInventory();
-        EquipmentService equipmentService = new EquipmentService(listInventory);
         
         var equipmentComponent = new EquipmentComponent
         {
@@ -84,13 +81,13 @@ public class EquipmentTest
             equipmentComponent
         );
         listInventory.AddItem(item); 
-        ListEquipment listEquipment = new ListEquipment(equipmentService);
+        ListEquipment listEquipment = new ListEquipment();
 
         //Act
-        InventoryItem legsItem = equipmentService.GetItem(EquipmentType.Legs);
+        InventoryItem legsItem = listInventory.GetItem(EquipmentType.Legs);
 
         //Assert
-        bool isEquip = listEquipment.Equip(legsItem);
+        bool isEquip = listEquipment.Equip(EquipmentType.Legs, legsItem);
         Assert.True(isEquip);
     }
 
@@ -99,7 +96,6 @@ public class EquipmentTest
     {
         //Arrange
         ListInventory listInventory = new ListInventory();
-        EquipmentService equipmentService = new EquipmentService(listInventory);
         
         var equipmentComponent = new EquipmentComponent
         {
@@ -113,11 +109,12 @@ public class EquipmentTest
             equipmentComponent
         );
         listInventory.AddItem(item); 
-        ListEquipment listEquipment = new ListEquipment(equipmentService);
-        InventoryItem legsItem = equipmentService.GetItem(EquipmentType.Legs);
+        ListEquipment listEquipment = new ListEquipment();
+        
+        InventoryItem legsItem = listInventory.GetItem(EquipmentType.Legs);
 
         //Act
-        listEquipment.Equip(legsItem);
+        listEquipment.Equip(EquipmentType.Legs, legsItem);
         
         //Assert
         Assert.AreEqual(legsItem, listEquipment.GetItem(EquipmentType.Legs));
@@ -128,8 +125,8 @@ public class EquipmentTest
     {
         //Arrange
         ListInventory listInventory = new ListInventory();
-        EquipmentService equipmentService = new EquipmentService(listInventory);
-        var listEquipment = new ListEquipment(equipmentService);
+        var listEquipment = new ListEquipment();
+        InventoryItemEquipment inventoryItemEquipment = new InventoryItemEquipment(listEquipment, listInventory);
         var entity = Substitution.CreateComponent<TestEntity>();
         var effector = new Effector<IEffect>();
         var playerModel = Substitution.CreateComponent<PlayerModel>();
@@ -144,7 +141,7 @@ public class EquipmentTest
         listInventory.AddItem(item);
         
         //Act
-        listEquipment.Equip(item);
+        inventoryItemEquipment.Equip(item);
         
         //Assert
         Assert.AreEqual(2f, playerModel.Damage.Value);

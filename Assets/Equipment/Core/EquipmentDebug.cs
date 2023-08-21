@@ -17,9 +17,15 @@ namespace Equipment.Core
         private InventoryItemEquipment _equipment;
 
         [Button]
-        public void DebugEquip()
+        public void AddInventoryItem(InventoryItemConfig config)
         {
-            _listInventory.FindItem("boots", out var result);
+            _listInventory.AddItem(config.item.Clone());
+        }
+        
+        [Button]
+        public void DebugEquip(InventoryItemConfig config)
+        {
+            _listInventory.FindItem(config.item.Name, out var result);
             _equipment.Equip(result);
         }
     }
