@@ -2,15 +2,8 @@
 
 namespace Game.Reward
 {
-    public class RewardFactory : IFactory<RewardConfig, Reward>
+    public class RewardFactory : PlaceholderFactory<RewardConfig, Reward>
     {
-        [Inject] private DiContainer _container;
         
-        public Reward Create(RewardConfig config)
-        {
-            var reward = config.Create();
-            _container.Inject(reward);
-            return reward;
-        }
     }
 }

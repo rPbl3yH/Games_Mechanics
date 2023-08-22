@@ -5,13 +5,13 @@ using UnityEngine;
 namespace Game
 {
     [CreateAssetMenu(menuName = "Rewards/ChestRewardConfig", fileName = "TimeRewardConfig", order = 0)]
-    public class ChestRewardConfig : ScriptableObject
+    public class ChestConfig : ScriptableObject
     {
         public string Id;
         public float ReceivingTime;
-        public List<RewardConfig> RewardConfigs;
+        [SerializeField] private List<RewardConfig> RewardConfigs;
 
-        public RewardConfig GetRandom()
+        public RewardConfig GetRandomReward()
         {
             var randomId = Random.Range(0, RewardConfigs.Count);
             return RewardConfigs[randomId];

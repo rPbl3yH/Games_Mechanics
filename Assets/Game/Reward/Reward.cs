@@ -4,8 +4,11 @@ using Zenject;
 namespace Game.Reward
 {
     [Serializable]
-    public abstract class Reward
+    public class Reward 
     {
-        public abstract void ReceiveReward();
+        public virtual void ReceiveReward()
+        {
+            
+        }
     }
 }
