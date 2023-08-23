@@ -1,4 +1,5 @@
-using Zenject;
+
+using VContainer;
 
 namespace Game.GamePlay.Upgrades
 {

@@ -1,13 +1,21 @@
 using Entities;
 using Game.GamePlay.Conveyor.Components;
-using Zenject;
+using UnityEngine;
+using VContainer;
 
 namespace Game.GamePlay.Upgrades
 {
     class LoadStorageUpgrade : Upgrade
     {
-        [Inject] private IEntity _conveyorModel;
+        private IEntity _conveyorEntity;
         private readonly LoadStorageUpgradeConfig _config;
+
+		[Inject]
+		public void Construct(IEntity entity)
+        {
+            Debug.Log("Inject in load storage upgrade");
+            _conveyorEntity = entity;
+        }
 
         public LoadStorageUpgrade(LoadStorageUpgradeConfig config) : base(config)
         {
@@ -16,7 +24,7 @@ namespace Game.GamePlay.Upgrades
 
         protected override void OnUpgrade(int newLevel)
         {
-            _conveyorModel.Get<IConveyor_SetLoadStorageComponent>().SetLoadStorage(
+            _conveyorEntity.Get<IConveyor_SetLoadStorageComponent>().SetLoadStorage(
                 _config.StorageUpgradeTable.GetLoadStorage(newLevel)
                 );
         }

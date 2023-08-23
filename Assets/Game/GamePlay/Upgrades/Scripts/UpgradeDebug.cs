@@ -1,17 +1,25 @@
+using Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using Zenject;
+using VContainer;
 
 namespace Game.GamePlay.Upgrades
 {
     public class UpgradeDebug : MonoBehaviour
     {
-        [SerializeField] private MoneyStorage _moneyStorage;
 
         [Header("Debug")] 
         [SerializeField] private string _upgradeId;
 
-        [Inject] private UpgradesManager _upgradesManager;
+        private IMoneyStorage _moneyStorage;
+        private UpgradesManager _upgradesManager;
+
+        [Inject]
+        public void Construct(IMoneyStorage moneyStorage, UpgradesManager upgradesManager) {
+            Debug.Log("Inject in upgrade debug");
+            _moneyStorage = moneyStorage;
+            _upgradesManager = upgradesManager;
+        }
         
         [Button]
         public void PurchaseDebug()

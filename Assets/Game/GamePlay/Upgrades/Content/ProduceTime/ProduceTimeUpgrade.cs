@@ -1,12 +1,12 @@
 using Entities;
 using Game.GamePlay.Conveyor.Components;
-using Zenject;
+using VContainer;
 
 namespace Game.GamePlay.Upgrades.Content
 {
     public class ProduceTimeUpgrade : Upgrade
     {
-        [Inject] private IEntity _conveyorModel;
+        [Inject] private IEntity _conveyorEntity;
         private readonly ProduceTimeUpgradeConfig _config;
 
         public ProduceTimeUpgrade(ProduceTimeUpgradeConfig config) : base(config)
@@ -16,7 +16,7 @@ namespace Game.GamePlay.Upgrades.Content
 
         protected override void OnUpgrade(int newLevel)
         {
-            _conveyorModel.Get<IConveyor_SetProduceTimeComponent>().SetProduceTime(
+            _conveyorEntity.Get<IConveyor_SetProduceTimeComponent>().SetProduceTime(
                 _config.ProduceTimeUpgradeTable.GetProduceTime(newLevel)
             );
         }

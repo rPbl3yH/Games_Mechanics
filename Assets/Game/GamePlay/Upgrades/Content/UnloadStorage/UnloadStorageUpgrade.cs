@@ -1,13 +1,14 @@
 using Entities;
 using Game.GamePlay.Conveyor.Components;
-using Zenject;
+using VContainer;
 
 namespace Game.GamePlay.Upgrades.Content
 {
     public class UnloadStorageUpgrade : Upgrade
     {
-        [Inject] private IEntity _conveyorModel;
+        [Inject] private IEntity _conveyorEntity;
         private readonly UnloadStorageUpgradeConfig _config;
+
         public UnloadStorageUpgrade(UnloadStorageUpgradeConfig config) : base(config)
         {
             _config = config;
@@ -15,7 +16,7 @@ namespace Game.GamePlay.Upgrades.Content
 
         protected override void OnUpgrade(int newLevel)
         {
-            _conveyorModel.Get<IConveyor_SetUnloadStorageComponent>().SetUnloadStorage(
+            _conveyorEntity.Get<IConveyor_SetUnloadStorageComponent>().SetUnloadStorage(
                 _config.StorageUpgradeTable.GetUnloadStorage(newLevel)
                 );
         }
