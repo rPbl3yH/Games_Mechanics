@@ -2,7 +2,7 @@ using Inventory.Equiper;
 using Lessons.MetaGame.Inventory;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using Zenject;
+using VContainer;
 
 namespace Equipment.Core
 {

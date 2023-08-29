@@ -1,12 +1,16 @@
 {
-    "name": "NewAssembly",
+    "name": "Inventory",
     "rootNamespace": "",
     "references": [
         "GUID:a89a98931c66f4d12aa54c90aaef09f5",
         "GUID:acc5aa56fae194232b996110808abd0c",
         "GUID:52ee84b7d63f245e6aa6cf091e952893",
         "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
-        "GUID:0acc523941302664db1f4e527237feb3"
+        "GUID:0acc523941302664db1f4e527237feb3",
+        "GUID:785872fffe145415dab38c4e07086c55",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:7bce08a00b4d54cd694096abadbb897e",
+        "GUID:cdfd058b393524bddbb7e850e0d53c8e"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

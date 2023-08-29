@@ -4,8 +4,8 @@
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "NewAssembly",
-        "Entities"
+        "Entities",
+        "Inventory"
     ],
     "includePlatforms": [
         "Editor"

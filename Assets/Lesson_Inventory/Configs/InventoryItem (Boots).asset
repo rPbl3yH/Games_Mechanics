@@ -20,27 +20,27 @@ MonoBehaviour:
       description: X2 SPEED
       icon: {fileID: 21300000, guid: 345cfbcc2796f458eba0947ea191ebf0, type: 3}
     components:
-    - rid: 414609695766216704
-    - rid: 414609695766216708
+    - rid: 6881862635069112324
+    - rid: 6881862635069112327
   references:
     version: 2
     RefIds:
-    - rid: 414609695766216704
-      type: {class: Component_Effect, ns: Game.GameEngine.Mechanics, asm: NewAssembly}
+    - rid: 6881862635069112324
+      type: {class: Component_Effect, ns: Game.GameEngine.Mechanics, asm: Inventory}
       data:
         effect:
-          rid: 414609695766216705
-    - rid: 414609695766216705
-      type: {class: Effect, ns: Game.GameEngine.Mechanics, asm: NewAssembly}
+          rid: 6881862635069112325
+    - rid: 6881862635069112325
+      type: {class: Effect, ns: Game.GameEngine.Mechanics, asm: Inventory}
       data:
         parameters:
-        - rid: 414609695766216706
-    - rid: 414609695766216706
-      type: {class: FloatEffectParameter, ns: Game.GameEngine.Mechanics, asm: NewAssembly}
+        - rid: 6881862635069112326
+    - rid: 6881862635069112326
+      type: {class: FloatEffectParameter, ns: Game.GameEngine.Mechanics, asm: Inventory}
       data:
         name: 1
         value: 2
-    - rid: 414609695766216708
-      type: {class: EquipmentComponent, ns: Inventory.Components, asm: NewAssembly}
+    - rid: 6881862635069112327
+      type: {class: EquipmentComponent, ns: Inventory.Components, asm: Inventory}
       data:
         <Type>k__BackingField: 2

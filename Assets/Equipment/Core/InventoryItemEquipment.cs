@@ -1,7 +1,7 @@
 using Equipment.Core;
 using Inventory.Components;
 using Lessons.MetaGame.Inventory;
-using Zenject;
+using VContainer;
 
 namespace Inventory.Equiper
 {
