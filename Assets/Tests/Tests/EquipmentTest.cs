@@ -126,14 +126,16 @@ public class EquipmentTest
         //Arrange
         ListInventory listInventory = new ListInventory();
         var listEquipment = new ListEquipment();
+
         InventoryItemEquipment inventoryItemEquipment = new InventoryItemEquipment(listEquipment, listInventory);
+
         var entity = Substitution.CreateComponent<TestEntity>();
         var effector = new Effector<IEffect>();
         var playerModel = Substitution.CreateComponent<PlayerModel>();
         entity.Add(new ComponentGetDamage(playerModel.Damage));
         entity.Add(new Component_Effector(effector));
         effector.AddHandler(new DamageEffectHandler(playerModel.Damage));
-        var effectApplier = new EquipmentEffectApplier(entity, listEquipment);
+
         var config = UnityEditor.AssetDatabase.LoadAssetAtPath<InventoryItemConfig>(
             "Assets/Lesson_Inventory/Configs/InventoryItem (Boots).asset"
         );
@@ -146,7 +148,59 @@ public class EquipmentTest
         //Assert
         Assert.AreEqual(2f, playerModel.Damage.Value);
     }
-    
+
+    [Test]
+    public void WhenUnequipBoots_AndEquipmentHasBoots_ThenEquipmentIsEmpty()
+    {
+        //Arrange
+        ListInventory listInventory = new ListInventory();
+        ListEquipment listEquipment = new ListEquipment();
+
+        var config = UnityEditor.AssetDatabase.LoadAssetAtPath<InventoryItemConfig>(
+            "Assets/Lesson_Inventory/Configs/InventoryItem (Boots).asset"
+        );
+        InventoryItem item = config.item.Clone();
+        listInventory.AddItem(item);
+
+        listEquipment.Equip(EquipmentType.Legs, item);
+        //Act
+
+        listEquipment.Unequip(EquipmentType.Legs);
+
+        //Assert
+        Assert.Null(listEquipment.GetItem(EquipmentType.Legs));
+    }
+
+    [Test]
+    public void WhenUnequipBoots_AndEquipmentHasBoots_ThenDamageIsZero()
+    {
+        //Arrange
+        ListInventory listInventory = new ListInventory();
+        var listEquipment = new ListEquipment();
+
+        InventoryItemEquipment inventoryItemEquipment = new InventoryItemEquipment(listEquipment, listInventory);
+
+        var entity = Substitution.CreateComponent<TestEntity>();
+        var effector = new Effector<IEffect>();
+        var playerModel = Substitution.CreateComponent<PlayerModel>();
+        entity.Add(new ComponentGetDamage(playerModel.Damage));
+        entity.Add(new Component_Effector(effector));
+        effector.AddHandler(new DamageEffectHandler(playerModel.Damage));
+
+        var config = UnityEditor.AssetDatabase.LoadAssetAtPath<InventoryItemConfig>(
+            "Assets/Lesson_Inventory/Configs/InventoryItem (Boots).asset"
+        );
+        InventoryItem item = config.item.Clone();
+        listInventory.AddItem(item);
+        inventoryItemEquipment.Equip(item);
+
+        //Act
+        inventoryItemEquipment.Unequip(item);
+
+        //Assert
+        Assert.AreEqual(0f, playerModel.Damage.Value);
+    }
+
     public class TestEntity : MonoEntityBase
     {
         
