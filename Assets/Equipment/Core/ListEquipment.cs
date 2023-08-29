@@ -14,12 +14,22 @@ namespace Equipment.Core
         [ShowInInspector]
         private readonly Dictionary<EquipmentType, InventoryItem> _equipments = new();
     
-        public bool Equip(EquipmentType type, InventoryItem item)
+        public void Equip(EquipmentType type, InventoryItem item)
         {
             _equipments[type] = item;
             OnEquipped?.Invoke(item);
             Debug.Log("Equip " + item);
-            return true;
+        }
+
+        public void Unequip(EquipmentType type)
+        {
+            _equipments.Remove(type);
+            Debug.Log("Unequip " + type);
+        }
+
+        public bool HasItem(InventoryItem item)
+        {
+            return _equipments.ContainsValue(item);
         }
 
         public InventoryItem GetItem(EquipmentType type)

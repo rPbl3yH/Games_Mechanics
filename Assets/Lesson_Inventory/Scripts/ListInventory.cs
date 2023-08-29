@@ -88,7 +88,7 @@ namespace Lessons.MetaGame.Inventory
             }
         }
         
-        public bool CheckItem(InventoryItem equipmentItem)
+        public bool HasItem(InventoryItem equipmentItem)
         {
             return items.Contains(equipmentItem);
         }

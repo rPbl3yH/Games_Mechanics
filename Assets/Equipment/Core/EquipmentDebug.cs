@@ -28,5 +28,12 @@ namespace Equipment.Core
             _listInventory.FindItem(config.item.Name, out var result);
             _equipment.Equip(result);
         }
+
+        [Button]
+        public void DebugUnequip(InventoryItemConfig config)
+        {
+            _listInventory.FindItem(config.item.Name, out var result);
+            _equipment.Unequip(result);
+        }
     }
 }

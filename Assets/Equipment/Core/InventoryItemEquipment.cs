@@ -25,12 +25,29 @@ namespace Inventory.Equiper
                 return false;
             }
 
-            if (!_listInventory.CheckItem(item))
+            if (!_listInventory.HasItem(item))
             {
                 return false;
             }
 
             _listEquipment.Equip(equipmentComponent.Type, item);
+            return true;
+        }
+
+        public bool Unequip(InventoryItem item)
+        {
+            var equipmentComponent = item.GetComponent<EquipmentComponent>();
+            if (equipmentComponent is null)
+            {
+                return false;
+            }
+
+            if (!_listEquipment.HasItem(item))
+            {
+                return false;
+            }
+
+            _listEquipment.Unequip(equipmentComponent.Type);
             return true;
         }
     }

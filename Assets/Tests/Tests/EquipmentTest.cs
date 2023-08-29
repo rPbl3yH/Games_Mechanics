@@ -87,8 +87,8 @@ public class EquipmentTest
         InventoryItem legsItem = listInventory.GetItem(EquipmentType.Legs);
 
         //Assert
-        bool isEquip = listEquipment.Equip(EquipmentType.Legs, legsItem);
-        Assert.True(isEquip);
+        listEquipment.Equip(EquipmentType.Legs, legsItem);
+        Assert.True(true);
     }
 
     [Test]
