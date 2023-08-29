@@ -1,35 +1,21 @@
 ﻿using System.Collections.Generic;
+using Game;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using Zenject;
+using VContainer;
+using VContainer.Unity;
 
-namespace Game
+namespace Game.Scopes
 {
-    public class ChestInstaller : MonoInstaller<ChestInstaller>
+    public class ChestInstaller : MonoBehaviour, IInitializable
     {
         [SerializeField] private List<ChestConfig> _chestRewardConfigs;
-
         [ShowInInspector] private List<Chest> _chests = new();
 
-        private ChestRewardReceiver _chestRewardObserver;
-        private RealTimeSaveLoader _saveLoader;
+        [Inject] private ChestRewardReceiver _chestRewardObserver;
+        [Inject] private RealTimeSaveLoader _saveLoader;
 
-        public override void InstallBindings()
-        {
-            _saveLoader = new RealTimeSaveLoader();
-            Container.Bind<RealTimeSaveLoader>()
-                .FromInstance(_saveLoader)
-                .AsSingle();
-
-            _chestRewardObserver = new ChestRewardReceiver();
-            Container.Bind<ChestRewardReceiver>()
-                .FromInstance(_chestRewardObserver)
-                .AsSingle();
-
-            InitializeChest();
-        }
-
-        private void InitializeChest()
+        public void Initialize()
         {
             foreach (var config in _chestRewardConfigs)
             {
@@ -37,8 +23,9 @@ namespace Game
             }
         }
 
-        public void StartChestTimers()
+        public void StartChestsTimer()
         {
+            Debug.Log("Start chest timer");
             foreach (var chest in _chests)
             {
                 chest.Start();

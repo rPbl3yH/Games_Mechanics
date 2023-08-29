@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-using Zenject;
+﻿using VContainer;
 
 namespace Game.Reward
 {
